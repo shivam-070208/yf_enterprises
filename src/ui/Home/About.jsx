@@ -1,14 +1,15 @@
 import React from 'react';
 import { FaPhoneAlt, FaBolt, FaTools } from 'react-icons/fa';
+import Button from '../Button';
 
 const AboutSection = () => {
   return (
     <section className="bg-transparent py-20 px-4">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-        {/* Left Side: Text Content */}
+      
         <div className=" w-full flex flex-col justify-between">
           <div>
-            <p className="text-orange-600 font-bold mb-2 text-lg">About Y.F Enterprises</p>
+            <p className="text-orange-600 font-bold mb-2 text-lg beforetext relative before:content-['Assesment']">About Y.F Enterprises</p>
             <h2 className="text-5xl font-bold text-black mb-4 leading-tight">
               Flameproof Electrical Safety You Can Rely On
             </h2>
@@ -32,12 +33,7 @@ const AboutSection = () => {
 
           {/* CTA + Contact */}
           <div className="flex flex-wrap items-center gap-6">
-            <a
-              href="/about"
-              className="bg-orange-600 hover:bg-orange-700 text-white font-bold px-6 py-3 rounded-md"
-            >
-              ABOUT US
-            </a>
+           <Button text={"About Us"} primarycolor={"bg-orange-700"} secondarycolor={"bg-green-400"} href={'/about'} />
             <div className="flex items-center gap-3 text-black">
               <div className="bg-gray-100 p-3 rounded-full">
                 <FaPhoneAlt className="text-xl text-orange-600" />

@@ -85,9 +85,11 @@ const HeroSection=()=> {
     <div className="w-full lg:absolute bottom-2 z-100 mt-10">
         <div className="w-fit mx-auto grid lg:grid-cols-3 gap-10 grid-cols-1 pointer-events-none">
             {cards.map((item,i)=>(
-                <div key={i} className="w-80 py-9 group  relative text-white cursor-pointer pointer-events-auto bg-black -z-10  px-6 rounded">
-                    <img src="https://html.themexriver.com/industo/images/gallery/1.jpg" className="absolute top-0 blur-md w-0 transition-all self-end  left-0 duration-700 group-hover:w-full h-full -z-1" />
-                    <div className="group-hover:rotate-y-180 origin-center inline-block transition-all  font-light">{item.icon}</div>
+                <div key={i} className="w-80 py-9 group  relative text-white cursor-pointer pointer-events-auto bg-black -z-10  px-6 rounded transform-3d perspective-midrange">
+                    <img src="https://html.themexriver.com/industo/images/gallery/1.jpg" className="absolute top-0 blur-md w-0 transition-all self-end  left-0 duration-z00 group-hover:w-full h-full -z-1" />
+                    <div className="group-hover:rotate-y-360 origin-center 
+                  
+                    inline-block transition-all duration-1000 transform-3d font-light translate-z-4">{item.icon}</div>
                 <p className="mt-7 pb-4  border-orange-600 border-b-4 text-xl font-bold w-20 whitespace-nowrap">{item.title}</p>
                <button  className="flex items-center gap-3 rounded bg-orange-600 px-4 py-2 font-mono text-lg font-semibold mt-8 ">Read More
                 <FaArrowRight />

@@ -1,11 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
-
 @layer utilities{
   .cursorspan{
     @apply w-4 h-4 -translate-x-1/2 -translate-y-1/2 z-[999] pointer-events-none fixed   bg-orange-500 rounded-full;
     animation: scaleIn 0.9s infinite cubic-bezier(0.2, 0, 1.0, 0.7) alternate;
      
   }
+ .beforetext::before{
+         font-family: "Roboto", sans-serif;
+    position: absolute;
+  
+   
+   color: transparent;
+   -webkit-text-stroke: 2px rgba(185, 182, 182, 0.477);
+    font-size: 120px;
+    top:-50px;
+    left: -10px;
+    z-index: -1;
+  }
+  
 }
 
 
@@ -48,11 +61,10 @@ background-color: var(--color-orange-600);
 
 @keyframes bglayer {
   0% {
-   top:0;
+   top:-40;
   }
   20%{
-    top:0;
-  }
+    top:-40; }
   80% {
     top:110%;
   }

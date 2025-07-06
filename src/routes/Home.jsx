@@ -1,6 +1,7 @@
 import React from 'react'
 import { AboutSection, HeroSection } from '../ui/Home'
 import { Bglayer } from '../ui'
+import PortfolioSection from '../ui/Home/Portfolio'
 
 
 function Home() {
@@ -9,7 +10,7 @@ function Home() {
          <Bglayer />
       <HeroSection />
       <AboutSection />
-       
+       <PortfolioSection />
     </div>
   )
 }
