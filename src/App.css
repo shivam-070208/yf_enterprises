@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.secondarynav::before{
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+content:'';
+z-index: -1;
+background-color: var(--color-orange-600);
+}
