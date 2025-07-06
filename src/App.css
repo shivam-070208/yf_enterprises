@@ -11,6 +11,8 @@
 
 @theme inline{
     --animate-bglayer:bglayer 10s ease-in-out infinite alternate;
+    --animate-view:view 0.8s ease-in-out ;
+    
 }
 
 body{
@@ -53,3 +55,14 @@ background-color: var(--color-orange-600);
   }
 }
 
+@keyframes view{
+    0%{
+        transform: rotateX(90deg);
+    }100%{
+        transform: rotateX(0deg);
+    }
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: white; 
+}

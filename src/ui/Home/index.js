@@ -1,4 +1,5 @@
-import Heroic from "./Heroic"
+import HeroSection from "./Heroic"
+
 export {
-    Heroic
+    HeroSection
 }
