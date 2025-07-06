@@ -30,7 +30,7 @@ const Secondarynav = () => {
 ];
 
   return (
-    <div className="w-screen  ">
+    <div className="w-screen  absolute ">
       <div className=" ml-auto  text-xl bg-transparent gap-10  md:w-fit w-full md:text-left  md:pr-53 flex sm:-translate-y-12 py-6 text-white font-semibold px-10 secondarynav relative sm:before:-skew-x-[24deg] sm:left-10">
         {NavItems.map(({ Name, href }, index) => (
           <Link key={index} className="sm:inline-block hidden" href={href}>

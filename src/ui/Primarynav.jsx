@@ -25,7 +25,7 @@ const Primarynav = () => {
   ];
 
   return (
-    <div className="w-screen flex  justify-center gap-x-80 gap-y-10 px-4 py-3 mt-4 flex-wrap">
+    <div className="w-screen flex  justify-center gap-x-80 gap-y-10 px-4 py-3 flex-wrap">
       {/* Logo */}
       <div className="h-full ">
         <img src={logo} className="w-40 h-30" alt="logo" />

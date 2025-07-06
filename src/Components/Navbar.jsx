@@ -4,7 +4,7 @@ import { Primarynav, Secondarynav } from '../ui'
 
 function Navbar() {
   return (
-    <div className='relative'>
+    <div className='relative bg-white'>
       <Primarynav />
       <Secondarynav />
     </div>
