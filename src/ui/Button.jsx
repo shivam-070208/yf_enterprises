@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaPlus } from 'react-icons/fa'
+
 import { Link } from 'react-router-dom'
 
 const Button = ({ href, text, secondarycolor, primarycolor }) => {
@@ -17,9 +17,9 @@ const Button = ({ href, text, secondarycolor, primarycolor }) => {
           {text}
         </span>
       </span>
-      <div className='inline-block relative bottom-1.5  z-10 ml-2 bg-[#e9e2e234] px-2 py-1'>
+      <div className=' z-10 ml-1 relative bottom-[3.5px] text-2xl inline-block'>
+    &gt;
 
-        <FaPlus className='inline-block ' />
       </div>
       <div
         className={`absolute  w-2 h-2 rounded-full ${secondarycolor} -translate-x-1/2 -translate-y-1/2  z-0  -top-4 transition-all duration-700 group-hover:scale-[60]`}

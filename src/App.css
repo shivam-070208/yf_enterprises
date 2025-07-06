@@ -10,7 +10,7 @@
 
 
 @theme inline{
-    --animate-bglayer:bglayer 10s ease-in-out infinite alternate;
+    --animate-bglayer:bglayer 14s ease-in-out infinite alternate;
     --animate-view:view 0.8s ease-in-out ;
     
 }
@@ -50,8 +50,14 @@ background-color: var(--color-orange-600);
   0% {
    top:0;
   }
-  100% {
-    top:100%;
+  20%{
+    top:0;
+  }
+  80% {
+    top:110%;
+  }
+  100%{
+    top:110%;
   }
 }
 

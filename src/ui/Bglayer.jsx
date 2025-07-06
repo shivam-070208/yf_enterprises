@@ -2,7 +2,7 @@ import React from 'react';
 
 function Bglayer() {
   return (
-    <div className="absolute w-full h-full flex-nowrap -z-10 top-0 left-0 flex">
+    <div className="fixed w-full h-full opacity-75   -z-1 top-0 left-0 flex">
       {Array(4).fill('').map((_, i) => (
         <div
           key={i}
@@ -10,10 +10,10 @@ function Bglayer() {
         >
             <div className='absolute top-0 right-[6px] z-0 h-full bg-neutral-100 w-[1px]' />
       <div
-  className="absolute  right-[4px] z-0 -translate-y-1/2 bg-neutral-300 animate-bglayer"
+  className="absolute  right-[4px] bg-gradient-to-t from-[#cbc8c8b5] via-[#e7e4e4eb] to-[#ffffffd4] z-0 -translate-y-1/2  animate-bglayer"
   style={{
-    width: "6px",
-    height: "60px",
+    width: "3px",
+    height: "100px",
     borderTopLeftRadius: "200% 200%",
     borderTopRightRadius: "200% 200%",
     borderBottomLeftRadius: "100% 100%",

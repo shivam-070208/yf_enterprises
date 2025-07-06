@@ -1,11 +1,15 @@
 import React from 'react'
-import { HeroSection } from '../ui/Home'
+import { AboutSection, HeroSection } from '../ui/Home'
+import { Bglayer } from '../ui'
 
 
 function Home() {
   return (
-    <div>
+    <div className='bg-transparent'>
+         <Bglayer />
       <HeroSection />
+      <AboutSection />
+       
     </div>
   )
 }

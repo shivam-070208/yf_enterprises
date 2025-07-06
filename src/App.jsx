@@ -8,7 +8,7 @@ import { Home } from './routes'
 function App() {
   return (
     <div>
-      <Bglayer />
+     
       <Cursor />
       <Navbar />
       <Routes>
