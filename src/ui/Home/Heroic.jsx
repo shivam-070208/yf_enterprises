@@ -47,7 +47,7 @@ const HeroSection=()=> {
     const [currentslide,setslide] = useState(0)
    
     return (
-    <div className="relative w-screen  min-h-[114vh] bg-white overflow-x-hidden overflow-y-visible">
+    <div className="relative w-screen  min-h-[114vh]  overflow-x-hidden overflow-y-visible">
     
       <Swiper
         navigation
@@ -82,8 +82,8 @@ const HeroSection=()=> {
         ))}
       </Swiper>
 
-    <div className="w-full md:absolute bottom-2 z-100 mt-10">
-        <div className="w-fit mx-auto grid md:grid-cols-3 gap-10 grid-cols-1 pointer-events-none">
+    <div className="w-full lg:absolute bottom-2 z-100 mt-10">
+        <div className="w-fit mx-auto grid lg:grid-cols-3 gap-10 grid-cols-1 pointer-events-none">
             {cards.map((item,i)=>(
                 <div key={i} className="w-80 py-9 group  relative text-white cursor-pointer pointer-events-auto bg-black -z-10  px-6 rounded">
                     <img src="https://html.themexriver.com/industo/images/gallery/1.jpg" className="absolute top-0 blur-md w-0 transition-all self-end  left-0 duration-700 group-hover:w-full h-full -z-1" />

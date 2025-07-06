@@ -2,7 +2,7 @@ import React from 'react';
 
 function Bglayer() {
   return (
-    <div className="fixed w-full h-full opacity-75   -z-1 top-0 left-0 flex">
+    <div className="fixed w-full h-full opacity-75   -z-10 top-0 left-0 flex">
       {Array(4).fill('').map((_, i) => (
         <div
           key={i}
