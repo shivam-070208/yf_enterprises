@@ -13,7 +13,7 @@ const Cursor = () => {
     },[])
     return (
     <motion.div  
- animate={{top:mouseposition.y,left:mouseposition.x}} transition={{type:'spring',stiffness:100}} className='cursorspan mix-blend-difference' />
+ animate={{top:mouseposition.y,left:mouseposition.x}} transition={{type:'spring',stiffness:100}} className='cursorspan mix-blend-difference lg:inline-block hidden' />
       
 
   )
