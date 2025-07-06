@@ -50,7 +50,7 @@ const HeroSection=()=> {
     <div className="relative w-screen  min-h-[114vh]  overflow-x-hidden overflow-y-visible">
     
       <Swiper
-        navigation
+      
         modules={[Autoplay]}
         onSlideChangeTransitionStart={(e)=>e.el.style.cursor ='grabbing'
         }

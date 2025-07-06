@@ -61,10 +61,10 @@ background-color: var(--color-orange-600);
 
 @keyframes bglayer {
   0% {
-   top:-40;
+   top:-40%;
   }
   20%{
-    top:-40; }
+    top:-40%; }
   80% {
     top:110%;
   }
@@ -83,4 +83,10 @@ background-color: var(--color-orange-600);
 .swiper-button-prev,
 .swiper-button-next {
   color: white; 
+}
+
+
+::selection{
+ 
+  background-color: transparent;
 }
