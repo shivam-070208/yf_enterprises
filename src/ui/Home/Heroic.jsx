@@ -71,10 +71,10 @@ const HeroSection=()=> {
               style={{ backgroundImage: `url(${slide.image})` }}
             >
            { currentslide === i &&  <div className="max-w-[600px] text-white space-y-10 px-3">
-                <h1 className="text-6xl animate-view origin-top font-bold leading-tight">
+                <h1 className="sm:text-6xl text-4xl leading-tight animate-view origin-top font-bold ">
                   {slide.heading}
                 </h1>
-                <p className="text-lg animate-view origin-top opacity-90">{slide.subheading}</p>
+                <p className="sm:text-lg animate-view origin-top opacity-90">{slide.subheading}</p>
               <Button text={"Our Services"} href={'/services'} primarycolor={"bg-orange-600"} secondarycolor={"bg-black"} />
               </div>}
             </div>

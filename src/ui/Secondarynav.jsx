@@ -61,13 +61,7 @@ const Secondarynav = () => {
         </nav>
       </div>
 
-      {/* Backdrop when drawer is open */}
-      {isOpen && (
-        <div
-          onClick={() => setIsOpen(false)}
-          className="fixed inset-0 bg-black animate-scale bg-opacity-50 z-90 sm:hidden"
-        />
-      )}
+     
     </>
   );
 };
