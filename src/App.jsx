@@ -7,8 +7,8 @@ import { Home } from './routes'
 
 function App() {
   return (
-    <div>
-     
+    <div className='w-screen overflow-x-hidden'>
+      <Bglayer />
       <Cursor />
       <Navbar />
       <Routes>

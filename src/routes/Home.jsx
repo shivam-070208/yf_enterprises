@@ -1,5 +1,5 @@
 import React from 'react'
-import { AboutSection, HeroSection, ServicesCarousel } from '../ui/Home'
+import { AboutSection, HeroSection, ProductCarousel, ServicesCarousel } from '../ui/Home'
 import { Bglayer } from '../ui'
 import PortfolioSection from '../ui/Home/Portfolio'
 
@@ -7,11 +7,12 @@ import PortfolioSection from '../ui/Home/Portfolio'
 function Home() {
   return (
     <div className='bg-transparent'>
-         <Bglayer />
+        
       <HeroSection />
       <AboutSection />
        <ServicesCarousel />
        <PortfolioSection />
+       <ProductCarousel />
     </div>
   )
 }

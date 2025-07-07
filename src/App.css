@@ -15,7 +15,7 @@
    -webkit-text-stroke: 2px rgba(185, 182, 182, 0.477);
     font-size: 120px;
     top:-50px;
-    left: -10px;
+    left: -80px;
     z-index: -1;
   }
   
@@ -30,7 +30,7 @@
 
 body{
     width: 100vw;
-    overflow-x: hidden;
+    overflow-x:hidden;
 }
 
 .secondarynav::before{

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+
+
 import { FaIndustry } from 'react-icons/fa';
 
 const services = [
@@ -39,11 +39,11 @@ const services = [
 
 const ServicesCarousel = () => {
   return (
-    <section className="relative py-24 mb-12 px-4  md:px-16 mt-10 bg-[#f5f5f570] backdrop:scale-x-200">
+    <section className="relative py-24 mb-12 px-4  md:px-16 mt-10 bg-[#f5f5f570] backdrop-blur-md">
       <div className="absolute w-full h-full inset-0 bg-cover opacity-10 bg-[url('https://html.themexriver.com/industo/images/background/1.jpg')]" />
       <div className="relative z-10 max-w-7xl mx-auto mt-8">
         <div className="text-center mb-10">
-          <div className="text-orange-600 inline-block font-bold uppercase relative beforetext before:content-['Services']">Our Awesome Services</div>
+          <div className="text-orange-600 inline-block font-bold uppercase relative beforetext md:before:content-['Services']">Our Awesome Services</div>
           <h2 className="text-5xl font-extrabold mt-5 text-gray-900">
             Our Awesome Services
           </h2>
@@ -63,6 +63,7 @@ const ServicesCarousel = () => {
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
+         
           modules={[ Autoplay]}
           className="w-full cursor-grab"
         >

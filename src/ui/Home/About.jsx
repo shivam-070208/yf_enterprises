@@ -9,7 +9,7 @@ const AboutSection = () => {
       
         <div className=" w-full flex flex-col justify-between">
           <div>
-            <p className="text-orange-600 font-bold mb-2 text-lg beforetext relative before:content-['Assesment']">About Y.F Enterprises</p>
+            <p className="text-orange-600 font-bold mb-2 text-lg beforetext relative md:before:content-['Assesment']">About Y.F Enterprises</p>
             <h2 className="text-5xl font-bold text-black mb-4 leading-tight">
               Flameproof Electrical Safety You Can Rely On
             </h2>
