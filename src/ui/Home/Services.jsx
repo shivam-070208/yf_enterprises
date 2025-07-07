@@ -49,7 +49,7 @@ const ServicesCarousel = () => {
           </h2>
         
         </div>
-    <div className='shadow-md py-4'>
+ 
 
     
         <Swiper
@@ -69,7 +69,7 @@ const ServicesCarousel = () => {
         >
           {services.map((service, index) => (
             <SwiperSlide key={index}>
-              <div className="group relative w-fit group h-fit cursor-pointer   rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+              <div className="group relative mx-auto w-fit group h-fit cursor-pointer   rounded-xl overflow-hidden  transition-all duration-300">
                 
                   <img
                     src={service.image}
@@ -91,7 +91,7 @@ const ServicesCarousel = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        </div>
+        
       </div>
     </section>
   );

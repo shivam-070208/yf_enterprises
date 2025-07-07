@@ -28,7 +28,7 @@ const Secondarynav = () => {
           {/* Menu Button for small screens */}
           <button
             onClick={() => setIsOpen(true)}
-            className="sm:hidden ml-auto text-white"
+            className="sm:hidden ml-auto cursor-pointer text-white"
           >
             <FaBars size={26} />
           </button>
@@ -37,8 +37,8 @@ const Secondarynav = () => {
 
       {/* Side Nav Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-black text-white z-100 transform transition-transform duration-300 ${
-          isOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 h-full w-64 bg-black text-white z-100 transform transition-transform duration-300  ${
+          isOpen ? "delay-700 translate-x-0" : "delay-100 translate-x-full"
         }`}
       >
         <div className="flex justify-between items-center p-4 border-b border-gray-700">
@@ -65,7 +65,7 @@ const Secondarynav = () => {
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
-          className="fixed inset-0 bg-black bg-opacity-50 z-90 sm:hidden"
+          className="fixed inset-0 bg-black animate-scale bg-opacity-50 z-90 sm:hidden"
         />
       )}
     </>
