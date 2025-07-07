@@ -80,10 +80,7 @@ background-color: var(--color-orange-600);
         transform: rotateX(0deg);
     }
 }
-.swiper-button-prev,
-.swiper-button-next {
-  color: white; 
-}
+
 
 
 ::selection{

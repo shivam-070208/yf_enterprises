@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar'
 import { Bglayer, Cursor } from './ui'
 import { Route, Routes } from 'react-router-dom'
 import { Home } from './routes'
+import Footer from './ui/Footer'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
       </Routes>
+      <Footer />
     </div>
   )
 }
