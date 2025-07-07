@@ -3,7 +3,7 @@ import { logo } from '../assets'; // make sure you have your logo here
 
 const Footer = () => {
   return (
-    <footer className="relative bg-[#000000] text-white pt-20 pb-8 px-6 md:px-16">
+    <footer className="relative bg-[#000000ef] text-white pt-20 pb-8 px-6 md:px-16">
      
 
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-19">
