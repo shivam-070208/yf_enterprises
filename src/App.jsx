@@ -3,7 +3,7 @@ import './App.css'
 import Navbar from './Components/Navbar'
 import { Bglayer, Cursor } from './ui'
 import { Route, Routes } from 'react-router-dom'
-import { Home } from './routes'
+import { Contact, Home } from './routes'
 import Footer from './ui/Footer'
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/contact' element={<Contact />} />
       </Routes>
       <Footer />
     </div>
