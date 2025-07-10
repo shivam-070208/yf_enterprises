@@ -137,7 +137,7 @@ const AboutUs = () => {
             <h2 className="text-3xl font-bold">Our Trusted Sponsor</h2>
           </div>
           <Swiper slidesPerView={2} modules={[Autoplay]} autoplay grabCursor={true}  spaceBetween={20} breakpoints={{ 640: { slidesPerView: 3 }, 1024: { slidesPerView: 5 } }}>
-            {[1, 2, 3, 4, 5,6,7,5,9,5,9].map((i) => (
+            {[1, 2, 3, 4, 5].map((i) => (
               <SwiperSlide key={i}>
                 <div className="p-4">
                   <img src={`https://html.themexriver.com/industo/images/resource/welcome.png`} alt={`sponsor-${i}`} className="mx-auto h-16" />
