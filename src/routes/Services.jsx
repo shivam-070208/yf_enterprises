@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { FaStar } from 'react-icons/fa';
 import { Button } from '../ui';
+import { Link } from 'react-router-dom';
 
 const ServicesPage = () => {
   const testimonials = Array(6).fill({
@@ -18,7 +19,7 @@ const ServicesPage = () => {
       <section className="bg-cover bg-center py-30" style={{ backgroundImage: "url('https://html.themexriver.com/industo/images/background/9.jpg')" }}>
         <div className="container mx-auto px-4">
           <ul className="flex gap-2 text-white text-sm">
-            <li><a href="/" className="underline">Home</a></li>
+            <li><Link to="/" className="underline">Home</Link></li>
             <li>/ Services</li>
           </ul>
           <h2 className="text-4xl font-bold text-white mt-2">What We Do</h2>

@@ -3,7 +3,7 @@ import './App.css'
 import Navbar from './Components/Navbar'
 import { Bglayer, Cursor } from './ui'
 import { Route, Routes } from 'react-router-dom'
-import { AboutUs, Contact, Home, ServicesPage } from './routes'
+import { AboutUs, Blog, Contact, Home, ServicesPage } from './routes'
 import Footer from './ui/Footer'
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/about' element={<AboutUs />} />
         <Route path='/services' element={<ServicesPage />} /> 
+          <Route path='/blog' element={<Blog />} /> 
       </Routes>
       <Footer />
     </div>
