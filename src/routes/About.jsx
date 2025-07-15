@@ -4,7 +4,35 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 
+
 const AboutUs = () => {
+  const textTestimonial = [
+    {
+      Name : " Manish Tiwari",
+      Lcation: "Kolkata",
+      text: "Y.F Enterprises resolved our UPS breakdown within hours. Their technician was skilled, fast, and professional. Best UPS repair and emergency service I’ve seen in Delhi."
+    },
+    {
+      Name : "Vikram Mehta",
+      Lcation: "Kolkata",
+      text: "We bought a reconditioned UPS and it runs like new. Affordable pricing and excellent installation support. Highly recommended for UPS solutions in Pune."
+    },
+    {
+      Name : "Rahul Patel",
+      Lcation: "Kolkata",
+      text:  "Y.F Enterprises resolved our UPS breakdown within hours. Their technician was skilled, fast, and professional. Best UPS repair and emergency service I’ve seen in Delhi."
+    },
+    {
+      Name : " Imran Sheikh",
+      Lcation: "Kolkata",
+      text:  "Needed UPS battery rental for an event—flawless service! Timely delivery, proper setup, and smooth backup. Great experience with their team in Hyderabad."
+    },
+    {
+      Name : "Naveen Raut",
+      Lcation: "Kolkata",
+      text:  "We use their AMC services across our offices. No power issues since they took over maintenance. Trusted UPS service partner in Nagpur."
+    }
+  ];
   return (
     <div className="bg-white text-gray-800">
       {/* Hero Section */}
@@ -55,7 +83,9 @@ const AboutUs = () => {
             <div>
               <div className="text-orange-600 font-semibold">Welcome to Y.F Enterprises</div>
               <h2 className="text-3xl font-bold mt-2">We Are Experts In All Industry Works</h2>
-              <p className="mt-4 text-gray-600">We specialize in service and maintenance of UPS, Battery Rental, Servo Stabilizer, AMC/CMC Contracts, and more across India.</p>
+              <p className="mt-4 text-gray-600">Y.F Enterprises is a leading engineering and maintenance service provider based in Kolkata, specializing in UPS systems, battery rentals, AMC/CMC contracts, flameproof electrical solutions, and custom power setups. With over 6 years of industry experience, we offer 24x7 reliable support across India, serving top brands like Exide, APC, Vertiv, Hitachi, and more.
+
+Whether it's UPS repair, servo stabilizers, or junction box wiring, we ensure uninterrupted power—on time, every time.</p>
             </div>
             <div className="grid grid-cols-2 gap-4 text-sm">
               <ul className="list-disc pl-5">
@@ -107,18 +137,18 @@ const AboutUs = () => {
             <div className="text-orange-600 font-bold">Our Testimonial</div>
             <h2 className="text-3xl font-bold">Happy Client Says About Us</h2>
           </div>
-          <Swiper slidesPerView={1} modules={{Autoplay}} autoplay={{delay:0.4}} spaceBetween={30} breakpoints={{ 640: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}>
-            {[1, 2, 3].map((item, index) => (
+          <Swiper slidesPerView={1} spaceBetween={30} breakpoints={{ 640: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}>
+            {textTestimonial.map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="bg-white p-6 rounded shadow text-left">
                   <div className="flex items-center gap-4 mb-4">
                     <img src="https://html.themexriver.com/industo/images/resource/welcome.png" alt="client" className="w-12 h-12 rounded-full" />
                     <div>
-                      <h4 className="font-bold">Jeffery Marshall</h4>
-                      <p className="text-sm text-gray-500">Founder & CEO</p>
+                      <h4 className="font-bold">{item.Name}</h4>
+                      <p className="text-sm text-gray-500">{item.Lcation}</p>
                     </div>
                   </div>
-                  <p className="text-gray-600 text-sm mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus facilisis.</p>
+                  <p className="text-gray-600 text-sm mb-4">{item.text}</p>
                   <div className="text-yellow-500 flex">
                     {[...Array(5)].map((_, i) => <FaStar key={i} />)}
                   </div>
