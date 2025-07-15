@@ -18,7 +18,7 @@ const Loaderinitiater = ({children}) => {
       {loading?(
         <Loader />
       ):(
-        <motion.div className='w-full h-full overflow-hidden' initial={{scale:0,filter:'blur(30px)'}} animate={{scale:1.0,filter:'blur(0px)'}} transition={{duration:0.8}}>{children}</motion.div>
+        <motion.div className='w-full h-full overflow-hidden origin-center' initial={{scale:0,filter:'blur(30px)',rotateZ:'45deg'}} animate={{scale:1.0,filter:'blur(0px)',rotateZ:'0deg'}} transition={{duration:0.8}}>{children}</motion.div>
       )
 
       }
