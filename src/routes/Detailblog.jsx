@@ -16,7 +16,7 @@ const Detailblog = () => {
           <ul className="flex gap-2 text-white text-sm">
             <li><Link to="/" className="underline">Home</Link>/</li>
             <li> <Link to="/blog" className="underline">Blog</Link>/</li>
-             <li> <Link to="/" className="underline">Blog</Link></li>
+             <li> {blogdetail?.title}</li>
           </ul>
           <h2 className="text-4xl font-bold text-white mt-2">What We Do</h2>
         </div>

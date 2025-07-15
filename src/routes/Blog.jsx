@@ -50,10 +50,10 @@ const Blog = () => {
             <h3 onClick={()=>setShowCategories(!showCategories)} className='text-xl cursor-pointer  font-bold mb-4 text-blue-950'>Categories</h3>
            {showCategories&& <div className='space-y-2 space-x-2'>
               {categories.map((category, idx) => (
-                <motion.button initial={{height:0,opacity:0,filter:'blur(4px)'}} animate={{height:'fit-content',opacity:1,filter:'blur(0)'}} transition={{delay:0.04*idx,duration:0.2}}
+                <motion.button layoutId={category+idx} initial={{height:0,opacity:0,filter:'blur(100px)'}} exit={{height:0,opacity:0,filter:'blur(100px)'}} animate={{height:'fit-content',opacity:1,filter:'blur(0)'}} transition={{delay:0.04*idx,duration:0.8}}
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`w-fit text-left p-2 overflow-hidden rounded transition-colors ${
+                  className={`w-fit text-left p-2 cursor-pointer overflow-hidden rounded transition-colors ${
                     selectedCategory === category 
                       ? 'bg-blue-600 text-white' 
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
