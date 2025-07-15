@@ -3,7 +3,6 @@ import { flameproofProducts, productCategories, getProductsByCategory, searchPro
 import { FaStar, FaSearch, FaFilter, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Button } from '../ui';
-
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState('All Products');
   const [searchTerm, setSearchTerm] = useState('');
