@@ -2,39 +2,53 @@ import { FaFacebookF, FaTwitter, FaDribbble, FaBehance, FaPhoneAlt, FaEnvelope }
 import { logo } from '../assets'; // make sure you have your logo here
 
 const Footer = () => {
+  const Company = ["Home", "About Us", "Brochure", "Blog", "Product", "Contact Us", "Privacy Policy"];
+  const footerProducts = [
+  "UPS Repair Services",
+  "Reconditioned UPS",
+  "Battery Rentals",
+  "AMC & CMC Contracts",
+  "Servo Stabilizers",
+  "Flameproof Electrical Solutions"
+];
+
+
   return (
     <footer className="relative bg-[#000000ef] text-white pt-20 pb-8 px-6 md:px-16">
      
 
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-19">
+      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-19">
         
         <div>
+<<<<<<< HEAD
           <img src={logo} alt="YF Logo " className="w-36 mb-4 " />
           <p className="text-gray-400 mb-4">We work with a passion for tackling challenges and creating impactful solutions in the industrial sector.</p>
+=======
+          <img src={logo} alt="YF Logo " className="w-36 mb-4" />
+          <p className="text-gray-400 mb-4">Y.F Enterprises provides 24×7 UPS services, battery rentals, and power solutions across India. Trusted by top brands like Exide, APC, and Hitachi.</p>
+>>>>>>> 343539f148926b84ed958064f710584018134eb3
           <a href="/about" className="inline-block text-sm bg-orange-500 hover:bg-orange-600 transition px-4 py-2 rounded text-white">About us</a>
         </div>
 
-        {/* Newsletter */}
+        {/* Company */}
         <div>
-          <h4 className="text-xl font-semibold mb-4">Newsletter</h4>
-          <p className="text-gray-400 mb-4">Subscribe to receive our latest updates and industry insights.</p>
-          <form className="flex items-center bg-white rounded overflow-hidden shadow-md">
-            <input
-              type="email"
-              placeholder="Your email"
-              className="w-full px-4 py-2 text-black outline-none"
-            />
-            <button type="submit" className="bg-orange-500 px-4 py-2 hover:bg-orange-600">
-              <FaEnvelope className="text-white" />
-            </button>
-          </form>
-          <div className="flex gap-4 mt-4 text-white">
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaTwitter /></a>
-            <a href="#"><FaDribbble /></a>
-            <a href="#"><FaBehance /></a>
-          </div>
+          <h4 className="text-xl font-semibold mb-4">Company</h4>
+          {
+            Company.map((item) => (
+              <a href={`/${item.toLowerCase().split(" ").join("-")} `} key={item} className="block text-gray-400 hover:text-white mb-2">{item}</a>
+            ))
+          }
+          
+         
+        </div> 
+        {/* Product  */}
+        <div>
+          <h4 className="text-xl font-semibold mb-4">Product</h4>
+          
+          
+         
         </div>
+        
 
         {/* Contact Info */}
         <div>
@@ -42,15 +56,15 @@ const Footer = () => {
           <ul className="text-gray-400 text-sm space-y-3">
             <li className="flex items-start gap-2">
               <FaPhoneAlt className="mt-1 text-orange-400" />
-              <span>+91 854 8484 747</span>
+              <span>+91 9748413152/+91 8240505520</span>
             </li>
             <li className="flex items-start gap-2">
               <FaEnvelope className="mt-1 text-orange-400" />
               <span>support@yfenterprises.com</span>
             </li>
             <li>
-              30 Commercial Road, <br />
-              Mathura, Uttar Pradesh, India
+              62, Bentick Street <br />
+               Kolkata-700069 West Bengal
             </li>
             <li>
               <strong>Open Hours:</strong> <br />
@@ -58,8 +72,14 @@ const Footer = () => {
               Sunday: Closed
             </li>
           </ul>
+          <div className="flex gap-4 mt-4 text-white ">
+            <a href="#" className=' transition-all ease-in bg-black p-4 rounded-full hover:bg-orange-700'><FaFacebookF /></a>
+            <a href="#" className=' transition-all ease-in bg-black p-4 rounded-full hover:bg-orange-700'><FaTwitter /></a>
+            <a href="#" className=' transition-all ease-in bg-black p-4 rounded-full hover:bg-orange-700'><FaDribbble /></a>
+            <a href="#" className=' transition-all ease-in bg-black p-4 rounded-full hover:bg-orange-700'><FaBehance /></a>
+          </div>
         </div>
-
+       
      
       </div>
 
