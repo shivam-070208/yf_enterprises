@@ -3,7 +3,7 @@ import './App.css'
 import Navbar from './Components/Navbar'
 import { Bglayer, Cursor } from './ui'
 import { Route, Routes } from 'react-router-dom'
-import { AboutUs, Blog, Contact, Detailblog, Home, ServicesPage } from './routes'
+import { AboutUs, Blog, Contact, Detailblog, Home, ServicesPage, Products } from './routes'
 import Footer from './ui/Footer'
 import Loaderinitiater from './Components/Loaderinitiater'
 
@@ -31,6 +31,11 @@ function App() {
             <ServicesPage />
           </Loaderinitiater>
           } /> 
+        <Route path='/products' element={
+          <Loaderinitiater>
+            <Products />
+          </Loaderinitiater>
+          } />
           <Route path='/blog' element={
             <Loaderinitiater>
             <Blog />
