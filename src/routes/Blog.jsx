@@ -28,11 +28,14 @@ const Blog = () => {
           <h2 className="text-4xl font-bold text-white mt-2">What We Do</h2>
         </div>
       </section>
-      <section className='w-full max-w-7xl mx-auto px-4 py-9 grid grid-cols-1 lg:grid-cols-3 gap-8'>
+      <section   style={{
+        scrollbarWidth: 'none',
+        msOverflowStyle: 'none'
+      }} className='w-full max-w-7xl relative h-[108vh] overflow-auto mx-auto px-4 py-9 grid grid-cols-1 lg:grid-cols-3 gap-8'>
         <Suspense fallback={null}>
           <Blogs search={search} selectedCategory={selectedCategory} />
         </Suspense>
-        <div className='lg:col-span-1 space-y-6 order-first lg:order-last'>
+        <div className='lg:sticky h-fit right-0 top-0 space-y-6 order-first lg:order-last'>
           {/* Search Bar */}
           <div className='bg-white p-6 rounded-lg shadow-md'>
             <h3 className='text-xl font-bold mb-4 text-blue-950'>Search Blogs</h3>
@@ -46,7 +49,7 @@ const Blog = () => {
           </div>
          
           {/* Category Filter */}
-          <div className='bg-white p-6 h-fit  rounded-lg shadow-md'>
+          <div className='bg-white p-6 h-fit rounded-lg shadow-md'>
             <h3 onClick={()=>setShowCategories(!showCategories)} className='text-xl cursor-pointer  font-bold mb-4 text-blue-950'>Filter</h3>
            {showCategories&& <div className='space-y-2 space-x-2'>
               {categories.map((category, idx) => (
@@ -66,7 +69,7 @@ const Blog = () => {
           </div>
 
           {/* Latest Blogs */}
-          <div className='bg-white p-6 rounded-lg shadow-md'>
+          <div className='bg-white p-6 rounded-lg hidden lg:inline-block  shadow-md'>
             <h3 className='text-xl font-bold mb-4 text-blue-950'>Latest Blogs</h3>
             <div className='space-y-4'>
               {latestBlogs.map((blog, index) => {
