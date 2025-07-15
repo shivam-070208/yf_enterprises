@@ -3,6 +3,15 @@ import { logo } from '../assets'; // make sure you have your logo here
 
 const Footer = () => {
   const Company = ["Home", "About Us", "Brochure", "Blog", "Product", "Contact Us", "Privacy Policy"];
+  const footerProducts = [
+  "UPS Repair Services",
+  "Reconditioned UPS",
+  "Battery Rentals",
+  "AMC & CMC Contracts",
+  "Servo Stabilizers",
+  "Flameproof Electrical Solutions"
+];
+
 
   return (
     <footer className="relative bg-[#000000ef] text-white pt-20 pb-8 px-6 md:px-16">
@@ -21,7 +30,7 @@ const Footer = () => {
           <h4 className="text-xl font-semibold mb-4">Company</h4>
           {
             Company.map((item) => (
-              <a href={`/${item.toLowerCase()}`} key={item} className="block text-gray-400 hover:text-white mb-2">{item}</a>
+              <a href={`/${item.toLowerCase().split(" ").join("-")} `} key={item} className="block text-gray-400 hover:text-white mb-2">{item}</a>
             ))
           }
           
