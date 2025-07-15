@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { image2, image4, image5, image6, image7 } from "../../assets";
 
 const categories = [
   "Flameproof Panels",
@@ -11,14 +12,13 @@ const categories = [
 ];
 
 const images = [
+  image5,
+  image2,
+  image4,
+  image6,
   "https://html.themexriver.com/industo/images/gallery/1.jpg",
-  "https://html.themexriver.com/industo/images/gallery/1.jpg",
-  "https://html.themexriver.com/industo/images/gallery/1.jpg",
-  "https://html.themexriver.com/industo/images/gallery/1.jpg", 
-  "https://html.themexriver.com/industo/images/gallery/1.jpg",
-   "https://html.themexriver.com/industo/images/gallery/1.jpg"
+  image7,
 ];
-
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState(0);
 
