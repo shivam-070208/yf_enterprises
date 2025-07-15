@@ -14,7 +14,6 @@ function App() {
       <Cursor />
       <Navbar />
       <Routes>
-<<<<<<< HEAD
         <Route path='/' element={
           <Loaderinitiater>
             <Home />
@@ -42,14 +41,6 @@ function App() {
             <Detailblog />
             </Loaderinitiater>
             } />
-=======
-        <Route path={"/"} element={<Home />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/about' element={<AboutUs />} />
-        <Route path='/services' element={<ServicesPage />} /> 
-          <Route path='/blog' element={<Blog />} /> 
-          <Route path='/blog/show' element={<Detailblog />} />
->>>>>>> 343539f148926b84ed958064f710584018134eb3
       </Routes>
       <Footer />
     </div>

@@ -1,8 +1,39 @@
 import { FaFacebookF, FaTwitter, FaDribbble, FaBehance, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import { logo } from '../assets'; // make sure you have your logo here
+import { href, Link } from 'react-router-dom';
 
 const Footer = () => {
-  const Company = ["Home", "About Us", "Brochure", "Blog", "Product", "Contact Us", "Privacy Policy"];
+  // {"Home", "About Us", "Brochure", "Blog", "Product", "Contact Us", "Privacy Policy"
+  const QuickLinks = [
+    {
+      Name:"Home",
+      href:"/"
+    },
+    {
+      Name:"About",
+      href:"/about"
+    },
+    {
+      Name:"Brouchure",
+      href:'#'
+    },
+    {
+      Name:"Blog",
+      href:"/blog"
+    },
+    {
+      Name:"Product",
+      href:"/products"
+    },
+    {
+      Name:"Contact Us",
+      href:"/contact"
+    },
+    {
+      Name:"Privacy Policy",
+      href:"#"
+    }
+  ];
   const footerProducts = [
   "UPS Repair Services",
   "Reconditioned UPS",
@@ -20,22 +51,17 @@ const Footer = () => {
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-19">
         
         <div>
-<<<<<<< HEAD
-          <img src={logo} alt="YF Logo " className="w-36 mb-4 " />
-          <p className="text-gray-400 mb-4">We work with a passion for tackling challenges and creating impactful solutions in the industrial sector.</p>
-=======
           <img src={logo} alt="YF Logo " className="w-36 mb-4" />
           <p className="text-gray-400 mb-4">Y.F Enterprises provides 24×7 UPS services, battery rentals, and power solutions across India. Trusted by top brands like Exide, APC, and Hitachi.</p>
->>>>>>> 343539f148926b84ed958064f710584018134eb3
           <a href="/about" className="inline-block text-sm bg-orange-500 hover:bg-orange-600 transition px-4 py-2 rounded text-white">About us</a>
         </div>
 
         {/* Company */}
         <div>
-          <h4 className="text-xl font-semibold mb-4">Company</h4>
+          <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
           {
-            Company.map((item) => (
-              <a href={`/${item.toLowerCase().split(" ").join("-")} `} key={item} className="block text-gray-400 hover:text-white mb-2">{item}</a>
+            QuickLinks.map((item) => (
+              <Link to={item.href} key={item} className="block text-gray-400 hover:text-white mb-2">{item.Name}</Link>
             ))
           }
           
