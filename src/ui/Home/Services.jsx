@@ -5,6 +5,7 @@ import 'swiper/css';
 
 
 import { FaIndustry } from 'react-icons/fa';
+import { image1, image2, image3, image4 } from '../../assets';
 
 const services = [
   {
@@ -12,28 +13,28 @@ const services = [
     subtitle: 'Custom solutions for industrial safety',
     description:
       'Designed for hazardous environments with gas group IIA, IIB, and IIC safety standards.',
-    image: 'https://html.themexriver.com/industo/images/resource/service-3.jpg',
+    image: image1,
   },
   {
     title: 'UPS AMC & Repair',
     subtitle: '24x7 UPS Service & Maintenance',
     description:
       'Servicing all major UPS brands with long-term contracts and emergency response.',
-    image: 'https://html.themexriver.com/industo/images/resource/service-3.jpg',
+    image: image2,
   },
   {
     title: 'Battery & Inverter Rentals',
     subtitle: 'Temporary or seasonal backup',
     description:
       'Flexible battery rental services for factories, events, or shutdown support.',
-    image: 'https://html.themexriver.com/industo/images/resource/service-3.jpg',
+    image: image3,
   },
   {
     title: 'Weatherproof Junction Boxes',
     subtitle: 'Secure cable management',
     description:
       'IP66/IP67 certified boxes for indoor and outdoor wiring protection.',
-    image: 'https://html.themexriver.com/industo/images/resource/service-3.jpg',
+    image: image4,
   },
 ];
 
