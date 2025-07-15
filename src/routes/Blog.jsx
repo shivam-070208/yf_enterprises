@@ -1,13 +1,14 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Allblogs } from '../assets'
+import { motion } from 'motion/react'
 const Blogs = React.lazy(()=>import('../Components/Blogs'))
 
 const Blog = () => {
   const navigate = useNavigate();
   const [search, setSearch] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
-
+  const [showCategories, setShowCategories] = useState(false);
   // Get unique categories
   const categories = ['All', ...new Set(Allblogs.map(blog => blog.category))];
 
@@ -45,23 +46,23 @@ const Blog = () => {
           </div>
          
           {/* Category Filter */}
-          <div className='bg-white p-6 rounded-lg shadow-md'>
-            <h3 className='text-xl font-bold mb-4 text-blue-950'>Categories</h3>
-            <div className='space-y-2'>
-              {categories.map(category => (
-                <button
+          <div className='bg-white p-6 h-fit  rounded-lg shadow-md'>
+            <h3 onClick={()=>setShowCategories(!showCategories)} className='text-xl cursor-pointer  font-bold mb-4 text-blue-950'>Categories</h3>
+           {showCategories&& <div className='space-y-2 space-x-2'>
+              {categories.map((category, idx) => (
+                <motion.button initial={{height:0,opacity:0,filter:'blur(4px)'}} animate={{height:'fit-content',opacity:1,filter:'blur(0)'}} transition={{delay:0.04*idx,duration:0.2}}
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`w-full text-left p-2 rounded transition-colors ${
+                  className={`w-fit text-left p-2 overflow-hidden rounded transition-colors ${
                     selectedCategory === category 
                       ? 'bg-blue-600 text-white' 
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
                   }`}
                 >
                   {category}
-                </button>
+                </motion.button>
               ))}
-            </div>
+            </div>}
           </div>
 
           {/* Latest Blogs */}
