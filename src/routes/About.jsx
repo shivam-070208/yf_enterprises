@@ -107,7 +107,7 @@ const AboutUs = () => {
             <div className="text-orange-600 font-bold">Our Testimonial</div>
             <h2 className="text-3xl font-bold">Happy Client Says About Us</h2>
           </div>
-          <Swiper slidesPerView={1} spaceBetween={30} breakpoints={{ 640: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}>
+          <Swiper slidesPerView={1} modules={{Autoplay}} autoplay={{delay:0.4}} spaceBetween={30} breakpoints={{ 640: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}>
             {[1, 2, 3].map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="bg-white p-6 rounded shadow text-left">
