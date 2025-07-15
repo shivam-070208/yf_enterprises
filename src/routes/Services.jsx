@@ -6,7 +6,7 @@ import { Button } from '../ui';
 import { Link } from 'react-router-dom';
 
 const ServicesPage = () => {
-  const [index,setindex]= useState(12)
+  const [index,setindex]= useState(6)
   const testimonials = Array(6).fill({
     name: 'Jeffery Marshall',
     role: 'Founder & CEO',
@@ -34,10 +34,10 @@ const ServicesPage = () => {
             <p className="text-blue-600 text-sm uppercase font-semibold">The Best Industry Services</p>
             <h2 className="text-3xl md:text-4xl font-bold">Industo Provide Services <br className="hidden md:block" /> For Your Business</h2>
           </div>
-          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
             {Array(index).fill('').map((_,i) => (
               <div key={i} className="bg-white shadow-md rounded-lg overflow-hidden p-6 hover:shadow-lg transition duration-300">
-                <div className="bg-cover h-32 rounded-md mb-4" style={{ backgroundImage: "url('https://html.themexriver.com/industo/images/background/9.jpg')" }}></div>
+                <div className="bg-cover h-50 rounded-md mb-4" style={{ backgroundImage: "url('https://html.themexriver.com/industo/images/background/9.jpg')" }}></div>
                 <div className="text-blue-500 font-bold text-xl mb-2">0{i}</div>
                 <div className="text-blue-600 text-2xl mb-2 font-semibold">Service {i}</div>
                 <p className="text-gray-600 text-sm">Lorem ipsum dolor gravida. Risus commm aecenas accumsa lacus vel facilisis.</p>
