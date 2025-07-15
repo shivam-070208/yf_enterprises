@@ -87,3 +87,144 @@ background-color: var(--color-orange-600);
  
   background-color: transparent;
 }
+
+
+.blog-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Headings */
+.blog-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.blog-content h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.blog-content h3::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 20px;
+  background: #3498db;
+}
+
+.blog-content h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+/* Paragraphs */
+.blog-content p {
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  text-align: justify;
+  color: #555;
+}
+
+/* Strong/Bold text */
+.blog-content strong {
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 1.05em;
+}
+
+/* Lists */
+.blog-content ul {
+  margin: 1.5rem 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.blog-content ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.blog-content ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Alternative bullet style */
+.blog-content ul.bullet-style li::before {
+  content: '●';
+  color: #3498db;
+}
+
+/* Alternative arrow style */
+.blog-content ul.arrow-style li::before {
+  content: '→';
+  color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-content {
+    padding: 15px;
+  }
+  
+  .blog-content h2 {
+    font-size: 2rem;
+  }
+  
+  .blog-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .blog-content h4 {
+    font-size: 1.2rem;
+  }
+  
+  .blog-content p,
+  .blog-content ul li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .blog-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .blog-content h3::before {
+    left: -10px;
+    width: 3px;
+    height: 15px;
+  }
+}
