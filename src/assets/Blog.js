@@ -2,6 +2,8 @@ const Allblogs = [
   {
     title: "Y.F. Enterprises: Engineering Excellence",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Engineering",
+    date: "2024-01-15",
     content: `<h2>Y.F. Enterprises: Engineering Excellence</h2>
 <h3>Multi-lateral 6thgeneration conglomeration</h3>
 <p>Something phone minute speech. School treat religious reduce get would. Yourself board power. We successful thousand agreement idea discussion.</p>
@@ -21,6 +23,8 @@ const Allblogs = [
   {
     title: "Precision Fabrication at Y.F. Enterprises",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpgg",
+    category: "Manufacturing",
+    date: "2024-01-10",
     content: `<h2>Precision Fabrication at Y.F. Enterprises</h2>
 <h3>Universal needs-based service-desk</h3>
 <p>That mind deal suffer exactly body. Line good large court receive. Able south north radio sound generation.</p>
@@ -40,6 +44,8 @@ const Allblogs = [
   {
     title: "Advanced Manufacturing Solutions",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Manufacturing",
+    date: "2024-01-05",
     content: `<h2>Advanced Manufacturing Solutions</h2>
 <h3>Robust scalable methodology</h3>
 <p>Industry standard processes deliver exceptional results. Quality control measures ensure precision manufacturing. Technical expertise drives innovation forward constantly.</p>
@@ -59,6 +65,8 @@ const Allblogs = [
   {
     title: "Steel Fabrication Expertise",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Steel Works",
+    date: "2024-01-01",
     content: `<h2>Steel Fabrication Expertise</h2>
 <h3>Integrated structural solutions</h3>
 <p>Welding techniques ensure structural integrity standards. Material selection affects project durability requirements. Engineering calculations determine load-bearing specifications.</p>
@@ -78,6 +86,8 @@ const Allblogs = [
   {
     title: "Industrial Equipment Manufacturing",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Equipment",
+    date: "2023-12-28",
     content: `<h2>Industrial Equipment Manufacturing</h2>
 <h3>Scalable production infrastructure</h3>
 <p>Heavy machinery requires specialized manufacturing processes. Component assembly follows strict quality standards. Testing procedures verify operational performance requirements.</p>
@@ -97,6 +107,8 @@ const Allblogs = [
   {
     title: "Quality Control Systems",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Quality",
+    date: "2023-12-25",
     content: `<h2>Quality Control Systems</h2>
 <h3>Systematic quality assurance</h3>
 <p>Inspection protocols ensure product specification compliance. Testing equipment verifies material property requirements. Documentation systems track quality metrics effectively.</p>
@@ -116,6 +128,8 @@ const Allblogs = [
   {
     title: "Project Management Excellence",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Management",
+    date: "2023-12-20",
     content: `<h2>Project Management Excellence</h2>
 <h3>Comprehensive project coordination</h3>
 <p>Project planning ensures timely delivery commitments. Resource allocation optimizes project efficiency levels. Risk management addresses potential project challenges.</p>
@@ -135,6 +149,8 @@ const Allblogs = [
   {
     title: "Engineering Design Services",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Engineering",
+    date: "2023-12-15",
     content: `<h2>Engineering Design Services</h2>
 <h3>Innovative design solutions</h3>
 <p>Technical expertise drives creative problem-solving approaches. Design optimization ensures performance requirement satisfaction. Engineering calculations validate design specification compliance.</p>
@@ -154,6 +170,8 @@ const Allblogs = [
   {
     title: "Safety and Compliance Standards",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Safety",
+    date: "2023-12-10",
     content: `<h2>Safety and Compliance Standards</h2>
 <h3>Comprehensive safety protocols</h3>
 <p>Workplace safety measures protect employee wellbeing. Regulatory compliance ensures legal requirement satisfaction. Training programs develop safety awareness continuously.</p>
@@ -173,6 +191,8 @@ const Allblogs = [
   {
     title: "Technology Integration Solutions",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Technology",
+    date: "2023-12-05",
     content: `<h2>Technology Integration Solutions</h2>
 <h3>Advanced technological capabilities</h3>
 <p>Digital systems enhance operational efficiency levels. Automation technologies reduce manual processing requirements. Data analytics support informed decision-making processes.</p>
@@ -192,6 +212,8 @@ const Allblogs = [
   {
     title: "Supply Chain Management",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Management",
+    date: "2023-12-01",
     content: `<h2>Supply Chain Management</h2>
 <h3>Efficient logistics coordination</h3>
 <p>Supplier relationships ensure material availability consistency. Inventory management optimizes stock level requirements. Logistics coordination ensures timely delivery schedules.</p>
@@ -211,6 +233,8 @@ const Allblogs = [
   {
     title: "Customer Service Excellence",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Service",
+    date: "2023-11-28",
     content: `<h2>Customer Service Excellence</h2>
 <h3>Dedicated customer support</h3>
 <p>Client communication maintains relationship quality standards. Service delivery ensures customer satisfaction levels. Response times meet customer expectation requirements.</p>
@@ -230,6 +254,8 @@ const Allblogs = [
   {
     title: "Environmental Sustainability",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Environment",
+    date: "2023-11-25",
     content: `<h2>Environmental Sustainability</h2>
 <h3>Sustainable business practices</h3>
 <p>Environmental responsibility guides operational decision-making. Resource conservation reduces environmental impact levels. Waste reduction programs minimize operational waste.</p>
@@ -249,6 +275,8 @@ const Allblogs = [
   {
     title: "Innovation and Research",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Research",
+    date: "2023-11-20",
     content: `<h2>Innovation and Research</h2>
 <h3>Research and development initiatives</h3>
 <p>Innovation drives competitive advantage development. Research activities support product development initiatives. Technical expertise enables breakthrough solution creation.</p>
@@ -268,6 +296,8 @@ const Allblogs = [
   {
     title: "Training and Development",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Training",
+    date: "2023-11-15",
     content: `<h2>Training and Development</h2>
 <h3>Comprehensive workforce development</h3>
 <p>Training programs develop employee skill capabilities. Professional development ensures workforce competency levels. Certification programs validate skill achievement.</p>
@@ -287,6 +317,8 @@ const Allblogs = [
   {
     title: "Strategic Planning and Growth",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Strategy",
+    date: "2023-11-10",
     content: `<h2>Strategic Planning and Growth</h2>
 <h3>Long-term strategic vision</h3>
 <p>Strategic planning guides organizational direction. Growth initiatives expand business capabilities. Market analysis identifies opportunity areas.</p>
@@ -306,6 +338,8 @@ const Allblogs = [
   {
     title: "Financial Management Excellence",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Finance",
+    date: "2023-11-05",
     content: `<h2>Financial Management Excellence</h2>
 <h3>Comprehensive financial oversight</h3>
 <p>Financial planning ensures operational sustainability. Budget management controls cost parameters. Investment decisions support growth objectives.</p>
@@ -325,6 +359,8 @@ const Allblogs = [
   {
     title: "Maintenance and Support Services",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Service",
+    date: "2023-11-01",
     content: `<h2>Maintenance and Support Services</h2>
 <h3>Comprehensive maintenance solutions</h3>
 <p>Preventive maintenance ensures equipment reliability. Repair services minimize operational downtime. Maintenance schedules optimize equipment performance.</p>
@@ -344,6 +380,8 @@ const Allblogs = [
   {
     title: "Global Market Expansion",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Business",
+    date: "2023-10-28",
     content: `<h2>Global Market Expansion</h2>
 <h3>International business development</h3>
 <p>Global markets offer significant growth opportunities. International expansion requires strategic planning. Cultural adaptation ensures market acceptance.</p>
@@ -363,6 +401,8 @@ const Allblogs = [
   {
     title: "Future Technology Trends",
     coverImage: "https://html.themexriver.com/industo/images/resource/news-14.jpg",
+    category: "Technology",
+    date: "2023-10-25",
     content: `<h2>Future Technology Trends</h2>
 <h3>Emerging technology adoption</h3>
 <p>Technology trends shape future business opportunities. Innovation adoption drives competitive advantage. Digital transformation accelerates business evolution.</p>

@@ -18,11 +18,18 @@ const Blogcard = ({ item,index }) => {
             </div>
             <div className="px-6  py-6 space-y-4 ">
                 <hr className="border-neutral-200" />
+                <div className="flex items-center gap-2 text-sm text-gray-500">
+                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded">
+                        {item.category}
+                    </span>
+                    <span>•</span>
+                    <span>{new Date(item.date).toLocaleDateString()}</span>
+                </div>
                 <h1 className="font-extrabold text-2xl w-full text-blue-950 max-w-full line-clamp-2 tracking-tight">
                     {item.title}
                 </h1>
                 <p className=" text-lg text-neutral-500   max-w-full line-clamp-4">
-                    {parse(item.content.replaceAll(/<[^>]+>/g, ''))}
+                    {parse(item.content.replaceAll(/\<[^\>]+\>/g, ''))}
                 </p>
                 <div className='text-center'>
 
