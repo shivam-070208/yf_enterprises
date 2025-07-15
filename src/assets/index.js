@@ -1,5 +1,6 @@
 import Allblogs from './Blog';
 import logo from './logo.png';
+import { flameproofProducts, productCategories, getFeaturedProducts, getProductsByCategory, getAllProducts, searchProducts } from './products';
 
 
 
@@ -20,5 +21,11 @@ export {
     image6,
     image7,
     logo,
-    Allblogs
+    Allblogs,
+    flameproofProducts,
+    productCategories,
+    getFeaturedProducts,
+    getProductsByCategory,
+    getAllProducts,
+    searchProducts
 }
