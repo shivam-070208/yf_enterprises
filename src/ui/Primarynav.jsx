@@ -9,17 +9,17 @@ const Primarynav = () => {
   const NavContent = [
     {
       tittle: "Call us for help",
-      comment: "+ 854 8484747",
+      comment: "+91 9748413152/+91 8240505520",
       Icon: <FaPhone size={30} className="text-orange-500" />,
     },
     {
-      tittle: "+ (888) 452 1505",
-      comment: "30 Commercial Road, Mathura",
+      tittle: "Address",
+      comment: "62, Bentick Street Kolkata-700069 West Bengal",
       Icon: <TiLocationOutline size={38} className="text-orange-500" />,
     },
     {
       tittle: "Mail us",
-      comment: "Help@Gmail.Com",
+      comment: "yfenterprises9@gmail.com",
       Icon: <FaEnvelopeOpenText size={30} className="text-orange-500" />,
     },
   ];
