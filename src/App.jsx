@@ -5,6 +5,7 @@ import { Bglayer, Cursor } from './ui'
 import { Route, Routes } from 'react-router-dom'
 import { AboutUs, Blog, Contact, Detailblog, Home, ServicesPage } from './routes'
 import Footer from './ui/Footer'
+import Loaderinitiater from './Components/Loaderinitiater'
 
 function App() {
   return (
@@ -13,12 +14,33 @@ function App() {
       <Cursor />
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/about' element={<AboutUs />} />
-        <Route path='/services' element={<ServicesPage />} /> 
-          <Route path='/blog' element={<Blog />} /> 
-          <Route path='/blog/show' element={<Detailblog />} />
+        <Route path='/' element={
+          <Loaderinitiater>
+            <Home />
+          </Loaderinitiater>
+        }/>
+        
+        <Route path='/contact' element={
+          <Loaderinitiater>
+          <Contact />
+          </Loaderinitiater>} />
+        <Route path='/about' element={<Loaderinitiater><AboutUs />
+        </Loaderinitiater>} />
+        <Route path='/services' element={
+          <Loaderinitiater>
+            <ServicesPage />
+          </Loaderinitiater>
+          } /> 
+          <Route path='/blog' element={
+            <Loaderinitiater>
+            <Blog />
+            </Loaderinitiater>
+            } /> 
+          <Route path='/blog/show' element={
+            <Loaderinitiater>
+            <Detailblog />
+            </Loaderinitiater>
+            } />
       </Routes>
       <Footer />
     </div>

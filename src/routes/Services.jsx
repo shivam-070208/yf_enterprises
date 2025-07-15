@@ -41,7 +41,7 @@ const ServicesPage = () => {
                 <div className="text-blue-500 font-bold text-xl mb-2">0{i}</div>
                 <div className="text-blue-600 text-2xl mb-2 font-semibold">Service {i}</div>
                 <p className="text-gray-600 text-sm">Lorem ipsum dolor gravida. Risus commm aecenas accumsa lacus vel facilisis.</p>
-                <a href="/oil-gas" className="text-blue-500 mt-3 inline-block">Read More →</a>
+                <Link to="/contact#contact" className="text-blue-500 mt-3 inline-block">Explore →</Link>
               </div>
             ))}
           </div>

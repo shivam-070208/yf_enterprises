@@ -22,15 +22,19 @@
 }
 
 
+
+
+
 @theme inline{
     --animate-bglayer:bglayer 14s ease-in-out infinite alternate;
     --animate-view:view 0.8s ease-in-out ;
     
 }
 
-body{
+body,html{
     width: 100vw;
     overflow-x:hidden;
+    scroll-behavior: smooth;
 }
 
 .secondarynav::before{
