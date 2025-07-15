@@ -60,21 +60,22 @@ const Footer = () => {
         <div>
           <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
           {
-            QuickLinks.map((item) => (
-              <Link to={item.href} key={item} className="block text-gray-400 hover:text-white mb-2">{item.Name}</Link>
+            QuickLinks.map((item,idx) => (
+              <Link to={item.href} key={idx} className="block text-gray-400 hover:text-white mb-2">{item.Name}</Link>
             ))
           }
           
          
         </div> 
-        {/* Product  */}
-        <div>
+        
+         <div>
           <h4 className="text-xl font-semibold mb-4">Product</h4>
-          
-          
+          {footerProducts.map((item) => (
+              <Link to='/products' key={item} className="block text-gray-400 hover:text-white mb-2">{item}</Link>
+            ))
+          }
          
         </div>
-        
 
         {/* Contact Info */}
         <div>
@@ -108,7 +109,7 @@ const Footer = () => {
        
      
       </div>
-
+        
       {/* Footer bottom */}
       <div className="text-center mt-12 border-t border-gray-700 pt-6 text-gray-400 text-sm relative z-10">
         © {new Date().getFullYear()} Y.F Enterprises. All rights reserved.

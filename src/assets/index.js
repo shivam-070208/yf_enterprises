@@ -2,10 +2,7 @@ import Allblogs from './Blog';
 import logo from './logo.png';
 
 
-export {
-    logo,
-    Allblogs
-}
+
 
 import image1 from './image1.png';
 import image3 from './image3.png';
@@ -22,4 +19,6 @@ export {
     image5,
     image6,
     image7,
+    logo,
+    Allblogs
 }
