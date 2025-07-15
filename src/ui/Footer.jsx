@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-19">
         
         <div>
-          <img src={logo} alt="YF Logo " className="w-36 mb-4 bg-blend-multiply mix-blend-multiply" />
+          <img src={logo} alt="YF Logo " className="w-36 mb-4" />
           <p className="text-gray-400 mb-4">We work with a passion for tackling challenges and creating impactful solutions in the industrial sector.</p>
           <a href="/about" className="inline-block text-sm bg-orange-500 hover:bg-orange-600 transition px-4 py-2 rounded text-white">About us</a>
         </div>

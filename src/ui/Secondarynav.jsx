@@ -9,7 +9,7 @@ const Secondarynav = () => {
     { Name: "Home", href: "/" },
     { Name: "About", href: "/about" },
     { Name: "Services", href: "/services" },
-    { Name: "Projects", href: "/projects" },
+    { Name: "Products", href: "/products" },
     { Name: "Blog", href: "/blog" },
     { Name: "Contact", href: "/contact" },
   ];
