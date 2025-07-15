@@ -11,6 +11,7 @@ import image4 from './image4.png';
 import image5 from './image5.png';
 import image6 from './image6.png';
 import image7 from './image7.png';
+import profile from './profileicon.png';
 export {
     image1,
     image2,
@@ -20,5 +21,6 @@ export {
     image6,
     image7,
     logo,
-    Allblogs
+    Allblogs,
+    profile,
 }

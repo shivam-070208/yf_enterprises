@@ -30,19 +30,26 @@ const Contact = () => {
                 icon: "📧",
                 title: "Email Address",
                 desc: "Sent mail asap anytime",
-                data: ["industo@example.com", "indasto@example.com"],
+                data: [
+                        "info@yfenterprises.in",
+                        "operations@yfenterprises.in",
+                        "yfenterprises9@gmail.com"
+                      ],
               },
               {
                 icon: "📞",
                 title: "Phone Number",
                 desc: "Call us asap anytime",
-                data: ["+90 456 789 152", "+90 251 456 478"],
+                data: [
+                        "+91 9748413152",
+                        "+91 8240505520"
+                      ],
               },
               {
                 icon: "🏢",
                 title: "Office Address",
                 desc: "Sent mail asap anytime",
-                data: ["B2, Miranda City Tower", "New York, US"],
+                data: [  "62, Bentick Street",  "Kolkata – 700069",  "West Bengal, India"],
               },
             ].map((item, i) => (
               <div
@@ -66,8 +73,7 @@ const Contact = () => {
         <section>
           <iframe
             className="w-full h-[400px] rounded-md"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d805184.6331292129!2d144.49266890254142!3d-37.97123689954809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2s!4v1574408946759!5m2!1sen!2s"
-            allowFullScreen=""
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.3100096682974!2d88.35010037518609!3d22.567505779495328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277007dba8ac5%3A0xdc034f3faadb5f3c!2sY%20F%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1752575831230!5m2!1sen!2sin"            allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
