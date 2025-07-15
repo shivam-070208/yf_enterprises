@@ -1,4 +1,4 @@
-import { FaFacebookF, FaTwitter, FaDribbble, FaBehance, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaDribbble, FaBehance, FaPhoneAlt, FaEnvelope, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { logo } from '../assets'; // make sure you have your logo here
 import { href, Link } from 'react-router-dom';
 
@@ -102,8 +102,8 @@ const Footer = () => {
           <div className="flex gap-4 mt-4 text-white ">
             <a href="#" className=' transition-all ease-in bg-black p-4 rounded-full hover:bg-orange-700'><FaFacebookF /></a>
             <a href="#" className=' transition-all ease-in bg-black p-4 rounded-full hover:bg-orange-700'><FaTwitter /></a>
-            <a href="#" className=' transition-all ease-in bg-black p-4 rounded-full hover:bg-orange-700'><FaDribbble /></a>
-            <a href="#" className=' transition-all ease-in bg-black p-4 rounded-full hover:bg-orange-700'><FaBehance /></a>
+            <a href="#" className=' transition-all ease-in bg-black p-4 rounded-full hover:bg-orange-700'><FaLinkedin /></a>
+            <a href="#" className=' transition-all ease-in bg-black p-4 rounded-full hover:bg-orange-700'><FaInstagram /></a>
           </div>
         </div>
        

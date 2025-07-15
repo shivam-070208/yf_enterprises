@@ -79,7 +79,7 @@ const Products = () => {
               <button
                 key={category.name}
                 onClick={() => handleCategoryChange(category.name)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition hover:cursor-pointer ${
                   selectedCategory === category.name
                     ? 'bg-orange-500 text-white'
                     : 'bg-white text-gray-700 hover:bg-orange-100'
@@ -128,10 +128,10 @@ const Products = () => {
                   </div>
                   
                   <div className="flex gap-2">
-                    <button className="bg-orange-500 hover:bg-orange-600 transition px-4 py-2 text-white font-semibold rounded-full flex items-center gap-2 text-sm">
+                    <button className="bg-orange-500 hover:bg-orange-600 hover:cursor-pointer transition px-4 py-2 text-white font-semibold rounded-full flex items-center gap-2 text-sm">
                       INQUIRY <FaArrowRight size={10} />
                     </button>
-                    <button className="bg-gray-200 hover:bg-gray-300 transition px-4 py-2 text-gray-700 font-semibold rounded-full text-sm">
+                    <button className="bg-gray-200 hover:cursor-pointer hover:bg-gray-300 transition px-4 py-2 text-gray-700 font-semibold rounded-full text-sm">
                       Details
                     </button>
                   </div>
@@ -156,7 +156,7 @@ const Products = () => {
                   setSearchTerm('');
                   setFilteredProducts(flameproofProducts);
                 }}
-                className="bg-orange-500 hover:bg-orange-600 transition px-6 py-2 text-white font-semibold rounded-full"
+                className="bg-orange-500 hover:bg-orange-600 transition px-6 py-2 hover:cursor-pointer text-white font-semibold rounded-full"
               >
                 Reset Filters
               </button>

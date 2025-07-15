@@ -3,6 +3,7 @@ import { FaIndustry, FaTools, FaGlobe, FaTrophy, FaStar } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
+import { profile } from '../assets';
 
 
 const AboutUs = () => {
@@ -56,7 +57,7 @@ const AboutUs = () => {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-gray-50 p-6 rounded shadow">
               <FaIndustry className="text-4xl text-orange-600 mx-auto mb-3" />
-              <h3 className="text-2xl font-bold">1,500+</h3>
+              <h3 className="text-2xl font-bold">10+</h3>
               <p>Chain of Factories</p>
             </div>
             <div className="bg-gray-50 p-6 rounded shadow">
@@ -66,7 +67,7 @@ const AboutUs = () => {
             </div>
             <div className="bg-gray-50 p-6 rounded shadow">
               <FaGlobe className="text-4xl text-red-600 mx-auto mb-3" />
-              <h3 className="text-2xl font-bold">266K</h3>
+              <h3 className="text-2xl font-bold">100+</h3>
               <p>Worldwide Partners</p>
             </div>
           </div>
@@ -142,7 +143,7 @@ Whether it's UPS repair, servo stabilizers, or junction box wiring, we ensure un
               <SwiperSlide key={index}>
                 <div className="bg-white p-6 rounded shadow text-left">
                   <div className="flex items-center gap-4 mb-4">
-                    <img src="https://html.themexriver.com/industo/images/resource/welcome.png" alt="client" className="w-12 h-12 rounded-full" />
+                    <img src={profile} alt="client" className="w-12 h-12 rounded-full" />
                     <div>
                       <h4 className="font-bold">{item.Name}</h4>
                       <p className="text-sm text-gray-500">{item.Lcation}</p>
