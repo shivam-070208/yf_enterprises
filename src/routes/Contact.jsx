@@ -1,6 +1,41 @@
 import React from "react";
 
 const Contact = () => {
+
+
+  const handleContact = async (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value
+  };
+
+  try {
+    const response = await fetch(`${import.meta.env.SERVER_URL}/?topic=Contact`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ data })
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      alert('Message sent successfully!');
+      form.reset(); // Optional: Reset the form
+    } else {
+      alert('Something went wrong. Please try again.');
+    }
+
+  } catch (error) {
+    console.error('Error sending contact form:', error);
+    alert('An error occurred while sending your message.');
+  }
+};
   return (
     <div className="w-full">
       {/* Title Banner */}
@@ -90,7 +125,7 @@ const Contact = () => {
               <p className="text-red-600 text-sm font-semibold">Submit Question</p>
               <h2 className="text-3xl font-bold">Needs Help? Let’s Get in Touch</h2>
             </div>
-            <form id="contact" className="space-y-6">
+            <form onSubmit={handlecontact} id="contact" className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input type="text" placeholder="Name" className="focus:outline-2 border border-amber-500 transition-all outline-orange-600 p-3 w-full rounded" />
                 <input type="email" placeholder="Your Email" className="focus:outline-2 border border-amber-500 transition-all outline-orange-600 p-3 w-full rounded" />
