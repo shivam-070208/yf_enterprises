@@ -125,7 +125,7 @@ const Contact = () => {
               <p className="text-red-600 text-sm font-semibold">Submit Question</p>
               <h2 className="text-3xl font-bold">Needs Help? Let’s Get in Touch</h2>
             </div>
-            <form onSubmit={handlecontact} id="contact" className="space-y-6">
+            <form onSubmit={handleContact} id="contact" className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input type="text" placeholder="Name" className="focus:outline-2 border border-amber-500 transition-all outline-orange-600 p-3 w-full rounded" />
                 <input type="email" placeholder="Your Email" className="focus:outline-2 border border-amber-500 transition-all outline-orange-600 p-3 w-full rounded" />
