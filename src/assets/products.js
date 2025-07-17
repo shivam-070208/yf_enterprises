@@ -233,7 +233,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: 'https://imgs.search.brave.com/PQ1-ekOrJOcT7Z1GXRfkHTy55hHU8U2LSeJJQsbfeuM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aWlt/Zy50aXN0YXRpYy5j/b20vZnAvMS8wMDcv/MDg3L2ZpcmUtYWxh/cm0tbWFudWFsLWNh/bGwtcG9pbnQtMzA0/LmpwZw', // Placeholder image
     description: 'Flameproof fire alarm/manual call point for hazardous areas.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',

@@ -42,10 +42,10 @@ const PortfolioSection = () => {
             City of Calgary LRT Station Refurbishments
           </h3>
           <p className="text-sm mt-1">ALBERTA</p>
-        </div>
+        </div><a href="/products">
         <div className="absolute bottom-0 right-0 bg-orange-600 w-30 h-12 flex items-center justify-center">
-          <FaArrowRight className="text-white" />
-        </div>
+          <FaArrowRight className="text-white" /> 
+        </div></a>
       </div>
 
       <div
