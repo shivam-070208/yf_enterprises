@@ -9,7 +9,7 @@ export const flameproofProducts = [
     price: '$150.00',
     originalPrice: '$180.00',
     rating: 5,
-    image: 'https://html.themexriver.com/industo/images/resource/products/2.png',
+    image: 'https://fcghitech.com/wp-content/uploads/2021/10/IJ-61100.jpg',
     description: 'Heavy-duty flameproof junction box for hazardous area applications',
     specifications: {
       material: 'Cast Iron',
@@ -27,7 +27,7 @@ export const flameproofProducts = [
     price: '$450.00',
     originalPrice: '$500.00',
     rating: 5,
-    image: 'https://html.themexriver.com/industo/images/resource/products/2.png',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLjJJtrKBUnTPsimw_5iR49KNOVrpGrtnwTA&s',
     description: 'Complete flameproof control panel for industrial automation',
     specifications: {
       material: 'Stainless Steel',
@@ -45,7 +45,7 @@ export const flameproofProducts = [
     price: '$85.00',
     originalPrice: '$100.00',
     rating: 4,
-    image: 'https://html.themexriver.com/industo/images/resource/products/2.png',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw9mLi1_K1BejT95Odti88AKE3SMTlyco_vQ&s',
     description: 'Explosion-proof LED light fitting for hazardous environments',
     specifications: {
       material: 'Aluminum Alloy',
@@ -63,7 +63,7 @@ export const flameproofProducts = [
     price: '$320.00',
     originalPrice: '$380.00',
     rating: 5,
-    image: 'https://html.themexriver.com/industo/images/resource/products/2.png',
+    image: 'https://5.imimg.com/data5/SELLER/Default/2021/2/HW/YA/GL/24596939/flame-proof-motor-starter-500x500.jpg',
     description: 'Direct-on-line motor starter with flameproof enclosure',
     specifications: {
       material: 'Cast Iron',
@@ -81,7 +81,7 @@ export const flameproofProducts = [
     price: '$95.00',
     originalPrice: '$120.00',
     rating: 4,
-    image: 'https://html.themexriver.com/industo/images/resource/products/2.png',
+    image: 'https://tejaslite.com/wp-content/uploads/2020/04/flp-wp-control-station-500x500-1.jpg',
     description: 'Heavy-duty push button station for hazardous area control',
     specifications: {
       material: 'Cast Iron',
@@ -99,7 +99,7 @@ export const flameproofProducts = [
     price: '$280.00',
     originalPrice: '$350.00',
     rating: 5,
-    image: 'https://html.themexriver.com/industo/images/resource/products/2.png',
+    image: 'https://5.imimg.com/data5/SELLER/Default/2023/8/332561787/FM/SH/KP/12234918/flameproof-mcb-distribution-board.jpg',
     description: 'Multi-way distribution board with flameproof protection',
     specifications: {
       material: 'Mild Steel',
@@ -117,7 +117,7 @@ export const flameproofProducts = [
     price: '$65.00',
     originalPrice: '$80.00',
     rating: 5,
-    image: 'https://html.themexriver.com/industo/images/resource/products/2.png',
+    image: 'https://5.imimg.com/data5/SELLER/Default/2022/12/NL/IB/NQ/195998/flameproof-push-button-stations-250x250.webp',
     description: 'Emergency stop button with flameproof certification',
     specifications: {
       material: 'Cast Iron',
@@ -135,7 +135,7 @@ export const flameproofProducts = [
     price: '$25.00',
     originalPrice: '$30.00',
     rating: 4,
-    image: 'https://html.themexriver.com/industo/images/resource/products/2.png',
+    image: 'https://d91ztqmtx7u1k.cloudfront.net/ClientContent/Images/Catalogue/flameproof-cable-gland-20240223234032057.jpg',
     description: 'Brass cable gland for flameproof installations',
     specifications: {
       material: 'Brass',
