@@ -8,30 +8,33 @@ import { FaStar, FaArrowRight } from 'react-icons/fa';
 
 const products = [
   {
-    name: 'Inverter Power Generator',
-    price: '$250.00',
-    originalPrice: '$300.00',
+    name: 'Flameproof Junction Box',
+    price: '$150.00',
+    originalPrice: '$180.00',
     rating: 5,
-    image: 'https://html.themexriver.com/industo/images/resource/products/2.png',
+    image: 'https://fcghitech.com/wp-content/uploads/2021/10/IJ-61100.jpg',
   },
   {
-    name: 'Compound Saw Makita Brand',
-    price: '$20.00',
+    name: 'Flameproof Control Panel',
+    price: '$450.00',
+    originalPrice: '$500.00',
     rating: 5,
-    image: 'https://html.themexriver.com/industo/images/resource/products/2.png',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLjJJtrKBUnTPsimw_5iR49KNOVrpGrtnwTA&s',
   },
   {
-    name: 'Impact Drill Machine Yato Brand',
-    price: '$10.00',
-    rating: 4,
-    image: 'https://html.themexriver.com/industo/images/resource/products/2.png',
+    name: 'Flameproof Motor Starter',
+    price: '$320.00',
+    originalPrice: '$380.00',
+    rating: 5,
+    image: 'https://5.imimg.com/data5/SELLER/Default/2021/2/HW/YA/GL/24596939/flame-proof-motor-starter-500x500.jpg',
   },
   {
-    name: 'Lilon Compact Drill Driver',
-    price: '$10.00',
+    name: 'Flameproof Emergency Stop',
+    price: '$65.00',
+    originalPrice: '$80.00',
     rating: 5,
-    image: 'https://html.themexriver.com/industo/images/resource/products/2.png',
-  },
+    image: 'https://5.imimg.com/data5/SELLER/Default/2022/12/NL/IB/NQ/195998/flameproof-push-button-stations-250x250.webp',
+  }
 ];
 
 const ProductCarousel = () => {
