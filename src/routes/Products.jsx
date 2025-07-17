@@ -127,8 +127,8 @@ const Products = () => {
                   </div>
                   
                   <div className="flex gap-2">
-                    <button onClick={() =>{nevigate(`/contact#contact`);}
-                    } className="bg-orange-500 hover:bg-orange-600 hover:cursor-pointer transition px-4 py-2 text-white font-semibold rounded-full flex items-center gap-2 text-sm relative z-10">
+                    <button href={'/contact#contact'}
+                     className="bg-orange-500 hover:bg-orange-600 hover:cursor-pointer transition px-4 py-2 text-white font-semibold rounded-full flex items-center gap-2 text-sm relative z-10">
                       INQUIRY <FaArrowRight size={10} />
                     </button>
                     <button className="bg-gray-200 hover:cursor-pointer hover:bg-gray-300 transition px-4 py-2 text-gray-700 font-semibold rounded-full text-sm">
