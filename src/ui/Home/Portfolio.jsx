@@ -43,8 +43,8 @@ const PortfolioSection = () => {
           </h3>
           <p className="text-sm mt-1">ALBERTA</p>
         </div><a href="/products">
-        <div className="absolute bottom-0 right-0 bg-orange-600 w-30 h-12 flex items-center justify-center">
-          <FaArrowRight className="text-white" /> 
+        <div className="absolute bottom-0 right-0 bg-orange-600 w-30 h-12 text-white hover:text-orange-600  hover:bg-white flex items-center justify-center">
+          <FaArrowRight className="" /> 
         </div></a>
       </div>
 
