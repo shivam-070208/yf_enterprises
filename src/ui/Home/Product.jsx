@@ -77,9 +77,10 @@ const ProductCarousel = () => {
                     <FaStar key={j} />
                   ))}
                 </div>
-                <button className="bg-orange-500 hover:bg-orange-600 transition px-6 py-2 text-white font-semibold rounded-full flex items-center gap-2">
+                <a href='/products'  className="bg-orange-500 hover:cursor-pointer hover:bg-orange-600 transition px-6 py-2 text-white font-semibold rounded-full flex items-center gap-2">
+
                   BUY NOW <FaArrowRight />
-                </button>
+                </a >
                 </div>
               </div>
             </SwiperSlide>
