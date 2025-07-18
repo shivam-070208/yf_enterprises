@@ -1,5 +1,5 @@
 import { FaFacebookF, FaTwitter, FaDribbble, FaBehance, FaPhoneAlt, FaEnvelope, FaLinkedin, FaInstagram } from 'react-icons/fa';
-import { logo } from '../assets'; // make sure you have your logo here
+import { whiteLogo } from '../assets'; // make sure you have your logo here
 import { href, Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -45,13 +45,13 @@ const Footer = () => {
 
 
   return (
-    <footer className="relative bg-[#000000ef] text-white pt-20 pb-8 px-6 md:px-16">
+    <footer className="relative bg-[#121f3d] text-white pt-20 pb-8 px-6 md:px-16">
      
 
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-19">
         
         <div>
-          <img src={logo} alt="YF Logo " className="w-36 mb-4" />
+          <img src={whiteLogo} alt="YF Logo " className="w-50 mb-5" />
           <p className="text-gray-400 mb-4">Y.F Enterprises provides 24×7 UPS services, battery rentals, and power solutions across India. Trusted by top brands like Exide, APC, and Hitachi.</p>
           <a href="/about" className="inline-block text-sm bg-orange-500 hover:bg-orange-600 transition px-4 py-2 rounded text-white">About us</a>
         </div>
