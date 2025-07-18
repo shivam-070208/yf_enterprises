@@ -6,6 +6,7 @@ import 'swiper/css';
 
 import { FaIndustry } from 'react-icons/fa';
 import { image1, image2, image3, image4 } from '../../assets';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
