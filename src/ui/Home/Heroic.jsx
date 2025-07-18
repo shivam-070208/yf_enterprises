@@ -29,17 +29,23 @@ const slides = [
 
 const cards = [
   {
-    title: "UPS Annual Maintenance",
+    title: "Services that Provide us",
+    serviceName: [
+      "UPS Repair Services",
+      "Reconditioned UPS",
+      "Battery Rentals"],
     icon: <FaTools size={40} className="text-blue-600" />,
   },
   {
-    title: "Battery & Inverter Rentals",
+    title: "Product That We Provide",
+    productName: [
+      "UPS Repair Services",
+      "Reconditioned UPS",
+      "Battery Rentals"
+    ],
     icon: <FaBatteryFull size={40} className="text-green-500" />,
   },
-  {
-    title: "Multi-Brand UPS Repair",
-    icon: <FaScrewdriver size={40} className="text-orange-400" />,
-  },
+
 ];
 
 
@@ -83,7 +89,7 @@ const HeroSection=()=> {
       </Swiper>
 
     <div className="w-full lg:absolute bottom-2 z-100 mt-10">
-        <div className="w-fit mx-auto grid lg:grid-cols-3 gap-10 grid-cols-1 pointer-events-none">
+        <div className="w-fit mx-auto grid lg:grid-cols-2 gap-10 grid-cols-1 pointer-events-none">
             {cards.map((item,i)=>(
                 <div key={i} className="w-80 py-9 group  relative text-white cursor-pointer pointer-events-auto bg-black -z-10  px-6 rounded transform-3d perspective-midrange">
                     <img src="https://html.themexriver.com/industo/images/gallery/1.jpg" className="absolute top-0 blur-md w-0 transition-all self-end  left-0 duration-z00 group-hover:w-full h-full -z-1" />
@@ -91,9 +97,19 @@ const HeroSection=()=> {
                   
                     inline-block transition-all duration-1000 transform-3d font-light translate-z-4">{item.icon}</div>
                 <p className="mt-7 pb-4  border-orange-600 border-b-4 text-xl font-bold w-20 whitespace-nowrap">{item.title}</p>
-               <button  className="flex items-center gap-3 rounded bg-orange-600 px-4 py-2 font-mono text-lg font-semibold mt-8 ">Read More
+                <ul>
+                  {
+                    i === 0 ? item.serviceName.map((service, index) => (
+                      <li key={index} className="text-sm mt-2">{service}</li>
+                    )) : item.productName.map((product, index) => (
+                      <li key={index} className="text-sm mt-2">{product}</li>
+                    )) 
+                  }
+                </ul>
+               <a href={i === 0 ? '/services' : '/products'}  className="flex items-center gap-3 rounded bg-orange-600 px-4 py-2 font-mono text-lg font-semibold mt-8 ">Explore More
+
                 <FaArrowRight />
-               </button>
+               </a>
                 </div>
             ))}
         </div>

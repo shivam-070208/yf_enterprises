@@ -9,7 +9,7 @@ const Primarynav = () => {
   const NavContent = [
     {
       tittle: "Call us for help",
-      comment: "+91 9748413152/+91 8240505520",
+      comment: "+91 9748413152",
       Icon: <FaPhone size={30} className="text-orange-500" />,
     },
     {
