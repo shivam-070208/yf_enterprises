@@ -12,16 +12,16 @@ const SmallTopNavbar = () => {
 
       {/* Social Media Icons */}
       <div className="flex gap-3 ml-auto">
-        <a href="#" className="transition-all ease-in bg-black p-2 rounded-full hover:bg-orange-700">
+        <a href="#" className="transition-all ease-in bg-orange-700 p-2 rounded-full hover:bg-orange-600">
           <FaFacebookF />
         </a>
-        <a href="#" className="transition-all ease-in bg-black p-2 rounded-full hover:bg-orange-700">
+        <a href="#" className="transition-all ease-in bg-orange-700 p-2 rounded-full hover:bg-orange-600">
           <FaTwitter />
         </a>
-        <a href="#" className="transition-all ease-in bg-black p-2 rounded-full hover:bg-orange-700">
+        <a href="#" className="transition-all ease-in bg-orange-700 p-2 rounded-full hover:bg-orange-600">
           <FaLinkedin />
         </a>
-        <a href="#" className="transition-all ease-in bg-black p-2 rounded-full hover:bg-orange-700">
+        <a href="#" className="transition-all ease-in bg-orange-700 p-2 rounded-full hover:bg-orange-600">
           <FaInstagram />
         </a>
       </div>

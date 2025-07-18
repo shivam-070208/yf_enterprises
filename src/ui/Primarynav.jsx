@@ -19,7 +19,7 @@ const Primarynav = () => {
     },
     {
       tittle: "Mail us",
-      comment: "yfenterprises9@gmail.com",
+      comment: "tenders@yfenterprises.com",
       Icon: <FaEnvelopeOpenText size={30} className="text-orange-500" />,
     },
   ];
@@ -28,7 +28,7 @@ const Primarynav = () => {
     <div className="w-screen flex  justify-center gap-x-80 gap-y-10 px-5 py-3 flex-wrap">
       {/* Logo */}
       <div className="h-[70%] ">
-        <img src={logo} className="w-50 h-30" alt="logo" />
+        <img src={logo} className="w-70 h-30" alt="logo" />
       </div>
 
       {/* Side Nav */}
