@@ -72,11 +72,13 @@ const ServicesCarousel = () => {
             <SwiperSlide key={index}>
               <div className="group relative mx-auto w-fit group h-fit cursor-pointer   rounded-xl overflow-hidden  transition-all duration-300">
                 
+                  <a href="/services">
                   <img
                     src={service.image}
                     alt={service.title}
                     className="w-full h-80 object-cover transition-transform duration-300 "
                   />
+                  </a>
                   <div className="absolute bottom-0 w-full group-hover:-bottom-28 duration-700 transition-all  justify-between flex">
                    <div className='px-4 py-3 text-white grid place-items-center text-5xl bg-orange-500'><FaIndustry /></div>
                     <div className='w-fit px-6 max-w-70  py-4 h-full bg-white'>
