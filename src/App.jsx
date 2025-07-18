@@ -6,10 +6,12 @@ import { Route, Routes } from 'react-router-dom'
 import { AboutUs, Blog, Contact, Detailblog, Home, ServicesPage, Products } from './routes'
 import Footer from './ui/Footer'
 import Loaderinitiater from './Components/Loaderinitiater'
+import Totop from './ui/Totop'
 
 function App() {
   return (
     <div className='w-screen overflow-x-hidden'>
+      <Totop />
       <Bglayer />
       <Cursor />
       <Navbar />

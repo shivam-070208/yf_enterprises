@@ -39,7 +39,7 @@ const Products = () => {
       </section>
 
       {/* Products Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-200">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="text-orange-600 inline-block font-bold uppercase relative beforetext md:before:content-['Products'] mb-4">YF Enterprises</div>
@@ -92,13 +92,13 @@ const Products = () => {
           {/* Products Grid */}
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-7xl mx-auto">
             {filteredProducts.map(product => (
-              <div key={product.id} className="bg-white rounded-xl relative py-24 flex flex-col items-center text-center transition hover:shadow-lg">
-                <img src={product.image} alt={product.name} className="w-40 h-40 shadow-md absolute -translate-y-1/2 rounded-full object-cover" />
-                <div className='bg-white p-6 flex flex-col items-center rounded pt-20 pb-6 rounded-2xl flex-1 w-full'>
+              <div key={product.id} className=" rounded-xl relative py-24 flex flex-col items-center text-center transition ">
+                <img src={product.image} alt={product.name} className="w-40 h-40 shadow-md absolute -translate-y-1/2  rounded-full object-cover" />
+                <div className='bg-white  h-fit p-6 flex flex-col items-center rounded pt-28 pb-6  flex-1 w-full'>
                   <h4 className="text-lg font-semibold mb-2">{product.name}</h4>
                   <div className="text-xs text-orange-600 font-medium mb-2">{product.category}</div>
                   <div className="mb-2">
-                    {product.originalPrice && (
+                    {!isNaN(product.originalPrice) && (
                       <span className="line-through text-gray-400 mr-2">{product.originalPrice}</span>
                     )}
                     <span className="text-black font-bold">{product.price}</span>
