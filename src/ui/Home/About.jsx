@@ -11,15 +11,13 @@ const AboutSection = () => {
           <div>
             <p className="text-orange-600 font-bold mb-2 text-lg beforetext relative md:before:content-['Assesment']">About Y.F Enterprises</p>
             <h2 className="text-5xl font-bold text-black mb-4 leading-tight">
-              Flameproof Electrical Safety You Can Rely On
+             Why Choose Us
             </h2>
             <p className="text-gray-600 mb-6">
-              Y.F Enterprises is dedicated to delivering reliable, certified, and eco-friendly flameproof solutions 
-              including control stations, junction boxes, and customized electrical panels. 
-              We ensure affordable pricing, safety, and 24x7 support across India.
+             <span className='font-bold'> Y.F Enterprises</span> is a nationally trusted name in engineering, maintenance, and power backup solutions. Headquartered in Kolkata, we bring over 6 years of excellence in UPS systems, battery rentals, flameproof equipment, and custom electrical solutions. What sets us apart is not just our technical capability, but our unwavering commitment to service, ethics, and trust. We proudly serve businesses across India with <span className='font-bold'>24x7x365</span> support, ensuring your operations never pause. With top-tier brands and real-time response, Y.F Enterprises isn’t just a service provider — we are a power partner committed to empowering industries with reliability, safety, and integrity.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-6 mb-8">
+            <div className="grid sm:grid-cols-1 gap-6 mb-8">
               <div className="flex items-center gap-4">
                 <FaBolt className="text-orange-600 text-3xl" />
                 <div className="font-bold text-lg text-black">Certified Flameproof Equipment</div>
@@ -27,6 +25,10 @@ const AboutSection = () => {
               <div className="flex items-center gap-4">
                 <FaTools className="text-orange-600 text-3xl" />
                 <div className="font-bold text-lg text-black">Custom Industrial Panels</div>
+              </div>
+              <div className="flex items-center gap-4">
+                <FaTools className="text-orange-600 text-3xl" />
+                <div className="font-bold text-lg text-black capitalize ">Engineering & Maintenance Services</div>
               </div>
             </div>
           </div>
@@ -40,7 +42,7 @@ const AboutSection = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-500">Call us for help</p>
-                <strong className="text-lg">+91 845 758 145</strong>
+                <strong className="text-lg">+91  9748 4131 52</strong>
               </div>
             </div>
           </div>
