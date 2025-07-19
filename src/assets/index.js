@@ -1,7 +1,7 @@
 import Allblogs from './Blog';
 import logo from './logo.png';
 import { flameproofProducts, productCategories, getFeaturedProducts, getProductsByCategory, getAllProducts, searchProducts } from './products';
-
+import Wallpattern from './patternwall.jpg'
 
 
 
@@ -15,6 +15,7 @@ import image7 from './image7.png';
 import profile from './profileicon.png';
 import whiteLogo from './whitelogo.png';
 export {
+    Wallpattern,
     image1,
     image2,
     image3,
