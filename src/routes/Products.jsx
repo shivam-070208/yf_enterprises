@@ -116,13 +116,13 @@ const Products = () => {
             {filteredProducts.map((product) => (
               <div
                 key={product.id}
-                className="rounded-xl relative py-24 flex flex-col items-center text-center transition"
+                className="rounded-xl group  relative py-24 flex flex-col items-center text-center transition"
               >
                 {/* 🟠 Product Image on Top */}
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="productimg w-40 h-40 shadow-md absolute -translate-y-1/2 rounded-full object-cover z-50"
+                  className="productimg group-hover:shadow-amber-800 w-40 h-40  absolute -translate-y-1/2 rounded-full object-cover z-50"
                 />
 
                 {/* 🔶 Animated Card */}
@@ -153,14 +153,14 @@ const Products = () => {
                       <span>Material:</span>
                       <span>{product.specifications.material}</span>
                     </div>
-                    <div className="flex justify-between mb-1">
+                    {/* <div className="flex justify-between mb-1">
                       <span>Protection:</span>
                       <span>{product.specifications.protection}</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Certification:</span>
                       <span>{product.specifications.certification}</span>
-                    </div>
+                    </div> */}
                   </div>
 
                   <div className="flex gap-2 z-20">

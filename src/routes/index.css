@@ -1,3 +1,4 @@
+
 .card-hover-effect {
   position: relative;
   overflow: hidden;
@@ -30,5 +31,6 @@
 }
 
 .card-hover-effect:hover .productimg {
-    box-shadow: 12px 12px 0 #000000; /* sharp black shadow going down */
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* subtle shadow on hover */
+  transform: scale(1.05); /* slight zoom effect */
 }
