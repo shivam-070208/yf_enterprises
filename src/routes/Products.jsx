@@ -4,7 +4,7 @@ import { FaStar, FaSearch, FaFilter, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Button } from '../ui';
 const Products = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All Products');
+  const [selectedCategory, setSelectedCategory] = useState('Lighting');
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredProducts, setFilteredProducts] = useState(flameproofProducts);
 
@@ -92,9 +92,9 @@ const Products = () => {
           {/* Products Grid */}
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-7xl mx-auto">
             {filteredProducts.map(product => (
-              <div key={product.id} className="bg-white rounded-xl relative py-24 flex flex-col items-center text-center transition hover:shadow-lg">
+              <div key={product.id} className="bg-white hover:bg-orange-100 rounded-xl relative py-10 mt-10 flex flex-col items-center text-center transition hover:shadow-lg">
                 <img src={product.image} alt={product.name} className="w-40 h-40 shadow-md absolute -translate-y-1/2 rounded-full object-cover" />
-                <div className='bg-white p-6 flex flex-col items-center rounded pt-20 pb-6 rounded-2xl flex-1 w-full'>
+                <div className='bg-white hover:bg-orange-100 p-6 flex flex-col items-center  pt-20 pb-6 rounded-2xl flex-1 w-full'>
                   <h4 className="text-lg font-semibold mb-2">{product.name}</h4>
                   <div className="text-xs text-orange-600 font-medium mb-2">{product.category}</div>
                   <div className="mb-2">
@@ -127,13 +127,7 @@ const Products = () => {
                   </div>
                   
                   <div className="flex gap-2">
-                    {/* <button  href={'/contact#contact'}
-                     className="bg-orange-500 hover:bg-orange-600 hover:cursor-pointer transition px-4 py-2 text-white font-semibold rounded-full flex items-center gap-2 text-sm relative z-10">
-                      INQUIRY <FaArrowRight size={10} />
-                    </button>
-                    <button className="bg-gray-200 hover:cursor-pointer hover:bg-gray-300 transition px-4 py-2 text-gray-700 font-semibold rounded-full text-sm">
-                      Details
-                    </button> */}
+
                     <a href="/contact#contact"
                       className="bg-orange-500 hover:bg-orange-600 hover:cursor-pointer transition px-4 py-2 text-white font-semibold rounded-full flex items-center gap-2 text-sm relative z-10">
                       INQUIRY <FaArrowRight size={10} />
