@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 import Button from "../Button";
-import { logo, Pipe } from "../../assets";
+import {  Pipe, whiteLogo } from "../../assets";
 
 const HeroContactSection = () => {
   return (
@@ -20,7 +20,7 @@ const HeroContactSection = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-24 flex flex-col items-center text-center">
         {/* Logo */}
         <div className="mb-6">
-          <img src={logo} alt="Industo" className="w-32 mx-auto" />
+          <img src={whiteLogo} alt="Industo" className="w-32 mx-auto" />
         </div>
 
         {/* Text */}
