@@ -189,7 +189,11 @@ const ServicesCarousel = () => {
               {String(idx + 1).padStart(2, "0")}
             </button>
           ))}
-          <span className="text-gray-400">/ {String(services.length).padStart(2, "0")}</span>
+          <span   onClick={() =>
+                swiperRef.current?.swiper?.slideToLoop(4, 500)
+              }  className={`px-2 cursor-pointer ${
+                4 === currentIndex ? "text-orange-500" : "text-gray-500"
+              }`}>/ {String(services.length+1).padStart(2, "0")}</span>
         </div>
       </div>
     </section>
