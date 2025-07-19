@@ -100,7 +100,7 @@ const ServicesCarousel = () => {
                 </div>
               </div>
                 <div
-                className="absolute top-0 right-0 h-full w-full bg-white shadow-xl p-5 py-7 origin-left transition-transform duration-500 ease-in-out z-10
+                className="absolute top-0 right-0 h-full w-full bg-[#ffffffe8] shadow-xl p-5 py-7 origin-left transition-transform duration-500 ease-in-out z-10
                group-hover:translate-x-0 translate-x-full"
               >
                 <h3 className="text-2xl font-bold mb-2 text-gray-800">
