@@ -26,9 +26,10 @@ const Secondarynav = () => {
           ))}
 
           {/* Menu Button for small screens */}
+          <a href="/contact" className="sm:hidden p-3 bg-orange-500 hover:bg-orange-400 cursor-pointer text-gray-50 rounded-md ">Contact</a>
           <button
             onClick={() => setIsOpen(true)}
-            className="sm:hidden ml-auto cursor-pointer text-white"
+            className="sm:hidden ml-auto cursor-pointer bg-orange-500 p-2 text-white"
           >
             <FaBars size={26} />
           </button>

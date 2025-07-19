@@ -63,6 +63,9 @@ const Contact = () => {
       </section>
        
       <div className="max-w-5xl mx-auto px-4 space-y-20 py-16">
+        <div className="bg-red-50 w-full h-full p-10 md:grid md:grid-cols-2 gap-10 rounded-lg shadow-lg">
+        
+        </div>
         {/* Contact Form */}
           <section>
           <iframe
