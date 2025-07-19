@@ -1,5 +1,5 @@
 import React from 'react'
-import { AboutSection, HeroSection, ProductCarousel, ServicesCarousel } from '../ui/Home'
+import { AboutSection, HeroContactSection, HeroSection, ProductCarousel, ServicesCarousel } from '../ui/Home'
 import { Bglayer } from '../ui'
 import PortfolioSection from '../ui/Home/Portfolio'
 
@@ -11,6 +11,7 @@ function Home() {
       <HeroSection />
       <AboutSection />
        <ServicesCarousel />
+       <HeroContactSection />
        <PortfolioSection />
        <ProductCarousel />
     </div>

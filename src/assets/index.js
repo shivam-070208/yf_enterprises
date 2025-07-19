@@ -14,6 +14,7 @@ import image6 from './image6.png';
 import image7 from './image7.png';
 import profile from './profileicon.png';
 import whiteLogo from './whitelogo.png';
+import Pipe from './pipe.jpg'
 export {
     Wallpattern,
     image1,
@@ -32,5 +33,6 @@ export {
     getProductsByCategory,
     getAllProducts,
     searchProducts,
-    whiteLogo
+    whiteLogo,
+    Pipe
 }
