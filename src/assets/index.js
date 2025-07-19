@@ -15,6 +15,7 @@ import image7 from './image7.png';
 import profile from './profileicon.png';
 import whiteLogo from './whitelogo.png';
 import Pipe from './pipe.jpg'
+import Giflogo from './YfEnterprises.gif';
 export {
     Wallpattern,
     image1,
@@ -34,5 +35,6 @@ export {
     getAllProducts,
     searchProducts,
     whiteLogo,
-    Pipe
+    Pipe,
+    Giflogo
 }

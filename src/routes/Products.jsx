@@ -112,17 +112,17 @@ const Products = () => {
           </div>
 
           {/* Products Grid */}
-          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-7xl mx-auto">
+          <div className="grid gap-6  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-7xl mx-auto">
             {filteredProducts.map((product) => (
               <div
                 key={product.id}
-                className="rounded-xl group  relative py-24 flex flex-col items-center text-center transition"
+                className="rounded-xl  relative py-24 flex flex-col items-center text-center transition"
               >
                 {/* 🟠 Product Image on Top */}
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="productimg group-hover:shadow-amber-800 w-40 h-40  absolute -translate-y-1/2 rounded-full object-cover z-50"
+                  className="productimg  w-40 h-40  absolute -translate-y-1/2 rounded-full object-cover z-50"
                 />
 
                 {/* 🔶 Animated Card */}
