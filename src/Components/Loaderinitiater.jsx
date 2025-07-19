@@ -1,29 +1,51 @@
-import {  motion } from 'motion/react'
-import React, { useEffect, useState } from 'react'
-import Loader from '../ui/Loader'
+import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import Loader from '../ui/Loader';
 
-const Loaderinitiater = ({children}) => {
-    const [loading,setloading] = useState(true)
-    useEffect(()=>{
-        setloading(true)
-      const timeout=  setTimeout(() => {
-            setloading(false)
-        }, 2000);
-       return(()=>{
-        clearTimeout(timeout)
-       })
-    },[children])
+const LoaderInitiater = ({ children }) => {
+  const [loading, setLoading] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    setLoading(true);
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); // simulate loading time
+
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
+
+  // Disable body scroll while loading
+  useEffect(() => {
+    if (loading) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [loading]);
+
   return (
     <>
-      {loading?(
-        <Loader />
-      ):(
-        <motion.div className='w-full h-full overflow-hidden origin-center' initial={{scale:0,filter:'blur(30px)',rotateZ:'45deg'}} animate={{scale:1.0,filter:'blur(0px)',rotateZ:'0deg'}} transition={{duration:0.4}}>{children}</motion.div>
-      )
+      {loading && <Loader />}
 
-      }
+      <motion.div
+        className=' overflow-hidden origin-center'
+        initial={{ width:'0px',height:'0px', filter: 'blur(30px)', rotateZ: '45deg' }}
+        animate={{
+         width: loading ? '0px' : '100%',
+         height:loading?'0px':'100%',
+          filter: loading ? 'blur(30px)' : 'blur(0px)',
+          rotateZ: loading ? '45deg' : '0deg',
+        }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
+       
+      >
+        {children}
+      </motion.div>
     </>
-  )
-}
+  );
+};
 
-export default Loaderinitiater
+export default LoaderInitiater;

@@ -1,14 +1,19 @@
-import { useMotionValueEvent, useScroll } from 'framer-motion';
-import React, { useState } from 'react';
+import { useScroll } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 import { BiArrowToTop } from 'react-icons/bi';
 
 const Totop = () => {
   const { scrollYProgress } = useScroll();
   const [progress, setProgress] = useState(0);
 
-  useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-    setProgress(latest);
-  });
+  // Correct the progress on mount
+  useEffect(() => {
+    const unsubscribe = scrollYProgress.on("change", (latest) => {
+      setProgress(latest);
+    });
+ 
+    return unsubscribe;
+  }, [scrollYProgress]);
 
   const degree = progress * 360;
 
@@ -18,7 +23,7 @@ const Totop = () => {
         <div
           className='absolute top-0 left-0 w-full h-full rounded-full'
           style={{
-            background: `conic-gradient(from 0deg,#f97316 ${degree||0}deg, #fff ${degree||0}deg)`,
+            background: `conic-gradient(#f97316 ${degree}deg, #fff ${degree}deg)`,
           }}
         ></div>
         <button
