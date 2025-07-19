@@ -1,0 +1,34 @@
+.card-hover-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-hover-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #fed7aa; /* Tailwind's bg-orange-200 */
+  transition: width 0.5s ease;
+  z-index: 5;
+}
+
+.card-hover-effect:hover::before {
+  width: 100%;
+}
+
+/* Make sure all content is always on top */
+.card-hover-effect > * {
+  position: relative;
+  z-index: 10;
+}
+
+.custom-shadow:hover {
+  box-shadow: 0 -20px 0 #000000; /* sharp black shadow going up */
+}
+
+.card-hover-effect:hover .productimg {
+    box-shadow: 12px 12px 0 #000000; /* sharp black shadow going down */
+}
