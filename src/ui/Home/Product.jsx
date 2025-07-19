@@ -74,11 +74,11 @@ const ProductCarousel = () => {
               <div className=" rounded-xl  relative py-24 group   flex flex-col items-center bg-transparent text-center transition ">
 
                 
-                <img src={product.image} alt={product.name} className="w-50 h-50 z-1 shadow-md absolute -translate-y-1/2  rounded-full object-cover " />
-               <div className='bg-white relative max-w-70  p-4 flex flex-col items-center  pt-40 pb-18 rounded-lg flex-1 w-full'>
+                <img src={product.image} alt={product.name} className="w-40 object-center h-40 z-1 shadow-md absolute -translate-y-1/2  rounded-full object-fill " />
+               <div className='bg-white relative max-w-70  p-4 flex flex-col items-center  pt-30 pb-20 rounded-lg flex-1 w-full'>
                 <h4 className="text-2xl font-bold  mb-1 w-60">{product.name}</h4>
                 <hr className='text-neutral-300 h-4 w-full' />
-               <div className='w-full flex justify-between items-center mb-4 flex-wrap'>
+               <div className='w-full flex justify-between items-center mt-4 flex-wrap'>
 
                 <div className="">
                   {product.originalPrice && (
