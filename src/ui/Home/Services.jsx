@@ -41,14 +41,14 @@ const services = [
 
 const ServicesCarousel = () => {
   return (
-    <section className="relative pt-8 pb-40 mb-10  px-4 md:px-16 mt-10 bg-gradient-to-b from-[url(https://html.themexriver.com/industo/images/background/1.jpg)] from-50% via-white to-white backdrop-blur-md">
+    <section className="relative pt-20 pb-50 mb-10  px-4 md:px-16 mt-10 backdrop-blur-md">
       {/* Background overlay */}
       <div
         className="absolute inset-0 bg-cover  bg-left"
         style={{ backgroundImage: `url(${Wallpattern})` }}
       ></div>
       <div className="absolute inset-0 bg-gradient-to-b from-white/0 from-50% via-white to-white"></div>
-      <div className="absolute w-full h-full inset-0 bg-cover opacity-10 bg-[url('https://html.themexriver.com/industo/images/background/1.jpg')]" />
+     
 
       <div className="relative z-10 max-w-7xl mx-auto mt-8">
         {/* Heading */}
