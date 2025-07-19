@@ -62,9 +62,11 @@ const ProductCarousel = () => {
         >
           {products.map((product, i) => (
             <SwiperSlide key={i}>
-              <div className=" rounded-xl  relative py-24  flex flex-col items-center bg-transparent text-center transition ">
+              <div className=" rounded-xl  relative py-24 group   flex flex-col items-center bg-transparent text-center transition ">
+
+                
                 <img src={product.image} alt={product.name} className="w-40 h-40 shadow-md absolute -translate-y-1/2  rounded-full object-cover " />
-               <div className='bg-white p-10 flex flex-col items-center rounded pt-29 pb-9 rounded-2 flex-1 w-full'>
+               <div className='bg-white hover:bg-orange-50 p-10 flex flex-col items-center rounded pt-29 pb-9 rounded-2 flex-1 w-full'>
                 <h4 className="text-lg font-semibold mb-1">{product.name}</h4>
                 <div className="mb-2">
                   {product.originalPrice && (

@@ -54,10 +54,10 @@ const HeroSection = () => {
     <div className="relative w-screen min-h-[114vh] pb-5 overflow-x-hidden overflow-y-visible">
       {/* 🔘 Custom Arrows */}
       <div className="absolute w-full z-50 flex justify-between items-center px-6 top-[40%]">
-        <button className="swiper-button-prev-custom bg-black text-white p-3 rounded-full hover:bg-orange-600 transition">
-          &#8592;
+        <button className="swiper-button-prev-custom bg-gray-900 w-10 h-10 text-white p-3 rounded-full grid content-center hover:bg-orange-600 transition">
+          &#8592;  
         </button>
-        <button className="swiper-button-next-custom bg-black text-white p-3 rounded-full hover:bg-orange-600 transition">
+        <button className="swiper-button-next-custom  w-10 h-10 bg-gray-900 text-white p-3 rounded-full grid content-center hover:bg-orange-600 transition">
           &#8594;
         </button>
       </div>
@@ -108,7 +108,7 @@ const HeroSection = () => {
       </Swiper>
 
       {/* 🧱 Cards Section */}
-      <div className="w-full lg:absolute bottom-2 z-100 mt-15 mb-10">
+      <div className="w-full lg:absolute bottom-2 z-100 mt-20 mb-10">
         <div className="w-fit mx-auto grid lg:grid-cols-2 gap-10 grid-cols-1 pointer-events-none">
           {cards.map((item, i) => (
             <div

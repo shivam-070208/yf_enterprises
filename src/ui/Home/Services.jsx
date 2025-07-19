@@ -1,8 +1,9 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
-
+import 'swiper/css/autoplay';
+import 'swiper/css/mousewheel';
 
 import { FaIndustry } from 'react-icons/fa';
 import { image1, image2, image3, image4 } from '../../assets';
@@ -41,32 +42,33 @@ const services = [
 
 const ServicesCarousel = () => {
   return (
-    <section className="relative py-24 mb-12 px-4  md:px-16 mt-10 bg-[#f5f5f570] backdrop-blur-md">
+    <section className="relative py-24 mb-12 px-4 md:px-16 mt-10 bg-[#f5f5f570] backdrop-blur-md">
+      {/* Background overlay */}
       <div className="absolute w-full h-full inset-0 bg-cover opacity-10 bg-[url('https://html.themexriver.com/industo/images/background/1.jpg')]" />
+      
       <div className="relative z-10 max-w-7xl mx-auto mt-8">
+        {/* Heading */}
         <div className="text-center mb-10">
-          <div className="text-orange-600 inline-block font-bold uppercase relative beforetext md:before:content-['Services']">Our Awesome Services</div>
+          <div className="text-orange-600 inline-block font-bold uppercase relative beforetext md:before:content-['Services']">
+            Our Awesome Services
+          </div>
           <h2 className="text-5xl font-extrabold mt-5 text-gray-900">
             Our Awesome Services
           </h2>
-        
         </div>
- 
 
-    
+        {/* Swiper Carousel */}
         <Swiper
           slidesPerView={1}
           spaceBetween={5}
-          loop
-        
-          
+          loop={true}
+          mousewheel={true}
           autoplay={{ delay: 3000 }}
           breakpoints={{
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-         
-          modules={[ Autoplay]}
+          modules={[Autoplay, Mousewheel]}
           className="w-full cursor-grab"
         >
           {services.map((service, index) => (
@@ -77,7 +79,7 @@ const ServicesCarousel = () => {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-80 object-cover transition-transform duration-300 "
+                    className="w-full h-80 object-cover transition-transform duration-300"
                   />
                   </Link>
                   <div className="absolute bottom-0 w-full group-hover:-bottom-28 duration-700 transition-all  justify-between flex">
@@ -86,16 +88,12 @@ const ServicesCarousel = () => {
 
                     <h5 className="text-xl font-bold line-clamp-2">{service.title}</h5>
                     <p className="text-sm text-neutral-500">{service.subtitle}</p>
-                    </div>
                   </div>
-                  
-               
-            
+                </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-        
       </div>
     </section>
   );
