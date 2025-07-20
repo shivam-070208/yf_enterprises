@@ -116,9 +116,10 @@ const Products = () => {
             {filteredProducts.map((product) => (
               <div
                 key={product.id}
-                className="rounded-xl  relative py-24 flex flex-col items-center text-center transition"
+                className="rounded-xl group relative py-24 flex flex-col items-center text-center transition"
               >
                 {/* 🟠 Product Image on Top */}
+                 <div className='w-40 h-45 group-hover:opacity-100 origin-center scale-0 group-hover:scale-100 opacity-0 transition-all duration-400 absolute  -translate-y-1/2 rounded-full bg-orange-500' />
                 <img
                   src={product.image}
                   alt={product.name}
@@ -126,8 +127,9 @@ const Products = () => {
                 />
 
                 {/* 🔶 Animated Card */}
-                <div className="card-hover-effect bg-white h-fit p-6 flex flex-col items-center rounded pt-28 pb-6 flex-1 w-full relative z-10">
-                  <h4 className="text-lg font-semibold mb-2 z-20">{product.name}</h4>
+                <div className=" bg-white h-fit p-6 flex flex-col items-center rounded pt-28 pb-6 flex-1 w-full relative z-10">
+                    <div className='absolute origin-center rounded-lg opacity-0 group-hover:opacity-100  w-full scale-x-0 group-hover:scale-x-100 duration-400 transition-all h-full bg-black top-0 -z-1' />
+                  <h4 className="text-lg font-semibold mb-2 z-20 group-hover:text-white">{product.name}</h4>
                   <div className="text-xs text-orange-600 font-medium mb-2 z-20">
                     {product.category}
                   </div>
@@ -137,18 +139,18 @@ const Products = () => {
                         {product.originalPrice}
                       </span>
                     )}
-                    <span className="text-black font-bold">{product.price}</span>
+                    <span className="text-black font-bold group-hover:text-white">{product.price}</span>
                   </div>
                   <div className="flex items-center justify-center gap-1 text-yellow-400 mb-3 z-20">
                     {Array.from({ length: product.rating }).map((_, j) => (
                       <FaStar key={j} />
                     ))}
                   </div>
-                  <p className="text-gray-600 text-sm mb-4 leading-relaxed z-20">
+                  <p className="text-gray-600 group-hover:text-white text-sm mb-4 leading-relaxed z-20">
                     {product.description}
                   </p>
 
-                  <div className="text-xs text-gray-500 mb-4 z-20">
+                  <div className="text-xs text-gray-500 group-hover:text-white mb-4 z-20">
                     <div className="flex justify-between mb-1">
                       <span>Material:</span>
                       <span>{product.specifications.material}</span>
