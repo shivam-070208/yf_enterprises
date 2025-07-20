@@ -61,7 +61,7 @@ const PortfolioSection = () => {
       </div>
 
       <div
-        className="w-full lg:w-1/3 lg:-translate-y-40 -translate-y-10 bg-cover bg-center h-[50vh] lg:h-full p-10 text-white"
+        className="w-full lg:w-1/3 lg:-translate-y-40 -translate-y-10 bg-cover bg-center h-fit lg:h-full p-10 text-white"
         style={{
           backgroundImage:
             "url('https://html.themexriver.com/industo/images/background/2.jpg')",
