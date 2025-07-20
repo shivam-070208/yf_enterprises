@@ -71,12 +71,13 @@ const ProductCarousel = () => {
         >
           {products.map((product, i) => (
             <SwiperSlide key={i}>
-              <div className=" rounded-xl  relative py-24 group   flex flex-col items-center bg-transparent text-center transition ">
+              <div className=" rounded-xl group relative py-24 group   flex flex-col items-center bg-transparent text-center transition ">
 
-                
-                <img src={product.image} alt={product.name} className="w-40 object-center h-40 z-1 shadow-md absolute -translate-y-1/2  rounded-full object-fill " />
-               <div className='bg-white relative max-w-70  p-4 flex flex-col items-center  pt-30 pb-20 rounded-lg flex-1 w-full'>
-                <h4 className="text-2xl font-bold  mb-1 w-60">{product.name}</h4>
+                <div className='w-40 h-45 group-hover:opacity-100 origin-center scale-0 group-hover:scale-100 opacity-0 transition-all duration-400 absolute  -translate-y-1/2 rounded-full bg-orange-500' />
+                <img src={product.image} alt={product.name} className="w-40 object-center  h-40 z-1 shadow-md absolute -translate-y-1/2  rounded-full object-fill " />
+               <div className='bg-white relative   max-w-70 z-0  p-4 flex flex-col items-center  pt-30 pb-20 rounded-lg flex-1 w-full'>
+               <div className='absolute origin-center rounded-lg opacity-0 group-hover:opacity-100  w-full scale-x-0 group-hover:scale-x-100 duration-400 transition-all h-full bg-black top-0 -z-1' />
+                <h4 className="text-2xl font-bold  mb-1 group-hover:text-white transition-all w-60">{product.name}</h4>
                 <hr className='text-neutral-300 h-4 w-full' />
                <div className='w-full flex justify-between items-center mt-4 flex-wrap'>
 
@@ -84,7 +85,7 @@ const ProductCarousel = () => {
                   {product.originalPrice && (
                     <span className="line-through text-gray-400 mr-2">{product.originalPrice}</span>
                   )}
-                  <span className="text-black font-bold">{product.price}</span>
+                  <span className="text-black group-hover:text-white font-bold">{product.price}</span>
                 </div>
                 <div className="flex items-center justify-center gap-1 text-yellow-400 ">
                   {Array.from({ length: product.rating }).map((_, j) => (

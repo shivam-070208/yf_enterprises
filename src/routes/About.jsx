@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 import { profile } from '../assets';
+import { partnerLogos } from '../assets/logo';
 
 
 const AboutUs = () => {
@@ -168,10 +169,10 @@ Whether it's UPS repair, servo stabilizers, or junction box wiring, we ensure un
             <h2 className="text-3xl font-bold">Our Trusted Sponsor</h2>
           </div>
           <Swiper slidesPerView={2} modules={[Autoplay]} autoplay grabCursor={true}  spaceBetween={20} breakpoints={{ 640: { slidesPerView: 3 }, 1024: { slidesPerView: 5 } }}>
-            {[1, 2, 3, 4, 5].map((i) => (
+            {partnerLogos.map((item,i) => (
               <SwiperSlide key={i}>
                 <div className="p-4">
-                  <img src={`https://html.themexriver.com/industo/images/resource/welcome.png`} alt={`sponsor-${i}`} className="mx-auto h-16" />
+                  <img src={item} alt={`sponsor-${i}`} className="mx-auto h-16" />
                 </div>
               </SwiperSlide>
             ))}
