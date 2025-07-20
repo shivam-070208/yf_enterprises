@@ -164,47 +164,19 @@ const ProductDetails = () => {
             Get detailed technical documentation and custom quotes for your specific requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-orange-500 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-300">
-              Download Datasheet
-            </button>
-            <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange-500 font-semibold py-3 px-8 rounded-lg transition duration-300">
+            <a href='/Y F ENTERPRISES SERVICES.pdf' className="bg-white text-orange-500 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-300">
+              Download Brouchure 
+            </a>
+            <a href='/contact' className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange-500 font-semibold py-3 px-8 rounded-lg transition duration-300">
+
               Request Quote
-            </button>
+            </a>
           </div>
         </div>
       </div>
 
       {/* Company Info Footer */}
-      <div className="bg-slate-800 text-white py-12 mt-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-300">
-                <li><a href="/about" className="hover:text-white">About Us</a></li>
-                <li><a href="/products" className="hover:text-white">Our Products</a></li>
-                <li><a href="/contact" className="hover:text-white">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Our Products</h4>
-              <ul className="space-y-2 text-gray-300">
-                <li><a href="#" className="hover:text-white">Flameproof Lighting</a></li>
-                <li><a href="#" className="hover:text-white">Control Systems</a></li>
-                <li><a href="#" className="hover:text-white">Safety Devices</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-              <div className="space-y-2 text-gray-300">
-                <p>📞 +91-9837-6323</p>
-                <p>📧 info@bharatflameproof.com</p>
-                <p>📍 Industrial Area, India</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
   );
 };
