@@ -122,7 +122,7 @@ const Products = () => {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="productimg  w-40 h-40  absolute -translate-y-1/2 rounded-full object-cover z-50"
+                  className="productimg shadow-lg  w-40 h-40  absolute -translate-y-1/2 rounded-full object-cover z-50"
                 />
 
                 {/* 🔶 Animated Card */}
