@@ -42,46 +42,31 @@ const ServicesPage = () => {
   ];
 const servicesInfo = [
   {
-    service: "UPS Repair Services",
-    textExplanation: "Fast and reliable repair for all major UPS systems to ensure continuous power."
+    service: "Instrumentation Services",
+    textExplanation: "Expert calibration, installation, and maintenance of process instruments to ensure accurate measurements and efficient industrial control."
   },
   {
-    service: "Reconditioned UPS",
-    textExplanation: "Cost-effective refurbished UPS units tested for performance and reliability."
+    service: "C&I Contracting Services",
+    textExplanation: "Comprehensive control and instrumentation contracting, covering design, engineering, procurement, installation, and commissioning of automation systems."
   },
   {
-    service: "UPS on Rent",
-    textExplanation: "Short-term and long-term UPS rental solutions for events and business continuity."
+    service: "Data Center Services",
+    textExplanation: "End-to-end data center infrastructure solutions, including setup, power management, cooling, and ongoing support for mission-critical environments."
   },
   {
-    service: "Battery Rentals",
-    textExplanation: "High-quality battery backup solutions available on flexible rental plans."
+    service: "Electrical Services",
+    textExplanation: "Full-spectrum electrical solutions ranging from LV/MV installations to panel designing, earthing systems, and complete electrical maintenance."
   },
   {
-    service: "AMC & CMC Contracts",
-    textExplanation: "Annual and comprehensive maintenance contracts for uninterrupted service and support."
+    service: "Testing and Commissioning",
+    textExplanation: "Thorough electrical testing and commissioning services to ensure all systems meet performance and safety standards before going live."
   },
   {
-    service: "Servo Stabilizers",
-    textExplanation: "Voltage regulation devices that protect sensitive equipment from power fluctuations."
-  },
-  {
-    service: "Flameproof Electrical Solutions",
-    textExplanation: "Safe electrical installations designed for hazardous or explosive environments."
-  },
-  {
-    service: "Custom Power Solutions",
-    textExplanation: "Tailored electrical and power backup systems based on specific client needs."
-  },
-  {
-    service: "Junction Boxes",
-    textExplanation: "Durable enclosures for safely organizing and protecting electrical wiring."
-  },
-  {
-    service: "Control Panels",
-    textExplanation: "Automation and control systems for managing power distribution and equipment."
+    service: "Manpower Services",
+    textExplanation: "Supply of skilled technical professionals and certified engineers for short-term and long-term industrial projects and maintenance operations."
   }
 ];
+
 
 
   return (
@@ -111,7 +96,7 @@ const servicesInfo = [
                 <div className="text-blue-500 font-bold text-xl mb-2">0{i}</div>
                 <div className="text-blue-600 text-2xl mb-2 font-semibold">{items.service}</div>
                 <p className="text-gray-600 text-sm">{items.textExplanation}</p>
-                <Link to="/contact#contact" className="text-blue-800 mt-3 bg-blue-200 hover:font-bold p-4 hover:bg-blue-300 rounded-lg inline-block">Explore →</Link>
+                <Link to={`/services/details/${i+1}`} className="text-blue-800 mt-3 bg-blue-200 hover:font-bold p-4 hover:bg-blue-300 rounded-lg inline-block">Explore →</Link>
               </div>
             ))}
           </div>
