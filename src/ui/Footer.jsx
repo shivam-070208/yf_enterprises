@@ -3,7 +3,7 @@ import { whiteLogo } from '../assets'; // make sure you have your logo here
 import { href, Link } from 'react-router-dom';
 
 const Footer = () => {
-  // {"Home", "About Us", "Brochure", "Blog", "Product", "Contact Us", "Privacy Policy"
+ 
   const QuickLinks = [
     {
       Name:"Home",
