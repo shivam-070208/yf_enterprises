@@ -44,31 +44,31 @@ function Home() {
        <PortfolioSection />
        <ProductCarousel />
        <HeroContactSection />
-    <section className="py-20 bg-gray-100 text-center">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="mb-10">
-            <div className="text-orange-600 font-bold">Our Testimonial</div>
-            <h2 className="text-3xl font-bold">Happy Client Says About Us</h2>
-          </div>
-          <Swiper slidesPerView={1} spaceBetween={30} breakpoints={{ 640: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}>
-            {textTestimonial.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className="bg-white p-6 rounded shadow text-left">
-                  <div className="flex items-center gap-4 mb-4">
-                    <img src={profile} alt="client" className="w-12 h-12 rounded-full" />
+        <section className="py-20 bg-gray-100 text-center">
+            <div className="max-w-6xl mx-auto px-4">
+              <div className="mb-10">
+                <div className="text-orange-600 font-bold">Our Testimonial</div>
+                <h2 className="text-3xl font-bold">Happy Client Says About Us</h2>
+              </div>
+              <Swiper slidesPerView={1} spaceBetween={30} breakpoints={{ 640: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}>
+                {textTestimonial.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="bg-white p-6 rounded shadow text-left">
+                      <div className="flex items-center gap-4 mb-4">
+                        <img src={profile} alt="client" className="w-12 h-12 rounded-full" />
 
-                  </div>
-                  <p className="text-gray-600 text-sm mb-4">{item.text}</p>
-                  <div className="text-yellow-500 flex">
-                    {[...Array(5)].map((_, i) => <FaStar
-                     key={i} />)}
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </section>
+                      </div>
+                      <p className="text-gray-600 text-sm mb-4">{item.text}</p>
+                      <div className="text-yellow-500 flex">
+                        {[...Array(5)].map((_, i) => <FaStar
+                        key={i} />)}
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </section>
     </div>
   )
 }
