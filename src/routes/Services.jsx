@@ -3,8 +3,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { FaStar } from 'react-icons/fa';
 import { Button } from '../ui';
+
 import { Link } from 'react-router-dom';
 import { profile } from '../assets';
+import serviceImages from '../assets/serviceImages';
+
 
 const ServicesPage = () => {
   const [index,setindex]= useState(6)
@@ -65,24 +68,7 @@ const servicesInfo = [
     service: "Manpower Deployment",
     textExplanation: "Skilled technical manpower supply for project execution, maintenance, and industrial operations support."
   },
-  {
-    service: "Flameproof Installations",
-    textExplanation: "Specialized flameproof solutions for hazardous zones ensuring safety and regulatory compliance."
-  },
-  {
-    service: "Custom-Built Panels",
-    textExplanation: "Design and fabrication of customized control panels meeting exact project specifications and standards."
-  },
-  {
-    service: "AMC & O&M Services",
-    textExplanation: "Comprehensive Annual Maintenance and Operation & Maintenance contracts to ensure uninterrupted plant uptime."
-  },
-  {
-    service: "Servo Stabilizers",
-    textExplanation: "Robust voltage stabilizers ensuring steady output voltage, protecting sensitive industrial equipment."
-  }
 ];
-
 
 
   return (
@@ -106,15 +92,18 @@ const servicesInfo = [
             <h2 className="text-3xl md:text-4xl font-bold">Industo Provides Services <br className="hidden md:block" /> for Your Business</h2>
           </div>
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
-            {servicesInfo.map((items,i) => (
-              <div key={i} className="bg-white shadow-md rounded-lg overflow-hidden p-6 hover:shadow-lg transition duration-300">
-                <div className="bg-cover h-50 rounded-md mb-4" style={{ backgroundImage: "url('https://html.themexriver.com/industo/images/background/9.jpg')" }}></div>
-                <div className="text-blue-500 font-bold text-xl mb-2">{(i+1).toString().padStart(2, '0')}</div>
-                <div className="text-blue-600 text-2xl mb-2 font-semibold">{items.service}</div>
-                <p className="text-gray-600 text-sm">{items.textExplanation.replace('to ensure accurate measurements and efficient industrial control.', 'to ensure accurate measurement and efficient industrial control.').replace('covering design, engineering, procurement, installation, and commissioning of automation systems.', 'covering design, engineering, procurement, installation, and commissioning of automation systems.').replace('including setup, power management, cooling, and ongoing support for mission-critical environments.', 'including setup, power management, cooling, and ongoing support for mission-critical environments.').replace('ranging from LV/MV installations to panel designing, earthing systems, and complete electrical maintenance.', 'ranging from LV/MV installations to panel design, earthing systems, and complete electrical maintenance.').replace('to ensure all systems meet performance and safety standards before going live.', 'to ensure all systems meet performance and safety standards before going live.').replace('for short-term and long-term industrial projects and maintenance operations.', 'for short-term and long-term industrial projects and maintenance operations.')}</p>
-                <Link to={`/services/details/${i+1}`} className="text-blue-800 mt-3 bg-blue-200 hover:font-bold p-4 hover:bg-blue-300 rounded-lg inline-block">Explore →</Link>
-              </div>
-            ))}
+            {servicesInfo.map((items, i) => {
+              const bgImg = serviceImages[`service${i+1}`];
+              return (
+                <div key={i} className="bg-white shadow-md rounded-lg overflow-hidden p-6 hover:shadow-lg transition duration-300">
+                  <div className="bg-cover h-50 rounded-md mb-4" style={{ backgroundImage: `url('${bgImg}')` }}></div>
+                  <div className="text-blue-500 font-bold text-xl mb-2">{(i+1).toString().padStart(2, '0')}</div>
+                  <div className="text-blue-600 text-2xl mb-2 font-semibold">{items.service}</div>
+                  <p className="text-gray-600 text-sm">{items.textExplanation.replace('to ensure accurate measurements and efficient industrial control.', 'to ensure accurate measurement and efficient industrial control.').replace('covering design, engineering, procurement, installation, and commissioning of automation systems.', 'covering design, engineering, procurement, installation, and commissioning of automation systems.').replace('including setup, power management, cooling, and ongoing support for mission-critical environments.', 'including setup, power management, cooling, and ongoing support for mission-critical environments.').replace('ranging from LV/MV installations to panel designing, earthing systems, and complete electrical maintenance.', 'ranging from LV/MV installations to panel design, earthing systems, and complete electrical maintenance.').replace('to ensure all systems meet performance and safety standards before going live.', 'to ensure all systems meet performance and safety standards before going live.').replace('for short-term and long-term industrial projects and maintenance operations.', 'for short-term and long-term industrial projects and maintenance operations.')}</p>
+                  <Link to={`/services/details/${i+1}`} className="text-blue-800 mt-3 bg-blue-200 hover:font-bold p-4 hover:bg-blue-300 rounded-lg inline-block">Explore →</Link>
+                </div>
+              );
+            })}
           </div>
           <div className="text-center mt-12">
            <Button text={"Explore More"} href={'/contact#contact'} primarycolor={"bg-blue-600"} secondarycolor={"bg-green-600"} />
