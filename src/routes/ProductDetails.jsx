@@ -1,58 +1,27 @@
+
 import React from 'react';
+import { useLocation, useSearchParams } from 'react-router-dom';
 import { FaStar, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { flameproofProducts } from '../assets/products';
 
 const ProductDetails = () => {
-  // Sample product data based on your flameproof products
-  const product = {
-    id: 22,
-    name: 'FLP/WP ANNUNCIATOR PANEL (4 TO 24 WINDOW)',
-    category: 'Control Systems',
-    price: 'Inquire for price',
-    rating: 5,
-    image: '/api/placeholder/400/400',
-    description: 'Flameproof annunciator panel with 4 to 24 windows for hazardous area alarm indication.',
-    specifications: {
-      typeOfProtection: 'Ex-d',
-      material: 'Cast Aluminium Alloy LM6',
-      flameproofZone: 'Zone 1 & 2',
-      gasGroup: 'IIA, IIB',
-      weatherproof: 'IP 65',
-      finish: 'Light Grey to Shade 631',
-      gasket: 'Neoprene',
-      cableEntry: 'As Per Customer Request',
-      tempClass: 'T6'
-    },
-    inStock: true,
-    featured: true
-  };
+  const location = useLocation();
+  const [searchParams] = useSearchParams();
+  // Try to get product id from URL query param or navigation state
+  let productId = null;
+  if (searchParams.get('id')) {
+    productId = parseInt(searchParams.get('id'), 10);
+  } else if (location.state && location.state.id) {
+    productId = location.state.id;
+  }
 
-  // Similar products data
-  const similarProducts = [
-    {
-      id: 24,
-      name: 'Flameproof Motor Control Panel',
-      image: '/api/placeholder/200/200',
-      category: 'Motor Control'
-    },
-    {
-      id: 25,
-      name: 'Flameproof PLC Panel Enclosure',
-      image: '/api/placeholder/200/200',
-      category: 'Control Systems'
-    },
-    {
-      id: 30,
-      name: 'Flameproof Vacuum Control Panel',
-      image: '/api/placeholder/200/200',
-      category: 'Control Systems'
-    },
-    {
-      id: 35,
-      name: 'Flameproof VFD Panel Enclosure',
-      image: '/api/placeholder/200/200',
-      category: 'Motor Control'
-    }
-  ];
+  // Find the product by id
+  const product = flameproofProducts.find((p) => p.id === productId) || flameproofProducts[0];
+
+  // Find similar products (same category, not the current one)
+  const similarProducts = flameproofProducts
+    .filter((p) => p.category === product.category && p.id !== product.id)
+    .slice(0, 4);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -88,7 +57,7 @@ const ProductDetails = () => {
           <div className="lg:w-1/2">
             <div className="bg-white rounded-lg shadow-lg p-8">
               <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop"
+                src={product.image}
                 alt={product.name}
                 className="w-full h-96 object-contain rounded-lg"
               />
@@ -106,54 +75,15 @@ const ProductDetails = () => {
               {/* Specifications List */}
               <div className="p-6">
                 <ul className="space-y-3">
-                  <li className="flex items-center">
-                    <div className="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-700">
-                      <strong>Type of Protection:</strong> {product.specifications.typeOfProtection}
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-700">
-                      <strong>Material:</strong> {product.specifications.material}
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-700">
-                      <strong>Flameproof Zone:</strong> {product.specifications.flameproofZone}
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-700">
-                      <strong>Gas Group:</strong> {product.specifications.gasGroup}
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-700">
-                      <strong>Weatherproof:</strong> {product.specifications.weatherproof}
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-700">
-                      <strong>Finish:</strong> {product.specifications.finish}
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-700">
-                      <strong>Gasket:</strong> {product.specifications.gasket}
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-gray-700">
-                      <strong>Cable entry:</strong> {product.specifications.cableEntry}
-                    </span>
-                  </li>
+                  {product.specifications &&
+                    Object.entries(product.specifications).map(([key, value]) => (
+                      <li key={key} className="flex items-center">
+                        <div className="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
+                        <span className="text-gray-700">
+                          <strong>{key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}:</strong> {value}
+                        </span>
+                      </li>
+                    ))}
                 </ul>
 
                 {/* Enquire Button */}
@@ -192,11 +122,11 @@ const ProductDetails = () => {
           
           <div className="relative">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {similarProducts.map((similarProduct, index) => (
+              {similarProducts.map((similarProduct) => (
                 <div key={similarProduct.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                   <div className="relative">
                     <img
-                      src={`https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=200&fit=crop&q=80&${index}`}
+                      src={similarProduct.image}
                       alt={similarProduct.name}
                       className="w-full h-48 object-cover"
                     />
@@ -206,9 +136,12 @@ const ProductDetails = () => {
                       {similarProduct.name}
                     </h3>
                     <p className="text-sm text-gray-600 mb-3">{similarProduct.category}</p>
-                    <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg text-sm transition duration-300">
+                    <a
+                      href={`/products/details?id=${similarProduct.id}`}
+                      className="w-full block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg text-sm text-center transition duration-300"
+                    >
                       View Details
-                    </button>
+                    </a>
                   </div>
                 </div>
               ))}
