@@ -172,12 +172,14 @@ const Products = () => {
                     >
                       INQUIRY <FaArrowRight size={10} />
                     </a>
-                    <a
-                      href="/contact#contact"
+                    <Link
+                      to="/products/details"
+                      state={{ product }}
                       className="bg-gray-200 hover:cursor-pointer hover:bg-gray-300 transition px-4 py-2 text-gray-700 font-semibold rounded-full text-sm"
                     >
                       Details
-                    </a>
+                    </Link>
+
                   </div>
 
                   {product.inStock && (

@@ -50,7 +50,7 @@ const ProductCarousel = () => {
   return (
     <section className="bg-[#efefef9f] py-16">
       <div className="text-center mb-12">
-          <div className="text-orange-600 inline-block font-bold uppercase relative beforetext md:before:content-['Products'] mb-10">Populat Products</div>
+          <div className="text-orange-600 inline-block font-bold uppercase relative beforetext md:before:content-['Products'] mb-10">Popular Products</div>
         <h2 className="text-4xl font-bold">We have the best quality <br /> industrial products.</h2>
         <div className="w-16 h-1 bg-orange-500 mx-auto mt-2"></div>
       </div>
