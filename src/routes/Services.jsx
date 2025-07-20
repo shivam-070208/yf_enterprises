@@ -42,28 +42,44 @@ const ServicesPage = () => {
   ];
 const servicesInfo = [
   {
-    service: "Instrumentation Services",
-    textExplanation: "Expert calibration, installation, and maintenance of process instruments to ensure accurate measurements and efficient industrial control."
+    service: "Instrumentation Solutions",
+    textExplanation: "Precision-driven instrumentation services for industrial automation, calibration, and process control."
   },
   {
-    service: "C&I Contracting Services",
-    textExplanation: "Comprehensive control and instrumentation contracting, covering design, engineering, procurement, installation, and commissioning of automation systems."
+    service: "C&I Contracting",
+    textExplanation: "End-to-end Control & Instrumentation contracting including PLC/DCS integration, field cabling, and commissioning."
   },
   {
-    service: "Data Center Services",
-    textExplanation: "End-to-end data center infrastructure solutions, including setup, power management, cooling, and ongoing support for mission-critical environments."
+    service: "Data Center Solutions",
+    textExplanation: "Turnkey data center infrastructure services covering power backup, cooling, security, and server rack integration."
   },
   {
-    service: "Electrical Services",
-    textExplanation: "Full-spectrum electrical solutions ranging from LV/MV installations to panel designing, earthing systems, and complete electrical maintenance."
+    service: "Electrical Projects",
+    textExplanation: "Complete electrical design, erection, testing, and commissioning for industrial and commercial setups."
   },
   {
-    service: "Testing and Commissioning",
-    textExplanation: "Thorough electrical testing and commissioning services to ensure all systems meet performance and safety standards before going live."
+    service: "Testing & Commissioning",
+    textExplanation: "Advanced testing and commissioning services for electrical panels, transformers, and substation equipment."
   },
   {
-    service: "Manpower Services",
-    textExplanation: "Supply of skilled technical professionals and certified engineers for short-term and long-term industrial projects and maintenance operations."
+    service: "Manpower Deployment",
+    textExplanation: "Skilled technical manpower supply for project execution, maintenance, and industrial operations support."
+  },
+  {
+    service: "Flameproof Installations",
+    textExplanation: "Specialized flameproof solutions for hazardous zones ensuring safety and regulatory compliance."
+  },
+  {
+    service: "Custom-Built Panels",
+    textExplanation: "Design and fabrication of customized control panels meeting exact project specifications and standards."
+  },
+  {
+    service: "AMC & O&M Services",
+    textExplanation: "Comprehensive Annual Maintenance and Operation & Maintenance contracts to ensure uninterrupted plant uptime."
+  },
+  {
+    service: "Servo Stabilizers",
+    textExplanation: "Robust voltage stabilizers ensuring steady output voltage, protecting sensitive industrial equipment."
   }
 ];
 
@@ -86,16 +102,16 @@ const servicesInfo = [
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-blue-600 text-sm uppercase font-semibold">The Best Industry Services</p>
-            <h2 className="text-3xl md:text-4xl font-bold">Industo Provide Services <br className="hidden md:block" /> For Your Business</h2>
+            <p className="text-blue-600 text-sm uppercase font-semibold">The Best Industrial Services</p>
+            <h2 className="text-3xl md:text-4xl font-bold">Industo Provides Services <br className="hidden md:block" /> for Your Business</h2>
           </div>
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
             {servicesInfo.map((items,i) => (
               <div key={i} className="bg-white shadow-md rounded-lg overflow-hidden p-6 hover:shadow-lg transition duration-300">
                 <div className="bg-cover h-50 rounded-md mb-4" style={{ backgroundImage: "url('https://html.themexriver.com/industo/images/background/9.jpg')" }}></div>
-                <div className="text-blue-500 font-bold text-xl mb-2">0{i}</div>
+                <div className="text-blue-500 font-bold text-xl mb-2">{(i+1).toString().padStart(2, '0')}</div>
                 <div className="text-blue-600 text-2xl mb-2 font-semibold">{items.service}</div>
-                <p className="text-gray-600 text-sm">{items.textExplanation}</p>
+                <p className="text-gray-600 text-sm">{items.textExplanation.replace('to ensure accurate measurements and efficient industrial control.', 'to ensure accurate measurement and efficient industrial control.').replace('covering design, engineering, procurement, installation, and commissioning of automation systems.', 'covering design, engineering, procurement, installation, and commissioning of automation systems.').replace('including setup, power management, cooling, and ongoing support for mission-critical environments.', 'including setup, power management, cooling, and ongoing support for mission-critical environments.').replace('ranging from LV/MV installations to panel designing, earthing systems, and complete electrical maintenance.', 'ranging from LV/MV installations to panel design, earthing systems, and complete electrical maintenance.').replace('to ensure all systems meet performance and safety standards before going live.', 'to ensure all systems meet performance and safety standards before going live.').replace('for short-term and long-term industrial projects and maintenance operations.', 'for short-term and long-term industrial projects and maintenance operations.')}</p>
                 <Link to={`/services/details/${i+1}`} className="text-blue-800 mt-3 bg-blue-200 hover:font-bold p-4 hover:bg-blue-300 rounded-lg inline-block">Explore →</Link>
               </div>
             ))}
@@ -110,8 +126,8 @@ const servicesInfo = [
       <section className="py-20 bg-[url('/images/background/map.png')] bg-no-repeat bg-center bg-cover">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-blue-600 text-sm uppercase font-semibold">Our Testimonial</p>
-            <h2 className="text-3xl md:text-4xl font-bold">Happy Client Says <br className="hidden md:block" /> About Us</h2>
+            <p className="text-blue-600 text-sm uppercase font-semibold">Our Testimonials</p>
+            <h2 className="text-3xl md:text-4xl font-bold">What Our Clients Say <br className="hidden md:block" /> About Us</h2>
           </div>
           <Swiper slidesPerView={1} spaceBetween={30} breakpoints={{ 640: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}>
             {textTestimonial.map((testimonial, index) => (

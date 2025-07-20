@@ -102,25 +102,25 @@ const ServiceDetails = () => {
 
         {/* Details Content */}
         <main className="flex-1">
-          <div className="bg-white rounded-lg shadow p-8">
+            <div className="bg-white rounded-lg shadow p-8">
             <div className="mb-6">
               <h3 className="text-2xl font-bold text-orange-600 mb-2">{service.provider}</h3>
               <div className="flex flex-col md:flex-row gap-4 mb-4">
                 {service.images.map((img, i) => (
-                  <img key={i} src={img} alt="service" className="rounded w-full md:w-1/3 object-cover h-40" />
+                  <img key={i} src={img} alt="Service" className="rounded w-full md:w-1/3 object-cover h-40" />
                 ))}
               </div>
               <p className="text-gray-700 mb-4">{service.description}</p>
               <ul className="list-disc pl-6 text-gray-700 mb-6">
                 {service.points.map((point, i) => (
-                  <li key={i} className="mb-1">{point}</li>
+                  <li key={i} className="mb-1">{point.replace('shut down', 'shutdown')}</li>
                 ))}
               </ul>
             </div>
             {service.sections.map((section, i) => (
               <div key={i} className="mb-6">
                 <h4 className="text-xl font-bold text-blue-700 mb-2">{section.title}</h4>
-                <p className="text-gray-700">{section.text}</p>
+                <p className="text-gray-700">{section.text.replace('equipments', 'equipment').replace('in-lab factory calibration and test and calibration equipment as required.', 'in-lab factory calibration and test equipment as required.')}</p>
               </div>
             ))}
             <div className="text-center mt-8">
