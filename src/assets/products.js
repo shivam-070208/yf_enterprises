@@ -1,4 +1,6 @@
 
+import productImages from './productImage';
+
 export const flameproofProducts = [
   {
     id: 1,
@@ -7,7 +9,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://imgs.search.brave.com/PQ1-ekOrJOcT7Z1GXRfkHTy55hHU8U2LSeJJQsbfeuM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aWlt/Zy50aXN0YXRpYy5j/b20vZnAvMS8wMDcv/MDg3L2ZpcmUtYWxh/cm0tbWFudWFsLWNh/bGwtcG9pbnQtMzA0/LmpwZw', // Placeholder image
+    image: productImages.product1,
     description: 'Flameproof fire alarm/manual call point for hazardous areas.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -28,7 +30,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 4,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product2,
     description: 'Flameproof limit switch for industrial applications.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -50,7 +52,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product3,
     description: 'Flameproof push button station for various control functions.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -73,7 +75,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 4,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product4,
     description: 'Flameproof hooter with flasher for audible and visual alarms.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -95,7 +97,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product5,
     description: 'Flameproof stop push button station for emergency cut-off.',
     specifications: {
       typeOfProtection: 'Ex-d',
@@ -117,7 +119,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product6,
     description: 'Flameproof start/stop push button station for motor control.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -138,7 +140,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 4,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product7,
     description: 'Flameproof push button station with integrated indication lamp.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -161,7 +163,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product8,
     description: 'Flameproof switch socket combine for power connectivity.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -185,7 +187,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 4,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product9,
     description: 'Flameproof ON/OFF rotary switch for various control applications.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -206,7 +208,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product10,
     description: 'Flameproof temperature indicator for monitoring in hazardous areas.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -227,7 +229,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 4,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product11,
     description: 'Flameproof lamp for reactor vessels.',
     specifications: {
       typeOfProtection: 'Ex-d',
@@ -248,7 +250,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product12,
     description: 'Flameproof clean room lighting fitting.',
     specifications: {
       typeOfProtection: 'Ex-d',
@@ -271,7 +273,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product13,
     description: 'Flameproof flood light fitting for wide area illumination.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -295,7 +297,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 4,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product14,
     description: 'Flameproof sunflower LED light fitting with various power options.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -318,7 +320,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 4,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product15,
     description: 'Flameproof tube light fitting for hazardous environments.',
     specifications: {
       typeOfProtection: 'Ex-d',
@@ -343,7 +345,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product16,
     description: 'Flameproof bulk head light fitting for general illumination.',
     specifications: {
       typeOfProtection: 'Ex-d',
@@ -366,7 +368,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 4,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product17,
     description: 'Flameproof aviation light for airfield and elevated structure safety.',
     specifications: {
       typeOfProtection: 'Ex-d',
@@ -387,7 +389,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 4,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product18,
     description: 'Flameproof hand lamp for portable illumination in hazardous areas.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -411,7 +413,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 4,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product19,
     description: 'Flameproof tower lamp for signal and warning applications.',
     specifications: {
       typeOfProtection: 'Ex-d',
@@ -433,7 +435,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product20,
     description: 'Flameproof well glass fitting with dome type design.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -460,7 +462,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product21,
     description: 'Multiple way flameproof junction box for gas groups IIA and IIB.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -484,7 +486,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product22,
     description: 'Flameproof annunciator panel with 4 to 24 windows.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -505,7 +507,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product23,
     description: 'Flameproof annunciator panel for various alarm indications.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -527,7 +529,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product24,
     description: 'Flameproof star delta starter panel for motor control.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -549,7 +551,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product25,
     description: 'Flameproof motor control panel with multiple starter ratings.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -571,7 +573,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product26,
     description: 'Multiple way flameproof junction box for gas group IIC.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -594,7 +596,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product27,
     description: 'Flameproof automation controller panel for industrial automation.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -616,7 +618,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product28,
     description: 'Flameproof HMI automation panel for human-machine interface in hazardous areas.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -638,7 +640,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product29,
     description: 'Flameproof PLC panel enclosure for housing programmable logic controllers.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -661,7 +663,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product30,
     description: 'Flameproof vacuum control panel for vacuum system management.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -684,7 +686,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product31,
     description: 'Flameproof distribution board for lightning and power distribution.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -705,7 +707,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product32,
     description: 'Flameproof enclosure for protecting sensitive instruments.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -726,7 +728,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product33,
     description: 'Flameproof ON/OFF push button station for clean room applications.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -747,7 +749,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product34,
     description: 'Flameproof bulk head light fitting for clean room environments.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -769,7 +771,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product35,
     description: 'Flameproof VFD (Variable Frequency Drive) panel for motor speed control.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -791,7 +793,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product36,
     description: 'Flameproof temperature controller for precise temperature management.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -812,7 +814,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product37,
     description: 'Flameproof DOL (Direct Online) starter for direct motor starting.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -833,7 +835,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product38,
     description: 'Flameproof rotary switch for clean room applications.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -855,7 +857,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product39,
     description: 'Flameproof switch socket combine for clean room environments.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -880,7 +882,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product40,
     description: 'Flameproof exhaust fan for ventilation in hazardous areas.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
