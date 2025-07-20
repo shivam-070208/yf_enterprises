@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useLocation, useSearchParams } from 'react-router-dom';
+import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import { FaStar, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { flameproofProducts } from '../assets/products';
 
@@ -35,9 +35,9 @@ const ProductDetails = () => {
         <div className="container mx-auto px-4">
           {/* Breadcrumb */}
           <nav className="flex items-center text-white text-sm mb-4">
-            <a href="/" className="hover:underline">Home</a>
+            <Link to="/" className="hover:underline">Home</Link>
             <span className="mx-2">/</span>
-            <a href="/products" className="hover:underline">Products</a>
+            <Link to="/products" className="hover:underline">Products</Link>
             <span className="mx-2">/</span>
             <span className="text-orange-400">Product Details</span>
           </nav>

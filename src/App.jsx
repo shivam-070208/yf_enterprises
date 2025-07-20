@@ -7,6 +7,7 @@ import { AboutUs, Blog, Contact, Detailblog, Home, ServicesPage, Products } from
 import Footer from './ui/Footer'
 import Loaderinitiater from './Components/Loaderinitiater'
 import Totop from './ui/Totop'
+import ProductDetails from './routes/ProductDetails'
 
 function App() {
   return (
@@ -37,7 +38,14 @@ function App() {
           <Loaderinitiater>
             <Products />
           </Loaderinitiater>
+         
           } />
+            <Route path='/products/details' element={
+          <Loaderinitiater>
+            <ProductDetails />
+          </Loaderinitiater>
+           }
+          />
           <Route path='/blog' element={
             <Loaderinitiater>
             <Blog />

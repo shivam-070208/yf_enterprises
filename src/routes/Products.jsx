@@ -155,26 +155,19 @@ const Products = () => {
                       <span>Material:</span>
                       <span>{product.specifications.material}</span>
                     </div>
-                    {/* <div className="flex justify-between mb-1">
-                      <span>Protection:</span>
-                      <span>{product.specifications.protection}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Certification:</span>
-                      <span>{product.specifications.certification}</span>
-                    </div> */}
+                  
                   </div>
 
                   <div className="flex gap-2 z-20">
-                    <a
-                      href="/contact#contact"
+                    <Link
+                      to="/contact#contact"
                       className="bg-orange-500 hover:bg-orange-600 hover:cursor-pointer transition px-4 py-2 text-white font-semibold rounded-full flex items-center gap-2 text-sm relative z-20"
                     >
                       INQUIRY <FaArrowRight size={10} />
-                    </a>
+                    </Link>
                     <Link
-                      to="/products/details"
-                      state={{ product }}
+                      to={`/products/details?id=${product.id}`}
+                     
                       className="bg-gray-200 hover:cursor-pointer hover:bg-gray-300 transition px-4 py-2 text-gray-700 font-semibold rounded-full text-sm"
                     >
                       Details
