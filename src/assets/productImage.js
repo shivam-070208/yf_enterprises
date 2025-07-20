@@ -40,6 +40,23 @@ import product37 from './YF PRODUCT/37.jpg';
 import product38 from './YF PRODUCT/38.jpg';
 import product39 from './YF PRODUCT/39.jpg';
 import product40 from './YF PRODUCT/40.jpg';
+import product41 from './YF PRODUCT/41.jpg';
+import product42 from './YF PRODUCT/42.jpg';
+import product43 from './YF PRODUCT/43.jpg';
+import product44 from './YF PRODUCT/44.jpg';
+import product45 from './YF PRODUCT/45.jpg';
+import product46 from './YF PRODUCT/46.jpg';
+import product47 from './YF PRODUCT/47.jpg';
+import product48 from './YF PRODUCT/48.jpg';
+import product49 from './YF PRODUCT/49.jpg';
+import product50 from './YF PRODUCT/50.jpg';
+import product51 from './YF PRODUCT/51.jpg';
+import product52 from './YF PRODUCT/52.jpg';
+import product53 from './YF PRODUCT/53.jpg';
+import product54 from './YF PRODUCT/54.jpg';
+import product55 from './YF PRODUCT/55.jpg';
+import product56 from './YF PRODUCT/56.jpg';
+import product57 from './YF PRODUCT/57.jpg';
 
 const images = {
   product1,
@@ -82,6 +99,23 @@ const images = {
   product38,
   product39,
   product40,
+  product41,
+  product42,
+  product43,
+  product44,
+  product45,
+  product46,
+  product47,
+  product48,
+  product49,
+  product50,
+  product51,
+  product52,
+  product53,
+  product54,
+  product55,
+  product56,
+  product57,
 };
 
 export default images;

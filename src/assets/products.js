@@ -903,7 +903,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product41,
     description: 'Flameproof wall mounted fan for air circulation.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6', // Material derived from other products
@@ -925,7 +925,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product42,
     description: 'Flameproof pedestal fan for portable air movement.',
     specifications: {
       certificationCode: 'Exd, IIA and IIB',
@@ -943,7 +943,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product43,
     description: 'Flameproof cable glands and accessories for secure cable entry.',
     specifications: {
       material: 'MS, Brass and Stainless Steel',
@@ -962,7 +962,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product44,
     description: 'Flameproof direct entry control station for direct control connections.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -983,7 +983,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product45,
     description: 'Flameproof camera housing for surveillance in hazardous areas.',
     specifications: {
       resolution: '1000TVL, 1MP, 1.3MP, 2MP, 3MP',
@@ -1008,7 +1008,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product46,
     description: 'Flameproof digital clock for time display in hazardous areas.',
     specifications: {
       gasGroup: 'IIA, IIB',
@@ -1035,7 +1035,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product47,
     description: 'Flameproof door interlocking system for controlled access.',
     specifications: {
       material: 'Cast Aluminium Alloy Lm6',
@@ -1055,7 +1055,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product48,
     description: 'Flameproof enclosure for gas detectors.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -1076,7 +1076,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product49,
     description: 'Flameproof enclosure for heaters.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -1097,7 +1097,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product50,
     description: 'Flameproof M Shape tubular heater panel.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -1116,7 +1116,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product51,
     description: 'Flameproof pass box for material transfer in clean rooms.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -1136,7 +1136,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product52,
     description: 'Flameproof UV tube light fitting for sterilization and other applications.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -1159,7 +1159,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product53,
     description: 'Flameproof junction box with 2, 3, or 4 ways.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -1182,7 +1182,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product54,
     description: 'Flameproof magnet for various industrial uses.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -1205,7 +1205,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product55,
     description: 'Flameproof thermocouple heads/sensors for temperature measurement.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -1225,7 +1225,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product56,
     description: 'Flameproof weighing scale unit for accurate measurement in hazardous areas.',
     specifications: {
       material: 'Cast Aluminium Alloy LM6',
@@ -1245,7 +1245,7 @@ export const flameproofProducts = [
     price: 'Inquire for price',
     originalPrice: 'Inquire for price',
     rating: 5,
-    image: 'https://via.placeholder.com/150', // Placeholder image
+    image: productImages.product57,
     description: 'Flameproof emergency exit light fitting with backup power.',
     specifications: {
       typeOfProtection: 'Ex-d',
