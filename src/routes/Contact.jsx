@@ -1,6 +1,23 @@
 import React, { useRef } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+const concactInfo = [
+  {
+    title: "Call us for help",
+    icon: "FaPhone",
+    value: "+91 9748413152",
+  },
+  {
+    title: "Address",
+    icon: "TiLocationOutline",
+    value: "62, Bentick Street Kolkata-700069 West Bengal",
+  },
+  {
+    title: "Mail us",
+    icon: "FaEnvelopeOpenText",
+    value: "tenders@yfenterprises.com",
+  },
+];
 
 const Contact = () => {
   const toastref = useRef(null);
@@ -63,8 +80,29 @@ const Contact = () => {
       </section>
        
       <div className="max-w-5xl mx-auto px-4 space-y-20 py-16">
-        <div className="bg-red-50 w-full h-full p-10 md:grid md:grid-cols-2 gap-10 rounded-lg shadow-lg">
-        
+        <div className="bg-white w-full h-full p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 rounded-lg shadow-lg">
+          {concactInfo.map((item, idx) => (
+            <div
+              key={idx}
+              className="flex flex-col items-center text-center bg-orange-50 rounded-xl shadow-sm p-6 hover:shadow-lg transition group border border-orange-100"
+            >
+              <span className="flex items-center justify-center w-14 h-14 rounded-full bg-orange-100 mb-4 group-hover:bg-orange-500 transition">
+                {item.icon === "FaPhone" && (
+                  <svg width="2em" height="2em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-orange-500 group-hover:text-white transition"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+                )}
+                {item.icon === "TiLocationOutline" && (
+                  <svg width="2em" height="2em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-orange-500 group-hover:text-white transition"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+                )}
+                {item.icon === "FaEnvelopeOpenText" && (
+                  <svg width="2em" height="2em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-orange-500 group-hover:text-white transition"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+                )}
+              </span>
+              <div>
+                <div className="font-bold text-lg mb-1 text-gray-900">{item.title}</div>
+                <div className="text-gray-700 text-base break-words font-medium">{item.value}</div>
+              </div>
+            </div>
+          ))}
         </div>
         {/* Contact Form */}
           <section>
