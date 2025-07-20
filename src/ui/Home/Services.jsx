@@ -6,6 +6,8 @@ import "swiper/css/autoplay";
 import { FaDropbox, FaIndustry } from "react-icons/fa";
 import { image1, image2, image3, image4, Wallpattern } from "../../assets";
 import { Link } from "react-router-dom";
+import serviceImages from "../../assets/serviceImages";
+
 
 // Mock logos (you can replace with image paths if needed)
 const logos = [
@@ -16,34 +18,49 @@ const logos = [
 
 const services = [
   {
-    title: "Flameproof Control Panels",
-    subtitle: "Custom solutions for industrial safety",
-    description: "Designed for hazardous environments with gas group IIA, IIB, and IIC safety standards.",
-    details: "Our flameproof panels are built to handle explosive environments. With rigorous IIA/IIB/IIC certifications, they ensure safe operations in chemical plants, oil rigs, and refineries. The rugged design offers long-lasting reliability under pressure.",
-    image: image1,
+    title: "Instrumentation Solutions",
+    subtitle: "Precision in every measurement",
+    description: "Precision-driven instrumentation services for industrial automation, calibration, and process control.",
+    details: "We deliver high-accuracy instrumentation solutions tailored to industrial requirements. From sensor calibration and loop checking to process instrumentation integration, we ensure system reliability and process optimization.",
+    image: serviceImages.service1,
   },
   {
-    title: "PLC Automation",
-    subtitle: "Precision control for your processes",
-    description: "Efficient automation using advanced PLC and SCADA systems.",
-    details: "We provide PLC-based control systems tailored for industrial automation. Integrated with SCADA, our systems increase productivity, reduce human error, and offer remote monitoring and control with robust fault tolerance.",
-    image: image2,
+    title: "C&I Contracting",
+    subtitle: "Control & Instrumentation expertise",
+    description: "End-to-end Control & Instrumentation contracting including PLC/DCS integration, field cabling, and commissioning.",
+    details: "Our C&I services include complete field engineering, cabling, PLC/DCS installation, and commissioning. We specialize in turnkey industrial automation setups with meticulous wiring and system integrity.",
+    image: serviceImages.service2,
   },
   {
-    title: "LT Panels & Distribution Boards",
-    subtitle: "Power control with safety and efficiency",
-    description: "Tailored LT panels for seamless power distribution in your facilities.",
-    details: "Our LT panels are engineered for optimized electrical distribution, safety, and low maintenance. Equipped with top-grade switchgear, these panels ensure smooth operation of industrial and commercial power systems.",
-    image: image3,
+    title: "Data Center Solutions",
+    subtitle: "Robust and scalable infrastructure",
+    description: "Turnkey data center infrastructure services covering power backup, cooling, security, and server rack integration.",
+    details: "From UPS systems and precision air conditioning to surveillance and structured cabling, we build reliable and efficient data center environments that meet modern IT needs and uptime standards.",
+    image: serviceImages.service3,
   },
   {
-    title: "APFC Panels",
-    subtitle: "Smart power factor correction",
-    description: "Automatic correction panels to maintain ideal power factor and reduce bills.",
-    details: "Our APFC panels automatically adjust reactive power to optimize the power factor. This leads to better energy efficiency, lower electricity bills, and improved voltage stability—essential for any large electrical setup.",
-    image: image4,
+    title: "Electrical Projects",
+    subtitle: "Powering industrial excellence",
+    description: "Complete electrical design, erection, testing, and commissioning for industrial and commercial setups.",
+    details: "Our services span HT/LT installation, electrical layout planning, equipment erection, and final commissioning. We adhere strictly to safety norms while ensuring seamless power flow and load management.",
+    image: serviceImages.service4,
+  },
+  {
+    title: "Testing & Commissioning",
+    subtitle: "Reliable performance verification",
+    description: "Advanced testing and commissioning services for electrical panels, transformers, and substation equipment.",
+    details: "We offer insulation resistance testing, primary/secondary injection, transformer testing, and relay configuration to verify system integrity before project handover, ensuring fault-free startups.",
+    image: serviceImages.service5,
+  },
+  {
+    title: "Manpower Deployment",
+    subtitle: "Skilled technical workforce on demand",
+    description: "Skilled technical manpower supply for project execution, maintenance, and industrial operations support.",
+    details: "Our manpower pool includes electricians, supervisors, panel testers, and engineers. Whether for shutdown maintenance or new projects, we provide experienced professionals tailored to industry needs.",
+    image: serviceImages.service6,
   },
 ];
+
 
 const ServicesCarousel = () => {
   const swiperRef = useRef(null);

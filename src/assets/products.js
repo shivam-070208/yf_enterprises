@@ -6,8 +6,8 @@ export const flameproofProducts = [
     id: 1,
     name: 'Flameproof Fire Alarm/Manual Call Point',
     category: 'Safety Devices',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product1,
     description: 'Flameproof fire alarm/manual call point for hazardous areas.',
@@ -27,8 +27,8 @@ export const flameproofProducts = [
     id: 2,
     name: 'Flameproof Limit Switch (Roller/Lever Type)',
     category: 'Control Devices',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 4,
     image: productImages.product2,
     description: 'Flameproof limit switch for industrial applications.',
@@ -49,8 +49,8 @@ export const flameproofProducts = [
     id: 3,
     name: 'Flameproof Push Button Station (R/F/S)',
     category: 'Control Devices',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product3,
     description: 'Flameproof push button station for various control functions.',
@@ -72,8 +72,8 @@ export const flameproofProducts = [
     id: 4,
     name: 'Flameproof Hooter with Flasher',
     category: 'Safety Devices',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 4,
     image: productImages.product4,
     description: 'Flameproof hooter with flasher for audible and visual alarms.',
@@ -94,8 +94,8 @@ export const flameproofProducts = [
     id: 5,
     name: 'Flameproof Stop Push Button Station',
     category: 'Control Devices',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product5,
     description: 'Flameproof stop push button station for emergency cut-off.',
@@ -116,8 +116,8 @@ export const flameproofProducts = [
     id: 6,
     name: 'Flameproof Start/Stop Push Button Station',
     category: 'Control Devices',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product6,
     description: 'Flameproof start/stop push button station for motor control.',
@@ -137,8 +137,8 @@ export const flameproofProducts = [
     id: 7,
     name: 'Flameproof Push Button Station with Indication Lamp',
     category: 'Control Devices',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 4,
     image: productImages.product7,
     description: 'Flameproof push button station with integrated indication lamp.',
@@ -160,8 +160,8 @@ export const flameproofProducts = [
     id: 8,
     name: 'Flameproof Switch Socket Combine',
     category: 'Electrical Components',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product8,
     description: 'Flameproof switch socket combine for power connectivity.',
@@ -184,8 +184,8 @@ export const flameproofProducts = [
     id: 9,
     name: 'Flameproof ON/OFF Rotary Switch',
     category: 'Control Devices',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 4,
     image: productImages.product9,
     description: 'Flameproof ON/OFF rotary switch for various control applications.',
@@ -205,8 +205,8 @@ export const flameproofProducts = [
     id: 10,
     name: 'Flameproof Temperature Indicator',
     category: 'Instrumentation',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product10,
     description: 'Flameproof temperature indicator for monitoring in hazardous areas.',
@@ -226,8 +226,8 @@ export const flameproofProducts = [
     id: 11,
     name: 'Flameproof Reactor Vessel Lamp',
     category: 'Lighting',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 4,
     image: productImages.product11,
     description: 'Flameproof lamp for reactor vessels.',
@@ -247,8 +247,8 @@ export const flameproofProducts = [
     id: 12,
     name: 'Flameproof Clean Room Fitting 2 x 36',
     category: 'Lighting',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product12,
     description: 'Flameproof clean room lighting fitting.',
@@ -270,8 +270,8 @@ export const flameproofProducts = [
     id: 13,
     name: 'Flameproof Flood Light Fitting',
     category: 'Lighting',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product13,
     description: 'Flameproof flood light fitting for wide area illumination.',
@@ -294,8 +294,8 @@ export const flameproofProducts = [
     id: 14,
     name: 'Flameproof Sunflower LED Light Fitting',
     category: 'Lighting',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 4,
     image: productImages.product14,
     description: 'Flameproof sunflower LED light fitting with various power options.',
@@ -317,8 +317,8 @@ export const flameproofProducts = [
     id: 15,
     name: 'Flameproof Tube Light Fitting',
     category: 'Lighting',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 4,
     image: productImages.product15,
     description: 'Flameproof tube light fitting for hazardous environments.',
@@ -342,8 +342,8 @@ export const flameproofProducts = [
     id: 16,
     name: 'Flameproof Bulk Head Light Fitting',
     category: 'Lighting',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product16,
     description: 'Flameproof bulk head light fitting for general illumination.',
@@ -365,8 +365,8 @@ export const flameproofProducts = [
     id: 17,
     name: 'Flameproof Aviation Light',
     category: 'Lighting',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 4,
     image: productImages.product17,
     description: 'Flameproof aviation light for airfield and elevated structure safety.',
@@ -386,8 +386,8 @@ export const flameproofProducts = [
     id: 18,
     name: 'Flameproof Hand Lamp',
     category: 'Lighting',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 4,
     image: productImages.product18,
     description: 'Flameproof hand lamp for portable illumination in hazardous areas.',
@@ -410,8 +410,8 @@ export const flameproofProducts = [
     id: 19,
     name: 'Flameproof Tower Lamp',
     category: 'Lighting',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 4,
     image: productImages.product19,
     description: 'Flameproof tower lamp for signal and warning applications.',
@@ -432,8 +432,8 @@ export const flameproofProducts = [
     id: 20,
     name: 'Flameproof Well Glass Fitting Dome Type',
     category: 'Lighting',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product20,
     description: 'Flameproof well glass fitting with dome type design.',
@@ -459,8 +459,8 @@ export const flameproofProducts = [
     id: 21,
     name: 'Flameproof Junction Box (Gas Group-IIA, IIB) Multiple Way',
     category: 'Electrical Safety',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product21,
     description: 'Multiple way flameproof junction box for gas groups IIA and IIB.',
@@ -483,8 +483,8 @@ export const flameproofProducts = [
     id: 22,
     name: 'Flameproof Annunciator Panel (4 to 24 Windows)',
     category: 'Control Systems',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product22,
     description: 'Flameproof annunciator panel with 4 to 24 windows.',
@@ -504,8 +504,8 @@ export const flameproofProducts = [
     id: 23,
     name: 'Flameproof Annunciator Panel',
     category: 'Control Systems',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product23,
     description: 'Flameproof annunciator panel for various alarm indications.',
@@ -526,8 +526,8 @@ export const flameproofProducts = [
     id: 24,
     name: 'Flameproof Star Delta Starter Panel',
     category: 'Motor Control',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product24,
     description: 'Flameproof star delta starter panel for motor control.',
@@ -548,8 +548,8 @@ export const flameproofProducts = [
     id: 25,
     name: 'Flameproof Motor Control Panel',
     category: 'Motor Control',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product25,
     description: 'Flameproof motor control panel with multiple starter ratings.',
@@ -570,8 +570,8 @@ export const flameproofProducts = [
     id: 26,
     name: 'Flameproof Junction Box (Gas Group-IIC) Multiple Way',
     category: 'Electrical Safety',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product26,
     description: 'Multiple way flameproof junction box for gas group IIC.',
@@ -593,8 +593,8 @@ export const flameproofProducts = [
     id: 27,
     name: 'Flameproof Automation Controller Panel',
     category: 'Control Systems',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product27,
     description: 'Flameproof automation controller panel for industrial automation.',
@@ -615,8 +615,8 @@ export const flameproofProducts = [
     id: 28,
     name: 'Flameproof HMI Automation Panel',
     category: 'Control Systems',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product28,
     description: 'Flameproof HMI automation panel for human-machine interface in hazardous areas.',
@@ -637,8 +637,8 @@ export const flameproofProducts = [
     id: 29,
     name: 'Flameproof PLC Panel Enclosure',
     category: 'Control Systems',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product29,
     description: 'Flameproof PLC panel enclosure for housing programmable logic controllers.',
@@ -660,8 +660,8 @@ export const flameproofProducts = [
     id: 30,
     name: 'Flameproof Vacuum Control Panel',
     category: 'Control Systems',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product30,
     description: 'Flameproof vacuum control panel for vacuum system management.',
@@ -683,8 +683,8 @@ export const flameproofProducts = [
     id: 31,
     name: 'Flameproof 12/18/24/36 Way Lightning/Power Distribution Board',
     category: 'Power Distribution',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product31,
     description: 'Flameproof distribution board for lightning and power distribution.',
@@ -704,8 +704,8 @@ export const flameproofProducts = [
     id: 32,
     name: 'Flameproof Instrument Enclosure',
     category: 'Instrumentation',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product32,
     description: 'Flameproof enclosure for protecting sensitive instruments.',
@@ -725,8 +725,8 @@ export const flameproofProducts = [
     id: 33,
     name: 'Flameproof Clean Room Push Button Station ON/OFF',
     category: 'Control Devices',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product33,
     description: 'Flameproof ON/OFF push button station for clean room applications.',
@@ -746,8 +746,8 @@ export const flameproofProducts = [
     id: 34,
     name: 'Flameproof Clean Room Bulk Head Light Fitting',
     category: 'Lighting',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product34,
     description: 'Flameproof bulk head light fitting for clean room environments.',
@@ -768,8 +768,8 @@ export const flameproofProducts = [
     id: 35,
     name: 'Flameproof VFD Panel',
     category: 'Motor Control',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product35,
     description: 'Flameproof VFD (Variable Frequency Drive) panel for motor speed control.',
@@ -790,8 +790,8 @@ export const flameproofProducts = [
     id: 36,
     name: 'Flameproof Temp Controller',
     category: 'Instrumentation',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product36,
     description: 'Flameproof temperature controller for precise temperature management.',
@@ -811,8 +811,8 @@ export const flameproofProducts = [
     id: 37,
     name: 'Flameproof DOL Starter',
     category: 'Motor Control',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product37,
     description: 'Flameproof DOL (Direct Online) starter for direct motor starting.',
@@ -832,8 +832,8 @@ export const flameproofProducts = [
     id: 38,
     name: 'Flameproof Clean Room Rotary Switch',
     category: 'Control Devices',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product38,
     description: 'Flameproof rotary switch for clean room applications.',
@@ -854,8 +854,8 @@ export const flameproofProducts = [
     id: 39,
     name: 'Flameproof Clean Room Switch Socket Combine',
     category: 'Electrical Components',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product39,
     description: 'Flameproof switch socket combine for clean room environments.',
@@ -879,8 +879,8 @@ export const flameproofProducts = [
     id: 40,
     name: 'Flameproof Exhaust Fan',
     category: 'Fan',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product40,
     description: 'Flameproof exhaust fan for ventilation in hazardous areas.',
@@ -900,8 +900,8 @@ export const flameproofProducts = [
     id: 41,
     name: 'Flameproof Wall Mounted Fan',
     category: 'Fan',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product41,
     description: 'Flameproof wall mounted fan for air circulation.',
@@ -922,8 +922,8 @@ export const flameproofProducts = [
     id: 42,
     name: 'Flameproof Pedestal Fan',
     category: 'Fan',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product42,
     description: 'Flameproof pedestal fan for portable air movement.',
@@ -940,8 +940,8 @@ export const flameproofProducts = [
     id: 43,
     name: 'Flameproof Double Compression Cable Gland/Dummy Plug/PVC Rubber Hood',
     category: 'Accessories',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product43,
     description: 'Flameproof cable glands and accessories for secure cable entry.',
@@ -959,8 +959,8 @@ export const flameproofProducts = [
     id: 44,
     name: 'Flameproof Direct Entry Control Station',
     category: 'Control Devices',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product44,
     description: 'Flameproof direct entry control station for direct control connections.',
@@ -980,8 +980,8 @@ export const flameproofProducts = [
     id: 45,
     name: 'Flameproof Camera Housing',
     category: 'Accessories',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product45,
     description: 'Flameproof camera housing for surveillance in hazardous areas.',
@@ -1005,8 +1005,8 @@ export const flameproofProducts = [
     id: 46,
     name: 'Flameproof Clock Digital',
     category: 'Instrumentation',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product46,
     description: 'Flameproof digital clock for time display in hazardous areas.',
@@ -1032,8 +1032,8 @@ export const flameproofProducts = [
     id: 47,
     name: 'Flameproof Door Interlocking System',
     category: 'Safety Devices',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product47,
     description: 'Flameproof door interlocking system for controlled access.',
@@ -1052,8 +1052,8 @@ export const flameproofProducts = [
     id: 48,
     name: 'Flameproof Gas Detector Enclosure',
     category: 'Safety Devices',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product48,
     description: 'Flameproof enclosure for gas detectors.',
@@ -1073,8 +1073,8 @@ export const flameproofProducts = [
     id: 49,
     name: 'Flameproof Heater Enclosure',
     category: 'Electrical Components',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product49,
     description: 'Flameproof enclosure for heaters.',
@@ -1094,8 +1094,8 @@ export const flameproofProducts = [
     id: 50,
     name: 'Flameproof M Shape Tubular Heater Panel',
     category: 'Electrical Components',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product50,
     description: 'Flameproof M Shape tubular heater panel.',
@@ -1113,8 +1113,8 @@ export const flameproofProducts = [
     id: 51,
     name: 'Flameproof Pass Box',
     category: 'Clean Room Application',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product51,
     description: 'Flameproof pass box for material transfer in clean rooms.',
@@ -1133,8 +1133,8 @@ export const flameproofProducts = [
     id: 52,
     name: 'Flameproof UV Tube Light Fitting',
     category: 'Lighting',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product52,
     description: 'Flameproof UV tube light fitting for sterilization and other applications.',
@@ -1156,8 +1156,8 @@ export const flameproofProducts = [
     id: 53,
     name: 'Flameproof Junction Box 2/3/4 Way',
     category: 'Electrical Safety',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product53,
     description: 'Flameproof junction box with 2, 3, or 4 ways.',
@@ -1179,8 +1179,8 @@ export const flameproofProducts = [
     id: 54,
     name: 'Flameproof Magnet',
     category: 'Accessories',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product54,
     description: 'Flameproof magnet for various industrial uses.',
@@ -1202,8 +1202,8 @@ export const flameproofProducts = [
     id: 55,
     name: 'Flameproof Thermocouple Heads/Sensor',
     category: 'Instrumentation',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product55,
     description: 'Flameproof thermocouple heads/sensors for temperature measurement.',
@@ -1222,8 +1222,8 @@ export const flameproofProducts = [
     id: 56,
     name: 'Flameproof Weighing Scale Unit',
     category: 'Instrumentation',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product56,
     description: 'Flameproof weighing scale unit for accurate measurement in hazardous areas.',
@@ -1242,8 +1242,8 @@ export const flameproofProducts = [
     id: 57,
     name: 'Flameproof Emergency Exit Light Fitting',
     category: 'Lighting',
-    price: 'Inquire for price',
-    originalPrice: 'Inquire for price',
+        
+          
     rating: 5,
     image: productImages.product57,
     description: 'Flameproof emergency exit light fitting with backup power.',
