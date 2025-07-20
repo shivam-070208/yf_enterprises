@@ -61,7 +61,7 @@ const Footer = () => {
           <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
           {
             QuickLinks.map((item,idx) => (
-              <Link to={item.href} key={idx} className="block text-gray-400 hover:text-white mb-2">{item.Name}</Link>
+              <Link to={item.href} target={idx==2?'_blank':'_self'} key={idx} className="block text-gray-400 hover:text-white mb-2">{item.Name}</Link>
             ))
           }
           
