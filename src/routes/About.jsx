@@ -125,7 +125,7 @@ Whether it's UPS repair, servo stabilizers, or junction box wiring, we ensure un
                 <img src={`https://html.themexriver.com/industo/images/resource/welcome.png`} alt={title} className="mb-4 w-full h-48 object-cover rounded" />
                 <h4 className="font-bold text-lg mb-2">{title}</h4>
                 <p className="text-gray-600 text-sm">We aim to prevent your power disruptions with timely service and committed technical support all year round.</p>
-                <a href="#" className="text-orange-600 text-sm font-medium mt-2 inline-block">Explore More</a>
+                {/* <a href="#" className="text-orange-600 text-sm font-medium mt-2 inline-block">Explore More</a> */}
               </div>
             ))}
           </div>
