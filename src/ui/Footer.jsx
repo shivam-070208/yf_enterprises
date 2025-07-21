@@ -14,7 +14,7 @@ const Footer = () => {
       href:"/about"
     },
     {
-      Name:"Brouchure",
+      Name:"Brochure",
       href:'/Y F ENTERPRISES SERVICES.pdf'
     },
     {
