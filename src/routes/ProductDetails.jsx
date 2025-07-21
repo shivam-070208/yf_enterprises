@@ -188,7 +188,7 @@ const ProductDetails = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href='/Y F ENTERPRISES SERVICES.pdf' className="bg-white text-orange-500 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-300">
-              Download Brouchure 
+              Download Brochure 
             </a>
             <a href='/contact' className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange-500 font-semibold py-3 px-8 rounded-lg transition duration-300">
               Request Quote

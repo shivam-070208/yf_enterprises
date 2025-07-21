@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 import { profile } from '../assets';
+import serviceImages from '../assets/serviceImages';
 import { partnerLogos } from '../assets/logo';
 
 
@@ -106,7 +107,7 @@ Whether it's UPS repair, servo stabilizers, or junction box wiring, we ensure un
                 <p className="text-gray-600 text-sm">24x7 support service to ensure minimal power disruptions and prompt resolution.</p>
               </div>
             </div>
-            <a href="#" className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg font-semibold">Explore More</a>
+            <a href="/services" className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg font-semibold">Explore More</a>
           </div>
         </div>
       </section>
@@ -120,14 +121,21 @@ Whether it's UPS repair, servo stabilizers, or junction box wiring, we ensure un
             <p className="text-gray-600 mt-2">We believe in fast resolution of power issues through proactive 24x7 services and customer-focused practices.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            {['Our Vision', 'Our Mission', 'Our Value'].map((title, index) => (
-              <div key={index} className="bg-white rounded-lg shadow p-4">
-                <img src={`https://html.themexriver.com/industo/images/resource/welcome.png`} alt={title} className="mb-4 w-full h-48 object-cover rounded" />
-                <h4 className="font-bold text-lg mb-2">{title}</h4>
-                <p className="text-gray-600 text-sm">We aim to prevent your power disruptions with timely service and committed technical support all year round.</p>
-                {/* <a href="#" className="text-orange-600 text-sm font-medium mt-2 inline-block">Explore More</a> */}
-              </div>
-            ))}
+            <div className="bg-white rounded-lg shadow p-4">
+              <img src={serviceImages.vision} alt="Our Vision" className="mb-4 w-full h-48 object-cover rounded" />
+              <h4 className="font-bold text-lg mb-2">Our Vision</h4>
+              <p className="text-gray-600 text-sm">We aim to prevent your power disruptions with timely service and committed technical support all year round.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow p-4">
+              <img src={serviceImages.mission} alt="Our Mission" className="mb-4 w-full h-48 object-cover rounded" />
+              <h4 className="font-bold text-lg mb-2">Our Mission</h4>
+              <p className="text-gray-600 text-sm">We aim to prevent your power disruptions with timely service and committed technical support all year round.</p>
+            </div>
+            <div className="bg-white rounded-lg shadow p-4">
+              <img src={serviceImages.values} alt="Our Value" className="mb-4 w-full h-48 object-cover rounded" />
+              <h4 className="font-bold text-lg mb-2">Our Value</h4>
+              <p className="text-gray-600 text-sm">We aim to prevent your power disruptions with timely service and committed technical support all year round.</p>
+            </div>
           </div>
         </div>
       </section>

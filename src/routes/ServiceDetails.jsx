@@ -246,11 +246,11 @@ const ServiceDetails = () => {
         </aside>
         {/* Main Column: Image + Content */}
         <div className="col-span-1 md:col-span-3 flex flex-col">
-          <div className="w-full flex justify-center items-center bg-white py-4">
+          <div className="w-full flex  bg-white">
             <img
               src={serviceImages[`service${service.id}`]}
               alt={service.service}
-              className="rounded-lg object-cover w-full max-w-3xl h-56 md:h-72 shadow mb-6"
+              className="rounded-lg object-cover w-full max-w-3xl h-60 md:h-90 shadow mb-6"
             />
           </div>
           <main className="flex-1">

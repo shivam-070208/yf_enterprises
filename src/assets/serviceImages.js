@@ -6,7 +6,9 @@ import service3 from './service/3.jpg';
 import service4 from './service/4.jpg';
 import service5 from './service/5.jpg';
 import service6 from './service/6.jpg';
-
+import values from './values.jpg';
+import vision from './vision.jpg';
+import mission from './mission.jpg';
 const serviceImages = {
   service1,
   service2,
@@ -15,5 +17,10 @@ const serviceImages = {
   service5,
   service6,
 };
+export default {
+  ...serviceImages,
+  values,
+  vision,
+  mission,
+};
 
-export default serviceImages;
