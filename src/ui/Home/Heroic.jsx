@@ -24,6 +24,13 @@ const slides = [
     subheading:
       " Y.F Enterprises offers expert annual maintenance, UPS rentals, battery replacement, and 24/7 service support across India.",
   },
+  {
+    image: "https://html.themexriver.com/industo/images/gallery/1.jpg",
+    heading: "India’s Reliable Partner for Industrial Engineering & Technical Services",
+    subheading:
+      " From skilled manpower deployment to electrical maintenance, HCD servicing, and UPS support — Y.F Enterprises delivers responsive, professional service solutions across industries.
+",
+  },
 ];
 
 const cards = [
