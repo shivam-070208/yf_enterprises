@@ -174,7 +174,7 @@ Whether it's UPS repair, servo stabilizers, or junction box wiring, we ensure un
         <div className="max-w-6xl mx-auto px-4 text-center">
           <div className="mb-6">
             <div className="text-orange-600 font-bold">Clients</div>
-            <h2 className="text-3xl font-bold">Our Trusted Sponsor</h2>
+            <h2 className="text-3xl font-bold">Our Trusted Clients</h2>
           </div>
           <Swiper slidesPerView={2} modules={[Autoplay]} autoplay grabCursor={true}  spaceBetween={20} breakpoints={{ 640: { slidesPerView: 3 }, 1024: { slidesPerView: 5 } }}>
             {partnerLogos.map((item,i) => (

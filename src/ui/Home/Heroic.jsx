@@ -14,15 +14,15 @@ import { FaArrowRight } from "react-icons/fa6";
 const slides = [
   {
     image: "https://html.themexriver.com/industo/images/gallery/1.jpg",
-    heading: "India’s Trusted Source for UPS Solutions",
+    heading: " Your Trusted Partner in EPC Projects & Industrial Safety",
     subheading:
-      "From AMC to battery sales, Y.F Enterprises supports industries with reliable, eco-friendly, and affordable power backup systems.",
+      " We handle complete Erection, Procurement, and Commissioning projects, while delivering intelligent HCD solutions to secure your operations.",
   },
   {
     image: "https://html.themexriver.com/industo/images/gallery/1.jpg",
-    heading: "Powering Critical Infrastructure Nationwide",
+    heading: "Never Lose Power Again with Our End-to-End UPS AMC Services",
     subheading:
-      "We serve sectors like manufacturing, pharma, and IT with UPS repair, rentals, and emergency support — 24x7 across India.",
+      " Y.F Enterprises offers expert annual maintenance, UPS rentals, battery replacement, and 24/7 service support across India.",
   },
 ];
 
