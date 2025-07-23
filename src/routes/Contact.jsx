@@ -47,7 +47,7 @@ const Contact = () => {
 
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
-    console.log(data)
+
 
     try {
       const response = await fetch(
@@ -80,8 +80,8 @@ const Contact = () => {
 
   return (
     <div className="w-full">
-      <div ref={toastref} className="">
-        <ToastContainer position="bottom" className="" autoClose={3000} />
+      <div ref={toastref} >
+        <ToastContainer position="bottom" className="z-[999]" autoClose={2000} closeOnClick />
       </div>
       <section
         className="w-full h-[300px] bg-cover bg-center flex items-center"
