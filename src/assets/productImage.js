@@ -58,7 +58,7 @@ import product55 from './YF PRODUCT/55.jpg';
 import product56 from './YF PRODUCT/56.jpg';
 import product57 from './YF PRODUCT/57.jpg';
 
-const images = {
+const productImages = [
   product1,
   product2,
   product3,
@@ -116,6 +116,6 @@ const images = {
   product55,
   product56,
   product57,
-};
+];
 
-export default images;
+export default productImages;
