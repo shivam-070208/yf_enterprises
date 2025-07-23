@@ -28,8 +28,7 @@ const slides = [
     image: "https://html.themexriver.com/industo/images/gallery/1.jpg",
     heading: "India’s Reliable Partner for Industrial Engineering & Technical Services",
     subheading:
-      " From skilled manpower deployment to electrical maintenance, HCD servicing, and UPS support — Y.F Enterprises delivers responsive, professional service solutions across industries.
-",
+      " From skilled manpower deployment to electrical maintenance, HCD servicing, and UPS support — Y.F Enterprises delivers responsive, professional service solutions across industries.",
   },
 ];
 
@@ -41,7 +40,6 @@ const cards = [
       "HCD Services",
       "UPS Repair Services",
       "Reconditioned UPS",
-      "Battery Rentals"
     ],
     icon: <FaTools size={40} className="text-blue-600" />,
   },
@@ -60,7 +58,7 @@ const HeroSection = () => {
   const [currentslide, setslide] = useState(0);
 
   return (
-    <div className="relative w-screen min-h-[114vh] pb-5 overflow-x-hidden overflow-y-visible">
+    <div className="relative w-screen min-h-[120vh] pb-10 overflow-x-hidden overflow-y-visible">
       {/* 🔘 Custom Arrows */}
       <div className="absolute w-full z-50 flex justify-between items-center px-6 top-[40%]">
         <button className="swiper-button-prev-custom bg-gray-900 w-10 h-10 text-white p-3 rounded-full grid content-center hover:bg-orange-600 transition">
@@ -98,7 +96,7 @@ const HeroSection = () => {
         {slides.map((slide, i) => (
           <SwiperSlide key={i}>
             <div
-              className="w-full h-full bg-cover bg-center flex py-30 justify-start md:px-40 px-2"
+              className="w-full h-full bg-cover bg-center flex py-25 justify-start md:px-40 px-2"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               {currentslide === i && (
@@ -117,7 +115,7 @@ const HeroSection = () => {
       </Swiper>
 
       {/* 🧱 Cards Section */}
-      <div className="w-full lg:absolute bottom-2 z-100 mt-20 mb-10">
+      <div className="w-full lg:absolute -bottom-2 z-100 mt-35 mb-10">
         <div className="w-fit mx-auto grid lg:grid-cols-2 gap-10 grid-cols-1 pointer-events-none">
           {cards.map((item, i) => (
             <div

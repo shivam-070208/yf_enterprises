@@ -8,7 +8,7 @@ import ServiceDetails from './routes/ServiceDetails';
 import Footer from './ui/Footer'
 import Loaderinitiater from './Components/Loaderinitiater'
 import Totop from './ui/Totop'
-import ProductDetails from './routes/ProductDetails'
+import ProductDetails from './routes/Productdetails'
 import Career from './routes/Career'
 
 function App() {
