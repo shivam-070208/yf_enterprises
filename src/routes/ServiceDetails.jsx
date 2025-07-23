@@ -1,13 +1,8 @@
+
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Button } from '../ui';
 import serviceImages from '../assets/serviceImages';
-
-// Example service details data (expand as needed)
-// Helper to import images using import.meta.url (Vite compatible)
-function requireImage(filename) {
-  return new URL(`../assets/YF PRODUCT/${filename}`, import.meta.url).href;
-}
 
 const serviceDetailsData = [
   {
@@ -155,8 +150,9 @@ const ServiceDetails = () => {
     <div className="page-wrapper bg-gray-50 min-h-screen">
       {/* Header */}
       <section
-      style={{ backgroundImage: `url(${'https://html.themexriver.com/industo/images/background/9.jpg'})` }}
-      className=" py-10">
+        style={{ backgroundImage: `url('https://html.themexriver.com/industo/images/background/9.jpg')` }}
+        className="py-10"
+      >
         <div className="container mx-auto px-4">
           <ul className="flex gap-2 text-white text-sm mb-2">
             <li><Link to="/" className="underline">Home</Link></li>
@@ -168,17 +164,17 @@ const ServiceDetails = () => {
         </div>
       </section>
 
-      {/* Sidebar and Banner Image Row */}
+      {/* Sidebar + Content */}
       <section className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 py-8">
         {/* Sidebar */}
-        <aside className="col-span-1 mb-8 md:mb-0 flex-shrink-0">
+        <aside className="col-span-1">
           <div className="bg-white rounded-lg shadow p-4 mb-6">
             <ul className="space-y-2">
               {serviceDetailsData.map((s, idx) => (
                 <li key={s.id}>
                   <Link
                     to={`/services/details/${s.id}`}
-                    className={`border-b pb-2 block ${serviceIndex === idx ? 'font-semibold text-blue-700' : ''}`}
+                    className={`block border-b pb-2 ${serviceIndex === idx ? 'text-blue-700 font-semibold' : ''}`}
                   >
                     {s.service}
                   </Link>
@@ -186,46 +182,44 @@ const ServiceDetails = () => {
               ))}
             </ul>
           </div>
-          <div className="bg-orange-100 rounded-lg shadow p-4 flex flex-col items-center text-center">
+          <div className="bg-orange-100 rounded-lg shadow p-4 text-center">
             <div className="text-2xl font-bold text-orange-600 mb-2">How Can We Help?</div>
             <div className="text-gray-700 mb-4">If you need any help, please feel free to contact us.</div>
-            <Link to="/contact#contact" className="bg-orange-500 text-white px-4 py-2 rounded font-semibold hover:bg-orange-600 transition">CONTACT US</Link>
+            <Link to="/contact#contact" className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition">CONTACT US</Link>
           </div>
         </aside>
-        {/* Main Column: Image + Content */}
-        <div className="col-span-1 md:col-span-3 flex flex-col">
-          <div className="w-full flex  bg-white">
-            <img
-              src={serviceImages[`service${service.id}`]}
-              alt={service.service}
-              className="rounded-lg object-cover w-full max-w-3xl h-60 md:h-90 shadow mb-6"
-            />
-          </div>
-          <main className="flex-1">
-            <div className="bg-white rounded-lg shadow p-8">
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-orange-600 mb-2">{service.provider}</h3>
-                <p className="text-gray-700 mb-4">{service.description}</p>
-                <ul className="list-disc pl-6 text-gray-700 mb-6">
-                  {service.points.map((point, i) => (
-                    <li key={i} className="mb-1">{point.replace('shut down', 'shutdown')}</li>
-                  ))}
-                </ul>
-              </div>
-              {service.sections.map((section, i) => (
-                <div key={i} className="mb-6">
-                  <h4 className="text-xl font-bold text-blue-700 mb-2">{section.title}</h4>
-                  <p className="text-gray-700">{section.text.replace('equipments', 'equipment').replace('in-lab factory calibration and test and calibration equipment as required.', 'in-lab factory calibration and test equipment as required.')}</p>
-                </div>
+
+        {/* Main Content */}
+        <div className="col-span-1 md:col-span-3">
+          <img
+            src={serviceImages[`service${service.id}`]}
+            alt={service.service}
+            className="rounded-lg object-cover w-full h-60 md:h-90 shadow mb-6"
+          />
+          <div className="bg-white rounded-lg shadow p-8">
+            <h3 className="text-2xl font-bold text-orange-600 mb-2">{service.provider}</h3>
+            <p className="text-gray-700 mb-4">{service.description}</p>
+            <ul className="list-disc pl-6 text-gray-700 mb-6">
+              {service.points.map((point, i) => (
+                <li key={i}>{point}</li>
               ))}
-              <div className="text-center mt-8">
-                <Button text="Request A Quote" href="/contact#contact" primarycolor="bg-orange-500" secondarycolor="bg-orange-600" />
+            </ul>
+            {service.sections.map((section, i) => (
+              <div key={i} className="mb-4">
+                <h4 className="text-xl font-semibold text-blue-700">{section}</h4>
               </div>
+            ))}
+            <div className="text-center mt-8">
+              <Button
+                text="Request A Quote"
+                href="/contact#contact"
+                primarycolor="bg-orange-500"
+                secondarycolor="bg-orange-600"
+              />
             </div>
-          </main>
+          </div>
         </div>
       </section>
-
     </div>
   );
 };

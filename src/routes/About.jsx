@@ -54,7 +54,7 @@ const AboutUs = () => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-8">
             <div className="text-orange-600 uppercase tracking-wide font-bold">Achievement</div>
-            <h2 className="text-3xl font-bold">Our Achievements</h2>
+            <h2 className="text-3xl font-bold">Our Achievement</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-gray-50 p-6 rounded shadow">

@@ -140,6 +140,12 @@ const Contact = () => {
                   className="p-3 w-full rounded border border-amber-500"
                 />
                 <input
+                  name="company"
+                  type="text"
+                  placeholder="Company Name"
+                  className="p-3 w-full rounded border border-amber-500"
+                />
+                <input
                   name="email"
                   type="email"
                   required
@@ -153,14 +159,14 @@ const Contact = () => {
                   placeholder="Phone"
                   className="p-3 w-full rounded border border-amber-500"
                 />
-                <input
-                  name="subject"
-                  type="text"
-                  required
-                  placeholder="Subject"
-                  className="p-3 w-full rounded border border-amber-500"
-                />
               </div>
+              <input
+                name="subject"
+                type="text"
+                required
+                placeholder="Subject"
+                className="p-3 w-full rounded border border-amber-500"
+              />
               <textarea
                 name="message"
                 required
