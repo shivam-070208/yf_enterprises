@@ -24,7 +24,7 @@ const HeroContactSection = () => {
         </div>
 
         {/* Text */}
-        <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-snug">
+        <h2 className="text-3xl md:text-5xl font-bold mb-5 leading-snug">
           Contact to Expertise in the <br />
           manufacturing industry
         </h2>

@@ -10,6 +10,7 @@ import "swiper/css/pagination"; // Import Swiper pagination CSS
 import { useState } from "react";
 import { FaTools, FaBatteryFull } from 'react-icons/fa';
 import { FaArrowRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const slides = [
   {
@@ -96,11 +97,11 @@ const HeroSection = () => {
         {slides.map((slide, i) => (
           <SwiperSlide key={i}>
             <div
-              className="w-full h-full bg-cover bg-center flex py-25 justify-start md:px-40 px-2"
+              className="w-full h-full bg-cover bg-center flex py-25 md:justify-start justify-center md:px-40 px-2 items-center text-center md:text-left"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               {currentslide === i && (
-                <div className="max-w-[600px] text-white space-y-10 px-3">
+                <div className="max-w-[600px] text-white space-y-10 px-3 mx-auto">
                   <h1 className="sm:text-6xl text-4xl leading-tight animate-view origin-top font-bold">
                     {slide.heading}
                   </h1>
@@ -142,7 +143,25 @@ const HeroSection = () => {
               </p>
 
               {/* 📜 List Items - Show on Hover Only */}
-              <ul className="relative z-10 transition-all duration-500 opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-60">
+              <ul className="relative z-10 transition-all duration-500 opacity-100 md:opacity-0 max-h-0 overflow-hidden md:group-hover:opacity-100 md:group-hover:max-h-60">
+                {(i === 0 ? item.serviceName : item.productName).map(
+                  (val, index) => (
+                    <li key={index} className="block text-sm mt-2">
+                      {val}
+                    </li>
+                  )
+                )}
+              </ul>
+              <style>{`
+                @media (max-width: 767px) {
+                  .show-mobile-list {
+                    opacity: 1 !important;
+                    max-height: 1000px !important;
+                  }
+                }
+              `}</style>
+              {/* On mobile, always show the list */}
+              <ul className="show-mobile-list relative z-10 transition-all duration-500 opacity-100 max-h-60 overflow-visible md:hidden">
                 {(i === 0 ? item.serviceName : item.productName).map(
                   (val, index) => (
                     <li key={index} className="block text-sm mt-2">
@@ -153,12 +172,12 @@ const HeroSection = () => {
               </ul>
 
               {/* 🔎 CTA Button */}
-              <a
-                href={i === 0 ? "/services" : "/products"}
-                className="flex items-center gap-3 rounded bg-orange-600 px-4 py-2 font-mono text-lg font-semibold mt-8 z-10 relative"
+              <Link
+                to={i === 0 ? "/services" : "/products"}
+                className="flex items-center gap-3 rounded hover:cursor-pointer bg-orange-600 px-4 py-2 font-mono text-lg font-semibold mt-8 z-10 relative"
               >
                 Explore More <FaArrowRight />
-              </a>
+              </Link>
             </div>
           ))}
         </div>

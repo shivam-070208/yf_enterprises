@@ -67,7 +67,7 @@ const Career = () => {
                 </div>
                 <h4 className="text-lg font-semibold">How Can We Help?</h4>
                 <p className="text-sm mb-4">If you need any help, please feel free to contact us.</p>
-                <a href="enquiryform.php" className="inline-block bg-orange-500 text-white px-4 py-2 rounded mt-2 text-sm font-medium">CONTACT US</a>
+                <a href="/contact#contact" className="inline-block bg-orange-500 text-white px-4 py-2 rounded mt-2 text-sm font-medium">CONTACT US</a>
               </div>
             </div>
           </aside>
