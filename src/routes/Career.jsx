@@ -24,7 +24,7 @@ const Career = () => {
   };
 
   return (
-    <div className='w-screen h-full'>
+    <div className='w-screen h-full mt-20 md:mt-0'>
       {/* Banner */}
       <section className="bg-cover bg-center py-20" style={{ backgroundImage: 'url(https://html.themexriver.com/industo/images/background/9.jpg)' }}>
         <div className="max-w-7xl mx-auto px-4">
@@ -43,16 +43,16 @@ const Career = () => {
             <div className="bg-white shadow rounded p-4 border">
               <ul className="space-y-3">
                 {[
-                  { text: "Instrumentation Services", link: "/services" },
-                  { text: "C&I Contracting Services", link: "/services" },
-                  { text: "Data Center Services", link: "/services" },
-                  { text: "Electrical Services", link: "/services" },
-                  { text: "Testing and Commissioning", link: "/services" },
-                  { text: "Manpower Services", link: "/servicesl" },
+                  { text: "Instrumentation Services", id: 1 },
+                  { text: "C&I Contracting Services", id: 2 },
+                  { text: "Data Center Services", id: 3 },
+                  { text: "Electrical Services", id: 4 },
+                  { text: "Testing and Commissioning", id: 5 },
+                  { text: "Manpower Services", id: 6 },
                 ].map((item, index) => (
                   <li key={index}>
-                    <Link to={item.link} className="flex items-center text-gray-700 hover:text-orange-500 transition">
-                      <i className="fas fa-angle-double-right mr-2 text-orange-500"></i> {item.text}
+                    <Link to={`/services/details/${item.id}`} className={`block border-b pb-2 text-blue-700 font-semibold `}>
+                       {item.text}
                     </Link>
                   </li>
                 ))}

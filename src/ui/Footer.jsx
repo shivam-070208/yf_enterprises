@@ -12,6 +12,10 @@ const Footer = () => {
     {
       Name:"About",
       href:"/about"
+    },    
+    {
+      Name:"Services",
+      href:"/services"
     },
     {
       Name:"Brochure",
