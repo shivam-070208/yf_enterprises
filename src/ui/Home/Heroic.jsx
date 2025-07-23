@@ -30,6 +30,8 @@ const cards = [
   {
     title: "Services",
     serviceName: [
+      "EPC Projects",
+      "HCD Services",
       "UPS Repair Services",
       "Reconditioned UPS",
       "Battery Rentals"
