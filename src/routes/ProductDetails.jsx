@@ -142,29 +142,64 @@ const ProductDetails = () => {
             >
               {similarProducts.map((similarProduct, i) => (
                 <SwiperSlide key={similarProduct.id}>
-                  <div className="rounded-xl group relative py-24 flex flex-col items-center bg-transparent text-center transition">
+                  <div
+                    className="rounded-xl group relative py-24 flex flex-col items-center text-center transition"
+                  >
+                    {/* 🟠 Product Image on Top */}
                     <div className='w-40 h-45 group-hover:opacity-100 origin-center scale-0 group-hover:scale-100 opacity-0 transition-all duration-400 absolute  -translate-y-1/2 rounded-full bg-orange-500' />
-                    <img src={similarProduct.image} alt={similarProduct.name} className="w-40 object-center h-40 z-1 shadow-md absolute -translate-y-1/2 rounded-full object-fill" />
-                    <div className='bg-white relative max-w-70 z-0 p-4 flex flex-col items-center pt-30 pb-20 rounded-lg flex-1 w-full'>
-                      <div className='absolute origin-center rounded-lg opacity-0 group-hover:opacity-100 w-full scale-x-0 group-hover:scale-x-100 duration-400 transition-all h-full bg-black top-0 -z-1' />
-                      <h4 className="text-2xl font-bold mb-1 group-hover:text-white transition-all w-60">{similarProduct.name}</h4>
-                      <hr className='text-neutral-300 h-4 w-full' />
-                      <div className='w-full flex justify-between items-center mt-4 flex-wrap'>
-                        <div className="">
-                          {similarProduct.originalPrice && (
-                            <span className="line-through text-gray-400 mr-2">{similarProduct.originalPrice}</span>
-                          )}
-                          <span className="text-black group-hover:text-white font-bold">{similarProduct.price}</span>
-                        </div>
-                        <div className="flex items-center justify-center gap-1 text-yellow-400 ">
-                          {Array.from({ length: similarProduct.rating }).map((_, j) => (
-                            <FaStar key={j} />
-                          ))}
+                    <img
+                      src={similarProduct.image}
+                      alt={similarProduct.name}
+                      className="productimg shadow-lg  w-40 h-40  absolute -translate-y-1/2 rounded-full object-cover z-50"
+                    />
+                    {/* 🔶 Animated Card */}
+                    <div className=" bg-white h-fit p-6 flex flex-col items-center rounded pt-28 pb-6 flex-1 w-full relative z-10">
+                        <div className='absolute origin-center rounded-lg opacity-0 group-hover:opacity-100  w-full scale-x-0 group-hover:scale-x-100 duration-400 transition-all h-full bg-black top-0 -z-1' />
+                      <h4 className="text-lg font-semibold mb-2 z-20 group-hover:text-white">{similarProduct.name}</h4>
+                      <div className="text-xs text-orange-600 font-medium mb-2 z-20">
+                        {similarProduct.category}
+                      </div>
+                      <div className="mb-2 z-20">
+                        {!isNaN(similarProduct.originalPrice) && (
+                          <span className="line-through text-gray-400 mr-2">
+                            {similarProduct.originalPrice}
+                          </span>
+                        )}
+                        <span className="text-black font-bold group-hover:text-white">{similarProduct.price}</span>
+                      </div>
+                      <div className="flex items-center justify-center gap-1 text-yellow-400 mb-3 z-20">
+                        {Array.from({ length: similarProduct.rating }).map((_, j) => (
+                          <FaStar key={j} />
+                        ))}
+                      </div>
+                      <p className="text-gray-600 group-hover:text-white text-sm mb-4 leading-relaxed z-20">
+                        {similarProduct.description}
+                      </p>
+                      <div className="text-xs text-gray-500 group-hover:text-white mb-4 z-20">
+                        <div className="flex justify-between mb-1">
+                          <span>Material:</span>
+                          <span>{similarProduct.specifications.material}</span>
                         </div>
                       </div>
-                      <Link to={`/products/details?id=${similarProduct.id}`} className="bg-orange-500 absolute -bottom-4 hover:cursor-pointer hover:bg-orange-600 transition px-8 py-4 text-white font-bold rounded text-md flex items-center gap-2">
-                        VIEW DETAILS <span>&gt;</span>
-                      </Link>
+                      <div className="flex gap-2 z-20">
+                        <Link
+                          to="/contact#contact"
+                          className="bg-orange-500 hover:bg-orange-600 hover:cursor-pointer transition px-4 py-2 text-white font-semibold rounded-full flex items-center gap-2 text-sm relative z-20"
+                        >
+                          INQUIRY <FaArrowRight size={10} />
+                        </Link>
+                        <Link
+                          to={`/products/details?id=${similarProduct.id}`}
+                          className="bg-gray-200 hover:cursor-pointer hover:bg-gray-300 transition px-4 py-2 text-gray-700 font-semibold rounded-full text-sm"
+                        >
+                          Details
+                        </Link>
+                      </div>
+                      {similarProduct.inStock && (
+                        <div className="mt-2 text-xs text-green-600 font-medium z-20">
+                          ✓ In Stock
+                        </div>
+                      )}
                     </div>
                   </div>
                 </SwiperSlide>
@@ -197,7 +232,7 @@ const ProductDetails = () => {
         </div>
       </div>
 
-      {/* Company Info Footer */}
+
 
     </div>
   );

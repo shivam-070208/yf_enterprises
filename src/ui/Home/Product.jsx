@@ -63,25 +63,24 @@ const ProductCarousel = () => {
         >
           {products.map((product, i) => (
             <SwiperSlide key={i}>
-              <div className=" rounded-xl group relative py-24 group   flex flex-col items-center bg-transparent text-center transition ">
-
-                <div className='w-40 h-45 group-hover:opacity-100 origin-center scale-0 group-hover:scale-100 opacity-0 transition-all duration-400 absolute  -translate-y-1/2 rounded-full bg-orange-500' />
-                <img src={product.image} alt={product.name} className="w-40 object-center  h-40 z-1 shadow-md absolute -translate-y-1/2  rounded-full object-fill " />
-               <div className='bg-white relative   max-w-70 z-0  p-4 flex flex-col items-center  pt-30 pb-20 rounded-lg flex-1 w-full'>
-               <div className='absolute origin-center rounded-lg opacity-0 group-hover:opacity-100  w-full scale-x-0 group-hover:scale-x-100 duration-400 transition-all h-full bg-black top-0 -z-1' />
-                <h4 className="text-2xl font-bold  mb-1 group-hover:text-white transition-all w-60">{product.name}</h4>
-                <hr className='text-neutral-300 h-4 w-full' />
-               <div className='w-full flex justify-between items-center mt-4 flex-wrap'>
-                <div className="flex items-center ml-[30%] justify-center gap-1 text-yellow-400 ">
+              <div className="bg-white rounded-xl shadow-lg flex flex-col items-center text-center transition hover:shadow-2xl p-6">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-36 h-36 object-cover rounded-lg mb-4 border-4 border-orange-100 shadow"
+                />
+                <h4 className="text-xl font-bold mb-2 text-gray-900">{product.name}</h4>
+                <div className="flex items-center justify-center gap-1 text-yellow-400 mb-2">
                   {Array.from({ length: product.rating }).map((_, j) => (
                     <FaStar key={j} />
                   ))}
                 </div>
-                  </div>
-                <Link to='/products' className="bg-orange-500 absolute -bottom-4 hover:cursor-pointer hover:bg-orange-600 transition px-8 py-4 text-white font-bold rounded text-md flex items-center gap-2">
+                <Link
+                  to="/products"
+                  className="mt-4 bg-orange-500 hover:bg-orange-600 transition px-6 py-2 text-white font-semibold rounded-full flex items-center gap-2 text-sm"
+                >
                   ENQUIRE NOW <span>&gt;</span>
                 </Link>
-                </div>
               </div>
             </SwiperSlide>
           ))}

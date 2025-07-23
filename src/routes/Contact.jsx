@@ -18,6 +18,27 @@ const concactInfo = [
     value: "tenders@yfenterprises.com",
   },
 ];
+const branches = [
+    {
+    title: "India",
+    icon: "TiLocationOutline",
+  },  {
+    title: "Dubai",
+    icon: "TiLocationOutline",
+  },    {
+    title: "Saudi Arabia",
+    icon: "TiLocationOutline",
+  },    {
+    title: "Tanzania",
+    icon: "TiLocationOutline",
+  },    {
+    title: "Mozambique",
+    icon: "TiLocationOutline",
+  },  {
+    title: "Bangladesh",
+    icon: "TiLocationOutline",
+  },
+]
 
 const Contact = () => {
   const toastref = useRef(null);
@@ -175,12 +196,30 @@ const Contact = () => {
               ></textarea>
               <button
                 type="submit"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded shadow-lg transition-all"
+                className="bg-orange-500 hover:cursor-pointer hover:bg-orange-600 text-white px-6 py-3 rounded shadow-lg transition-all"
               >
                 Send Message
               </button>
             </form>
           </div>
+                  <div className="bg-white w-full h-full p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 rounded-lg shadow-lg">
+          {branches.map((item, idx) => (
+            <div
+              key={idx}
+              className="flex flex-col items-center text-center bg-orange-50 rounded-xl shadow-sm p-4 hover:shadow-lg transition group border border-orange-100"
+            >
+              <span className="flex items-center justify-center w-14 h-14 rounded-full bg-orange-100 mb-4 group-hover:bg-orange-500 transition">
+                {item.icon === "TiLocationOutline" && (
+                  <svg width="2em" height="2em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-orange-500 group-hover:text-white transition"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+                )}
+
+              </span>
+              <div>
+                <div className="font-bold text-lg mb-1 text-gray-900">{item.title}</div> 
+              </div>
+            </div>
+          ))}
+        </div>
         </section>
       </div>
     </div>
