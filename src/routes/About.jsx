@@ -59,8 +59,8 @@ const AboutUs = () => {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-gray-50 p-6 rounded shadow">
               <FaIndustry className="text-4xl text-orange-600 mx-auto mb-3" />
-              <h3 className="text-2xl font-bold">10+</h3>
-              <p>Chain of Factories</p>
+              <h3 className="text-2xl font-bold">30+</h3>
+              <p>Project successfuly completed</p>
             </div>
             <div className="bg-gray-50 p-6 rounded shadow">
               <FaTools className="text-4xl text-blue-600 mx-auto mb-3" />
@@ -70,7 +70,7 @@ const AboutUs = () => {
             <div className="bg-gray-50 p-6 rounded shadow">
               <FaGlobe className="text-4xl text-red-600 mx-auto mb-3" />
               <h3 className="text-2xl font-bold">100+</h3>
-              <p>Worldwide Partners</p>
+              <p>Trusted Clients </p>
             </div>
           </div>
         </div>
