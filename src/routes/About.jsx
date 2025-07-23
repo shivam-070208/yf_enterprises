@@ -89,7 +89,7 @@ const AboutUs = () => {
               <h2 className="text-3xl font-bold mt-2">We Are Experts In All Industry Works</h2>
               <p className="mt-4 text-gray-600">Y.F Enterprises is a leading engineering and maintenance service provider based in Kolkata, specializing in UPS systems, battery rentals, AMC/CMC contracts, flameproof electrical solutions, and custom power setups. With over 6 years of industry experience, we offer 24x7 reliable support across India, serving top brands like Exide, APC, Vertiv, Hitachi, and more.
 
-Whether it's UPS repair, servo stabilizers, or junction box wiring, we ensure uninterrupted power—on time, every time.</p>
+                    Whether it's UPS repair, servo stabilizers, or junction box wiring, we ensure uninterrupted power—on time, every time.</p>
             </div>
             <div className="grid grid-cols-2 gap-4 text-sm">
               <ul className="list-disc pl-5">
@@ -125,17 +125,17 @@ Whether it's UPS repair, servo stabilizers, or junction box wiring, we ensure un
             <div className="bg-white rounded-lg shadow p-4">
               <img src={serviceImages.vision} alt="Our Vision" className="mb-4 w-full h-48 object-cover rounded" />
               <h4 className="font-bold text-lg mb-2">Our Vision</h4>
-              <p className="text-gray-600 text-sm">We aim to prevent your power disruptions with timely service and committed technical support all year round.</p>
+              <p className="text-gray-600 text-sm">YF Enterprises aims to deliver high-quality engineering services with honesty and integrity, ensuring customer satisfaction by completing projects efficiently, safely, and reliably across diverse industrial sectors.</p>
             </div>
             <div className="bg-white rounded-lg shadow p-4">
               <img src={serviceImages.mission} alt="Our Mission" className="mb-4 w-full h-48 object-cover rounded" />
               <h4 className="font-bold text-lg mb-2">Our Mission</h4>
-              <p className="text-gray-600 text-sm">We aim to prevent your power disruptions with timely service and committed technical support all year round.</p>
+              <p className="text-gray-600 text-sm">YF Enterprises aims to deliver high-quality engineering services with honesty and integrity, ensuring customer satisfaction by completing projects efficiently, safely, and reliably across diverse industrial sectors.</p>
             </div>
             <div className="bg-white rounded-lg shadow p-4">
               <img src={serviceImages.values} alt="Our Value" className="mb-4 w-full h-48 object-cover rounded" />
               <h4 className="font-bold text-lg mb-2">Our Value</h4>
-              <p className="text-gray-600 text-sm">We aim to prevent your power disruptions with timely service and committed technical support all year round.</p>
+              <p className="text-gray-600 text-sm">Integrity, trust, and honesty guide every action. The company is dedicated, dependable, flexible, and focuses on polite, friendly customer care, valuing understanding and responsiveness in all relationships.</p>
             </div>
           </div>
         </div>
