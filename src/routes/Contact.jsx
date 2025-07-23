@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const concactInfo = [
@@ -92,7 +93,7 @@ const Contact = () => {
         <div className="w-full mx-auto px-4">
           <ul className="text-white text-sm mb-2">
             <li className="inline-block mr-2">
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li className="inline-block">/ Contact Page</li>
           </ul>
