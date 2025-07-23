@@ -6,6 +6,7 @@ import service3 from './service/3.jpg';
 import service4 from './service/4.jpg';
 import service5 from './service/5.jpg';
 import service6 from './service/6.jpg';
+import service7 from './service/7.jpg';
 import values from './values.jpg';
 import vision from './vision.jpg';
 import mission from './mission.jpg';
@@ -16,6 +17,7 @@ const serviceImages = {
   service4,
   service5,
   service6,
+  service7,
 };
 export default {
   ...serviceImages,

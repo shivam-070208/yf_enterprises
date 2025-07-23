@@ -5,7 +5,10 @@ import PortfolioSection from '../ui/Home/Portfolio';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { profile } from '../assets';
 import { FaStar } from 'react-icons/fa';
-import { partnerLogos } from '../assets/logo';
+import { ChannelImage, ClientsImage } from '../assets/logo';
+import Clients from '../ui/Home/Clients';
+
+
 const textTestimonial = [
   {
     Name: "Manish Tiwari",
@@ -69,6 +72,7 @@ function Home() {
               </Swiper>
             </div>
           </section>
+          <Clients/>
     </div>
   )
 }

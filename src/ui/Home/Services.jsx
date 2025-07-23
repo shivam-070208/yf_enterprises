@@ -37,7 +37,7 @@ const services = [
     subtitle: "CCTV Solutions expertise",
     description: "Comprehensive CCTV solutions including installation, maintenance, and monitoring services to ensure security and surveillance for residential, commercial, and industrial properties.",
     details: "Comprehensive CCTV solutions including installation, maintenance, and monitoring services to ensure security and surveillance for residential, commercial, and industrial properties.",
-    image: serviceImages.service8,
+    image: serviceImages.service3,
   },
   {
     title: "EPC Projects",
