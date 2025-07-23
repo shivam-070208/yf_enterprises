@@ -1,6 +1,7 @@
 import React from 'react';
-import { FaPhoneAlt, FaBolt, FaTools } from 'react-icons/fa';
+import { FaPhoneAlt, FaBolt,  FaRobot, FaToolbox } from 'react-icons/fa';
 import Button from '../Button';
+import { FaComputer } from 'react-icons/fa6';
 
 const AboutSection = () => {
   return (
@@ -14,21 +15,27 @@ const AboutSection = () => {
              Why Choose Us
             </h2>
             <p className="text-gray-600 mb-6">
-             <span className='font-bold'> Y.F Enterprises</span> is a nationally trusted name in engineering, maintenance, and power backup solutions. Headquartered in Kolkata, we bring over 6 years of excellence in UPS systems, battery rentals, flameproof equipment, and custom electrical solutions. What sets us apart is not just our technical capability, but our unwavering commitment to service, ethics, and trust. We proudly serve businesses across India with <span className='font-bold'>24x7x365</span> support, ensuring your operations never pause. With top-tier brands and real-time response, Y.F Enterprises isn’t just a service provider — we are a power partner committed to empowering industries with reliability, safety, and integrity.
+              Y.F Enterprises is a trusted multidisciplinary engineering service provider based in Kolkata, operating since 2013. Led by Mr. Omar Farooque, the company excels in delivering reliable project execution across industries like oil & gas, power, water, pharma, and cement.
+              <br />
+              Specializing in Electrical, Control & Instrumentation, BMS, Firefighting, and Industrial Security Systems, Y.F Enterprises blends traditional trust with modern efficiency. With a strong focus on quality, safety, and innovation, we provide client-centric, end-to-end engineering solutions across India.   
             </p>
 
             <div className="grid sm:grid-cols-1 gap-6 mb-8">
               <div className="flex items-center gap-4">
+                <FaToolbox className="text-orange-600 text-3xl" />
+                <div className="font-bold text-lg text-black">Instrumentation Erection and Commissioning</div>
+              </div>
+              <div className="flex items-center gap-4">
+                <FaComputer className="text-orange-600 text-3xl" />
+                <div className="font-bold text-lg text-black">Cybersecurity Systems & BMS Implementation</div>
+              </div>
+              <div className="flex items-center gap-4">
                 <FaBolt className="text-orange-600 text-3xl" />
-                <div className="font-bold text-lg text-black">Certified Flameproof Equipment</div>
+                <div className="font-bold text-lg text-black capitalize ">Electrical and Mechanical Projects</div>
               </div>
               <div className="flex items-center gap-4">
-                <FaTools className="text-orange-600 text-3xl" />
-                <div className="font-bold text-lg text-black">Custom Industrial Panels</div>
-              </div>
-              <div className="flex items-center gap-4">
-                <FaTools className="text-orange-600 text-3xl" />
-                <div className="font-bold text-lg text-black capitalize ">Engineering & Maintenance Services</div>
+                <FaRobot className="text-orange-600 text-3xl" />
+                <div className="font-bold text-lg text-black capitalize ">Automation and Control Systems</div>
               </div>
             </div>
           </div>
