@@ -80,7 +80,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full md:mt-0 mt-10">
       <div ref={toastref} >
         <ToastContainer position="bottom" className="z-[999]" autoClose={2000} closeOnClick />
       </div>

@@ -28,7 +28,7 @@ const ProductDetails = () => {
     .slice(0, 4);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 md:mt-0 mt-10">
       {/* Header Section with Background */}
       <section 
         className="bg-cover bg-center py-25 relative"
@@ -58,7 +58,7 @@ const ProductDetails = () => {
         {/* Product Details Section */}
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           {/* Product Image */}
-          <div className="lg:w-1/2">
+          <div className="mx-auto lg:w-1/2">
             <div className="bg-white rounded-lg shadow-lg p-8">
               <img
                 src={product.image}
@@ -69,7 +69,7 @@ const ProductDetails = () => {
           </div>
 
           {/* Product Information Panel */}
-          <div className="lg:w-1/2">
+          <div className="w-full lg:w-1/2">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               {/* Header */}
               <div className="bg-slate-800 text-white p-4">
@@ -77,7 +77,7 @@ const ProductDetails = () => {
               </div>
               
               {/* Specifications List */}
-              <div className="p-6">
+              <div className="p-6 w-full">
                 <ul className="space-y-3">
                   {product.specifications &&
                     Object.entries(product.specifications).map(([key, value]) => (
@@ -122,11 +122,12 @@ const ProductDetails = () => {
         </div>
 
         {/* Similar Products Section */}
-        <div className="mt-16">
+        <div className="mt-16 px-5">
           <h2 className="text-center text-2xl font-bold text-gray-800 mb-8">Similar Products</h2>
-          <div className="relative">
+          <div className="relative px-5">
             <Swiper
               modules={[Navigation]}
+              loop={true}
               navigation={{
                 nextEl: '.similar-next',
                 prevEl: '.similar-prev',

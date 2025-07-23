@@ -2,6 +2,7 @@ import React, { Suspense, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Allblogs } from '../assets'
 import { motion } from 'motion/react'
+import { FaArrowDown } from 'react-icons/fa'
 const Blogs = React.lazy(()=>import('../Components/Blogs'))
 
 const Blog = () => {
@@ -18,7 +19,7 @@ const Blog = () => {
     .slice(0, 3);
 
   return (
-    <div className='mb-10'>
+    <div className='mb-10 mt-10 md:mt-0'>
       <section className="bg-cover bg-center py-30 " style={{ backgroundImage: "url('https://html.themexriver.com/industo/images/background/9.jpg')" }}>
         <div className="container mx-auto px-4">
           <ul className="flex gap-2 text-white text-sm">
@@ -50,7 +51,7 @@ const Blog = () => {
          
           {/* Category Filter */}
           <div className='bg-white p-6 h-fit rounded-lg shadow-md'>
-            <h3 onClick={()=>setShowCategories(!showCategories)} className='text-xl cursor-pointer  font-bold mb-4 text-blue-950'>Filter</h3>
+            <h3 onClick={()=>setShowCategories(!showCategories)} className='text-xl cursor-pointer  font-bold mb-4 text-blue-950'>Filter <FaArrowDown className='md:hidden' /> </h3>
            {showCategories&& <div className='space-y-2 space-x-2'>
               {categories.map((category, idx) => (
                 <motion.button layoutId={category+idx} initial={{height:0,opacity:0,filter:'blur(100px)'}} exit={{height:0,opacity:0,filter:'blur(100px)'}} animate={{height:'fit-content',opacity:1,filter:'blur(0)'}} transition={{delay:0.002*idx,duration:0.7}}

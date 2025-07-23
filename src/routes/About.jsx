@@ -38,7 +38,7 @@ const AboutUs = () => {
     }
   ];
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-white text-gray-800 md:mt-0 mt-15 ">
       {/* Hero Section */}
       <section className="bg-cover bg-center py-20" style={{ backgroundImage: 'url(https://html.themexriver.com/industo/images/background/9.jpg)' }}>
         <div className="max-w-7xl mx-auto px-4">

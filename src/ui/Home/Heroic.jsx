@@ -97,11 +97,11 @@ const HeroSection = () => {
         {slides.map((slide, i) => (
           <SwiperSlide key={i}>
             <div
-              className="w-full h-full bg-cover bg-center flex py-25 md:justify-start justify-center md:px-40 px-2 items-center text-center md:text-left"
+              className="w-full h-full bg-cover bg-center flex py-25 justify-start md:px-40 px-2"
               style={{ backgroundImage: `url(${slide.image})` }}
             >
               {currentslide === i && (
-                <div className="max-w-[600px] text-white space-y-10 px-3 mx-auto">
+                <div className="max-w-[600px] text-white space-y-10 px-3 mt-20 md:mt-0">
                   <h1 className="sm:text-6xl text-4xl leading-tight animate-view origin-top font-bold">
                     {slide.heading}
                   </h1>
@@ -116,12 +116,12 @@ const HeroSection = () => {
       </Swiper>
 
       {/* 🧱 Cards Section */}
-      <div className="w-full lg:absolute -bottom-2 z-100 mt-35 mb-10">
-        <div className="w-fit mx-auto grid lg:grid-cols-2 gap-10 grid-cols-1 pointer-events-none">
+      <div className="w-full lg:absolute -bottom-2 z-100  mt-35 mb-10">
+        <div className="w-fit mx-auto grid lg:grid-cols-2  gap-10 grid-cols-1 pointer-events-none">
           {cards.map((item, i) => (
             <div
               key={i}
-              className="w-120 py-9 group relative text-white cursor-pointer pointer-events-auto bg-black -z-10 px-6 rounded overflow-hidden"
+              className="w-120 py-9 group relative text-white cursor-pointer pointer-events-auto bg-black  px-6 rounded overflow-hidden"
             >
               {/* 🏷️ Company Name on Hover */}
 
@@ -129,7 +129,7 @@ const HeroSection = () => {
               {/* 🌆 Background Blur Image */}
               <img
                 src="https://html.themexriver.com/industo/images/gallery/1.jpg"
-                className="absolute top-0 left-0 blur-md w-0 group-hover:w-full transition-all duration-500 h-full object-cover -z-1"
+                className="absolute top-0 left-0 blur-md w-0 group-hover:w-full transition-all duration-500 h-full object-cover z-0"
               />
 
               {/* 🛠️ Icon */}
@@ -174,7 +174,7 @@ const HeroSection = () => {
               {/* 🔎 CTA Button */}
               <Link
                 to={i === 0 ? "/services" : "/products"}
-                className="flex items-center gap-3 rounded hover:cursor-pointer bg-orange-600 px-4 py-2 font-mono text-lg font-semibold mt-8 z-10 relative"
+                className="flex items-center gap-3 rounded bg-orange-600 px-4 py-2 font-mono text-lg font-semibold mt-8 z-[999]  relative"
               >
                 Explore More <FaArrowRight />
               </Link>
