@@ -60,17 +60,17 @@ const AboutUs = () => {
             <div className="bg-gray-50 p-6 rounded shadow">
               <FaIndustry className="text-4xl text-orange-600 mx-auto mb-3" />
               <h3 className="text-2xl font-bold">30+</h3>
-              <p>Project successfuly completed</p>
+              <p>Project successfully completed</p>
             </div>
             <div className="bg-gray-50 p-6 rounded shadow">
               <FaTools className="text-4xl text-blue-600 mx-auto mb-3" />
-              <h3 className="text-2xl font-bold">1.5K</h3>
-              <p>Engineering Projects</p>
+              <h3 className="text-2xl font-bold">20</h3>
+              <p>Trusted Clients</p>
             </div>
             <div className="bg-gray-50 p-6 rounded shadow">
               <FaGlobe className="text-4xl text-red-600 mx-auto mb-3" />
-              <h3 className="text-2xl font-bold">100+</h3>
-              <p>Trusted Clients </p>
+              <h3 className="text-2xl font-bold">15+</h3>
+              <p>Years Of Experience</p>
             </div>
           </div>
         </div>

@@ -12,188 +12,136 @@ function requireImage(filename) {
 const serviceDetailsData = [
   {
     id: 1,
-    service: 'Instrumentation Solutions',
-    images: [requireImage('41.jpg'), requireImage('42.jpg'), requireImage('43.jpg')],
-    provider: 'Instrumentation Services Provider',
-    description:
-      'Instrumentation is the backbone of precision-driven industries. YF Enterprises delivers specialized solutions that enhance performance, efficiency, and control.',
+    service: "Instrumentation Solutions",
+    provider: "Y.F Enterprises",
+    description: "Precision-driven instrumentation services for industrial automation, calibration, and process control.",
     points: [
-      'Installation of transmitters, switches, gauges (pressure, temperature, flow, and level).',
-      'Setup of control valves, breather valves, safety valves, junction boxes, and instrumentation panels.',
-      'Installation of PLC, SCADA, and DCS systems tailored for industrial automation.',
-      'Structured cabling, impulse piping, instrument air/gas tubing, and marshalling panel connections.',
-      'Loop checking, testing, and NABL-accredited calibration using high-end equipment.',
-      'Onsite/offsite prefabrication of supports and customized control package installations.',
-      'Deployment of certified engineers and technicians for shutdown and commissioning operations.'
+      "Industrial sensor installation & configuration",
+      "SCADA & PLC instrumentation integration",
+      "Flow, pressure & temperature instrumentation setup",
+      "Calibration & certification as per ISO standards"
     ],
     sections: [
-      {
-        title: 'Testing',
-        text: 'We conduct end-to-end testing for electrical installations and field instruments. Our services comply with ISO 9000 standards and are NABL-certified.'
-      },
-      {
-        title: 'Commissioning',
-        text: 'YF Enterprises provides experienced commissioning engineers, fitters, and electricians capable of handling complex control systems. Our deliverables include international-standard documentation.'
-      },
-      {
-        title: 'Calibration',
-        text: 'Our mobile calibration lab and in-house equipment inventory allow us to deliver precision calibration services across India.'
-      }
+      "Field Instrumentation Deployment",
+      "Instrument Cabling & Loop Wiring",
+      "Calibration & Accuracy Testing",
+      "Analog & Digital Signal Integration",
+      "Final Handover with Performance Report"
     ]
   },
   {
     id: 2,
-    service: 'C&I Contracting',
-    images: [requireImage('44.jpg'), requireImage('45.jpg'), requireImage('46.jpg')],
-    provider: 'Control & Instrumentation Contract Experts',
-    description:
-      'YF Enterprises excels in turnkey Control & Instrumentation (C&I) contracting, delivering tailored automation and integration services for industrial systems.',
+    service: "C&I Contracting",
+    provider: "Y.F Enterprises",
+    description: "End-to-end Control & Instrumentation contracting including PLC/DCS integration, field cabling, and commissioning.",
     points: [
-      'Complete C&I system design and layout planning for process industries.',
-      'Supply and installation of PLC, SCADA, RTU, and DCS systems with real-time monitoring capabilities.',
-      'Field cabling, signal wiring, earthing, and termination with proper tagging and documentation.',
-      'Installation of automation panels, remote IO panels, and VFD drives.',
-      'Loop testing, simulation testing, and system I/O validation before commissioning.',
-      'Custom HMI programming and SCADA screen development as per client needs.',
-      'AMC and technical support post-commissioning for seamless plant operation.'
+      "PLC/DCS control panel supply and integration",
+      "Complete cable laying, termination & glanding",
+      "Signal loop testing & documentation",
+      "Final commissioning with client SAT"
     ],
     sections: [
-      {
-        title: 'PLC/DCS Integration',
-        text: 'We integrate advanced PLC and DCS systems to streamline plant processes and maximize productivity.'
-      },
-      {
-        title: 'Field Cabling',
-        text: 'We handle high-quality field wiring with proper shielding, routing, and gland sealing practices.'
-      },
-      {
-        title: 'Commissioning & Handover',
-        text: 'Comprehensive end-to-end commissioning support, including FAT, SAT, and system documentation.'
-      }
+      "Control Panel Fabrication",
+      "Cable Tray Installation",
+      "Field Cabling Termination",
+      "Loop Check & Functional Testing",
+      "PLC/DCS Programming Support",
+      "Control Room Finalization"
     ]
   },
   {
     id: 3,
-    service: 'Data Center Solutions',
-    images: [requireImage('47.jpg'), requireImage('48.jpg'), requireImage('49.jpg')],
-    provider: 'Data Center Infrastructure Experts',
-    description:
-      'We provide robust, scalable, and energy-efficient data center solutions to support IT infrastructure and mission-critical applications.',
+    service: "CCTV Sources",
+    provider: "Y.F Enterprises",
+    description: "Comprehensive CCTV solutions including installation, maintenance, and monitoring services to ensure security and surveillance for residential, commercial, and industrial properties.",
     points: [
-      'Design and construction of tier-compliant data centers (Tier I to Tier IV).',
-      'Installation of UPS systems, battery banks, precision air conditioning (PAC), and cold/hot aisle containment.',
-      'Structured cabling, rack installations, and cable tray management.',
-      'Access control, CCTV surveillance, fire detection, and suppression system setup.',
-      'Power distribution and redundancy planning (PDUs, LT panels, diesel generators).',
-      'Environment monitoring sensors and DCIM software for data center visibility.',
-      'Annual maintenance and real-time support for uptime assurance.'
+      "IP-based & Analog CCTV installation",
+      "NVR/DVR setup with storage optimization",
+      "Remote access configuration",
+      "Annual maintenance & health checks"
     ],
     sections: [
-      {
-        title: 'Power Backup',
-        text: 'Reliable backup systems including UPS, DG Sets, and dual-source power integration for uninterrupted performance.'
-      },
-      {
-        title: 'Cooling Solutions',
-        text: 'Efficient PAC systems, aisle containment, and thermal design for optimal environment control.'
-      },
-      {
-        title: 'Security & Monitoring',
-        text: 'Multi-layered physical and digital security with 24x7 monitoring and access logging.'
-      }
+      "Surveillance System Design",
+      "Wired & Wireless Camera Setup",
+      "NVR/DVR Rack Mounting",
+      "Mobile App Integration & Alerts",
+      "Annual AMC & Reporting"
     ]
   },
   {
     id: 4,
-    service: 'Electrical Projects',
-    images: [requireImage('50.jpg'), requireImage('51.jpg'), requireImage('52.jpg')],
-    provider: 'Electrical Engineering Project Specialists',
-    description:
-      'From concept to commissioning, YF Enterprises delivers electrical project solutions that power industrial, commercial, and infrastructure developments.',
+    service: "EPC Projects",
+    provider: "Y.F Enterprises",
+    description: "Complete electrical design, erection, testing, and commissioning for industrial and commercial setups.",
     points: [
-      'Turnkey execution of LT & HT power distribution systems.',
-      'Panel fabrication, supply, installation, and testing (PCC, MCC, APFC, VFD panels).',
-      'Cable laying (underground, overhead), glanding, and termination.',
-      'Lighting systems, earthing grids, and surge protection systems.',
-      'Transformer erection, bus duct installation, and switchgear testing.',
-      'Load analysis, energy audits, and power factor improvement services.',
-      'Liaisoning with electrical utilities and local authorities for statutory approvals.'
+      "Design engineering for HT/LT systems",
+      "Procurement of electrical equipment",
+      "On-site erection & installation",
+      "Commissioning & documentation"
     ],
     sections: [
-      {
-        title: 'Design & Erection',
-        text: 'We offer complete electrical design, BOQ preparation, and on-site erection as per IS and IEC standards.'
-      },
-      {
-        title: 'Testing & Protection',
-        text: 'We perform insulation resistance, earth resistance, and relay testing using calibrated test kits.'
-      },
-      {
-        title: 'Commissioning & Handover',
-        text: 'Final system commissioning, trial runs, and handover documentation with test reports.'
-      }
+      "HT/LT Electrical Design",
+      "Bill of Material Preparation",
+      "Procurement & Vendor Coordination",
+      "On-site Execution & Cabling",
+      "Testing, Compliance, & Final Commissioning"
     ]
   },
   {
     id: 5,
-    service: 'Testing & Commissioning',
-    images: [requireImage('53.jpg'), requireImage('54.jpg'), requireImage('55.jpg')],
-    provider: 'Electrical Testing & QC Experts',
-    description:
-      'We offer comprehensive testing and commissioning services to validate and ensure safe operation of your electrical systems.',
+    service: "Testing & Commissioning",
+    provider: "Y.F Enterprises",
+    description: "Advanced testing and commissioning services for electrical panels, transformers, and substation equipment.",
     points: [
-      'Relay coordination study and protection relay testing.',
-      'Primary and secondary injection testing for circuit breakers.',
-      'Insulation resistance (IR), contact resistance, and earth resistance testing.',
-      'Transformer oil testing and power factor testing of capacitors.',
-      'HV testing, VLF testing for cables, and SF6 gas testing for GIS equipment.',
-      'Thermal imaging and harmonic analysis for preventive maintenance.',
-      'Documentation of test reports, certificates, and third-party inspection compliance.'
+      "Primary and secondary injection testing",
+      "Relay coordination and testing",
+      "Transformer insulation resistance & IR testing",
+      "HT/LT panel functionality tests"
     ],
     sections: [
-      {
-        title: 'Testing Capabilities',
-        text: 'We use advanced testing instruments for detailed diagnostics and quality assurance.'
-      },
-      {
-        title: 'Onsite Commissioning',
-        text: 'Our engineers ensure live commissioning support with safety and efficiency.'
-      },
-      {
-        title: 'Report & Compliance',
-        text: 'We generate digital reports and third-party certifications for QA and regulatory audits.'
-      }
+      "Relay Logic Testing",
+      "IR & PI Value Testing",
+      "HV Pressure Test",
+      "Switchgear Operational Check",
+      "Final Report Submission & Certification"
     ]
   },
   {
     id: 6,
-    service: 'Manpower Deployment',
-    images: [requireImage('56.jpg'), requireImage('57.jpg'), requireImage('58.jpg')],
-    provider: 'Industrial Technical Manpower Provider',
-    description:
-      'YF Enterprises supplies skilled manpower tailored for complex engineering projects and maintenance operations.',
+    service: "Manpower Deployment",
+    provider: "Y.F Enterprises",
+    description: "Skilled technical manpower supply for project execution, maintenance, and industrial operations support.",
     points: [
-      'Deployment of certified electricians, fitters, welders, and instrumentation technicians.',
-      'Provision of engineers and supervisors for short-term and long-term projects.',
-      'Support for shutdown, turnaround, and emergency maintenance tasks.',
-      'Manpower for cable laying, termination, panel wiring, and equipment installation.',
-      'Time-bound mobilization of teams across India for onshore/offshore projects.',
-      'Strict adherence to client-specific skill matrix and safety norms.',
-      'Manpower tracking, daily reporting, and performance-based deployment.'
+      "Electricians, fitters, welders on contract",
+      "Shift-based or project-based workforce",
+      "PAN India skilled technician network",
+      "Safety-compliant labor provisioning"
     ],
     sections: [
-      {
-        title: 'Certified Workforce',
-        text: 'We supply experienced and certified personnel with domain-specific expertise.'
-      },
-      {
-        title: 'Nationwide Reach',
-        text: 'Our manpower teams are available across metro, tier-2, and remote industrial zones.'
-      },
-      {
-        title: 'Flexible Deployment',
-        text: 'From single resource to bulk deployment – we offer tailor-fit solutions for every project.'
-      }
+      "Daily Workforce Management",
+      "Skill-based Allocation (ITI, Diploma)",
+      "On-Site Safety Training",
+      "HR Compliance & Attendance Logs",
+      "Client Coordination & Feedback"
+    ]
+  },
+  {
+    id: 7,
+    service: "HCD Services",
+    provider: "Y.F Enterprises",
+    description: "High Capacity Diesel Generator services including installation, maintenance, and fuel management for uninterrupted power supply.",
+    points: [
+      "DG set installation (15kVA–1000kVA)",
+      "AMC and on-call servicing",
+      "Fuel efficiency management",
+      "Noise and emission control compliance"
+    ],
+    sections: [
+      "DG Sizing & Load Calculation",
+      "DG Installation & Earthing",
+      "Battery & Fuel Line Setup",
+      "Control Panel Connection",
+      "Preventive Maintenance & Noise Compliance"
     ]
   }
 ];

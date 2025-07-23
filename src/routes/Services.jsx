@@ -10,7 +10,7 @@ import serviceImages from '../assets/serviceImages';
 
 
 const ServicesPage = () => {
-  const [index,setindex]= useState(6)
+  const [index,setindex]= useState(7)
  const textTestimonial = [
     {
       Name : " Manish Tiwari",
@@ -53,11 +53,12 @@ const servicesInfo = [
     textExplanation: "End-to-end Control & Instrumentation contracting including PLC/DCS integration, field cabling, and commissioning."
   },
   {
-    service: "Data Center Solutions",
-    textExplanation: "Turnkey data center infrastructure services covering power backup, cooling, security, and server rack integration."
+    service: "CCTV Sources",
+      textExplanation: "Comprehensive CCTV solutions including installation, maintenance, and monitoring services to ensure security and surveillance for residential, commercial, and industrial properties."
+
   },
   {
-    service: "Electrical Projects",
+    service: "EPC Projects",
     textExplanation: "Complete electrical design, erection, testing, and commissioning for industrial and commercial setups."
   },
   {
@@ -68,6 +69,10 @@ const servicesInfo = [
     service: "Manpower Deployment",
     textExplanation: "Skilled technical manpower supply for project execution, maintenance, and industrial operations support."
   },
+  {
+    service: "HCD Services",
+    textExplanation: "High Capacity Diesel Generator services including installation, maintenance, and fuel management for uninterrupted power supply."
+  }
 ];
 
 
