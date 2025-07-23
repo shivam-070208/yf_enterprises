@@ -7,6 +7,7 @@ import { FaDropbox, FaIndustry } from "react-icons/fa";
 import { image1, image2, image3, image4, Wallpattern } from "../../assets";
 import { Link } from "react-router-dom";
 import serviceImages from "../../assets/serviceImages";
+import { details, title } from "motion/react-m";
 
 
 // Mock logos (you can replace with image paths if needed)
@@ -18,141 +19,55 @@ const logos = [
 
 const services = [
   {
-    id: 1,
-    service: "Instrumentation Solutions",
-    provider: "Y.F Enterprises",
+    title: "Instrumentation Solutions",
+    subtitle: "Precision in every measurement",
     description: "Precision-driven instrumentation services for industrial automation, calibration, and process control.",
-    points: [
-      "Industrial sensor installation & configuration",
-      "SCADA & PLC instrumentation integration",
-      "Flow, pressure & temperature instrumentation setup",
-      "Calibration & certification as per ISO standards"
-    ],
-    sections: [
-      "Field Instrumentation Deployment",
-      "Instrument Cabling & Loop Wiring",
-      "Calibration & Accuracy Testing",
-      "Analog & Digital Signal Integration",
-      "Final Handover with Performance Report"
-    ]
+    details: "We deliver high-accuracy instrumentation solutions tailored to industrial requirements. From sensor calibration and loop checking to process instrumentation integration, we ensure system reliability and process optimization.",
+    image: serviceImages.service1,
   },
   {
-    id: 2,
-    service: "C&I Contracting",
-    provider: "Y.F Enterprises",
+    title: "C&I Contracting",
+    subtitle: "Control & Instrumentation expertise",
     description: "End-to-end Control & Instrumentation contracting including PLC/DCS integration, field cabling, and commissioning.",
-    points: [
-      "PLC/DCS control panel supply and integration",
-      "Complete cable laying, termination & glanding",
-      "Signal loop testing & documentation",
-      "Final commissioning with client SAT"
-    ],
-    sections: [
-      "Control Panel Fabrication",
-      "Cable Tray Installation",
-      "Field Cabling Termination",
-      "Loop Check & Functional Testing",
-      "PLC/DCS Programming Support",
-      "Control Room Finalization"
-    ]
+    details: "Our C&I services include complete field engineering, cabling, PLC/DCS installation, and commissioning. We specialize in turnkey industrial automation setups with meticulous wiring and system integrity.",
+    image: serviceImages.service2,
   },
-  {
-    id: 3,
-    service: "CCTV Sources",
-    provider: "Y.F Enterprises",
+   {
+    title: "CCTV Sources",
+    subtitle: "CCTV Solutions expertise",
     description: "Comprehensive CCTV solutions including installation, maintenance, and monitoring services to ensure security and surveillance for residential, commercial, and industrial properties.",
-    points: [
-      "IP-based & Analog CCTV installation",
-      "NVR/DVR setup with storage optimization",
-      "Remote access configuration",
-      "Annual maintenance & health checks"
-    ],
-    sections: [
-      "Surveillance System Design",
-      "Wired & Wireless Camera Setup",
-      "NVR/DVR Rack Mounting",
-      "Mobile App Integration & Alerts",
-      "Annual AMC & Reporting"
-    ]
+    details: "Comprehensive CCTV solutions including installation, maintenance, and monitoring services to ensure security and surveillance for residential, commercial, and industrial properties.",
+    image: serviceImages.service8,
   },
   {
-    id: 4,
-    service: "EPC Projects",
-    provider: "Y.F Enterprises",
+    title: "EPC Projects",
+    subtitle: "Powering industrial excellence",
     description: "Complete electrical design, erection, testing, and commissioning for industrial and commercial setups.",
-    points: [
-      "Design engineering for HT/LT systems",
-      "Procurement of electrical equipment",
-      "On-site erection & installation",
-      "Commissioning & documentation"
-    ],
-    sections: [
-      "HT/LT Electrical Design",
-      "Bill of Material Preparation",
-      "Procurement & Vendor Coordination",
-      "On-site Execution & Cabling",
-      "Testing, Compliance, & Final Commissioning"
-    ]
+    details: "Our services span HT/LT installation, electrical layout planning, equipment erection, and final commissioning. We adhere strictly to safety norms while ensuring seamless power flow and load management.",
+    image: serviceImages.service4,
   },
   {
-    id: 5,
-    service: "Testing & Commissioning",
-    provider: "Y.F Enterprises",
+    title: "Testing & Commissioning",
+    subtitle: "Reliable performance verification",
     description: "Advanced testing and commissioning services for electrical panels, transformers, and substation equipment.",
-    points: [
-      "Primary and secondary injection testing",
-      "Relay coordination and testing",
-      "Transformer insulation resistance & IR testing",
-      "HT/LT panel functionality tests"
-    ],
-    sections: [
-      "Relay Logic Testing",
-      "IR & PI Value Testing",
-      "HV Pressure Test",
-      "Switchgear Operational Check",
-      "Final Report Submission & Certification"
-    ]
+    details: "We offer insulation resistance testing, primary/secondary injection, transformer testing, and relay configuration to verify system integrity before project handover, ensuring fault-free startups.",
+    image: serviceImages.service5,
   },
   {
-    id: 6,
-    service: "Manpower Deployment",
-    provider: "Y.F Enterprises",
+    title: "Manpower Deployment",
+    subtitle: "Skilled technical workforce on demand",
     description: "Skilled technical manpower supply for project execution, maintenance, and industrial operations support.",
-    points: [
-      "Electricians, fitters, welders on contract",
-      "Shift-based or project-based workforce",
-      "PAN India skilled technician network",
-      "Safety-compliant labor provisioning"
-    ],
-    sections: [
-      "Daily Workforce Management",
-      "Skill-based Allocation (ITI, Diploma)",
-      "On-Site Safety Training",
-      "HR Compliance & Attendance Logs",
-      "Client Coordination & Feedback"
-    ]
+    details: "Our manpower pool includes electricians, supervisors, panel testers, and engineers. Whether for shutdown maintenance or new projects, we provide experienced professionals tailored to industry needs.",
+    image: serviceImages.service6,
   },
-  {
-    id: 7,
-    service: "HCD Services",
-    provider: "Y.F Enterprises",
+    {
+    title: "HCD Services",
+    subtitle: "High Capacity Diesel Generator expertise",
     description: "High Capacity Diesel Generator services including installation, maintenance, and fuel management for uninterrupted power supply.",
-    points: [
-      "DG set installation (15kVA–1000kVA)",
-      "AMC and on-call servicing",
-      "Fuel efficiency management",
-      "Noise and emission control compliance"
-    ],
-    sections: [
-      "DG Sizing & Load Calculation",
-      "DG Installation & Earthing",
-      "Battery & Fuel Line Setup",
-      "Control Panel Connection",
-      "Preventive Maintenance & Noise Compliance"
-    ]
-  }
+    details: "We specialize in HCD generator installation, routine maintenance, fuel management, and emergency support. Our services ensure your operations run smoothly without power interruptions.",
+    image: serviceImages.service7,
+    }
 ];
-
 
 
 const ServicesCarousel = () => {
