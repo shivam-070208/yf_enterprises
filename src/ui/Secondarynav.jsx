@@ -11,6 +11,7 @@ const Secondarynav = () => {
     { Name: "Services", href: "/services" },
     { Name: "Products", href: "/products" },
     { Name: "Blog", href: "/blog" },
+      { Name: "Career", href: "/career" },
     { Name: "Contact", href: "/contact" },
   ];
 

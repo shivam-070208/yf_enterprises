@@ -9,6 +9,7 @@ import Footer from './ui/Footer'
 import Loaderinitiater from './Components/Loaderinitiater'
 import Totop from './ui/Totop'
 import ProductDetails from './routes/ProductDetails'
+import Career from './routes/Career'
 
 function App() {
   return (
@@ -51,6 +52,11 @@ function App() {
             <ProductDetails />
           </Loaderinitiater>
         } />
+         <Route path='/career' element={
+            <Loaderinitiater>
+            <Career />
+            </Loaderinitiater>
+            } /> 
           <Route path='/blog' element={
             <Loaderinitiater>
             <Blog />
