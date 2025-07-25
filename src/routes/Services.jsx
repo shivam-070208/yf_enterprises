@@ -111,7 +111,7 @@ const servicesInfo = [
             })}
           </div>
           <div className="text-center mt-12">
-           <Button text={"Explore More"} href={'/contact#contact'} primarycolor={"bg-blue-600"} secondarycolor={"bg-green-600"} />
+           <Button text={"Explore More"} href={'/services/details/1'} primarycolor={"bg-blue-600"} secondarycolor={"bg-green-600"} />
           </div>
         </div>
       </section>
