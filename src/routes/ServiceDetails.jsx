@@ -213,11 +213,11 @@ const ServiceDetails = () => {
   const service = serviceDetailsData[serviceIndex];
 
   return (
-    <div className="page-wrapper mt-25 bg-gray-50 min-h-screen">
+    <div className="page-wrapper md:mt-0 mt-25 bg-gray-50 min-h-screen">
       {/* Header */}
       <section
       style={{ backgroundImage: `url(${'https://html.themexriver.com/industo/images/background/9.jpg'})` }}
-      className=" py-10">
+      className=" py-20">
         <div className="container mx-auto px-4">
           <ul className="flex gap-2 text-white text-sm mb-2">
             <li><Link to="/" className="underline">Home</Link></li>
