@@ -7,9 +7,9 @@ import service4 from './service/4.webp';
 import service5 from './service/5.webp';
 import service6 from './service/6.webp';
 import service7 from './service/7.webp';
-import values from './values.jpg';
-import vision from './vision.jpg';
-import mission from './mission.jpg';
+import values from './values.webp';
+import vision from './vision.webp';
+import mission from './mission.webp';
 const serviceImages = {
   service1,
   service2,
