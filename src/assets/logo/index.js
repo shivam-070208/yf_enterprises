@@ -11,7 +11,7 @@ import IOCL from './IOCL.webp';
 import tatasteel from './tatasteel.webp';
 import yokogawa from './yokogawa-seeklogo.webp';
 import Hitachi from './Hitachi.webp';
-import { Home } from '../../routes';
+export { Home } from '../../routes';
 
 export const ClientsImage = [
   Hp,

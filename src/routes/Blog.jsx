@@ -14,9 +14,7 @@ const Blog = () => {
   const categories = ['All', ...new Set(Allblogs.map(blog => blog.category))];
 
   // Get latest 3 blogs
-  const latestBlogs = Allblogs
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 3);
+  const latestBlogs = Allblogs.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
 
   return (
     <div className='mb-10 mt-10 md:mt-0'>
