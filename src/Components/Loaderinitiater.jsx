@@ -33,17 +33,17 @@ const LoaderInitiater = ({ children }) => {
 
       <motion.div
         className=' overflow-hidden origin-center'
-        initial={{transform:"scale(0)",duration: '0', filter: 'blur(30px)' }}
+        // initial={{transform:"scale(0)",duration: '0', filter: 'blur(30px)' }}
 
-        animate={{
-        //  width: loading ? '0px' : '100%',
-        //  height:loading?'0px':'100%',
-          transform: loading ? 'scale(0)' : 'scale(1)',
-          filter: loading ? 'blur(30px)' : 'blur(0px)',
-          duration: loading ? "0" : "0.4",
-          // rotateZ: loading ? '0deg' : '0deg',
-        }}
-        transition={{ duration: 0.5, ease: 'easeInOut' }}
+        // animate={{
+        // //  width: loading ? '0px' : '100%',
+        // //  height:loading?'0px':'100%',
+        //   transform: loading ? 'scale(0)' : 'scale(1)',
+        //   filter: loading ? 'blur(30px)' : 'blur(0px)',
+        //   duration: loading ? "0" : "0.4",
+        //   // rotateZ: loading ? '0deg' : '0deg',
+        // }}
+        // transition={{ duration: 0.5, ease: 'easeInOut' }}
        
       >
         {children}
