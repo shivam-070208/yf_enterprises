@@ -92,10 +92,10 @@ const ProductDetails = () => {
 
                 {/* Enquire Button */}
                 <div className="mt-8">
-                  <a href='/contact' className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-lg">
+                  <Link to={'/contact'} className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 shadow-lg">
 
                     Enquire Now
-                  </a>
+                  </Link>
                 </div>
 
                 {/* Rating */}
