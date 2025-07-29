@@ -1,5 +1,4 @@
 
-import React, { useRef, useState } from 'react';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import { FaStar, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { flameproofProducts } from '../assets/products';

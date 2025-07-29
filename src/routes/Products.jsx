@@ -142,7 +142,7 @@ const Products = () => {
                     <span className="text-black font-bold group-hover:text-white">{product.price}</span>
                   </div>
                   <div className="flex items-center justify-center gap-1 text-yellow-400 mb-3 z-20">
-                    {Array.from({ length: product.rating }).map((_, j) => (
+                    {Array.from({ length: product.rating }).map((i, j) => (
                       <FaStar key={j} />
                     ))}
                   </div>
