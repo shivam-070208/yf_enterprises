@@ -94,7 +94,7 @@ const servicesInfo = [
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <p className="text-blue-600 text-sm uppercase font-semibold">The Best Industrial Services</p>
-            <h2 className="text-3xl md:text-4xl font-bold">Industo Provides Services <br className="hidden md:block" /> for Your Business</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">We Provide Services <br className="hidden md:block" /> for Your Business</h2>
           </div>
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
             {servicesInfo.map((items, i) => {

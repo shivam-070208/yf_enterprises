@@ -114,7 +114,7 @@ const AboutUs = () => {
               <FaTrophy className="text-3xl text-yellow-500" />
               <div>
                 <h4 className="font-bold text-lg">Best Quality</h4>
-                <p className="text-gray-600 text-sm">24x7 support service to ensureprompt resolution.</p>
+                <p className="text-gray-600 text-sm">24x7 support service to ensure prompt resolution.</p>
               </div>
             </div>
             <a href="/services" className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg font-semibold">Explore More</a>

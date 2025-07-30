@@ -118,7 +118,8 @@ const Career = () => {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <input name="name" required type="text" placeholder="Your Name" className="w-full border p-2 rounded" />
                 <input name="email" required type="email" placeholder="Your Email" className="w-full border p-2 rounded" />
-                <input name="resume" required type="file" accept="application/pdf" onChange={handleResumePreview} className="w-full border p-2 rounded" />
+                <input name="mobile" required type="number" placeholder="Your Mobile Number" className="w-full border p-2 rounded" />
+                <input name="resume" required type="file" accept="application/pdf" placeholder="Upload your resume" onChange={handleResumePreview} className="w-full bg-gray-500 border p-2 rounded" />
 
                 {fileURL && (
                   <iframe src={URL.createObjectURL(fileURL)} title="Resume Preview" className="w-full h-48 border rounded"></iframe>
