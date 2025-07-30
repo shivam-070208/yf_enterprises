@@ -81,7 +81,7 @@ const AboutUs = () => {
       {/* Welcome Section */}
       <section className="py-20 bg-gray-100">
         <div className="max-w-6xl mx-auto p-5 flex flex-col lg:flex-row items-center gap-15">
-          <div className="w-full lg:w-1/2 mr-20">
+          <div className="w-full lg:w-1/2 ml-5 lg:mr-20">
             <img src={about} alt="Welcome" className="rounded-xl shadow" />
           </div>
           <div className="w-full lg:w-1/2 space-y-6">
