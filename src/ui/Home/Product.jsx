@@ -257,7 +257,7 @@ const ProductCarousel = () => {
         >
           {products.map((product, i) => (
             <SwiperSlide key={i}>
-              <div className="rounded-xl group relative py-24 flex flex-col items-center text-center transition">
+              <div className="rounded-xl group relative py-24 flex flex-col items-center text-center transition h-full">
                 {/* 🟠 Product Image on Top */}
                 <div className='w-40 h-45 group-hover:opacity-100 origin-center scale-0 group-hover:scale-100 opacity-0 transition-all duration-400 absolute  -translate-y-1/2 rounded-full bg-orange-500' />
                 <img
@@ -268,7 +268,7 @@ const ProductCarousel = () => {
                 {/* 🔶 Animated Card */}
                 <div className="bg-white h-fit p-6 flex flex-col items-center rounded pt-28 pb-6 flex-1 w-full relative z-10">
                   <div className='absolute origin-center rounded-lg opacity-0 group-hover:opacity-100  w-full scale-x-0 group-hover:scale-x-100 duration-400 transition-all h-full bg-black top-0 -z-1' />
-                  <h4 className="text-lg font-semibold mb-2 z-20 group-hover:text-white">{product.name}</h4>
+                  <h4 className="text-md font-semibold mb-2 z-20 group-hover:text-white">{product.name}</h4>
                   <div className="text-xs text-orange-600 font-medium mb-2 z-20">{product.category}</div>
                   <div className="mb-2 z-20">
                     <span className="text-black font-bold group-hover:text-white">{product.price || ''}</span>

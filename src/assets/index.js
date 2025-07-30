@@ -16,6 +16,7 @@ import profile from './profileicon.webp';
 import whiteLogo from './whitelogo.webp';
 import Pipe from './pipe.webp'
 import Giflogo from './YfEnterprises.gif';
+import about from './about.jpg'
 export {
     Wallpattern,
     image1,
@@ -36,5 +37,6 @@ export {
     searchProducts,
     whiteLogo,
     Pipe,
-    Giflogo
+    Giflogo,
+    about
 }
