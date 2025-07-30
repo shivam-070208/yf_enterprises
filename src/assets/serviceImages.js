@@ -10,6 +10,9 @@ import service7 from './service/7.webp';
 import values from './values.webp';
 import vision from './vision.webp';
 import mission from './mission.webp';
+import heroic1 from './service/Heroic1.jpg';
+import heroic2 from './service/Heroic2.jpg';
+import heroic3 from './service/Heroic3.jpg';
 const serviceImages = {
   service1,
   service2,
@@ -18,11 +21,17 @@ const serviceImages = {
   service5,
   service6,
   service7,
+  heroic1,
+  heroic2,
+  heroic3,
 };
 export default {
   ...serviceImages,
   values,
   vision,
   mission,
+  heroic1,
+  heroic2,
+  heroic3
 };
 
