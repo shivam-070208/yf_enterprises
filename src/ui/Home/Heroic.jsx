@@ -45,7 +45,7 @@ const HeroSection = () => {
   const [currentslide, setslide] = useState(0);
 
   return (
-    <div className="relative w-screen min-h-[120vh] pb-10 overflow-x-hidden overflow-y-visible">
+    <div className="relative w-screen min-h-[105vh] pb-10 overflow-x-hidden overflow-y-visible">
       
       {/* 🌀 Swiper Component */}
       <Swiper
@@ -64,10 +64,11 @@ const HeroSection = () => {
         pagination={{
           clickable: true,
           renderBullet: function (index, className) {
-            return `<span class="${className}" style="background-color: ${
+            return `<span class='${className}' style='background-color: ${
               index === currentslide ? "#FF8C00" : "#D3D3D3"
-            }; width: 12px; height: 12px; margin: 15px 5px; border-radius: 50%;"></span>`;
+            }; width: 12px; height: 12px; margin: 15px 5px; border-radius: 50%;'></span>`;
           },
+          el: '.custom-swiper-pagination',
         }}
       >
         {slides.map((slide, i) => (
@@ -150,6 +151,8 @@ const HeroSection = () => {
             </div>
           ))}
         </div>
+        {/* Swiper Pagination Bullets Below Cards */}
+        <div className="custom-swiper-pagination flex justify-center items-center mt-8"></div>
       </div>
     </div>
   );
