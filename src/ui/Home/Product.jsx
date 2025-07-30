@@ -209,27 +209,7 @@ const products = [
     inStock: true,
     featured: false
   },
-  {
-    id: 10,
-    name: 'Flameproof Temperature Indicator',
-    category: 'Instrumentation',
-        
-          
-    rating: 5,
-    image: productImages[9],
-    description: 'Flameproof temperature indicator for monitoring in hazardous areas.',
-    specifications: {
-      material: 'Cast Aluminium Alloy LM6',
-      flameproofZone: 'Zone 1 & 2,IIA,IIB,IIC as per IS/IEC 60079-1:2007',
-      weatherproof: 'IP 66 as per IS/IEC 60529:2001',
-      finish: 'Light Grey to Shade 631 of 15:5 (Epoxy Powder Coated)',
-      gasket: 'Neoprene',
-      cableEntry: '2 Nos. 3/4"ET Entry',
-      range: '0 To 200 DEGREE, 0 TO 400 DEGREE',
-    },
-    inStock: true,
-    featured: true
-  }
+
 ];
 
 const ProductCarousel = () => {

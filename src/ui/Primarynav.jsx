@@ -21,7 +21,7 @@ const Primarynav = () => {
     },
     {
       tittle: "Mail us",
-      comment: "tenders@yfenterprises.com",
+      comment: "info@yfenterprises.com",
       Icon: <FaEnvelopeOpenText size={30} className="text-orange-500" />,
       link: 'https://mail.google.com/mail/u/0/#inbox?compose=new',
     },
@@ -46,7 +46,7 @@ const Primarynav = () => {
               <a href={`tel:${item.comment.replace(/[^\d]/g, "")}`} style={{ textDecoration: "none" }}>
                 <div>
                   <p className="font-semibold text-lg text-black">{item.tittle}</p>
-                  <p className="text text-gray-600 underline">{item.comment}</p>
+                  <p className="text text-gray-600 no-underline">{item.comment}</p>
                 </div>
               </a>
             ) : (
