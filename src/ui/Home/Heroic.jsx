@@ -83,7 +83,7 @@ const HeroSection = () => {
               {/* Text Content */}
               {currentslide === i && (
                 <div className="max-w-[700px] text-white space-y-10 px-3 mt-20 md:mt-0 relative z-20">
-                  <h1 className="sm:text-6xl text-4xl leading-tight font-bold drop-shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+                  <h1 className="sm:text-6xl text-2xl leading-tight font-bold drop-shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
                     {slide.heading}
                   </h1>
                   <p className="sm:text-lg mt-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
@@ -107,7 +107,7 @@ const HeroSection = () => {
       </div>
 
       {/* 🧱 Cards Section */}
-      <div className="w-full lg:absolute -bottom-2 z-40 mt-35 mb-10">
+      <div className="w-full lg:absolute -bottom-2 z-40 mt-35 -mb-5">
         <div className="w-fit mx-auto grid lg:grid-cols-2 gap-10 grid-cols-1 pointer-events-none">
           {cards.map((item, i) => (
             <div
