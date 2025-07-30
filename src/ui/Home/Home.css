@@ -1,0 +1,18 @@
+/* Make sure the text is clean & visible */
+.slider-caption h1,
+.slider-caption h2,
+.slider-caption p {
+  color: #fff; /* White text */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Subtle black glow */
+  background: none !important; /* Remove black box if present */
+}
+
+/* Optional: Make text slightly bolder if needed */
+.slider-caption h1,
+.slider-caption h2 {
+  font-weight: 800;
+}
+.slider-caption p {
+  font-weight: 500;
+  font-size: 18px;
+}
