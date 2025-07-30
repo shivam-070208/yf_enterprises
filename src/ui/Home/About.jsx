@@ -51,7 +51,7 @@ const AboutSection = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-500">Call us for help</p>
-                <strong className="text-lg">+91  9748 4131 52</strong>
+                <strong className="text-lg">+91  97484 13152</strong>
               </div>
             </div>
           </div>

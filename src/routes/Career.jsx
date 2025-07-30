@@ -90,7 +90,7 @@ const Career = () => {
             </div>
 
             <div className="text-center">
-              <button onClick={() => setShowForm(true)} className="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition">
+              <button onClick={() => setShowForm(true)} className="bg-orange-500 cursor-pointer text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition">
                 Send your resume
               </button>
             </div>
@@ -113,20 +113,20 @@ const Career = () => {
               exit={{ scale: 0.8, opacity: 0 }}
               className="bg-white rounded-lg shadow-lg max-w-lg w-full p-6 relative space-y-4"
             >
-              <button onClick={() => setShowForm(false)} className="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl font-bold">&times;</button>
+              <button onClick={() => setShowForm(false)} className="absolute top-2 right-2 cursor-pointer text-gray-500 hover:text-red-500 text-xl font-bold">&times;</button>
               <h2 className="text-xl font-semibold text-orange-600 mb-4">Submit Your Resume</h2>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <input name="name" required type="text" placeholder="Your Name" className="w-full border p-2 rounded" />
                 <input name="email" required type="email" placeholder="Your Email" className="w-full border p-2 rounded" />
-                <input name="mobile" required type="number" placeholder="Your Mobile Number" className="w-full border p-2 rounded" />
-                <input name="resume" required type="file" accept="application/pdf" placeholder="Upload your resume" onChange={handleResumePreview} className="w-full bg-gray-500 border p-2 rounded" />
+                <input name="mobile" required type="digit" placeholder="Your Mobile Number" className="w-full border p-2 rounded" />
+                <input name="resume" required type="file" accept="application/pdf" placeholder="Select your file (PDF)" onChange={handleResumePreview} className="w-full bg-gray-500 border p-2 rounded" />
 
                 {fileURL && (
                   <iframe src={URL.createObjectURL(fileURL)} title="Resume Preview" className="w-full h-48 border rounded"></iframe>
                 )}
 
                 <button type="submit" className="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition">
-                  Submit
+                  Send You Resume
                 </button>
               </form>
             </motion.div>

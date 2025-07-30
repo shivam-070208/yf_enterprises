@@ -3,6 +3,16 @@ import logo from './logo.webp';
 import { flameproofProducts, productCategories, getFeaturedProducts, getProductsByCategory, getAllProducts, searchProducts } from './products';
 import Wallpattern from './patternwall.webp'
 
+import gallery1 from './Gallery/1.jpg';
+import gallery2 from './Gallery/2.jpg';
+import gallery3 from './Gallery/3.jpg';
+import gallery4 from './Gallery/4.jpg';
+import gallery5 from './Gallery/5.jpg';
+
+// Export all gallery images as named exports.
+export const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5];
+
+
 
 
 import image1 from './image1.webp';
