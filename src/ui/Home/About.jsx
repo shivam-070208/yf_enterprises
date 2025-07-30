@@ -2,6 +2,8 @@ import React from 'react';
 import { FaPhoneAlt, FaBolt,  FaRobot, FaToolbox } from 'react-icons/fa';
 import Button from '../Button';
 import { FaComputer } from 'react-icons/fa6';
+import { about } from '../../assets';
+
 
 const AboutSection = () => {
   return (
@@ -69,7 +71,7 @@ const AboutSection = () => {
           </div>
           <div className="relative w-full max-w-md">
             <img
-              src="https://html.themexriver.com/industo/images/resource/about-2.jpg"
+              src={about}
               alt="YF Flameproof Engineers"
               className="rounded-2xl object-cover w-full"
             />
