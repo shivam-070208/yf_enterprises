@@ -39,8 +39,8 @@ const Secondarynav = () => {
 
       {/* Side Nav Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-black text-white z-100 transform transition-transform duration-300  ${
-          isOpen ? "delay-700 translate-x-0" : "delay-100 translate-x-full"
+        className={`fixed top-0 right-0 h-full w-64 bg-black text-white z-100 transform transition-transform duration-100  ${
+          isOpen ? "delay-700 translate-x-0" : "delay-0 translate-x-full"
         }`}
       >
         <div className="flex justify-between items-center p-4 border-b border-gray-700">
