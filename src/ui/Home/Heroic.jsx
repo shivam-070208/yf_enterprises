@@ -45,7 +45,7 @@ const HeroSection = () => {
   const [currentslide, setslide] = useState(0);
 
   return (
-    <div className="relative w-screen min-h-[105vh] md:min-h-[115vh] pb-10 overflow-x-hidden overflow-y-visible">
+    <div className="relative w-screen min-h-[105vh] md:min-h-[115vh] pb-10 overflow-x-hidden">
       
       {/* 🌀 Swiper Component */}
       <Swiper

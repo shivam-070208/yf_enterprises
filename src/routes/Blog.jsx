@@ -1,6 +1,8 @@
 import React, { Suspense, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Allblogs } from '../assets'
+import blog1 from '../assets/blog1.jpg';
+import blog2 from '../assets/blog2.jpg';
 import { motion } from 'framer-motion'
 import { FaArrowDown } from 'react-icons/fa'
 const Blogs = React.lazy(()=>import('../Components/Blogs'))
@@ -71,6 +73,13 @@ const Blog = () => {
             <div className='space-y-4'>
               {latestBlogs.map((blog, index) => {
                 const originalIndex = Allblogs.findIndex(b => b.title === blog.title);
+                // Use blog1.jpg and blog2.jpg for index 0 and 1
+                let imgSrc = blog.coverImage;
+                if (index === 0) {
+                  imgSrc = blog1;
+                } else if (index === 1) {
+                  imgSrc = blog2;
+                }
                 return (
                   <div 
                     key={index} 
@@ -78,7 +87,7 @@ const Blog = () => {
                     onClick={() => navigate(`/blog/show?id=${originalIndex}`)}
                   >
                     <img 
-                      src={blog.coverImage} 
+                      src={imgSrc} 
                       alt={blog.title}
                       className='w-16 h-16 object-cover rounded'
                     />
