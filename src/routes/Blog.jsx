@@ -1,7 +1,7 @@
 import React, { Suspense, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Allblogs } from '../assets'
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 import { FaArrowDown } from 'react-icons/fa'
 const Blogs = React.lazy(()=>import('../Components/Blogs'))
 
@@ -9,7 +9,6 @@ const Blog = () => {
   const navigate = useNavigate();
   const [search, setSearch] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
-  const [showCategories, setShowCategories] = useState(false);
   // Get unique categories
   const categories = ['All', ...new Set(Allblogs.map(blog => blog.category))];
 
@@ -18,7 +17,7 @@ const Blog = () => {
 
   return (
     <div className='mb-10 mt-10 md:mt-0'>
-      <section className="bg-cover bg-center py-30 " style={{ backgroundImage: "url('https://html.themexriver.com/industo/images/background/9.jpg')" }}>
+      <section className="bg-cover bg-center py-10 " style={{ backgroundImage: "url('https://html.themexriver.com/industo/images/background/9.jpg')" }}>
         <div className="container mx-auto px-4">
           <ul className="flex gap-2 text-white text-sm">
             <li><Link to="/" className="underline">Home</Link></li>
@@ -27,13 +26,12 @@ const Blog = () => {
           <h2 className="text-4xl font-bold text-white mt-2">What We Do</h2>
         </div>
       </section>
-      <section   style={{
-        scrollbarWidth: 'none',
-        msOverflowStyle: 'none'
-      }} className='w-full max-w-7xl relative h-[108vh] overflow-auto mx-auto px-4 py-9 grid grid-cols-1 lg:grid-cols-3 gap-8'>
-        <Suspense fallback={null}>
-          <Blogs search={search} selectedCategory={selectedCategory} />
-        </Suspense>
+      <section className='w-full max-w-7xl relative mx-auto px-4 py-9 grid grid-cols-1 lg:grid-cols-3 gap-8'>
+        <div className='lg:col-span-2 h-[150vh] overflow-y-auto pr-2'>
+          <Suspense fallback={null}>
+            <Blogs search={search} selectedCategory={selectedCategory} />
+          </Suspense>
+        </div>
         <div className='lg:sticky h-fit right-0 top-0 space-y-6 order-first lg:order-last'>
           {/* Search Bar */}
           <div className='bg-white p-6 rounded-lg shadow-md'>
@@ -49,10 +47,10 @@ const Blog = () => {
          
           {/* Category Filter */}
           <div className='bg-white p-6 h-fit rounded-lg shadow-md'>
-            <h3 onClick={()=>setShowCategories(!showCategories)} className='text-xl cursor-pointer  font-bold mb-4 text-blue-950'>Filter <FaArrowDown className='md:hidden' /> </h3>
-           {showCategories&& <div className='space-y-2 space-x-2'>
+            <h3 className='text-xl font-bold mb-4 text-blue-950'>Filter</h3>
+            <div className='space-y-2 space-x-2'>
               {categories.map((category, idx) => (
-                <motion.button layoutId={category+idx} initial={{height:0,opacity:0,filter:'blur(100px)'}} exit={{height:0,opacity:0,filter:'blur(100px)'}} animate={{height:'fit-content',opacity:1,filter:'blur(0)'}} transition={{delay:0.002*idx,duration:0.7}}
+                <motion.button layoutId={category+idx} initial={{height:0,opacity:0,filter:'blur(100px)'}} exit={{height:0,opacity:0,filter:'blur(100px)'}} animate={{height:'fit-content',opacity:1,filter:'blur(0)'}} transition={{delay:0.02*idx,duration:0.3}}
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`w-fit text-left p-2 cursor-pointer overflow-hidden rounded transition-colors ${
@@ -64,7 +62,7 @@ const Blog = () => {
                   {category}
                 </motion.button>
               ))}
-            </div>}
+            </div>
           </div>
 
           {/* Latest Blogs */}
