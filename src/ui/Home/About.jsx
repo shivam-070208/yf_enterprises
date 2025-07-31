@@ -61,12 +61,12 @@ const AboutSection = () => {
         <div className="relative flex flex-col justify-between items-center">
             <div className='flex gap-14 mb-10'>
           <div className=" text-left ">
-            <h2 className="text-5xl font-bold text-orange-600">3,010+</h2>
-            <p className="font-semibold text-black">Satisfied Clients</p>
+            <h2 className="text-5xl font-bold text-orange-600">30+</h2>
+            <p className="font-semibold text-black">Project successfully completed</p>
           </div>
           <div className="text-left ">
-            <h2 className="text-5xl font-bold text-orange-600">528+</h2>
-            <p className="font-semibold text-black">Active Projects</p>
+            <h2 className="text-5xl font-bold text-orange-600">20+</h2>
+            <p className="font-semibold text-black">Trusted Clients</p>
           </div>
           </div>
           <div className="relative w-full max-w-md">
