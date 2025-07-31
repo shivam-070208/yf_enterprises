@@ -127,9 +127,6 @@ const Contact = () => {
           ))}
         </div>
         {/* Contact Form */}
-          <section>
-          <iframe className="w-full h-[400px] rounded-md" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.3100096682974!2d88.35010037518609!3d22.567505779495328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277007dba8ac5%3A0xdc034f3faadb5f3c!2sY%20F%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1752575831230!5m2!1sen!2sin" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" ></iframe>
-          </section>
         <section className="relative">
           <div
             className="absolute inset-0 bg-cover opacity-10 pointer-events-none"
@@ -216,6 +213,9 @@ const Contact = () => {
           ))}
         </div>
         </section>
+          <section>
+          <iframe className="w-full h-[400px] rounded-md" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.3100096682974!2d88.35010037518609!3d22.567505779495328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277007dba8ac5%3A0xdc034f3faadb5f3c!2sY%20F%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1752575831230!5m2!1sen!2sin" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" ></iframe>
+          </section>
       </div>
     </div>
   );

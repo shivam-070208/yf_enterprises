@@ -126,7 +126,7 @@ const Career = () => {
                 )}
 
                 <button type="submit" className="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition">
-                  Send You Resume
+                  Send Your Resume
                 </button>
               </form>
             </motion.div>

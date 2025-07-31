@@ -30,7 +30,9 @@ const HeroContactSection = () => {
         </h2>
 
         {/* Button */}
-      <Button text={'Contact Us'} href={'/contact'} primarycolor={"bg-orange-500"} secondarycolor={"bg-orange-700"} />
+      <Button text={'Contact Us'} href={'/contact'} primarycolor={"bg-orange-500"} secondarycolor={"bg-orange-700"}>
+        Contact Us
+      </Button>
       </div>
 
       {/* Optional corner graphics */}

@@ -6,6 +6,7 @@ import { Autoplay } from 'swiper/modules';
 import { about, profile } from '../assets';
 import serviceImages from '../assets/serviceImages';
 import {ClientsImage,ChannelImage} from '../assets/logo';
+import { galleryImages } from '../assets';
 import { FaComputer } from 'react-icons/fa6';
 
 
@@ -208,6 +209,24 @@ const AboutUs = () => {
               <SwiperSlide key={i}>
                 <div className="p-4">
                   <img src={item} alt={`sponsor-${i}`} className="mx-auto h-16" />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section>
+      {/* Gallery Section */}
+      <section className="py-12 bg-white">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <div className="mb-6">
+            <div className="text-orange-600 font-bold">Gallery</div>
+            <h2 className="text-3xl font-bold">Our Work Gallery</h2>
+          </div>
+          <Swiper slidesPerView={2} modules={[Autoplay]} autoplay grabCursor={true} spaceBetween={30} breakpoints={{ 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}>
+            {galleryImages.map((img, i) => (
+              <SwiperSlide key={i}>
+                <div className="bg-white rounded-xl shadow-lg flex items-center justify-center w-full h-[350px] md:h-[400px] mx-auto">
+                  <img src={img} alt={`gallery-${i}`} className="object-cover rounded-xl w-full h-full" />
                 </div>
               </SwiperSlide>
             ))}
