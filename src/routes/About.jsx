@@ -217,7 +217,7 @@ const AboutUs = () => {
       </section>
       {/* Gallery Section */}
       <section className="py-12 bg-white">
-        <div className="md:max-w-[100vw] max-w-6xl mx-auto px-4 text-center">
+        <div className="md:max-w-[90vw] max-w-6xl mx-auto px-4 text-center">
           <div className="mb-6">
             <div className="text-orange-600 font-bold">Gallery</div>
             <h2 className="text-3xl font-bold">Our Work Gallery</h2>
@@ -225,7 +225,7 @@ const AboutUs = () => {
           <Swiper slidesPerView={2} modules={[Autoplay]} autoplay grabCursor={true} spaceBetween={30} breakpoints={{ 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}>
             {galleryImages.map((img, i) => (
               <SwiperSlide key={i}>
-                <div className="bg-white rounded-xl shadow-lg flex items-center justify-center w-full h-[350px] md:h-[400px] mx-auto">
+                <div className="bg-white rounded-sm shadow-lg grid-cols-1 md:flex items-center justify-center w-full h-[300px] md:h-[300px] mx-auto">
                   <img src={img} alt={`gallery-${i}`} className="object-cover rounded-xl w-full h-full" />
                 </div>
               </SwiperSlide>
