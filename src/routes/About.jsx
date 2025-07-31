@@ -217,7 +217,7 @@ const AboutUs = () => {
       </section>
       {/* Gallery Section */}
       <section className="py-12 bg-white">
-        <div className="max-w-6xl mx-auto px-4 text-center">
+        <div className="md:max-w-[100vw] max-w-6xl mx-auto px-4 text-center">
           <div className="mb-6">
             <div className="text-orange-600 font-bold">Gallery</div>
             <h2 className="text-3xl font-bold">Our Work Gallery</h2>
