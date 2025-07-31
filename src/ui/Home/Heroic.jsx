@@ -45,7 +45,7 @@ const HeroSection = () => {
   const [currentslide, setslide] = useState(0);
 
   return (
-    <div className="relative w-screen min-h-[105vh] md:min-h-[115vh] pb-10 overflow-x-hidden">
+    <div className="relative w-screen min-h-[105vh] md:min-h-[105vh] pb-10 overflow-x-hidden">
       
       {/* 🌀 Swiper Component */}
       <Swiper
@@ -65,8 +65,8 @@ const HeroSection = () => {
           clickable: true,
           renderBullet: function (index, className) {
             return `<span class='${className}' style='background-color: ${
-              index === currentslide ? "#FF8C00" : "#D3D3D3"
-            }; width: 12px; height: 12px; margin: 15px 5px; border-radius: 50%;'></span>`;
+              index === currentslide ? "#FF8C00" : ""
+            }; width: 12px; height: 12px; margin: 10px 5px; border-radius: 50%;'></span>`;
           },
           el: '.custom-swiper-pagination',
         }}

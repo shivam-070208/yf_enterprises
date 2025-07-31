@@ -1,4 +1,4 @@
-import { FaFacebookF, FaTwitter, FaDribbble, FaBehance, FaPhoneAlt, FaEnvelope, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter,  FaPhoneAlt, FaEnvelope, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { whiteLogo } from '../assets'; // make sure you have your logo here
 import { href, Link } from 'react-router-dom';
 
@@ -16,10 +16,6 @@ const Footer = () => {
     {
       Name:"Services",
       href:"/services"
-    },
-    {
-      Name:"Brochure",
-      href:'/Y F ENTERPRISES SERVICES.pdf'
     },
     {
       Name:"Blog",
@@ -42,9 +38,7 @@ const Footer = () => {
   "UPS Repair Services",
   "Reconditioned UPS",
   "Battery Rentals",
-  "AMC & CMC Contracts",
-  "Servo Stabilizers",
-  "Flameproof Electrical Solutions"
+  "AMC & CMC Contracts"
 ];
 
 
@@ -57,7 +51,7 @@ const Footer = () => {
         <div>
           <img src={whiteLogo} alt="YF Logo " className="w-50 mb-5" />
           <p className="text-gray-400 mb-4">Y.F Enterprises provides 24×7 UPS services, battery rentals, and power solutions across India. Trusted by top brands like Exide, APC, and Hitachi.</p>
-          <a href="/about" className="inline-block text-sm bg-orange-500 hover:bg-orange-600 transition px-4 py-2 rounded text-white">About us</a>
+          <Link to="/about" className="inline-block text-sm bg-orange-500 hover:bg-orange-600 transition px-4 py-2 rounded text-white">About us</Link>
         </div>
 
         {/* Company */}
@@ -78,6 +72,7 @@ const Footer = () => {
               <Link to='/products' key={item} className="block text-gray-400 hover:text-white mb-2">{item}</Link>
             ))
           }
+          <Link to="/products" className="inline-block text-sm bg-orange-500 hover:bg-orange-600 transition px-4 py-2 rounded text-white">Explore Products</Link>
          
         </div>
 
@@ -113,6 +108,10 @@ const Footer = () => {
        
      
       </div>
+          <div className='flex gap-5 mt-4'>
+                      <Link to="/about" className="inline-block text-sm bg-orange-500 hover:bg-orange-600 transition px-3 py-2 rounded text-white">Product Brochure</Link>
+                      <Link to="/contact" className="inline-block text-sm bg-orange-500 hover:bg-orange-600 transition px-4 py-2 rounded text-white">Service Brochure</Link>
+          </div>
         
       {/* Footer bottom */}
       <div className="text-center mt-12 border-t border-gray-700 pt-6 text-gray-400 text-sm relative z-10">
