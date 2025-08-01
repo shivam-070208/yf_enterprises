@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Loader from '../ui/Loader';
+import Totop from '../ui/Totop';
 
 const LoaderInitiater = ({ children }) => {
   const [loading, setLoading] = useState(true);
@@ -17,20 +18,14 @@ const LoaderInitiater = ({ children }) => {
     return () => clearTimeout(timer);
   }, [location.pathname]);
 
-  // Disable body scroll while loading
-  useEffect(() => {
-    if (loading) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-  }, [loading]);
+
 
   return (
     <>
       {loading && <Loader />}
 
-      <motion.div className='origin-center'>
+      <motion.div className=''>
+         {!loading && <Totop />}
         {children}
       </motion.div>
     </>
