@@ -54,7 +54,7 @@ const handleSubmit = async (e) => {
 
 
   return (
-    <div className="w-screen h-full">
+    <div className='w-screen h-full mt-20 md:mt-0'>
       {/* Banner */}
       <section
         className="bg-cover bg-center py-20"
@@ -81,20 +81,16 @@ const handleSubmit = async (e) => {
             <div className="bg-white shadow rounded p-4 border">
               <ul className="space-y-3">
                 {[
-                  { text: "Instrumentation Services", link: "/services" },
-                  { text: "C&I Contracting Services", link: "/services" },
-                  { text: "Data Center Services", link: "/services" },
-                  { text: "Electrical Services", link: "/services" },
-                  { text: "Testing and Commissioning", link: "/services" },
-                  { text: "Manpower Services", link: "/servicesl" },
+                  { text: "Instrumentation Services", id: 1 },
+                  { text: "C&I Contracting Services", id: 2 },
+                  { text: "Data Center Services", id: 3 },
+                  { text: "Electrical Services", id: 4 },
+                  { text: "Testing and Commissioning", id: 5 },
+                  { text: "Manpower Services", id: 6 },
                 ].map((item, index) => (
                   <li key={index}>
-                    <Link
-                      to={item.link}
-                      className="flex items-center text-gray-700 hover:text-orange-500 transition"
-                    >
-                      <i className="fas fa-angle-double-right mr-2 text-orange-500"></i>{" "}
-                      {item.text}
+                    <Link to={item.link} className="flex items-center text-gray-700 hover:text-orange-500 transition">
+                      <i className="fas fa-angle-double-right mr-2 text-orange-500"></i> {item.text}
                     </Link>
                   </li>
                 ))}
@@ -111,15 +107,8 @@ const handleSubmit = async (e) => {
                   <i className="flaticon-phone-call text-white"></i>
                 </div>
                 <h4 className="text-lg font-semibold">How Can We Help?</h4>
-                <p className="text-sm mb-4">
-                  If you need any help, please feel free to contact us.
-                </p>
-                <a
-                  href="enquiryform.php"
-                  className="inline-block bg-orange-500 text-white px-4 py-2 rounded mt-2 text-sm font-medium"
-                >
-                  CONTACT US
-                </a>
+                <p className="text-sm mb-4">If you need any help, please feel free to contact us.</p>
+                <a href="enquiryform.php" className="inline-block bg-orange-500 text-white px-4 py-2 rounded mt-2 text-sm font-medium">CONTACT US</a>
               </div>
             </div>
           </aside>
@@ -166,10 +155,7 @@ const handleSubmit = async (e) => {
             </div>
 
             <div className="text-center">
-              <button
-                onClick={() => setShowForm(true)}
-                className="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition"
-              >
+              <button onClick={() => setShowForm(true)} className="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition">
                 Send your resume
               </button>
             </div>
@@ -192,49 +178,13 @@ const handleSubmit = async (e) => {
               exit={{ scale: 0.8, opacity: 0 }}
               className="bg-white rounded-lg shadow-lg max-w-lg w-full p-6 relative space-y-4"
             >
-              <button
-                onClick={() => setShowForm(false)}
-                className="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl font-bold"
-              >
-                &times;
-              </button>
-              <h2 className="text-xl font-semibold text-orange-600 mb-4">
-                Submit Your Resume
-              </h2>
+              <button onClick={() => setShowForm(false)} className="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl font-bold">&times;</button>
+              <h2 className="text-xl font-semibold text-orange-600 mb-4">Submit Your Resume</h2>
               <form onSubmit={handleSubmit} className="space-y-4">
-                <input
-                  name="name"
-                  required
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-full border p-2 rounded"
-                />
-                <input
-                  name="email"
-                  required
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-full border p-2 rounded"
-                />
-                <textarea
-                  name="description"
-                  required
-                  placeholder="Describe yourself"
-                  className="w-full border p-2 max-h-[200px] rounded min-h-[80px] overflow-scroll resize-y "
-                  rows={1}
-                  onInput={(e) => {
-                    e.target.style.height = "auto";
-                    e.target.style.height = `${e.target.scrollHeight}px`;
-                  }}
-                />{" "}
-                <input
-                  name="resume"
-                  required
-                  type="file"
-                  accept="application/pdf"
-                  onChange={handleResumePreview}
-                  className="w-full  border p-2 rounded"
-                />
+                <input name="name" required type="text" placeholder="Your Name" className="w-full border p-2 rounded" />
+                <input name="email" required type="email" placeholder="Your Email" className="w-full border p-2 rounded" />
+                <input name="resume" required type="file" accept="application/pdf" onChange={handleResumePreview} className="w-full border p-2 rounded" />
+
                 {fileURL && (
                   <iframe
                     src={URL.createObjectURL(fileURL)}
@@ -242,10 +192,8 @@ const handleSubmit = async (e) => {
                     className="w-full h-48 border rounded"
                   ></iframe>
                 )}
-                <button
-                  type="submit"
-                  className="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition"
-                >
+
+                <button type="submit" className="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition">
                   Submit
                 </button>
               </form>

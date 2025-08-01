@@ -67,57 +67,53 @@ const serviceDetailsData = [
   },
   {
     id: 3,
-    service: "CCTV Sources",
+    service: "CCTV Projects",
     provider: "Y.F Enterprises",
-    description: "Comprehensive CCTV solutions including installation, maintenance, and monitoring services to ensure security and surveillance for residential, commercial, and industrial properties.",
+    description: "Y.F Enterprises offers end-to-end execution of CCTV surveillance system projects for industrial, commercial, and infrastructure applications. With a growing demand for intelligent security systems in high-risk and critical operational environments, our team delivers robust, scalable, and fully integrated video surveillance solutions tailored to your site’s security requirements. We handle the complete lifecycle of CCTV implementation—from system design and hardware procurement to installation, configuration, and commissioning—ensuring high-definition monitoring, remote access, and fail-safe recording mechanisms.",
     points: [
-      "IP-based & Analog CCTV installation",
-      "NVR/DVR setup with storage optimization",
-      "Remote access configuration",
-      "Annual maintenance & health checks"
+      "Industrial-Grade Security Expertise: We understand critical environments and deliver surveillance systems that meet operational safety needs.",
+      "Seamless System Integration: Our CCTV solutions can be linked with your existing control rooms, BMS, fire safety, and alarm systems.",
+      "Certified Hardware & Structured Cabling: We use top-tier surveillance equipment with high reliability, even in hazardous locations.",
+      "Pan-India Execution Capability: With active teams across India, we deploy CCTV systems for plants, terminals, substations, and facilities nationwide."
     ],
     sections: [
       {
         title: "System Design & Planning",
-        text: "We begin with a thorough survey and risk assessment to identify coverage areas, followed by selection of camera types like dome, PTZ, and thermal variants. Network layout, DVR/NVR sizing, and integration scopes are finalized at this stage."
+        text: "Site survey and security risk assessment. Coverage planning based on client-specific safety zones. Camera selection (IP, PTZ, thermal, dome, bullet, etc.). NVR/DVR capacity planning and network design."
       },
       {
         title: "Installation & Integration",
-        text: "Our team installs CCTV cameras with precision across key zones, sets up cabling, power supply units, and integrates systems with existing BMS, SCADA, or alarm networks. We ensure robust mounting and clear line-of-sight coverage."
+        text: "Mounting of CCTV cameras across designated zones. Laying of communication and power cables. Installation of NVR/DVRs, monitors, and power supplies. Configuration of recording setups, alerts, and retention policies. Integration with fire alarms, access control, or SCADA if required."
       },
       {
         title: "Testing, Commissioning & Handover",
-        text: "We carry out live testing under different conditions, enable mobile access, configure alert protocols, and hand over detailed user documentation. User training and final project handover are included."
+        text: "Focus testing, motion sensitivity adjustment, and angle calibration. Network testing for remote access via mobile/PC. System performance verification under day/night conditions. Final documentation, user training, and system handover."
       }
     ]
   },
   {
     id: 4,
     service: "EPC Projects",
-    provider: "Electrical Engineering Project Specialists",
-    description:
-      "From concept to commissioning, YF Enterprises delivers electrical project solutions that power industrial, commercial, and infrastructure developments.",
+    provider: "Y.F Enterprises",
+    description: "At Y.F Enterprises, we undertake comprehensive EPC projects for the Electrical and Instrumentation (E&I) domain, delivering integrated solutions across diverse sectors such as oil & gas, petrochemicals, power, water, fertilizers, and manufacturing. With a proven track record in executing time-bound, high-value industrial assignments, we manage the full lifecycle of a project—from detailed planning and resource procurement to on-site erection and final commissioning.",
     points: [
-      'Turnkey execution of LT & HT power distribution systems.',
-      'Panel fabrication, supply, installation, and testing (PCC, MCC, APFC, VFD panels).',
-      'Cable laying (underground, overhead), glanding, and termination.',
-      'Lighting systems, earthing grids, and surge protection systems.',
-      'Transformer erection, bus duct installation, and switchgear testing.',
-      'Load analysis, energy audits, and power factor improvement services.',
-      'Liaisoning with electrical utilities and local authorities for statutory approvals.'
+      "In-house expertise across multiple disciplines including E&I, automation, and mechanical installations.",
+      "Proven execution for major clients such as HPCL, IOCL, BPCL, Honeywell, and Unitop.",
+      "Commitment to safety, compliance, and on-time delivery.",
+      "Nationwide deployment capability with dedicated site teams."
     ],
     sections: [
       {
         title: "Erection (Field Installation & Integration)",
-        text: "Our erection scope includes systematic deployment of electrical and instrumentation assets at project sites. We install cable trays, conduit systems, MCCs, PCCs, junction boxes, VFDs, and control panels with precision, ensuring robust field integration that aligns with safety and compliance norms."
+        text: "Our erection scope includes the systematic deployment of electrical, mechanical, and instrumentation assets at project sites. This involves: Installation of cable trays, conduit systems, and support structures; Cable laying, glanding, and termination for power and control systems; Mounting and alignment of instruments, junction boxes, and local panels; Field cabling and tubing for pneumatic and signal lines; Installation of VFDs, MCCs, PCCs, control panels, and PLC cabinets; Earthing and lightning protection network installation. Our field teams are trained to work under strict safety and quality protocols, ensuring minimal downtime and precise integration with existing infrastructure."
       },
       {
         title: "Procurement (Material Sourcing & Logistics)",
-        text: "We manage timely sourcing of critical components like SCADA systems, panels, flameproof enclosures, and instrumentation devices from reputed OEMs. Our strong vendor network ensures adherence to quality, compliance, and schedule requirements."
+        text: "Procurement in EPC projects is central to performance. Y.F Enterprises ensures timely sourcing and delivery of all critical equipment and components including: Electrical panels, transformers, and instrumentation devices; SCADA/PLC/DCS systems, analyzers, and transmitters; Flameproof equipment and hazardous area-rated enclosures; Field cabling, tubing, glands, junction boxes, and cable trays. We collaborate with reputed OEMs and certified vendors to guarantee compliance, quality, and seamless project progression."
       },
       {
         title: "Commissioning (Testing, Calibration & Handover)",
-        text: "Commissioning includes loop checking, calibration, dry-run testing, SCADA/DCS integration, and generation of detailed test reports. Our experts validate every component and system before handing it over for live operation."
+        text: "Commissioning is the final validation of all systems installed. Our experienced engineers undertake: Loop checking, functional testing, and signal verification; Calibration of field instruments and analyzers; Energization and dry-run testing of electrical systems; SCADA, DCS, and HMI integration testing; Safety system interlocks and emergency shutdown validation; Generation of test reports, documentation, and handover packages. We ensure that all systems are commissioned as per client specifications and industry standards, ready for safe and efficient operation."
       }
     ]
   },
@@ -180,27 +176,27 @@ const serviceDetailsData = [
   },
   {
     id: 7,
-    service: "HCD Services",
-    provider: "Industrial Safety through Advanced Gas Detection",
-    description: "High Capacity Diesel Generator services including installation, maintenance, and fuel management for uninterrupted power supply.",
+    service: "Hydrocarbon Gas Detector (HCD) Services",
+    provider: "Y.F Enterprises",
+    description: "At Y.F Enterprises, we specialize in providing Hydrocarbon Gas Detector (HCD) services tailored to critical industrial environments such as oil & gas plants, petrochemical units, power stations, and manufacturing facilities. Our HCD solutions are designed to detect hazardous gases in real time, helping prevent accidents, ensure regulatory compliance, and protect personnel and assets. Hydrocarbon gases are highly flammable and often invisible. Early and accurate detection is essential to maintain a safe working environment—especially in zones classified as hazardous. That’s where Y.F Enterprises steps in with comprehensive HCD project execution and after-sales services.",
     points: [
-      "DG set installation (15kVA–1000kVA)",
-      "AMC and on-call servicing",
-      "Fuel efficiency management",
-      "Noise and emission control compliance"
+      "Expertise in Hazardous Area Installations with certified technicians",
+      "Integration with critical control systems (SCADA, PLC, ESD)",
+      "Flameproof and weatherproof installations as per industrial safety standards",
+      "PAN India support for both project deployment and post-installation service"
     ],
     sections: [
       {
         title: "Design & Planning",
-        text: "We assess site hazards and design detector layouts in line with ATEX and IECEx standards. Appropriate sensors like IR, catalytic bead, or ultrasonic types are selected based on application need and classification of the zone."
+        text: "Site surveys and hazard zone classification. System design as per ATEX, IECEx, and IS standards. Detector selection (IR, catalytic bead, ultrasonic, etc.) based on application."
       },
       {
         title: "Installation & Commissioning",
-        text: "We install detectors, wiring, control units, and ensure integration with SCADA, ESD, or BMS systems. Functional testing and sensor calibration are carried out before formal handover."
+        text: "Mounting and wiring of gas detectors and controllers. Integration with SCADA, DCS, ESD, or BMS systems. Cable laying, glanding, and termination in flameproof enclosures. Sensor calibration and response testing. Functionality testing, documentation, and final commissioning."
       },
       {
         title: "Maintenance & AMC Support",
-        text: "Our services include periodic recalibration, emergency support, and annual maintenance contracts (AMCs) for sensor longevity and compliance. We ensure round-the-clock availability to protect life and assets."
+        text: "Periodic calibration and testing as per safety protocols. Sensor health monitoring and replacement. Troubleshooting and emergency breakdown support. Annual Maintenance Contracts (AMC) for sustained performance."
       }
     ]
   }
@@ -213,11 +209,11 @@ const ServiceDetails = () => {
   const service = serviceDetailsData[serviceIndex];
 
   return (
-    <div className="page-wrapper bg-gray-50 min-h-screen">
+    <div className="page-wrapper md:mt-0 mt-25 bg-gray-50 min-h-screen">
       {/* Header */}
       <section
-      style={{ backgroundImage: `url(${'https://html.themexriver.com/industo/images/background/9.jpg'})` }}
-      className=" py-10">
+        style={{ backgroundImage: `url(${'https://html.themexriver.com/industo/images/background/9.jpg'})` }}
+        className=" py-20">
         <div className="container mx-auto px-4">
           <ul className="flex gap-2 text-white text-sm mb-2">
             <li><Link to="/" className="underline">Home</Link></li>
@@ -256,30 +252,213 @@ const ServiceDetails = () => {
         {/* Main Column: Image + Content */}
         <div className="col-span-1 md:col-span-3 flex flex-col">
           <div className="w-full flex  bg-white">
-          <img
-            src={serviceImages[`service${service.id}`]}
-            alt={service.service}
-            className="rounded-lg object-cover w-full h-60 md:h-90 shadow mb-6"
-          />
+            <img
+              src={serviceImages[`service${service.id}`]}
+              alt={service.service}
+              className="rounded-lg object-cover w-full h-60 md:h-90 shadow mb-6"
+            />
           </div>
           <main className="flex-1">
-          <div className="bg-white rounded-lg shadow p-8">
+            <div className="bg-white rounded-lg shadow p-8">
               <div className="mb-6">
-            <h3 className="text-2xl font-bold text-orange-600 mb-2">{service.provider}</h3>
-            <p className="text-gray-700 mb-4">{service.description}</p>
-            <ul className="list-disc pl-6 text-gray-700 mb-6">
-              {service.points.map((point, i) => (
+                <h3 className="text-2xl font-bold text-orange-600 mb-2">{service.provider}</h3>
+                <p className="text-gray-700 mb-4">{service.description}</p>
+                <ul className="list-disc pl-6 text-gray-700 mb-6">
+                  {service.points.map((point, i) => (
                     <li key={i} className="mb-1">{point.replace('shut down', 'shutdown')}</li>
-              ))}
-            </ul>
+                  ))}
+                </ul>
               </div>
-            {service.sections.map((section, i) => (
-                <div key={i} className="mb-6">
-                  <h4 className="text-xl font-bold text-blue-700 mb-2">{section.title}</h4>
-                  <p className="text-gray-700">{section.text.replace('equipments', 'equipment').replace('in-lab factory calibration and test and calibration equipment as required.', 'in-lab factory calibration and test equipment as required.')}</p>
-              </div>
-            ))}
-            <div className="text-center mt-8">
+              {/* Custom rendering for EPC Projects section */}
+              {/* Custom rendering for EPC and CCTV Projects section */}
+              {service.id === 4 ? (
+                // ...existing code for EPC Projects...
+                <div className="mb-6">
+                  {/* ...existing EPC rendering... */}
+                  <div className="mb-8">
+                    <h4 className="text-xl font-bold text-blue-700 mb-2 flex items-center">
+                      <span role="img" aria-label="Erection" className="mr-2">🔧</span>
+                      Erection (Field Installation & Integration)
+                    </h4>
+                    <ul className="list-disc pl-6 text-gray-700">
+                      <li>Installation of cable trays, conduit systems, and support structures</li>
+                      <li>Cable laying, glanding, and termination for power and control systems</li>
+                      <li>Mounting and alignment of instruments, junction boxes, and local panels</li>
+                      <li>Field cabling and tubing for pneumatic and signal lines</li>
+                      <li>Installation of VFDs, MCCs, PCCs, control panels, and PLC cabinets</li>
+                      <li>Earthing and lightning protection network installation</li>
+                    </ul>
+                    <p className="text-gray-700 mt-2">Our field teams are trained to work under strict safety and quality protocols, ensuring minimal downtime and precise integration with existing infrastructure.</p>
+                  </div>
+                  <div className="mb-8">
+                    <h4 className="text-xl font-bold text-blue-700 mb-2 flex items-center">
+                      <span role="img" aria-label="Procurement" className="mr-2">📦</span>
+                      Procurement (Material Sourcing & Logistics)
+                    </h4>
+                    <ul className="list-disc pl-6 text-gray-700">
+                      <li>Electrical panels, transformers, and instrumentation devices</li>
+                      <li>SCADA/PLC/DCS systems, analyzers, and transmitters</li>
+                      <li>Flameproof equipment and hazardous area-rated enclosures</li>
+                      <li>Field cabling, tubing, glands, junction boxes, and cable trays</li>
+                    </ul>
+                    <p className="text-gray-700 mt-2">We collaborate with reputed OEMs and certified vendors to guarantee compliance, quality, and seamless project progression.</p>
+                  </div>
+                  <div className="mb-8">
+                    <h4 className="text-xl font-bold text-blue-700 mb-2 flex items-center">
+                      <span role="img" aria-label="Commissioning" className="mr-2">✅</span>
+                      Commissioning (Testing, Calibration & Handover)
+                    </h4>
+                    <ul className="list-disc pl-6 text-gray-700">
+                      <li>Loop checking, functional testing, and signal verification</li>
+                      <li>Calibration of field instruments and analyzers</li>
+                      <li>Energization and dry-run testing of electrical systems</li>
+                      <li>SCADA, DCS, and HMI integration testing</li>
+                      <li>Safety system interlocks and emergency shutdown validation</li>
+                      <li>Generation of test reports, documentation, and handover packages</li>
+                    </ul>
+                    <p className="text-gray-700 mt-2">We ensure that all systems are commissioned as per client specifications and industry standards, ready for safe and efficient operation.</p>
+                  </div>
+                </div>
+              ) : service.id === 3 ? (
+                <div className="mb-6">
+                  {/* CCTV Projects Custom Section */}
+                  <h3 className="text-2xl font-bold text-orange-600 mb-2">CCTV Projects by Y.F Enterprises</h3>
+                  <h4 className="text-lg font-semibold text-blue-700 mb-2">(Surveillance System Design, Installation & Commissioning)</h4>
+                  <p className="text-gray-700 mb-4">Y.F Enterprises offers end-to-end execution of CCTV surveillance system projects for industrial, commercial, and infrastructure applications. With a growing demand for intelligent security systems in high-risk and critical operational environments, our team delivers robust, scalable, and fully integrated video surveillance solutions tailored to your site’s security requirements.<br/>We handle the complete lifecycle of CCTV implementation—from system design and hardware procurement to installation, configuration, and commissioning—ensuring high-definition monitoring, remote access, and fail-safe recording mechanisms.</p>
+                  <div className="mb-8">
+                    <h4 className="text-xl font-bold text-blue-700 mb-2 flex items-center">
+                      <span role="img" aria-label="Scope" className="mr-2">⚙️</span>
+                      Scope of Work Includes:
+                    </h4>
+                    {/* System Design & Planning */}
+                    <div className="mb-4">
+                      <h5 className="text-lg font-bold text-blue-600 mb-1 flex items-center">
+                        <span role="img" aria-label="System Design" className="mr-2">📐</span>
+                        System Design & Planning
+                      </h5>
+                      <ul className="list-disc pl-6 text-gray-700">
+                        <li>Site survey and security risk assessment</li>
+                        <li>Coverage planning based on client-specific safety zones</li>
+                        <li>Camera selection (IP, PTZ, thermal, dome, bullet, etc.)</li>
+                        <li>NVR/DVR capacity planning and network design</li>
+                      </ul>
+                    </div>
+                    {/* Installation & Integration */}
+                    <div className="mb-4">
+                      <h5 className="text-lg font-bold text-blue-600 mb-1 flex items-center">
+                        <span role="img" aria-label="Installation" className="mr-2">🧰</span>
+                        Installation & Integration
+                      </h5>
+                      <ul className="list-disc pl-6 text-gray-700">
+                        <li>Mounting of CCTV cameras across designated zones</li>
+                        <li>Laying of communication and power cables</li>
+                        <li>Installation of NVR/DVRs, monitors, and power supplies</li>
+                        <li>Configuration of recording setups, alerts, and retention policies</li>
+                        <li>Integration with fire alarms, access control, or SCADA if required</li>
+                      </ul>
+                    </div>
+                    {/* Testing, Commissioning & Handover */}
+                    <div className="mb-4">
+                      <h5 className="text-lg font-bold text-blue-600 mb-1 flex items-center">
+                        <span role="img" aria-label="Testing" className="mr-2">🧪</span>
+                        Testing, Commissioning & Handover
+                      </h5>
+                      <ul className="list-disc pl-6 text-gray-700">
+                        <li>Focus testing, motion sensitivity adjustment, and angle calibration</li>
+                        <li>Network testing for remote access via mobile/PC</li>
+                        <li>System performance verification under day/night conditions</li>
+                        <li>Final documentation, user training, and system handover</li>
+                      </ul>
+                    </div>
+                  </div>
+                  {/* Why Choose Y.F Enterprises for CCTV Projects? */}
+                  <div className="mb-8">
+                    <h4 className="text-xl font-bold text-blue-700 mb-2 flex items-center">
+                      <span role="img" aria-label="Why Choose" className="mr-2">✅</span>
+                      Why Choose Y.F Enterprises for CCTV Projects?
+                    </h4>
+                    <ul className="list-disc pl-6 text-gray-700">
+                      <li>Industrial-Grade Security Expertise: We understand critical environments and deliver surveillance systems that meet operational safety needs.</li>
+                      <li>Seamless System Integration: Our CCTV solutions can be linked with your existing control rooms, BMS, fire safety, and alarm systems.</li>
+                      <li>Certified Hardware & Structured Cabling: We use top-tier surveillance equipment with high reliability, even in hazardous locations.</li>
+                      <li>Pan-India Execution Capability: With active teams across India, we deploy CCTV systems for plants, terminals, substations, and facilities nationwide.</li>
+                    </ul>
+                  </div>
+                </div>
+              ) : service.id === 7 ? (
+                <div className="mb-6">
+                  {/* HCD Services Custom Section */}
+                  <h3 className="text-2xl font-bold text-orange-600 mb-2">Hydrocarbon Gas Detector (HCD) Services</h3>
+                  <h4 className="text-lg font-semibold text-blue-700 mb-2">Industrial Safety through Advanced Gas Detection Technology</h4>
+                  <p className="text-gray-700 mb-4">At Y.F Enterprises, we specialize in providing Hydrocarbon Gas Detector (HCD) services tailored to critical industrial environments such as oil & gas plants, petrochemical units, power stations, and manufacturing facilities. Our HCD solutions are designed to detect hazardous gases in real time, helping prevent accidents, ensure regulatory compliance, and protect personnel and assets.<br/>Hydrocarbon gases are highly flammable and often invisible. Early and accurate detection is essential to maintain a safe working environment—especially in zones classified as hazardous. That’s where Y.F Enterprises steps in with comprehensive HCD project execution and after-sales services.</p>
+                  <div className="mb-8">
+                    <h4 className="text-xl font-bold text-blue-700 mb-2 flex items-center">
+                      <span role="img" aria-label="Scope" className="mr-2">⚙️</span>
+                      Our HCD Services Include:
+                    </h4>
+                    {/* Design & Planning */}
+                    <div className="mb-4">
+                      <h5 className="text-lg font-bold text-blue-600 mb-1 flex items-center">
+                        <span role="img" aria-label="Design" className="mr-2">🔍</span>
+                        Design & Planning
+                      </h5>
+                      <ul className="list-disc pl-6 text-gray-700">
+                        <li>Site surveys and hazard zone classification</li>
+                        <li>System design as per ATEX, IECEx, and IS standards</li>
+                        <li>Detector selection (IR, catalytic bead, ultrasonic, etc.) based on application</li>
+                      </ul>
+                    </div>
+                    {/* Installation & Commissioning */}
+                    <div className="mb-4">
+                      <h5 className="text-lg font-bold text-blue-600 mb-1 flex items-center">
+                        <span role="img" aria-label="Installation" className="mr-2">🧰</span>
+                        Installation & Commissioning
+                      </h5>
+                      <ul className="list-disc pl-6 text-gray-700">
+                        <li>Mounting and wiring of gas detectors and controllers</li>
+                        <li>Integration with SCADA, DCS, ESD, or BMS systems</li>
+                        <li>Cable laying, glanding, and termination in flameproof enclosures</li>
+                        <li>Sensor calibration and response testing</li>
+                        <li>Functionality testing, documentation, and final commissioning</li>
+                      </ul>
+                    </div>
+                    {/* Maintenance & Support */}
+                    <div className="mb-4">
+                      <h5 className="text-lg font-bold text-blue-600 mb-1 flex items-center">
+                        <span role="img" aria-label="Maintenance" className="mr-2">🔄</span>
+                        Maintenance & Support
+                      </h5>
+                      <ul className="list-disc pl-6 text-gray-700">
+                        <li>Periodic calibration and testing as per safety protocols</li>
+                        <li>Sensor health monitoring and replacement</li>
+                        <li>Troubleshooting and emergency breakdown support</li>
+                        <li>Annual Maintenance Contracts (AMC) for sustained performance</li>
+                      </ul>
+                    </div>
+                  </div>
+                  {/* Why Choose Y.F Enterprises for HCD Services? */}
+                  <div className="mb-8">
+                    <h4 className="text-xl font-bold text-blue-700 mb-2 flex items-center">
+                      <span role="img" aria-label="Why Choose" className="mr-2">✅</span>
+                      Why Choose Y.F Enterprises for HCD Services?
+                    </h4>
+                    <ul className="list-disc pl-6 text-gray-700">
+                      <li>Expertise in Hazardous Area Installations with certified technicians</li>
+                      <li>Integration with critical control systems (SCADA, PLC, ESD)</li>
+                      <li>Flameproof and weatherproof installations as per industrial safety standards</li>
+                      <li>PAN India support for both project deployment and post-installation service</li>
+                    </ul>
+                  </div>
+                </div>
+              ) : (
+                service.sections.map((section, i) => (
+                  <div key={i} className="mb-6">
+                    <h4 className="text-xl font-bold text-blue-700 mb-2">{section.title}</h4>
+                    <p className="text-gray-700">{section.text.replace('equipments', 'equipment').replace('in-lab factory calibration and test and calibration equipment as required.', 'in-lab factory calibration and test equipment as required.')}</p>
+                  </div>
+                ))
+              )}
+              <div className="text-center mt-8">
                 <Button text="Request A Quote" href="/contact#contact" primarycolor="bg-orange-500" secondarycolor="bg-orange-600" />
               </div>
             </div>

@@ -79,7 +79,7 @@ const servicesInfo = [
   return (
     <div className="page-wrapper">
       {/* Page Title */}
-      <section className="bg-cover bg-center py-30" style={{ backgroundImage: "url('https://html.themexriver.com/industo/images/background/9.jpg')" }}>
+      <section className="bg-cover bg-center mt-5 py-30" style={{ backgroundImage: "url('https://html.themexriver.com/industo/images/background/9.jpg')" }}>
         <div className="container mx-auto px-4">
           <ul className="flex gap-2 text-white text-sm">
             <li><Link to="/" className="underline">Home</Link></li>
@@ -94,7 +94,7 @@ const servicesInfo = [
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <p className="text-blue-600 text-sm uppercase font-semibold">The Best Industrial Services</p>
-            <h2 className="text-3xl md:text-4xl font-bold">Industo Provides Services <br className="hidden md:block" /> for Your Business</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">We Provide Services <br className="hidden md:block" /> for Your Business</h2>
           </div>
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
             {servicesInfo.map((items, i) => {
@@ -111,7 +111,7 @@ const servicesInfo = [
             })}
           </div>
           <div className="text-center mt-12">
-           <Button text={"Explore More"} href={'/contact#contact'} primarycolor={"bg-blue-600"} secondarycolor={"bg-green-600"} />
+           <Button text={"Explore More"} href={'/services/details/1'} primarycolor={"bg-blue-600"} secondarycolor={"bg-green-600"} />
           </div>
         </div>
       </section>

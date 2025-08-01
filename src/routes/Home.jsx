@@ -44,7 +44,7 @@ function Home() {
       <HeroSection />
       <AboutSection />
        <ServicesCarousel />
-       <PortfolioSection />
+       {/* <PortfolioSection /> */}
        <ProductCarousel />
        <HeroContactSection />
         <section className="py-20 bg-gray-100 text-center">

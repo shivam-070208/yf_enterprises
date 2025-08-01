@@ -17,10 +17,10 @@ const Button = ({ href, text, secondarycolor, primarycolor }) => {
           {text}
         </span>
       </span>
-      <div className=' z-10 ml-1 relative bottom-[3.5px] text-2xl inline-block'>
+      {/* <div className=' z-10 ml-1 relative bottom-[3.5px] text-2xl inline-block'>
     &gt;
 
-      </div>
+      </div> */}
       <div
         className={`absolute  w-2 h-2 rounded-full ${secondarycolor} -translate-x-1/2 -translate-y-1/2  z-0  -top-4 transition-all duration-700 group-hover:scale-[60]`}
       />

@@ -1,7 +1,10 @@
+import { div } from "motion/react-m";
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+
 const concactInfo = [
   {
     title: "Call us for help",
@@ -19,27 +22,7 @@ const concactInfo = [
     value: "tenders@yfenterprises.com",
   },
 ];
-const branches = [
-    {
-    title: "India",
-    icon: "TiLocationOutline",
-  },  {
-    title: "Dubai",
-    icon: "TiLocationOutline",
-  },    {
-    title: "Saudi Arabia",
-    icon: "TiLocationOutline",
-  },    {
-    title: "Tanzania",
-    icon: "TiLocationOutline",
-  },    {
-    title: "Mozambique",
-    icon: "TiLocationOutline",
-  },  {
-    title: "Bangladesh",
-    icon: "TiLocationOutline",
-  },
-]
+const branches = [ "India","Dubai","Saudi Arabia","Tanzania","Mozambique","Bangladesh"];
 
 const Contact = () => {
   const toastref = useRef(null);
@@ -80,7 +63,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full md:mt-0 mt-10">
       <div ref={toastref} >
         <ToastContainer position="bottom" className="z-[999]" autoClose={2000} closeOnClick />
       </div>
@@ -127,15 +110,6 @@ const Contact = () => {
           ))}
         </div>
         {/* Contact Form */}
-          <section>
-          <iframe
-            className="w-full h-[400px] rounded-md"
-           
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.3100096682974!2d88.35010037518609!3d22.567505779495328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277007dba8ac5%3A0xdc034f3faadb5f3c!2sY%20F%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1752575831230!5m2!1sen!2sin"            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-          </section>
         <section className="relative">
           <div
             className="absolute inset-0 bg-cover opacity-10 pointer-events-none"
@@ -203,25 +177,23 @@ const Contact = () => {
               </button>
             </form>
           </div>
-                  <div className="bg-white w-full h-full p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 rounded-lg shadow-lg">
-          {branches.map((item, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-center text-center bg-orange-50 rounded-xl shadow-sm p-4 hover:shadow-lg transition group border border-orange-100"
-            >
-              <span className="flex items-center justify-center w-14 h-14 rounded-full bg-orange-100 mb-4 group-hover:bg-orange-500 transition">
-                {item.icon === "TiLocationOutline" && (
-                  <svg width="2em" height="2em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-orange-500 group-hover:text-white transition"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
-                )}
+            <div>
 
-              </span>
-              <div>
-                <div className="font-bold text-lg mb-1 text-gray-900">{item.title}</div> 
-              </div>
             </div>
-          ))}
-        </div>
         </section>
+          <section>
+          <iframe className="w-full h-[400px] rounded-md" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.3100096682974!2d88.35010037518609!3d22.567505779495328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277007dba8ac5%3A0xdc034f3faadb5f3c!2sY%20F%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1752575831230!5m2!1sen!2sin" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" ></iframe>
+          </section>
+      <div class="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.899A2.409 2.409 0 0110 20.899L5.757 16.657A8 8 0 1117.657 16.657z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13a3 3 0 100-6 3 3 0 000 6z" />
+        </svg>
+        
+        <p class="text-xl font-semibold text-gray-800">
+            <span class="font-bold text-primary-orange">Branches :</span> Saudi Arabia | Nigeria | Oman | Bangladesh
+        </p>
+      </div>
       </div>
     </div>
   );

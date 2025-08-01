@@ -146,7 +146,7 @@ const ServicesCarousel = () => {
                     {service.details}
                   </p>
                   <Link
-                    to="/services"
+                    to={`/services/details/${index}`}
                     className="w-fit h-fit text-white flex gap-2 items-center bg-orange-500 hover:bg-orange-300 px-4 py-3 font-bold rounded-xs mt-5 transition"
                   >
                     Read More<span>&gt;</span>
@@ -188,7 +188,7 @@ const ServicesCarousel = () => {
                     {services[2].details}
                   </p>
                   <Link
-                    to="/services"
+                    to={`/services/details?id=2`}
                     className="w-fit h-fit text-white flex gap-2 items-center bg-orange-500 hover:bg-orange-300 px-4 py-3 font-bold rounded-xs mt-5 transition"
                   >
                     Read More<span>&gt;</span>

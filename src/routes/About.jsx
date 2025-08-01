@@ -1,11 +1,13 @@
 import React from 'react';
-import { FaIndustry, FaTools, FaGlobe, FaTrophy, FaStar } from 'react-icons/fa';
+import { FaIndustry, FaTools, FaGlobe, FaTrophy, FaStar, FaToolbox, FaBolt, FaRobot } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
-import { profile } from '../assets';
+import { about, profile } from '../assets';
 import serviceImages from '../assets/serviceImages';
 import {ClientsImage,ChannelImage} from '../assets/logo';
+import { galleryImages } from '../assets';
+import { FaComputer } from 'react-icons/fa6';
 
 
 
@@ -38,7 +40,7 @@ const AboutUs = () => {
     }
   ];
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-white text-gray-800 md:mt-0 mt-15 ">
       {/* Hero Section */}
       <section className="bg-cover bg-center py-20" style={{ backgroundImage: 'url(https://html.themexriver.com/industo/images/background/9.jpg)' }}>
         <div className="max-w-7xl mx-auto px-4">
@@ -79,33 +81,41 @@ const AboutUs = () => {
 
       {/* Welcome Section */}
       <section className="py-20 bg-gray-100">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-10">
-          <div className="w-full lg:w-1/2">
-            <img src="https://html.themexriver.com/industo/images/resource/welcome.png" alt="Welcome" className="rounded-full shadow" />
+        <div className="max-w-6xl mx-auto p-5 flex flex-col lg:flex-row items-center gap-15">
+          <div className="w-full lg:w-1/2 ml-3 lg:mr-20">
+            <img src={about} alt="Welcome" className="rounded-xl shadow" />
           </div>
           <div className="w-full lg:w-1/2 space-y-6">
             <div>
               <div className="text-orange-600 font-semibold">Welcome to Y.F Enterprises</div>
               <h2 className="text-3xl font-bold mt-2">We Are Experts In All Industry Works</h2>
-              <p className="mt-4 text-gray-600">Y.F Enterprises is a leading engineering and maintenance service provider based in Kolkata, specializing in UPS systems, battery rentals, AMC/CMC contracts, flameproof electrical solutions, and custom power setups. With over 6 years of industry experience, we offer 24x7 reliable support across India, serving top brands like Exide, APC, Vertiv, Hitachi, and more.
-
-                    Whether it's UPS repair, servo stabilizers, or junction box wiring, we ensure uninterrupted power—on time, every time.</p>
+              <p className="mt-4 text-gray-600">Y.F Enterprises is a trusted multidisciplinary engineering service provider based in Kolkata, operating since 2013. Led by Mr. Omar Farooque, the company excels in delivering reliable project execution across industries like oil & gas, power, water, pharma, and cement.
+              <br />
+              Specializing in Electrical, Control & Instrumentation, BMS, Firefighting, and Industrial Security Systems, Y.F Enterprises blends traditional trust with modern efficiency. With a strong focus on quality, safety, and innovation, we provide client-centric, end-to-end engineering solutions across India.   </p>
             </div>
-            <div className="grid grid-cols-2 gap-4 text-sm">
-              <ul className="list-disc pl-5">
-                <li>Our Work Growth</li>
-                <li>1500+ Employed</li>
-              </ul>
-              <ul className="list-disc pl-5">
-                <li>Employee Growth</li>
-                <li>Service Management</li>
-              </ul>
-            </div>
+              <div className="grid sm:grid-cols-1 gap-6 mb-8">
+                <div className="flex items-center gap-4">
+                  <FaToolbox className="text-orange-600 text-3xl" />
+                  <div className="font-bold text-lg text-black">Instrumentation Erection and Commissioning</div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <FaComputer className="text-orange-600 text-3xl" />
+                  <div className="font-bold text-lg text-black">Cybersecurity Systems & BMS Implementation</div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <FaBolt className="text-orange-600 text-3xl" />
+                  <div className="font-bold text-lg text-black capitalize ">Electrical and Mechanical Projects</div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <FaRobot className="text-orange-600 text-3xl" />
+                  <div className="font-bold text-lg text-black capitalize ">Automation and Control Systems</div>
+                </div>
+              </div>
             <div className="bg-white p-4 rounded shadow flex items-start gap-4">
               <FaTrophy className="text-3xl text-yellow-500" />
               <div>
                 <h4 className="font-bold text-lg">Best Quality</h4>
-                <p className="text-gray-600 text-sm">24x7 support service to ensure minimal power disruptions and prompt resolution.</p>
+                <p className="text-gray-600 text-sm">24x7 support service to ensure prompt resolution.</p>
               </div>
             </div>
             <a href="/services" className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-2 rounded-lg font-semibold">Explore More</a>
@@ -191,14 +201,32 @@ const AboutUs = () => {
         <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <div className="mb-6">
-            <div className="text-orange-600 font-bold">Clients</div>
-            <h2 className="text-3xl font-bold">Our Trusted Clients</h2>
+            <div className="text-orange-600 font-bold">Channel Partners</div>
+            <h2 className="text-3xl font-bold">Our Channel Partners</h2>
           </div>
           <Swiper slidesPerView={2} modules={[Autoplay]} autoplay grabCursor={true}  spaceBetween={20} breakpoints={{ 640: { slidesPerView: 3 }, 1024: { slidesPerView: 5 } }}>
             {ChannelImage.map((item,i) => (
               <SwiperSlide key={i}>
                 <div className="p-4">
                   <img src={item} alt={`sponsor-${i}`} className="mx-auto h-16" />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section>
+      {/* Gallery Section */}
+      <section className="py-12 bg-white">
+        <div className="md:max-w-[90vw] max-w-6xl mx-auto px-4 text-center">
+          <div className="mb-6">
+            <div className="text-orange-600 font-bold">Gallery</div>
+            <h2 className="text-3xl font-bold">Our Work Gallery</h2>
+          </div>
+          <Swiper slidesPerView={2} modules={[Autoplay]} autoplay grabCursor={true} spaceBetween={30} breakpoints={{ 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}>
+            {galleryImages.map((img, i) => (
+              <SwiperSlide key={i}>
+                <div className="bg-white rounded-sm shadow-lg grid-cols-1 md:flex items-center justify-center w-full h-[300px] md:h-[300px] mx-auto">
+                  <img src={img} alt={`gallery-${i}`} className="object-cover rounded-xl w-full h-full" />
                 </div>
               </SwiperSlide>
             ))}

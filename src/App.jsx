@@ -13,8 +13,8 @@ import Career from './routes/Career'
 
 function App() {
   return (
-    <div className='w-screen overflow-x-hidden'>
-      <Totop />
+    <div className='h-screen overflow-scroll root overflow-x-hidden'>
+    
       <Bglayer />
       <Cursor />
       <Navbar />

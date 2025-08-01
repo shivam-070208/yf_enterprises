@@ -2,6 +2,8 @@ import React from 'react';
 import { FaPhoneAlt, FaBolt,  FaRobot, FaToolbox } from 'react-icons/fa';
 import Button from '../Button';
 import { FaComputer } from 'react-icons/fa6';
+import { about } from '../../assets';
+
 
 const AboutSection = () => {
   return (
@@ -49,7 +51,7 @@ const AboutSection = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-500">Call us for help</p>
-                <strong className="text-lg">+91  9748 4131 52</strong>
+                <strong className="text-lg">+91  97484 13152</strong>
               </div>
             </div>
           </div>
@@ -59,17 +61,17 @@ const AboutSection = () => {
         <div className="relative flex flex-col justify-between items-center">
             <div className='flex gap-14 mb-10'>
           <div className=" text-left ">
-            <h2 className="text-5xl font-bold text-orange-600">3,010+</h2>
-            <p className="font-semibold text-black">Satisfied Clients</p>
+            <h2 className="text-5xl font-bold text-orange-600">30+</h2>
+            <p className="font-semibold text-black">Project successfully completed</p>
           </div>
           <div className="text-left ">
-            <h2 className="text-5xl font-bold text-orange-600">528+</h2>
-            <p className="font-semibold text-black">Active Projects</p>
+            <h2 className="text-5xl font-bold text-orange-600">20+</h2>
+            <p className="font-semibold text-black">Trusted Clients</p>
           </div>
           </div>
           <div className="relative w-full max-w-md">
             <img
-              src="https://html.themexriver.com/industo/images/resource/about-2.jpg"
+              src={about}
               alt="YF Flameproof Engineers"
               className="rounded-2xl object-cover w-full"
             />
