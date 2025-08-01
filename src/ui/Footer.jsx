@@ -109,8 +109,8 @@ const Footer = () => {
      
       </div>
           <div className='flex gap-5 mt-4'>
-                      <Link to="/about" className="inline-block text-sm bg-orange-500 hover:bg-orange-600 transition px-3 py-2 rounded text-white">Product Brochure</Link>
-                      <Link to="/contact" className="inline-block text-sm bg-orange-500 hover:bg-orange-600 transition px-4 py-2 rounded text-white">Service Brochure</Link>
+                      <Link to="/Flameproof Catalog...pdf" target='_blank' className="inline-block text-sm bg-orange-500 hover:bg-orange-600 transition px-3 py-2 rounded text-white">Product Brochure</Link>
+                      <Link to="/Y F ENTERPRISES SERVICES.pdf" target="_blank" className="inline-block text-sm bg-orange-500 hover:bg-orange-600 transition px-4 py-2 rounded text-white">Service Brochure</Link>
           </div>
         
       {/* Footer bottom */}
