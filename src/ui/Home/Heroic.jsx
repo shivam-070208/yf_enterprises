@@ -45,7 +45,7 @@ const HeroSection = () => {
   const [currentslide, setslide] = useState(0);
 
   return (
-    <div className="relative w-screen min-h-[100vh] md:min-h-[100vh] pb-6 overflow-x-hidden">
+    <div className="relative w-screen min-h-[100vh] md:min-h-[110vh] pb-6 overflow-x-hidden">
       
       {/* 🌀 Swiper Component */}
       <Swiper
@@ -83,10 +83,10 @@ const HeroSection = () => {
               {/* Text Content */}
               {currentslide === i && (
                 <div className="max-w-[700px] text-white space-y-10 px-3 mt-20 md:mt-0 relative z-20">
-                  <h1 className="sm:text-5xl text-2xl leading-tight font-bold drop-shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
+                  <h1 className="sm:text-5xl text-2xl font-montserrat leading-tight font-bold drop-shadow-[0_4px_6px_rgba(0,0,0,0.6)]">
                     {slide.heading}
                   </h1>
-                  <p className="sm:text-lg mt-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+                  <p className="sm:text-lg mt-4 font-poppins drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
                     {slide.subheading}
                   </p>
                 </div>

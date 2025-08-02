@@ -33,7 +33,7 @@ import image6 from './image6.webp';
 import image7 from './image7.webp';
 import profile from './profileicon.webp';
 import whiteLogo from './whitelogo.webp';
-import Pipe from './pipe.webp'
+import Pipe from './pipe.jpg'
 import Giflogo from './YfEnterprises.gif';
 import about from './about.jpg'
 export {

@@ -19,15 +19,15 @@ const HeroContactSection = () => {
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-24 flex flex-col items-center text-center">
         {/* Logo */}
-        <div className="mb-6">
-          <img src={whiteLogo} alt="Industo" className="w-50 mx-auto" />
-        </div>
 
         {/* Text */}
-        <h2 className="text-3xl md:text-5xl font-bold mb-5 leading-snug">
-          Contact to Expertise in the <br />
-          manufacturing industry
+        <h2 className="text-3xl font-montserrat md:text-5xl font-bold mb-5 leading-snug">
+          Partner with Experts in Industrial Project Execution
+        </h2>        
+          <h2 className="text-lg font-poppins  md:text-xl mb-5 px-4 justify-center leading-snug">
+          We delivers proven expertise in EPC projects, hydrocarbon detection systems, and engineering services for the manufacturing and industrial sectors. We combine technical precision, safety compliance, and timely delivery to power your operations from concept to completion.
         </h2>
+
 
         {/* Button */}
       <Button text={'Contact Us'} href={'/contact'} primarycolor={"bg-orange-500"} secondarycolor={"bg-orange-700"}>
