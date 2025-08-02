@@ -205,6 +205,9 @@ const Products = () => {
               </button>
             </div>
           )}
+          <div className=" w-full flex justify-center m-auto">
+          <Link to="/Flameproof Catalog...pdf" target='_blank' className="inline-block text-sm bg-orange-500 hover:bg-orange-600 transition px-3 py-2 rounded text-white">All Product Brochure</Link>
+          </div>
 
           {/* Call to Action */}
           <div className="text-center mt-12">

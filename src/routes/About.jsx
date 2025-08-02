@@ -187,7 +187,7 @@ const AboutUs = () => {
             <div className="text-orange-600 font-bold">Clients</div>
             <h2 className="text-3xl font-bold">Our Trusted Clients</h2>
           </div>
-          <Swiper slidesPerView={2} modules={[Autoplay]} autoplay grabCursor={true}  spaceBetween={20} breakpoints={{ 640: { slidesPerView: 3 }, 1024: { slidesPerView: 5 } }}>
+          <Swiper slidesPerView={1} modules={[Autoplay]} autoplay grabCursor={true}  spaceBetween={20} breakpoints={{ 640: { slidesPerView: 3 }, 1024: { slidesPerView: 5 } }}>
             {ClientsImage.map((item,i) => (
               <SwiperSlide key={i}>
                 <div className="p-4">
@@ -204,7 +204,7 @@ const AboutUs = () => {
             <div className="text-orange-600 font-bold">Channel Partners</div>
             <h2 className="text-3xl font-bold">Our Channel Partners</h2>
           </div>
-          <Swiper slidesPerView={2} modules={[Autoplay]} autoplay grabCursor={true}  spaceBetween={20} breakpoints={{ 640: { slidesPerView: 3 }, 1024: { slidesPerView: 5 } }}>
+          <Swiper slidesPerView={1} modules={[Autoplay]} autoplay grabCursor={true}  spaceBetween={20} breakpoints={{ 640: { slidesPerView: 3 }, 1024: { slidesPerView: 5 } }}>
             {ChannelImage.map((item,i) => (
               <SwiperSlide key={i}>
                 <div className="p-4">
@@ -222,10 +222,10 @@ const AboutUs = () => {
             <div className="text-orange-600 font-bold">Gallery</div>
             <h2 className="text-3xl font-bold">Our Work Gallery</h2>
           </div>
-          <Swiper slidesPerView={2} modules={[Autoplay]} autoplay grabCursor={true} spaceBetween={30} breakpoints={{ 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}>
+          <Swiper slidesPerView={1} modules={[Autoplay]} autoplay grabCursor={true} spaceBetween={30} breakpoints={{ 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}>
             {galleryImages.map((img, i) => (
               <SwiperSlide key={i}>
-                <div className="bg-white rounded-sm shadow-lg grid-cols-1 md:flex items-center justify-center w-full h-[300px] md:h-[300px] mx-auto">
+                <div className="bg-white rounded-sm shadow-lg  grid grid-cols-1 md:flex items-center justify-center w-full h-[300px] md:h-[300px] mx-auto">
                   <img src={img} alt={`gallery-${i}`} className="object-cover rounded-xl w-full h-full" />
                 </div>
               </SwiperSlide>
