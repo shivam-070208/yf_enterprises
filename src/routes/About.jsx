@@ -127,25 +127,25 @@ const AboutUs = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <div className="mb-12">
-            <div className="text-orange-600 font-bold">Our Approach</div>
-            <h2 className="text-3xl font-bold">Capitalise On Hanging</h2>
-            <p className="text-gray-600 mt-2">We believe in fast resolution of power issues through proactive 24x7 services and customer-focused practices.</p>
+            <div className="text-orange-600 font-bold font-montserrat">Our Approach</div>
+            <h2 className="text-3xl font-bold font-montserrat">Delivering Fast, Reliable Industrial Solutions</h2>
+            <p className="text-gray-600 mt-2 font-poppins">We focus on rapid resolution of operational challenges through 24×7 support, proactive project management, and a customer-first approach.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white rounded-lg shadow p-4">
               <img src={serviceImages.vision} alt="Our Vision" className="mb-4 w-full h-48 object-cover rounded" />
-              <h4 className="font-bold text-lg mb-2">Our Vision</h4>
-              <p className="text-gray-600 text-sm">YF Enterprises aims to deliver high-quality engineering services with honesty and integrity, ensuring customer satisfaction by completing projects efficiently, safely, and reliably across diverse industrial sectors.</p>
+              <h4 className="font-bold text-lg mb-2 font-montserrat">Our Vision</h4>
+              <p className="text-gray-600 text-sm font-poppins">YF Enterprises aims to deliver high-quality engineering services with honesty and integrity, ensuring customer satisfaction by completing projects efficiently, safely, and reliably across diverse industrial sectors.</p>
             </div>
             <div className="bg-white rounded-lg shadow p-4">
               <img src={serviceImages.mission} alt="Our Mission" className="mb-4 w-full h-48 object-cover rounded" />
-              <h4 className="font-bold text-lg mb-2">Our Mission</h4>
-              <p className="text-gray-600 text-sm">YF Enterprises aims to deliver high-quality engineering services with honesty and integrity, ensuring customer satisfaction by completing projects efficiently, safely, and reliably across diverse industrial sectors.</p>
+              <h4 className="font-bold text-lg mb-2 font-montserrat">Our Mission</h4>
+              <p className="text-gray-600 text-sm font-poppins">YF Enterprises aims to deliver high-quality engineering services with honesty and integrity, ensuring customer satisfaction by completing projects efficiently, safely, and reliably across diverse industrial sectors.</p>
             </div>
             <div className="bg-white rounded-lg shadow p-4">
               <img src={serviceImages.values} alt="Our Value" className="mb-4 w-full h-48 object-cover rounded" />
-              <h4 className="font-bold text-lg mb-2">Our Value</h4>
-              <p className="text-gray-600 text-sm">Integrity, trust, and honesty guide every action. The company is dedicated, dependable, flexible, and focuses on polite, friendly customer care, valuing understanding and responsiveness in all relationships.</p>
+              <h4 className="font-bold text-lg mb-2 font-montserrat">Our Value</h4>
+              <p className="text-gray-600 text-sm font-poppins">Integrity, trust, and honesty guide every action. The company is dedicated, dependable, flexible, and focuses on polite, friendly customer care, valuing understanding and responsiveness in all relationships.</p>
             </div>
           </div>
         </div>

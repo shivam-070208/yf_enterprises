@@ -93,7 +93,7 @@ const ServicesCarousel = () => {
           <div className="text-orange-600 inline-block font-bold uppercase relative beforetext md:before:content-['Services']">
             Our Awesome Services
           </div>
-          <h2 className="text-5xl font-extrabold mt-5 text-gray-900">
+          <h2 className="text-5xl font-montserrat font-extrabold mt-5 text-gray-900">
             Our Awesome Services
           </h2>
         </div>

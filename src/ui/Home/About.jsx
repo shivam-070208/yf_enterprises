@@ -13,16 +13,16 @@ const AboutSection = () => {
         <div className=" w-full flex flex-col justify-between">
           <div>
             <p className="text-orange-600 font-bold mb-2 text-lg beforetext relative md:before:content-['Assesment']">About Y.F Enterprises</p>
-            <h2 className="text-5xl font-bold text-black mb-4 leading-tight">
+            <h2 className="text-5xl font-bold text-black mb-4 leading-tight font-montserrat">
              Why Choose Us
             </h2>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-6 font-poppins">
               Y.F Enterprises is a trusted multidisciplinary engineering service provider based in Kolkata, operating since 2013. Led by Mr. Omar Farooque, the company excels in delivering reliable project execution across industries like oil & gas, power, water, pharma, and cement.
               <br />
               Specializing in Electrical, Control & Instrumentation, BMS, Firefighting, and Industrial Security Systems, Y.F Enterprises blends traditional trust with modern efficiency. With a strong focus on quality, safety, and innovation, we provide client-centric, end-to-end engineering solutions across India.   
             </p>
 
-            <div className="grid sm:grid-cols-1 gap-6 mb-8">
+            <div className="grid sm:grid-cols-1 gap-6 mb-8 font-montserrat">
               <div className="flex items-center gap-4">
                 <FaToolbox className="text-orange-600 text-3xl" />
                 <div className="font-bold text-lg text-black">Instrumentation Erection and Commissioning</div>

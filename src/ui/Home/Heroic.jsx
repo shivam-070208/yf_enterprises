@@ -116,12 +116,12 @@ const HeroSection = () => {
             >
               <img
                 src="https://html.themexriver.com/industo/images/gallery/1.jpg"
-                className="absolute top-0 left-0 blur-md w-0 group-hover:w-full transition-all duration-500 h-full object-cover z-0"
+                className="absolute top-0 left-0 blur-md w-full transition-all duration-500 h-full object-cover z-0"
               />
-              <div className="group-hover:rotate-y-360 origin-center inline-block transition-all duration-1000 transform font-light translate-z-4 z-10">
+              <div className="group-hover:rotate-y-360 origin-center inline-block transition-all duration-1000 transform font-light translate-z-4 z-50">
                 {item.icon}
               </div>
-              <p className="mt-7 pb-4 border-orange-600 border-b-4 text-xl font-bold w-20 whitespace-nowrap z-10">
+              <p className="mt-7 pb-4 border-orange-600 border-b-4 text-xl font-bold w-20 whitespace-nowrap relative z-10">
                 {item.title}
               </p>
               <ul className="relative z-10 transition-all duration-500 opacity-100 md:opacity-0 max-h-0 overflow-hidden md:group-hover:opacity-100 md:group-hover:max-h-60">
