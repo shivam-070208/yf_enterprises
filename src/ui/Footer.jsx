@@ -82,15 +82,19 @@ const Footer = () => {
           <ul className="text-gray-400 text-sm space-y-3">
             <li className="flex items-start gap-2">
               <FaPhoneAlt className="mt-1 text-orange-400" />
-              <span>+91 9748413152/+91 8240505520</span>
+              <a href="tel:+919748413152" className="hover:text-white">+91 9748413152</a>
+              <span className="mx-1">/</span>
+              <a href="tel:+918240505520" className="hover:text-white">+91 8240505520</a>
             </li>
             <li className="flex items-start gap-2">
               <FaEnvelope className="mt-1 text-orange-400" />
-              <span>support@yfenterprises.com</span>
+              <a href="mailto:support@yfenterprises.com" className="hover:text-white">support@yfenterprises.com</a>
             </li>
             <li>
-              62, Bentick Street <br />
-               Kolkata-700069 West Bengal
+              <a href="https://www.google.com/maps/place/Y+F+ENTERPRISES/@22.567506,88.352675,16z/data=!4m6!3m5!1s0x3a0277007dba8ac5:0xdc034f3faadb5f3c!8m2!3d22.5675058!4d88.3526753!16s%2Fg%2F11lywwhhkj?hl=en&entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                62, Bentick Street <br />
+                Kolkata-700069 West Bengal
+              </a>
             </li>
             <li>
               <strong>Open Hours:</strong> <br />
