@@ -188,27 +188,7 @@ const products = [
     inStock: true,
     featured: true
   },
-  {
-    id: 9,
-    name: 'Flameproof ON/OFF Rotary Switch',
-    category: 'Control Devices',
-        
-          
-    rating: 4,
-    image: productImages[8],
-    description: 'Flameproof ON/OFF rotary switch for various control applications.',
-    specifications: {
-      material: 'Cast Aluminium Alloy LM6',
-      flameproofZone: 'Zone 1 & 2,IIA, IIB,IIC as per IS/IEC 60079-1:2007',
-      weatherproof: 'IP 66 as per IS/IEC 60529:2001',
-      finish: 'Light Grey to Shade 631 of IS:5 (Epoxy Powder Coated)',
-      gasket: 'Neoprene',
-      cableEntry: '2 Nos, 3/4" ET Entry',
-      switch: '16A/32AMP/25AMP DP ON/OFF Rotary Switch',
-    },
-    inStock: true,
-    featured: false
-  },
+
 
 ];
 
