@@ -35,37 +35,6 @@ const Blog = () => {
           </Suspense>
         </div>
         <div className='lg:sticky h-fit right-0 top-0 space-y-6 order-first lg:order-last'>
-          {/* Search Bar */}
-          {/* <div className='bg-white p-6 rounded-lg shadow-md'>
-            <h3 className='text-xl font-bold mb-4 text-blue-950'>Search Blogs</h3>
-            <input
-              type="text"
-              placeholder="Search blogs..."
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              className="w-full p-3 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
-            />
-          </div> */}
-         
-          {/* Category Filter */}
-          {/* <div className='bg-white p-6 h-fit rounded-lg shadow-md'>
-            <h3 className='text-xl font-bold mb-4 text-blue-950'>Filter</h3>
-            <div className='space-y-2 space-x-2'>
-              {categories.map((category, idx) => (
-                <motion.button layoutId={category+idx} initial={{height:0,opacity:0,filter:'blur(100px)'}} exit={{height:0,opacity:0,filter:'blur(100px)'}} animate={{height:'fit-content',opacity:1,filter:'blur(0)'}} transition={{delay:0.02*idx,duration:0.3}}
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`w-fit text-left p-2 cursor-pointer overflow-hidden rounded transition-colors ${
-                    selectedCategory === category 
-                      ? 'bg-blue-600 text-white' 
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
-                  }`}
-                >
-                  {category}
-                </motion.button>
-              ))}
-            </div>
-          </div> */}
 
           {/* Latest Blogs */}
           <div className='bg-white p-6 rounded-lg hidden lg:inline-block  shadow-md'>

@@ -45,7 +45,7 @@ const HeroSection = () => {
   const [currentslide, setslide] = useState(0);
 
   return (
-    <div className="relative w-screen min-h-[105vh] md:min-h-[105vh] pb-10 overflow-x-hidden">
+    <div className="relative w-screen min-h-[100vh] md:min-h-[100vh] pb-6 overflow-x-hidden">
       
       {/* 🌀 Swiper Component */}
       <Swiper
@@ -66,7 +66,7 @@ const HeroSection = () => {
           renderBullet: function (index, className) {
             return `<span class='${className}' style='background-color: ${
               index === currentslide ? "#FF8C00" : ""
-            }; width: 12px; height: 12px; margin: 10px 5px; border-radius: 50%;'></span>`;
+            }; width: 12px; height: 12px; margin: 8px 5px; border-radius: 50%;'></span>`;
           },
           el: '.custom-swiper-pagination',
         }}
@@ -107,7 +107,7 @@ const HeroSection = () => {
       </div>
 
       {/* 🧱 Cards Section */}
-      <div className="w-full lg:absolute -bottom-4 z-40 mt-35 -mb-5">
+      <div className="w-full lg:absolute -bottom-1 z-40 mt-32 -mb-5">
         <div className="w-fit mx-auto grid lg:grid-cols-2 gap-10 grid-cols-1 pointer-events-none">
           {cards.map((item, i) => (
             <div
