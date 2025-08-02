@@ -8,9 +8,18 @@ import gallery2 from './Gallery/2.jpg';
 import gallery3 from './Gallery/3.jpg';
 import gallery4 from './Gallery/4.jpg';
 import gallery5 from './Gallery/5.jpg';
+import gallery6 from './Gallery/6.jpg';
+import gallery7 from './Gallery/7.jpg';
+import gallery8 from './Gallery/8.jpg';
+import gallery9 from './Gallery/9.jpg';
+import gallery10 from './Gallery/10.jpg';
+import gallery11 from './Gallery/11.jpg';
+
+
 
 // Export all gallery images as named exports.
-export const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5];
+export const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9, gallery10, gallery11];
+
 
 
 

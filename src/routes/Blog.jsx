@@ -36,7 +36,7 @@ const Blog = () => {
         </div>
         <div className='lg:sticky h-fit right-0 top-0 space-y-6 order-first lg:order-last'>
           {/* Search Bar */}
-          <div className='bg-white p-6 rounded-lg shadow-md'>
+          {/* <div className='bg-white p-6 rounded-lg shadow-md'>
             <h3 className='text-xl font-bold mb-4 text-blue-950'>Search Blogs</h3>
             <input
               type="text"
@@ -45,10 +45,10 @@ const Blog = () => {
               onChange={e => setSearch(e.target.value)}
               className="w-full p-3 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
             />
-          </div>
+          </div> */}
          
           {/* Category Filter */}
-          <div className='bg-white p-6 h-fit rounded-lg shadow-md'>
+          {/* <div className='bg-white p-6 h-fit rounded-lg shadow-md'>
             <h3 className='text-xl font-bold mb-4 text-blue-950'>Filter</h3>
             <div className='space-y-2 space-x-2'>
               {categories.map((category, idx) => (
@@ -65,7 +65,7 @@ const Blog = () => {
                 </motion.button>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Latest Blogs */}
           <div className='bg-white p-6 rounded-lg hidden lg:inline-block  shadow-md'>

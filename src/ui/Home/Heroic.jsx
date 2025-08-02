@@ -107,7 +107,7 @@ const HeroSection = () => {
       </div>
 
       {/* 🧱 Cards Section */}
-      <div className="w-full lg:absolute -bottom-2 z-40 mt-35 -mb-5">
+      <div className="w-full lg:absolute -bottom-4 z-40 mt-35 -mb-5">
         <div className="w-fit mx-auto grid lg:grid-cols-2 gap-10 grid-cols-1 pointer-events-none">
           {cards.map((item, i) => (
             <div
