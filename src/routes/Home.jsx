@@ -7,6 +7,7 @@ import { profile } from '../assets';
 import { FaStar } from 'react-icons/fa';
 import { ChannelImage, ClientsImage } from '../assets/logo';
 import Clients from '../ui/Home/Clients';
+import ModernLogoCarousel from '../ui/Home/Clients';
 
 
 const textTestimonial = [
@@ -72,7 +73,22 @@ function Home() {
               </Swiper>
             </div>
           </section>
-          <Clients/>
+               <ModernLogoCarousel 
+                 title="Our Trusted Clients" 
+                 subtitle="Clients" 
+                 logos={ClientsImage} 
+                 bgColor="bg-gradient-to-br from-gray-50 to-white"
+               />
+               
+               <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mx-auto max-w-4xl"></div>
+               
+               <ModernLogoCarousel 
+                 title="Our Channel Partners" 
+                 subtitle="Channel Partners" 
+                 logos={ChannelImage} 
+                 bgColor="bg-gradient-to-br from-white to-gray-50"
+               />
+         
     </div>
   )
 }
