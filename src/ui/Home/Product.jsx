@@ -228,7 +228,7 @@ const ProductCarousel = () => {
                 {/* 🔶 Animated Card */}
                 <div className="bg-white h-fit p-6 flex flex-col items-center rounded pt-28 pb-6 flex-1 w-full relative z-10">
                   <div className='absolute origin-center rounded-lg opacity-0 group-hover:opacity-100  w-full scale-x-0 group-hover:scale-x-100 duration-400 transition-all h-full bg-black top-0 -z-1' />
-                  <h4 className="text-md font-semibold mb-2 z-20 group-hover:text-white">{product.name}</h4>
+                  <h4 className="text-sm font-semibold mb-2 z-20 group-hover:text-white">{product.name}</h4>
                   <div className="text-xs text-orange-600 font-medium mb-2 z-20">{product.category}</div>
                   <div className="mb-2 z-20">
                     <span className="text-black font-bold group-hover:text-white">{product.price || ''}</span>
