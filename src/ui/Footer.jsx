@@ -193,9 +193,8 @@ const Footer = () => {
             {/* Replaced local logo with a placeholder image */}
             <img src={whiteLogo} alt="YF Logo" className="w-50 mb-5" />
             <p className="text-gray-400 mb-6 font-poppins leading-relaxed">
-            Y.F Enterprises is a leading engineering company specializing in EPC projects, hydrocarbon gas detection, CCTV installations, and industrial manpower solutions...
-              <br />
-            <Link  rel="stylesheet" className='font-poppins flex items-center hover:text-orange-500' href="/about" >
+            Y.F Enterprises is a leading engineering company specializing in EPC projects, hydrocarbon gas detection, CCTV installations...          <br />
+            <Link to={'/about'} className='font-poppins flex items-center hover:text-orange-500' href="/about" >
             Read More <FaArrowRight className='ml-2 text-sm' />
             </Link>
             </p>
