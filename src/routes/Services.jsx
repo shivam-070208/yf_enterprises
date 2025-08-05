@@ -7,6 +7,7 @@ import { Button } from '../ui';
 import { Link } from 'react-router-dom';
 import { profile } from '../assets';
 import serviceImages from '../assets/serviceImages';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 
 const ServicesPage = () => {
@@ -117,29 +118,51 @@ const servicesInfo = [
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-20 bg-[url('/images/background/map.png')] bg-no-repeat bg-center bg-cover">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <p className="text-blue-600 text-sm uppercase font-semibold">Our Testimonials</p>
-            <h2 className="text-3xl md:text-4xl font-bold">What Our Clients Say <br className="hidden md:block" /> About Us</h2>
-          </div>
-          <Swiper slidesPerView={1} spaceBetween={30} breakpoints={{ 640: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}>
-            {textTestimonial.map((testimonial, index) => (
-              <SwiperSlide key={index}>
-                <div className="bg-white p-6 rounded-lg shadow text-center">
-                  <img src={profile} alt={testimonial.Name} className="w-20 h-20 rounded-full mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold">{testimonial.Name}</h3>
-                  <p className="text-sm text-gray-500 mb-2">{testimonial.Lcation}</p>
-                  <p className="text-gray-600 text-sm mb-4">{testimonial.text}</p>
-                  <div className="flex justify-center text-yellow-400">
-                    {[...Array(5)].map((_, i) => <FaStar key={i} />)}
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+     <section className="py-20 bg-gray-100 text-center">
+        <div className="max-w-6xl mx-auto px-4">
+        <div className="mb-10">
+          <div className="text-orange-600 font-bold uppercase">Our Testimonial</div>
+          <h2 className="text-3xl font-bold text-gray-800">Happy Clients Say About Us</h2>
         </div>
-      </section>
+
+        <Swiper
+          modules={[Navigation, Autoplay, Pagination]}
+          spaceBetween={30}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="testimonial-swiper"
+        >
+          {textTestimonial.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-white p-6 rounded-xl shadow-md text-left h-full flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-4 mb-4">
+                    <img src={profile} alt="client" className="w-12 h-12 rounded-full" />
+                    <div>
+                      <h4 className="text-md font-semibold text-gray-700">{item.name}</h4>
+                      <p className="text-sm text-gray-500">Client</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 text-sm mb-4">{item.text}</p>
+                </div>
+                <div className="text-yellow-500 flex">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar key={i} />
+                  ))}
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+        </section>
     </div>
   );
 };

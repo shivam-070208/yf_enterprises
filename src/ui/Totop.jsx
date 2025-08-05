@@ -44,7 +44,7 @@ const Totop = () => {
       </div>
     </button> 
     <button
-      aria-label="Scroll to top"
+      aria-label="Whatsapp"
       className='fixed bottom-30 right-8 w-14 h-14 z-9999'
       onClick={() => document.querySelector('.root').scrollTo({ top: 0, behavior: 'smooth' })}
     >
@@ -59,12 +59,12 @@ const Totop = () => {
           <BiArrowToTop size={28} />
         </div>
       </div> */}
-      <a href="https://wa.me/8439843788" className='w-full h-full cursor-pointer rounded-full hover:text-white hover:bg-orange-500 transition-all duration-300 z-10 relative bg-white grid place-items-center text-orange-500'>
+      <a href="https://wa.me/9748413152" className='w-full h-full cursor-pointer rounded-full hover:text-white hover:bg-orange-500 transition-all duration-300 z-10 relative bg-white grid place-items-center text-orange-500'>
       <FaWhatsapp className='w-10 h-10 '/>
       </a>
     </button>
     <button
-      aria-label="Scroll to top"
+      aria-label="Telephone"
       className='fixed bottom-8 left-8 w-14 h-14 z-999 '
       onClick={() => document.querySelector('.root').scrollTo({ top: 0, behavior: 'smooth' })}
     >
