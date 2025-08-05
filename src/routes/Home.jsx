@@ -50,7 +50,7 @@ function Home() {
        <ProductCarousel />
        <HeroContactSection />
         <section className="py-20 bg-gray-100 text-center">
-      <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
         <div className="mb-10">
           <div className="text-orange-600 font-bold uppercase">Our Testimonial</div>
           <h2 className="text-3xl font-bold text-gray-800">Happy Clients Say About Us</h2>
@@ -93,7 +93,7 @@ function Home() {
           ))}
         </Swiper>
       </div>
-    </section>
+        </section>
                <ModernLogoCarousel 
                  title="Our Trusted Clients" 
                  subtitle="Clients" 

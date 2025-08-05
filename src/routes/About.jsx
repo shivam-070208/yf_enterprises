@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { FaIndustry, FaTools, FaGlobe, FaTrophy, FaStar, FaToolbox, FaBolt, FaRobot } from 'react-icons/fa';
+import React, { useState, useEffect, useRef } from 'react';
+import { FaIndustry, FaTools, FaGlobe, FaTrophy, FaStar, FaToolbox, FaBolt, FaRobot, FaArrowRight } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import {galleryImages, about, profile } from '../assets';
 import serviceImages from '../assets/serviceImages';
 import {ClientsImage,ChannelImage} from '../assets/logo';
@@ -11,6 +11,10 @@ import { FaComputer } from 'react-icons/fa6';
 import {ModernLogoCarousel} from '../ui/Home/Clients';
 
 const AboutUs = () => {
+
+    const prevRef = useRef(null);
+    const nextRef = useRef(null);
+
   const textTestimonial = [
     {
       Name : " Manish Tiwari",
@@ -154,33 +158,51 @@ const AboutUs = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gray-100 text-center">
+       <section className="py-20 bg-gray-100 text-center">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="mb-10">
-            <div className="text-orange-600 font-bold">Our Testimonial</div>
-            <h2 className="text-3xl font-bold">Happy Client Says About Us</h2>
-          </div>
-          <Swiper slidesPerView={1} spaceBetween={30} breakpoints={{ 640: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}>
-            {textTestimonial.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className="bg-white p-6 rounded shadow text-left">
+        <div className="mb-10">
+          <div className="text-orange-600 font-bold uppercase">Our Testimonial</div>
+          <h2 className="text-3xl font-bold text-gray-800">Happy Clients Say About Us</h2>
+        </div>
+
+        <Swiper
+          modules={[Navigation, Autoplay, Pagination]}
+          spaceBetween={30}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="testimonial-swiper"
+        >
+          {textTestimonial.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-white p-6 rounded-xl shadow-md text-left h-full flex flex-col justify-between">
+                <div>
                   <div className="flex items-center gap-4 mb-4">
                     <img src={profile} alt="client" className="w-12 h-12 rounded-full" />
                     <div>
-                      <h4 className="font-bold">{item.Name}</h4>
-                      <p className="text-sm text-gray-500">{item.Lcation}</p>
+                      <h4 className="text-md font-semibold text-gray-700">{item.name}</h4>
+                      <p className="text-sm text-gray-500">Client</p>
                     </div>
                   </div>
                   <p className="text-gray-600 text-sm mb-4">{item.text}</p>
-                  <div className="text-yellow-500 flex">
-                    {[...Array(5)].map((_, i) => <FaStar key={i} />)}
-                  </div>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </section>
+                <div className="text-yellow-500 flex">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar key={i} />
+                  ))}
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
 
       {/* Modern Logo Carousels */}
       <ModernLogoCarousel 
@@ -200,23 +222,54 @@ const AboutUs = () => {
       />
 
       {/* Gallery Section */}
-      <section className="py-12 bg-white">
-        <div className="md:max-w-[90vw] max-w-6xl mx-auto px-4 text-center">
-          <div className="mb-6">
-            <div className="text-orange-600 font-bold">Gallery</div>
-            <h2 className="text-3xl font-bold">Our Work Gallery</h2>
-          </div>
-          <Swiper slidesPerView={1} modules={[Autoplay]} autoplay grabCursor={true} spaceBetween={30} breakpoints={{ 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}>
-            {galleryImages.map((img, i) => (
-              <SwiperSlide key={i}>
-                <div className="bg-white rounded-sm shadow-lg  grid grid-cols-1 md:flex items-center justify-center w-full h-[300px] md:h-[300px] mx-auto">
-                  <img src={img} alt={`gallery-${i}`} className="object-cover rounded-xl w-full h-full" />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+     <section className="py-12 bg-white">
+      <div className="md:max-w-[90vw] max-w-6xl mx-auto px-4 text-center relative">
+        <div className="mb-6">
+          <div className="text-orange-600 font-bold">Gallery</div>
+          <h2 className="text-3xl font-bold">Our Work Gallery</h2>
         </div>
-      </section>
+
+        {/* Navigation Buttons */}
+        <div className="absolute top-1/2 -left-5 z-10">
+          <button ref={prevRef} className="bg-white p-2 rounded-full shadow hover:bg-orange-500 transition">
+            <FaArrowRight className="rotate-180 text-black" />
+          </button>
+        </div>
+        <div className="absolute top-1/2 -right-5 z-10">
+          <button ref={nextRef} className="bg-white p-2 rounded-full shadow hover:bg-orange-500 transition">
+            <FaArrowRight className="text-black" />
+          </button>
+        </div>
+
+        <Swiper
+          modules={[Autoplay, Navigation]}
+          slidesPerView={1}
+          spaceBetween={30}
+          grabCursor
+          autoplay
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+          }}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+        >
+          {galleryImages.map((img, i) => (
+            <SwiperSlide key={i}>
+              <div className="bg-white rounded-sm shadow-lg grid grid-cols-1 md:flex items-center justify-center w-full h-[300px] md:h-[300px] mx-auto">
+                <img src={img} alt={`gallery-${i}`} className="object-cover rounded-xl w-full h-full" />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
     </div>
   );
 };
