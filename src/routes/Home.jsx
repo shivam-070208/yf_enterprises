@@ -6,8 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { profile } from '../assets';
 import { FaStar } from 'react-icons/fa';
 import { ChannelImage, ClientsImage } from '../assets/logo';
-import Clients from '../ui/Home/Clients';
-import ModernLogoCarousel from '../ui/Home/Clients';
+// import Clients from '../ui/Home/Clients';
+import {ModernLogoCarousel} from '../ui/Home/Clients';
 
 
 const textTestimonial = [

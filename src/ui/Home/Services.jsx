@@ -1,21 +1,16 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
-import { FaDropbox, FaIndustry } from "react-icons/fa";
-import { image1, image2, image3, image4, Wallpattern } from "../../assets";
+import "swiper/css/navigation";
+import { FaIndustry } from "react-icons/fa";
+import { Wallpattern } from "../../assets";
 import { Link } from "react-router-dom";
 import serviceImages from "../../assets/serviceImages";
-import { details, title } from "motion/react-m";
 
-
-// Mock logos (you can replace with image paths if needed)
-const logos = [
-  'bg-orange-500',
-  'bg-blue-500',
-  'bg-green-400'
-];
+// Dummy logos for background color
+const logos = ['bg-orange-500', 'bg-blue-500', 'bg-green-400'];
 
 const services = [
   {
@@ -84,8 +79,8 @@ const ServicesCarousel = () => {
       <div
         className="absolute inset-0 bg-cover bg-left"
         style={{ backgroundImage: `url(${Wallpattern})` }}
-      ></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-white/0 from-50% via-white to-white"></div>
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/0 via-white to-white" />
 
       <div className="relative z-10 max-w-7xl mx-auto mt-8">
         {/* Heading */}
@@ -98,18 +93,34 @@ const ServicesCarousel = () => {
           </h2>
         </div>
 
+        {/* Swiper Navigation Buttons */}
+        <div className=" absolute w-full top-[60%] z-666 flex justify-between items-center mb-4 px-4">
+          <button
+            className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full shadow-md"
+            onClick={() => swiperRef.current?.swiper?.slidePrev()}
+          >
+            &larr;
+          </button>
+          <button
+            className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full shadow-md"
+            onClick={() => swiperRef.current?.swiper?.slideNext()}
+          >
+            &rarr;
+          </button>
+        </div>
+
         {/* Swiper Carousel */}
         <Swiper
           ref={swiperRef}
           slidesPerView={1}
-          spaceBetween={2}
+          spaceBetween={10}
           loop={true}
           autoplay={{ delay: 3000 }}
           breakpoints={{
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-          modules={[Autoplay]}
+          modules={[Autoplay, Navigation]}
           onSlideChange={onSlideChange}
           className="w-full cursor-grab"
         >
@@ -123,9 +134,9 @@ const ServicesCarousel = () => {
                     className="w-90 h-80 object-cover transition-transform duration-300"
                   />
                 </Link>
-                <div className="absolute bottom-0 w-full group-hover:-bottom-28 duration-700 transition-all justify-between flex">
-                  <div className="absolute bottom-0 w-full h-fit group-hover:-bottom-28 duration-700 transition-all gap-4 flex">
-                    <div className={`px-4 text-white grid flex-1 max-w-fit place-items-center text-5xl ${logos[index%3]}`}>
+                <div className="absolute bottom-0 w-full group-hover:-bottom-28 duration-700 transition-all flex">
+                  <div className="absolute bottom-0 w-full h-fit gap-4 flex">
+                    <div className={`px-4 text-white grid flex-1 max-w-fit place-items-center text-5xl ${logos[index % 3]}`}>
                       <FaIndustry />
                     </div>
                     <div className="w-50 px-4 flex h-fit pb-5 flex-col bg-white">
@@ -155,70 +166,22 @@ const ServicesCarousel = () => {
               </div>
             </SwiperSlide>
           ))}
-       
-            <SwiperSlide >
-              <div className="group relative mx-auto w-fit h-fit cursor-pointer rounded overflow-hidden transition-all duration-300">
-                <Link to="/services">
-                  <img
-                    src={services[2].image}
-                    alt={services[2].title}
-                    className="w-90 h-80 object-cover transition-transform duration-300"
-                  />
-                </Link>
-                <div className="absolute bottom-0 w-full group-hover:-bottom-28 duration-700 transition-all justify-between flex">
-                  <div className="absolute bottom-0 w-full h-fit group-hover:-bottom-28 duration-700 transition-all gap-4 flex">
-                    <div className={`px-4 text-white grid flex-1 max-w-fit place-items-center text-5xl ${logos[2%3]}`}>
-                      <FaIndustry />
-                    </div>
-                    <div className="w-50 px-4 flex h-fit pb-5 flex-col bg-white">
-                      <h5 className="text-lg font-bold py-2 overflow-hidden h-fit line-clamp-1">
-                        {services[2].title}
-                      </h5>
-                      <p className="text-sm text-neutral-500 line-clamp-1">
-                        {services[2].subtitle}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute top-0 right-0 h-full w-full bg-[#ffffffe8] shadow-xl p-5 py-7 origin-left transition-transform duration-500 ease-in-out z-10 group-hover:translate-x-0 translate-x-full">
-                  <h3 className="text-2xl font-bold mb-2 text-gray-800">
-                    {services[2].title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                    {services[2].details}
-                  </p>
-                  <Link
-                    to={`/services/details?id=2`}
-                    className="w-fit h-fit text-white flex gap-2 items-center bg-orange-500 hover:bg-orange-300 px-4 py-3 font-bold rounded-xs mt-5 transition"
-                  >
-                    Read More<span>&gt;</span>
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-          
         </Swiper>
 
-        {/* Custom Pagination */}
-        <div className="flex justify-center mt-6 gap-6 font-bold text-lg">
+        {/* Pagination Discs */}
+        <div className="flex justify-center mt-6 gap-3">
           {services.map((_, idx) => (
             <button
               key={idx}
-              onClick={() =>
-                swiperRef.current?.swiper?.slideToLoop(idx, 500)
-              }
-              className={`px-2 cursor-pointer ${
-                idx === currentIndex ? "text-orange-500" : "text-gray-500"
-              }`}
-            >
-              {String(idx + 1).padStart(2, "0")}
-            </button>
+              onClick={() => swiperRef.current?.swiper?.slideToLoop(idx, 500)}
+              className={`w-3 h-3 rounded-full ${
+                idx === currentIndex
+                  ? "bg-orange-500 scale-110"
+                  : "bg-gray-300 hover:bg-gray-400"
+              } transition-all duration-200`}
+              aria-label={`Go to slide ${idx + 1}`}
+            ></button>
           ))}
-          <span   onClick={() =>
-                swiperRef.current?.swiper?.slideToLoop(4, 500)
-              }  className={`px-2 cursor-pointer ${
-                4 === currentIndex ? "text-orange-500" : "text-gray-500"
-              }`}>/ {String(services.length+1).padStart(2, "0")}</span>
         </div>
       </div>
     </section>

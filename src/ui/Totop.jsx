@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BiArrowToTop } from 'react-icons/bi';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Totop = () => {
   const [progress, setProgress] = useState(0);
@@ -24,7 +25,8 @@ const Totop = () => {
   }, []);
 
   return (
-    <button
+    <>
+        <button
       aria-label="Scroll to top"
       className='fixed bottom-8 right-8 w-14 h-14 z-50'
       onClick={() => document.querySelector('.root').scrollTo({ top: 0, behavior: 'smooth' })}
@@ -36,11 +38,32 @@ const Totop = () => {
             background: `conic-gradient(#f97316 ${progress * 360}deg, #fff ${progress * 360}deg)`,
           }}
         ></div>
-        <div className='w-full h-full cursor-pointer rounded-full z-10 relative bg-white grid place-items-center text-orange-500'>
+        <div className='w-full  hover:text-white hover:bg-orange-500 transition-all duration-300  h-full cursor-pointer rounded-full z-10 relative bg-white grid place-items-center text-orange-500'>
           <BiArrowToTop size={28} />
         </div>
       </div>
+    </button> 
+    <button
+      aria-label="Scroll to top"
+      className='fixed bottom-30 right-8 w-14 h-14 z-50'
+      onClick={() => document.querySelector('.root').scrollTo({ top: 0, behavior: 'smooth' })}
+    >
+      {/* <div className='relative w-14 h-14 p-1'>
+        <div
+          className='absolute top-0 left-0 w-14 h-14 rounded-full'
+          style={{
+            background: `conic-gradient(#f97316 ${progress * 360}deg, #fff ${progress * 360}deg)`,
+          }}
+        ></div>
+        <div className='w-full h-full cursor-pointer rounded-full z-10 relative bg-white grid place-items-center text-orange-500'>
+          <BiArrowToTop size={28} />
+        </div>
+      </div> */}
+      <a href="https://wa.me/8439843788" className='w-full h-full cursor-pointer rounded-full hover:text-white hover:bg-orange-500 transition-all duration-300 z-10 relative bg-white grid place-items-center text-orange-500'>
+      <FaWhatsapp className='w-10 h-10 '/>
+      </a>
     </button>
+    </>
   );
 };
 

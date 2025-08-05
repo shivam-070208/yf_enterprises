@@ -8,7 +8,7 @@ import serviceImages from '../assets/serviceImages';
 import {ClientsImage,ChannelImage} from '../assets/logo';
 
 import { FaComputer } from 'react-icons/fa6';
-import ModernLogoCarousel from '../ui/Home/Clients';
+import {ModernLogoCarousel} from '../ui/Home/Clients';
 
 const AboutUs = () => {
   const textTestimonial = [
