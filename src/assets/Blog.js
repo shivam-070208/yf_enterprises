@@ -4,14 +4,13 @@ import blog2 from './blog2.jpg';
 const Allblogs = [
   {
     title: "Key Challenges in EPC Project Execution and How to Overcome Them",
-    coverImage: blog2,
+    coverImage: blog1,
     category: "Engineering",
     date: "2024-01-15",
     content: `
 <h2>Key Challenges in EPC Project Execution and How to Overcome Them</h2>
 <h3>In the dynamic landscape of infrastructure and industrial development, Engineering, Procurement, and Construction (EPC) projects form the backbone of large-scale initiatives.</h3>
 <p>From building power plants to developing transportation networks, EPC contracts involve intricate coordination across multiple phases. However, these projects often face significant hurdles that can lead to delays, cost overruns, and quality issues. At YF Enterprise Kolkata, a leading player in the EPC sector with over two decades of experience in delivering turnkey solutions for energy, infrastructure, and manufacturing projects in Eastern India, we understand these challenges intimately. Our expertise, honed through successful executions in diverse terrains like West Bengal's urban hubs and rural expanses, positions us to offer practical insights. This article delves into the key challenges in EPC project execution and provides actionable strategies to overcome them, drawing from industry best practices and our own proven methodologies.</p>
-<img src="${blog2}" alt="EPC Project" style="width:100%;margin:20px 0;"/>
 <h3>Understanding EPC Project Execution</h3>
 <p>EPC projects encompass three core phases: engineering (design and planning), procurement (sourcing materials and services), and construction (on-site implementation). These phases are interdependent, requiring seamless integration to meet timelines, budgets, and quality standards. According to industry reports, over 70% of EPC projects experience delays, with average cost overruns exceeding 20%. Factors like regulatory complexities, supply chain disruptions, and stakeholder misalignments exacerbate these issues. For companies like YF Enterprise Kolkata, which specializes in customized EPC solutions for clients in sectors such as renewable energy and civil infrastructure, addressing these challenges is crucial for maintaining client trust and operational efficiency.</p>
 <h3>Major Challenges in EPC Project Execution</h3>
@@ -71,14 +70,13 @@ const Allblogs = [
   },
   {
     title: "How Regular HCD Maintenance Can Prevent Industrial Accidents",
-    coverImage: blog1,
+    coverImage: blog2,
     category: "Safety",
     date: "2024-01-10",
     content: `
 <h2>How Regular HCD Maintenance Can Prevent Industrial Accidents</h2>
 <h3>In the fast-paced world of industrial operations, safety remains paramount.</h3>
 <p>At YF Enterprise Kolkata, a trusted name in Engineering, Procurement, and Construction (EPC) services with a strong focus on infrastructure and manufacturing projects across Eastern India, we prioritize innovative approaches to minimize risks. One such approach is Human-Centered Design (HCD), which places human factors at the core of system and equipment design to enhance usability and safety. However, the true value of HCD lies not just in initial implementation but in regular maintenance. Neglecting this can lead to overlooked hazards, resulting in accidents that disrupt operations and endanger lives. Drawing from our extensive experience in delivering safe, efficient projects in challenging environments like West Bengal's industrial zones, this article explores how regular HCD maintenance can prevent industrial accidents, offering practical insights and strategies for implementation.</p>
-<img src="${blog1}" alt="HCD Maintenance" style="width:100%;margin:20px 0;"/>
 <h3>What is Human-Centered Design (HCD) in Industrial Contexts?</h3>
 <p>Human-Centered Design is a methodology that integrates user needs, behaviors, and limitations into the design of tools, processes, and environments. In industrial settings, HCD ensures that machinery, workspaces, and protocols are intuitive, reducing the likelihood of human error—a leading cause of accidents. For instance, designing control panels with ergonomic layouts or incorporating fail-safes that account for operator fatigue can prevent mishaps. At YF Enterprise Kolkata, we apply HCD principles in EPC projects, such as renewable energy installations, where user-friendly interfaces help operators manage complex systems safely.</p>
 <p>Yet, HCD isn't a one-time effort. Regular maintenance involves ongoing assessments, updates, and refinements to these designs, ensuring they adapt to evolving conditions like wear and tear or new operational demands. Without this, even well-designed systems can degrade, leading to higher accident rates. Studies show that maintenance-related activities account for a significant portion of industrial incidents, often due to overlooked human factors.</p>

@@ -11,7 +11,7 @@ const Detailblog = () => {
     },[])
   return (
     <div className='w-screen'>
-      <section className="bg-cover bg-center py-30" style={{ backgroundImage: "url('https://html.themexriver.com/industo/images/background/9.jpg')" }}>
+      <section className="bg-cover bg-center py-30 " style={{ backgroundImage: "url('https://html.themexriver.com/industo/images/background/9.jpg')" }}>
         <div className="container mx-auto px-4">
           <ul className="flex gap-2 text-white text-sm">
             <li><Link to="/" className="underline">Home</Link>/</li>

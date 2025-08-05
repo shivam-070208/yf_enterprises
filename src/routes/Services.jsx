@@ -162,7 +162,7 @@ const servicesInfo = [
           ))}
         </Swiper>
       </div>
-        </section>
+    </section>
     </div>
   );
 };

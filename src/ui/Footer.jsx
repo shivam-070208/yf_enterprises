@@ -10,6 +10,7 @@ const Footer = () => {
     { Name: "Home", href: "/" },
     { Name: "About", href: "/about" },
     { Name: "Services", href: "/services" },
+    { Name: "Career", href: "/career" },
     { Name: "Blog", href: "/blog" },
     { Name: "Product", href: "/products" },
     { Name: "Contact Us", href: "/contact" },
@@ -26,12 +27,13 @@ const Footer = () => {
   ];
 
   const WhatWeDoLinks = [
-    { text: "Instrumentation Services", link: "/services" },
-    { text: "C&I Contracting Services", link: "/services" },
-    { text: "Data Center Services", link: "/services" },
-    { text: "Electrical Services", link: "/services" },
-    { text: "Testing and Commissioning", link: "/services" },
-    { text: "Manpower Services", link: "/services" },
+    { text: "Instrumentation Services", link: "/services/details/1" },
+    { text: "C&I Contracting Services", link: "/services/details/2" },
+    { text: "CCTV Sources", link: "/services/details/3" },
+    { text: "EPC Projects", link: "/services/details/4" },
+    { text: "Testing and Commissioning", link: "/services/details/5" },
+    { text: "Manpower Services", link: "/services/details/6" },
+    { text: "HCD Services", link: "/services/details/7" },
   ];
 
   // A new array that combines quick links and product links for the "Useful Links" section

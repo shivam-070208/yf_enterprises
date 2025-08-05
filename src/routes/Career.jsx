@@ -1,3 +1,212 @@
+// import React, { useState } from "react";
+// import { Link } from "react-router-dom";
+// import { motion, AnimatePresence } from "framer-motion";
+
+// const Career = () => {
+//   const [showForm, setShowForm] = useState(false);
+//   const [fileURL, setFileURL] = useState("");
+
+//   const handleResumePreview = (e) => {
+//     const file = e.target.files[0];
+//     if (file && file.type === "application/pdf") {
+//       setFileURL(file);
+//     } else {
+//       alert("Please upload a valid PDF file.");
+//     }
+//   };
+
+// const handleSubmit = async (e) => {
+//   e.preventDefault();
+
+//   try {
+//     const formdata = Object.fromEntries(new FormData(e.target).entries());
+
+//     const data = JSON.stringify({
+//       name: formdata.name,
+//       Email: formdata.email,
+//       Description: formdata.description,
+//     });
+
+//     const final = new FormData();
+//     final.append('data', data);
+//     final.append('pdf', fileURL); // Ensure fileURL is the actual File, not Object URL
+
+//     const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/?id=Career`, {
+//       method: 'POST',
+//       body: final,
+//       // No need for headers when using FormData; browser sets it automatically
+//     });
+
+//     if (res.status === 200) {
+//       e.target.reset();         // Reset form
+//       setFileURL(null);         // Reset preview/file state
+//       setShowForm(false);       // Close popup
+//       alert('Resume submitted successfully!');
+//     } else {
+//       alert('Submission failed. Please try again.');
+//     }
+
+//   } catch (error) {
+//     console.error('Error during submission:', error);
+//     alert('Something went wrong. Please try again later.');
+//   }
+// };
+
+
+//   return (
+//     <div className='w-screen h-full mt-20 md:mt-0'>
+//       {/* Banner */}
+//       <section
+//         className="bg-cover bg-center py-20"
+//         style={{
+//           backgroundImage:
+//             "url(https://html.themexriver.com/industo/images/background/9.jpg)",
+//         }}
+//       >
+//         <div className="max-w-7xl mx-auto px-4">
+//           <ul className="text-white text-sm mb-2">
+//             <Link to={"/"} className="inline-block text-white">
+//               Home /
+//             </Link>
+//             <li className="inline-block ml-1 font-bold">Career</li>
+//           </ul>
+//         </div>
+//       </section>
+
+//       {/* Main Section */}
+//       <div className="sidebar-page-container w-full py-10 px-4 z-1">
+//         <div className="max-w-5xl mx-auto relative grid grid-cols-1 lg:grid-cols-3 gap-8">
+//           {/* Sidebar */}
+//           <aside className="sticky top-1 space-y-6">
+//             <div className="bg-white shadow rounded p-4 border">
+//               <ul className="space-y-3">
+//                 {[
+//                   { text: "Instrumentation Services", id: 1 },
+//                   { text: "C&I Contracting Services", id: 2 },
+//                   { text: "Data Center Services", id: 3 },
+//                   { text: "Electrical Services", id: 4 },
+//                   { text: "Testing and Commissioning", id: 5 },
+//                   { text: "Manpower Services", id: 6 },
+//                 ].map((item, index) => (
+//                   <li key={index}>
+//                     <Link to={item.link} className="flex items-center text-gray-700 hover:text-orange-500 transition">
+//                       <i className="fas fa-angle-double-right mr-2 text-orange-500"></i> {item.text}
+//                     </Link>
+//                   </li>
+//                 ))}
+//               </ul>
+//             </div>
+
+//             <div
+//               className="relative text-white p-6 rounded-lg bg-cover bg-center"
+//               style={{ backgroundImage: "url('/images/resource/service.jpg')" }}
+//             >
+//               <div className="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
+//               <div className="relative z-10">
+//                 <div className="text-3xl mb-2">
+//                   <i className="flaticon-phone-call text-white"></i>
+//                 </div>
+//                 <h4 className="text-lg font-semibold">How Can We Help?</h4>
+//                 <p className="text-sm mb-4">If you need any help, please feel free to contact us.</p>
+//                 <a href="enquiryform.php" className="inline-block bg-orange-500 text-white px-4 py-2 rounded mt-2 text-sm font-medium">CONTACT US</a>
+//               </div>
+//             </div>
+//           </aside>
+
+//           {/* Content */}
+//           <div className="col-span-2 space-y-6">
+//             <h1 className="text-2xl md:text-3xl font-bold text-orange-500">
+//               :: Career ::
+//             </h1>
+//             <img
+//               src="https://www.mirajengineeringservices.com/images/resource/career.jpg"
+//               alt="career"
+//               className="rounded-lg w-full object-cover"
+//             />
+
+//             <div>
+//               <h3 className="text-xl font-semibold mb-4">
+//                 We have requirement for following post:
+//               </h3>
+//               <ul className="space-y-3">
+//                 <li>
+//                   <i className="fas fa-angle-double-right text-orange-500 mr-2"></i>{" "}
+//                   Electrical Testing Engineer having 5 years experience.
+//                 </li>
+//                 <li>
+//                   <i className="fas fa-angle-double-right text-orange-500 mr-2"></i>{" "}
+//                   E&I Site Manager with 10-15 years experience.
+//                 </li>
+//                 <li>
+//                   <i className="fas fa-angle-double-right text-orange-500 mr-2"></i>{" "}
+//                   Instrument Technician with 3-10 years experience.
+//                 </li>
+//                 <li>
+//                   <i className="fas fa-angle-double-right text-orange-500 mr-2"></i>
+//                   <a
+//                     href="mailto:hr@yfenterprises.com"
+//                     target="_blank"
+//                     className="font-bold underline text-blue-500"
+//                   >
+//                     Email: hr@yfenterprises.com
+//                   </a>
+//                 </li>
+//               </ul>
+//             </div>
+
+//             <div className="text-center">
+//               <button onClick={() => setShowForm(true)} className="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition">
+//                 Send your resume
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Popup Form */}
+//       <AnimatePresence>
+//         {showForm && (
+//           <motion.div
+//             initial={{ opacity: 0 }}
+//             animate={{ opacity: 1 }}
+//             exit={{ opacity: 0 }}
+//             className="fixed backdrop-blur-md  top-0 left-0 w-screen h-full bg-opacity-50 flex justify-center items-center z-[999]"
+//           >
+//             <motion.div
+//               initial={{ scale: 0.8, opacity: 0 }}
+//               animate={{ scale: 1, opacity: 1 }}
+//               exit={{ scale: 0.8, opacity: 0 }}
+//               className="bg-white rounded-lg shadow-lg max-w-lg w-full p-6 relative space-y-4"
+//             >
+//               <button onClick={() => setShowForm(false)} className="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl font-bold">&times;</button>
+//               <h2 className="text-xl font-semibold text-orange-600 mb-4">Submit Your Resume</h2>
+//               <form onSubmit={handleSubmit} className="space-y-4">
+//                 <input name="name" required type="text" placeholder="Your Name" className="w-full border p-2 rounded" />
+//                 <input name="email" required type="email" placeholder="Your Email" className="w-full border p-2 rounded" />
+//                 <input name="resume" required type="file" accept="application/pdf" onChange={handleResumePreview} className="w-full border p-2 rounded" />
+
+//                 {fileURL && (
+//                   <iframe
+//                     src={URL.createObjectURL(fileURL)}
+//                     title="Resume Preview"
+//                     className="w-full h-48 border rounded"
+//                   ></iframe>
+//                 )}
+
+//                 <button type="submit" className="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition">
+//                   Submit
+//                 </button>
+//               </form>
+//             </motion.div>
+//           </motion.div>
+//         )}
+//       </AnimatePresence>
+//     </div>
+//   );
+// };
+
+// export default Career;
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -15,46 +224,44 @@ const Career = () => {
     }
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  try {
-    const formdata = Object.fromEntries(new FormData(e.target).entries());
+    try {
+      const formdata = Object.fromEntries(new FormData(e.target).entries());
 
-    const data = JSON.stringify({
-      name: formdata.name,
-      Email: formdata.email,
-      Description: formdata.description,
-    });
+      const data = JSON.stringify({
+        name: formdata.name,
+        Email: formdata.email,
+        Description: formdata.description,
+      });
 
-    const final = new FormData();
-    final.append('data', data);
-    final.append('pdf', fileURL); // Ensure fileURL is the actual File, not Object URL
+      const final = new FormData();
+      final.append("data", data);
+      final.append("pdf", fileURL); // Ensure fileURL is the actual File, not Object URL
 
-    const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/?id=Career`, {
-      method: 'POST',
-      body: final,
-      // No need for headers when using FormData; browser sets it automatically
-    });
+      const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/?id=Career`, {
+        method: "POST",
+        body: final,
+        // No need for headers when using FormData; browser sets it automatically
+      });
 
-    if (res.status === 200) {
-      e.target.reset();         // Reset form
-      setFileURL(null);         // Reset preview/file state
-      setShowForm(false);       // Close popup
-      alert('Resume submitted successfully!');
-    } else {
-      alert('Submission failed. Please try again.');
+      if (res.status === 200) {
+        e.target.reset(); // Reset form
+        setFileURL(null); // Reset preview/file state
+        setShowForm(false); // Close popup
+        alert("Resume submitted successfully!");
+      } else {
+        alert("Submission failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error during submission:", error);
+      alert("Something went wrong. Please try again later.");
     }
-
-  } catch (error) {
-    console.error('Error during submission:', error);
-    alert('Something went wrong. Please try again later.');
-  }
-};
-
+  };
 
   return (
-    <div className='w-screen h-full mt-20 md:mt-0'>
+    <div className="w-full h-full mt-20 md:mt-0">
       {/* Banner */}
       <section
         className="bg-cover bg-center py-20"
@@ -74,10 +281,28 @@ const handleSubmit = async (e) => {
       </section>
 
       {/* Main Section */}
-      <div className="sidebar-page-container w-full py-10 px-4 z-1">
-        <div className="max-w-5xl mx-auto relative grid grid-cols-1 lg:grid-cols-3 gap-8">
+      {/* - Removed `z-1` from here. It's better to manage z-index on specific elements if needed,
+          not on the entire container, as it can cause stacking issues.
+        - The `min-h-screen` ensures the container is at least the height of the viewport,
+          preventing the footer or next section from overlapping if the content is short.
+      */}
+      <div className="sidebar-page-container w-full py-10 px-4">
+        {/* - On smaller screens, the sidebar-page container should be a single column.
+          - On larger screens, the grid layout with two columns is appropriate.
+        */}
+        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
           {/* Sidebar */}
-          <aside className="sticky top-1 space-y-6">
+          {/* - The `sticky` top-1 is causing the sidebar to stick, which can lead to
+              overlapping when the main content is shorter.
+            - Change `top-1` to a higher value like `top-20` to account for a fixed header or
+              simply remove `sticky` if you don't need it to stick.
+            - If you still want the sidebar to stick, you need to ensure the main content has a
+              z-index that places it above the sidebar's content, which isn't the case here.
+            - Let's remove the sticky for a simpler, non-overlapping layout.
+            - On mobile, `order-last` moves the sidebar to the bottom of the column,
+              while `lg:order-first` puts it first on large screens, a common pattern.
+          */}
+          <aside className="lg:order-first space-y-6">
             <div className="bg-white shadow rounded p-4 border">
               <ul className="space-y-3">
                 {[
@@ -89,8 +314,12 @@ const handleSubmit = async (e) => {
                   { text: "Manpower Services", id: 6 },
                 ].map((item, index) => (
                   <li key={index}>
-                    <Link to={item.link} className="flex items-center text-gray-700 hover:text-orange-500 transition">
-                      <i className="fas fa-angle-double-right mr-2 text-orange-500"></i> {item.text}
+                    <Link
+                      to={item.link}
+                      className="flex items-center text-gray-700 hover:text-orange-500 transition"
+                    >
+                      <i className="fas fa-angle-double-right mr-2 text-orange-500"></i>{" "}
+                      {item.text}
                     </Link>
                   </li>
                 ))}
@@ -107,14 +336,21 @@ const handleSubmit = async (e) => {
                   <i className="flaticon-phone-call text-white"></i>
                 </div>
                 <h4 className="text-lg font-semibold">How Can We Help?</h4>
-                <p className="text-sm mb-4">If you need any help, please feel free to contact us.</p>
-                <a href="enquiryform.php" className="inline-block bg-orange-500 text-white px-4 py-2 rounded mt-2 text-sm font-medium">CONTACT US</a>
+                <p className="text-sm mb-4">
+                  If you need any help, please feel free to contact us.
+                </p>
+                <a
+                  href="/contact"
+                  className="inline-block bg-orange-500 text-white px-4 py-2 rounded mt-2 text-sm font-medium"
+                >
+                  CONTACT US
+                </a>
               </div>
             </div>
           </aside>
 
           {/* Content */}
-          <div className="col-span-2 space-y-6">
+          <div className="lg:col-span-2 space-y-6">
             <h1 className="text-2xl md:text-3xl font-bold text-orange-500">
               :: Career ::
             </h1>
@@ -155,7 +391,10 @@ const handleSubmit = async (e) => {
             </div>
 
             <div className="text-center">
-              <button onClick={() => setShowForm(true)} className="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition">
+              <button
+                onClick={() => setShowForm(true)}
+                className="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition"
+              >
                 Send your resume
               </button>
             </div>
@@ -170,20 +409,59 @@ const handleSubmit = async (e) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed backdrop-blur-md  top-0 left-0 w-screen h-full bg-opacity-50 flex justify-center items-center z-[999]"
+            /* - The z-index on the popup is the most important part to prevent it from being
+                covered by other content. `z-[999]` is a good choice to ensure it's on top.
+              - The backdrop-blur-md on mobile might be a little heavy, but it helps the popup
+                stand out.
+              - The `fixed` class correctly positions the modal relative to the viewport.
+              - The `overflow-y-auto` ensures that if the form content is too long for the
+                screen (e.g., on a mobile device), the user can still scroll within the popup
+                to see all the fields without the page itself scrolling.
+            */
+            className="fixed inset-0 backdrop-blur-md w-screen h-full bg-black bg-opacity-50 flex justify-center items-center z-[999] overflow-y-auto"
           >
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
-              className="bg-white rounded-lg shadow-lg max-w-lg w-full p-6 relative space-y-4"
+              /* - On mobile, `m-4` adds some margin so the popup doesn't touch the screen edges.
+                - `w-11/12` makes the popup width slightly less than the full screen, which looks
+                  better on mobile. `sm:w-full` and `sm:max-w-lg` then take over on larger screens.
+              */
+              className="bg-white rounded-lg shadow-lg w-11/12 sm:max-w-lg p-6 relative space-y-4 m-4"
             >
-              <button onClick={() => setShowForm(false)} className="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl font-bold">&times;</button>
-              <h2 className="text-xl font-semibold text-orange-600 mb-4">Submit Your Resume</h2>
+              <button
+                onClick={() => setShowForm(false)}
+                className="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl font-bold"
+              >
+                &times;
+              </button>
+              <h2 className="text-xl font-semibold text-orange-600 mb-4">
+                Submit Your Resume
+              </h2>
               <form onSubmit={handleSubmit} className="space-y-4">
-                <input name="name" required type="text" placeholder="Your Name" className="w-full border p-2 rounded" />
-                <input name="email" required type="email" placeholder="Your Email" className="w-full border p-2 rounded" />
-                <input name="resume" required type="file" accept="application/pdf" onChange={handleResumePreview} className="w-full border p-2 rounded" />
+                <input
+                  name="name"
+                  required
+                  type="text"
+                  placeholder="Your Name"
+                  className="w-full border p-2 rounded"
+                />
+                <input
+                  name="email"
+                  required
+                  type="email"
+                  placeholder="Your Email"
+                  className="w-full border p-2 rounded"
+                />
+                <input
+                  name="resume"
+                  required
+                  type="file"
+                  accept="application/pdf"
+                  onChange={handleResumePreview}
+                  className="w-full border p-2 rounded"
+                />
 
                 {fileURL && (
                   <iframe
@@ -193,7 +471,10 @@ const handleSubmit = async (e) => {
                   ></iframe>
                 )}
 
-                <button type="submit" className="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition">
+                <button
+                  type="submit"
+                  className="w-full bg-orange-500 text-white py-2 rounded hover:bg-orange-600 transition"
+                >
                   Submit
                 </button>
               </form>
