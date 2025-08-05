@@ -114,7 +114,7 @@ const ProductDetails = () => {
         {/* Product Description */}
         <div className="mt-12 bg-white rounded-lg shadow-lg p-8">
           <h3 className="text-2xl font-bold mb-4 text-gray-800">Product Description</h3>
-          <p className="text-gray-700 font-semibold leading-relaxed text-lg">
+          <p className="text-gray-700 font-thin leading-relaxed text-lg">
             {product.description} This high-quality flameproof equipment is designed to meet the strictest safety standards for hazardous environments. 
             Built with premium materials and advanced engineering, it ensures reliable operation in Zone 1 & 2 classified areas with protection against various gas groups.
           </p>

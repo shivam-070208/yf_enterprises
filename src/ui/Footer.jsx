@@ -177,7 +177,7 @@ const Footer = () => {
                 </svg>
                 <div className="flex-1">
                   <h5 className="font-semibold text-white">Phone</h5>
-                  <a href="tel:+919748413152" className="hover:text-white transition-colors">+91 9748413152</a> / <a href="tel:+918240505520" className="hover:text-white transition-colors">+91 8240505520</a>
+                  <a href="tel:+919748413152" className="hover:text-white transition-colors">+91 9748413152</a> 
                 </div>
               </li>
               <li className="flex items-start gap-3">
