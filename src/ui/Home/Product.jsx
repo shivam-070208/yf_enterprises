@@ -3,11 +3,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import { FaStar, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import productImages from '../../assets/productImage';
-
 
 const products = [
    {
@@ -196,36 +195,37 @@ const ProductCarousel = () => {
   return (
     <section className="bg-[#efefef9f] py-16">
       <div className="text-center mb-12">
-        <div className="text-orange-600 inline-block font-bold uppercase relative beforetext md:before:content-['Products'] mb-10">Popular Products</div>
-        <h2 className="text-4xl font-bold">We offer the highest quality <br /> industrial products.</h2>
+        <div className="text-orange-600 inline-block font-bold uppercase relative beforetext md:before:content-['Products'] mb-10">
+          Popular Products
+        </div>
+        <h2 className="text-4xl font-bold">
+          We offer the highest quality <br /> industrial products.
+        </h2>
         <div className="w-16 h-1 bg-orange-500 mx-auto mt-2"></div>
       </div>
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4 relative">
         <Swiper
-          modules={[ Pagination, Autoplay]}
+          modules={[Pagination, Autoplay, Navigation]}
           slidesPerView={1}
           spaceBetween={30}
           loop
           autoplay={{ delay: 4000 }}
           pagination={{ clickable: true }}
-        
+          navigation
           breakpoints={{
             768: { slidesPerView: 3 },
             1024: { slidesPerView: 4 },
           }}
-        
         >
           {products.map((product, i) => (
             <SwiperSlide key={i}>
               <div className="rounded-xl group relative py-24 flex flex-col items-center text-center transition h-full">
-                {/* 🟠 Product Image on Top */}
                 <div className='w-40 h-45 group-hover:opacity-100 origin-center scale-0 group-hover:scale-100 opacity-0 transition-all duration-400 absolute  -translate-y-1/2 rounded-full bg-orange-500' />
                 <img
                   src={product.image}
                   alt={product.name}
                   className="productimg shadow-lg  w-40 h-40  absolute -translate-y-1/2 rounded-full object-cover z-50"
                 />
-                {/* 🔶 Animated Card */}
                 <div className="bg-white h-fit p-6 flex flex-col items-center rounded pt-28 pb-6 flex-1 w-full relative z-10">
                   <div className='absolute origin-center rounded-lg opacity-0 group-hover:opacity-100  w-full scale-x-0 group-hover:scale-x-100 duration-400 transition-all h-full bg-black top-0 -z-1' />
                   <h4 className="text-sm font-semibold mb-2 z-20 group-hover:text-white">{product.name}</h4>
