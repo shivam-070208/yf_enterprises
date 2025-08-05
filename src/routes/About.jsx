@@ -12,8 +12,31 @@ import {ModernLogoCarousel} from '../ui/Home/Clients';
 
 const AboutUs = () => {
 
-    const prevRef = useRef(null);
-    const nextRef = useRef(null);
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+  const swiperRef = useRef(null);
+  const [currentSlide, setCurrentSlide] = useState(1);
+
+  // Handle swiper navigation and current slide index
+  useEffect(() => {
+    const swiperInstance = swiperRef.current?.swiper;
+
+    if (swiperInstance && prevRef.current && nextRef.current) {
+      swiperInstance.params.navigation.prevEl = prevRef.current;
+      swiperInstance.params.navigation.nextEl = nextRef.current;
+
+      swiperInstance.navigation.destroy();
+      swiperInstance.navigation.init();
+      swiperInstance.navigation.update();
+
+      swiperInstance.on('slideChange', () => {
+        setCurrentSlide(swiperInstance.realIndex + 1);
+      });
+
+      // Set initial slide
+      setCurrentSlide(swiperInstance.realIndex + 1);
+    }
+  }, []);
 
   const textTestimonial = [
     {
@@ -220,9 +243,9 @@ const AboutUs = () => {
         logos={ChannelImage} 
         bgColor="bg-gradient-to-br from-white to-gray-50"
       />
-
       {/* Gallery Section */}
-     <section className="py-12 bg-white">
+
+  <section className="py-12 bg-white p-5">
       <div className="md:max-w-[90vw] max-w-6xl mx-auto px-4 text-center relative">
         <div className="mb-6">
           <div className="text-orange-600 font-bold">Gallery</div>
@@ -231,30 +254,30 @@ const AboutUs = () => {
 
         {/* Navigation Buttons */}
         <div className="absolute top-1/2 -left-5 z-10">
-          <button ref={prevRef} className="bg-white p-2 rounded-full shadow hover:bg-orange-500 transition">
+          <button
+            ref={prevRef}
+            className="bg-white p-2 rounded-full shadow hover:bg-orange-500 transition"
+          >
             <FaArrowRight className="rotate-180 text-black" />
           </button>
         </div>
         <div className="absolute top-1/2 -right-5 z-10">
-          <button ref={nextRef} className="bg-white p-2 rounded-full shadow hover:bg-orange-500 transition">
+          <button
+            ref={nextRef}
+            className="bg-white p-2 rounded-full shadow hover:bg-orange-500 transition"
+          >
             <FaArrowRight className="text-black" />
           </button>
         </div>
 
+        {/* Swiper */}
         <Swiper
           modules={[Autoplay, Navigation]}
+          ref={swiperRef}
           slidesPerView={1}
           spaceBetween={30}
           grabCursor
           autoplay
-          navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
-          }}
-          onBeforeInit={(swiper) => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-          }}
           breakpoints={{
             640: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
@@ -263,11 +286,22 @@ const AboutUs = () => {
           {galleryImages.map((img, i) => (
             <SwiperSlide key={i}>
               <div className="bg-white rounded-sm shadow-lg grid grid-cols-1 md:flex items-center justify-center w-full h-[300px] md:h-[300px] mx-auto">
-                <img src={img} alt={`gallery-${i}`} className="object-cover rounded-xl w-full h-full" />
+                <img
+                  src={img}
+                  alt={`gallery-${i}`}
+                  className="object-cover rounded-xl w-full h-full"
+                />
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
+
+        {/* Progress Indicator */}
+        <div className="mt-6 text-sm text-gray-500">
+          <span>
+            Slide {currentSlide} of {galleryImages.length}
+          </span>
+        </div>
       </div>
     </section>
     </div>
