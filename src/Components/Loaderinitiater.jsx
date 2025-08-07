@@ -13,7 +13,7 @@ const LoaderInitiater = ({ children }) => {
 
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // simulate loading time
+    }, 1500); // simulate loading time
 
     return () => clearTimeout(timer);
   }, [location.pathname]);
