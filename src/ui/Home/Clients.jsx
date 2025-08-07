@@ -102,7 +102,7 @@ export const ModernLogoCarousel = ({ title, subtitle, logos, bgColor = "bg-white
                   <div className="group relative">
                     <div className="bg-white rounded-xl border-2 border-gray-100 p-6 h-32 flex items-center justify-center transition-all duration-300 hover:border-orange-200 hover:shadow-lg hover:-translate-y-1">
                       <img
-                        src={logo || "https://placehold.co/100x60/f3f4f6/9ca3af?text=Logo"}
+                        src={logo}
                         alt={`Logo ${index + 1}`}
                         className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
                         onError={(e) => {

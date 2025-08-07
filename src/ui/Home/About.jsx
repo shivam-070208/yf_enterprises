@@ -2,7 +2,7 @@ import React from 'react';
 import { FaPhoneAlt, FaBolt,  FaRobot, FaToolbox } from 'react-icons/fa';
 import Button from '../Button';
 import { FaComputer } from 'react-icons/fa6';
-import { about } from '../../assets';
+import { about, aboutcircle } from '../../assets';
 
 
 const AboutSection = () => {
@@ -76,7 +76,7 @@ const AboutSection = () => {
               className="rounded-2xl object-cover w-full"
             />
             <img
-              src="https://html.themexriver.com/industo/images/resource/about-circle.png"
+              src={aboutcircle}
               alt="Gear Decoration"
               className="absolute -top-4 shadow-lg rounded-full -left-5 w-50 animate-spin origin-center [animation-duration:10s]"
             />

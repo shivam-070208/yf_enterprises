@@ -2,6 +2,7 @@ import Allblogs from './Blog';
 import logo from './logo.jpg';
 import { flameproofProducts, productCategories, getFeaturedProducts, getProductsByCategory, getAllProducts, searchProducts } from './products';
 import Wallpattern from './patternwall.jpg'
+import aboutcircle from './about-circle.png'
 
 import gallery1 from './Gallery/1.jpg';
 import gallery2 from './Gallery/2.jpg';
@@ -81,5 +82,7 @@ export {
     whiteLogo,
     Pipe,
     Giflogo,
-    about
+    about,
+    aboutcircle
+
 }

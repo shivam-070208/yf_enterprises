@@ -1,16 +1,16 @@
-import Beliga from './Beliga.webp';
-import BharatFlameProof from './BharatFlameProof.webp';
-import BharatPetrolium from './BharatPetrolium.webp';
-import Emerson from './Emerson.webp';
-import EndressHauser from './Endress Hauser.webp';
-import Exide from './Exide.webp';
-import Siemens from './Siemens.webp';
-import Honeywell from './Honeywell.webp';
-import Hp from './Hp.webp';
-import IOCL from './IOCL.webp';
-import tatasteel from './tatasteel.webp';
-import yokogawa from './yokogawa-seeklogo.webp';
-import Hitachi from './Hitachi.webp';
+import Beliga from './Beliga.jpg';
+import BharatFlameProof from './BharatFlameProof.jpg';
+import BharatPetrolium from './BharatPetrolium.jpg';
+import Emerson from './Emerson.jpg';
+import EndressHauser from './Endress Hauser.jpg';
+import Exide from './Exide.jpg';
+import Siemens from './Siemens.jpg';
+import Honeywell from './Honeywell.jpg';
+import Hp from './Hp.jpg';
+import IOCL from './IOCL.jpg';
+import tatasteel from './tatasteel.jpg';
+import yokogawa from './yokogawa-seeklogo.jpg';
+import Hitachi from './Hitachi.jpg';
 export { Home } from '../../routes';
 
 export const ClientsImage = [
