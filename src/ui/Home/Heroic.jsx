@@ -64,9 +64,27 @@ const HeroSection = () => {
         pagination={{
           clickable: true,
           renderBullet: function (index, className) {
-            return `<span class='${className}' style='background-color: ${
-              index === currentslide ? "#FF8C00" : ""
-            }; width: 12px; height: 12px; margin: 8px 5px; border-radius: 50%;'></span>`;
+            const bulletStyle = `
+              background-color: ${index === currentslide ? "#FF8C00" : "#FF8C00"};
+              width: 12px;
+              height: 12px;
+              margin: 8px 5px;
+              border-radius: 50%;
+              display: inline-block;
+            `;
+            
+            const mediaQuery = `
+              @media (max-width: 768px) {
+                .custom-swiper-pagination {
+                  display: none;
+                }
+              }
+            `;
+
+            return `
+              <style>${mediaQuery}</style>
+              <span class='${className}' style='${bulletStyle}'></span>
+            `;
           },
           el: '.custom-swiper-pagination',
         }}
