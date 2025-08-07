@@ -30,7 +30,7 @@ const Primarynav = () => {
   return (
     <div className="w-screen flex  justify-center gap-x-80 gap-y-10 px-5 py-3 flex-wrap">
       {/* Logo */}
-      <div className="h-[30%] ">
+       <div className="h-[30%] ">
         <img src={logo} className="w-55 h-20" alt="logo" />
       </div>
 
