@@ -133,6 +133,7 @@ const HeroSection = () => {
               className="w-120 py-9 group relative text-white cursor-pointer pointer-events-auto bg-black px-6 rounded overflow-hidden"
             >
               <img
+              alt="imageBackground"
                 src="https://html.themexriver.com/industo/images/gallery/1.jpg"
                 className="absolute top-0 left-0 blur-md w-full transition-all duration-500 h-full object-cover z-0"
               />
