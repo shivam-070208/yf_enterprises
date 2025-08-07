@@ -1,7 +1,7 @@
 import Allblogs from './Blog';
-import logo from './logo.webp';
+import logo from './logo.jpg';
 import { flameproofProducts, productCategories, getFeaturedProducts, getProductsByCategory, getAllProducts, searchProducts } from './products';
-import Wallpattern from './patternwall.webp'
+import Wallpattern from './patternwall.jpg'
 
 import gallery1 from './Gallery/1.jpg';
 import gallery2 from './Gallery/2.jpg';
@@ -48,15 +48,15 @@ export const galleryImages = [gallery1, gallery2, gallery3, gallery4, gallery5, 
 
 
 
-import image1 from './image1.webp';
-import image3 from './image3.webp';
-import image2 from './image2.webp';
-import image4 from './image4.webp';
-import image5 from './image5.webp';
-import image6 from './image6.webp';
-import image7 from './image7.webp';
-import profile from './profileicon.webp';
-import whiteLogo from './whitelogo.webp';
+import image1 from './image1.jpg';
+import image2 from './image2.jpg';
+import image3 from './image3.jpg';
+import image4 from './image4.jpg';
+import image5 from './image5.jpg';
+import image6 from './image6.jpg';
+import image7 from './image7.jpg';
+import profile from './profileicon.jpg';
+import whiteLogo from './whitelogo.jpg';
 import Pipe from './pipe.jpg'
 import Giflogo from './YfEnterprises.gif';
 import about from './about.jpg'
