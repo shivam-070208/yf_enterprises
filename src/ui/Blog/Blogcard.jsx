@@ -9,17 +9,11 @@ import { useNavigate } from 'react-router-dom'
 
 const Blogcard = ({ item,index }) => {
     const navigate = useNavigate()
-    let imgSrc = item.coverImage || "https://html.themexriver.com/industo/images/resource/news-15.jpg";
-    if (index === 0) {
-        imgSrc = blog1;
-    } else if (index === 1) {
-        imgSrc = blog2;
-    }
     return (
         <motion.div layoutId={item.title+index} className="w-full max-w-xl mx-auto bg-white   border border-neutral-200 overflow-hidden transition-shadow  cursor-pointer">
             <div className="overflow-hidden h-64">
                 <img
-                    src={imgSrc}
+                    src={item.coverImage}
                     alt={item.title}
                     className="w-full h-full object-cover hover:saturate-200 transform hover:scale-105 transition-transform duration-500"
                 />

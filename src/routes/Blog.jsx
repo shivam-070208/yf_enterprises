@@ -43,12 +43,6 @@ const Blog = () => {
               {latestBlogs.map((blog, index) => {
                 const originalIndex = Allblogs.findIndex(b => b.title === blog.title);
                 // Use blog1.jpg and blog2.jpg for index 0 and 1
-                let imgSrc = blog.coverImage;
-                if (index === 0) {
-                  imgSrc = blog1;
-                } else if (index === 1) {
-                  imgSrc = blog2;
-                }
                 return (
                   <div 
                     key={index} 
@@ -56,7 +50,7 @@ const Blog = () => {
                     onClick={() => navigate(`/blog/show?id=${originalIndex}`)}
                   >
                     <img 
-                      src={imgSrc} 
+                      src={blog.coverImage} 
                       alt={blog.title}
                       className='w-16 h-16 object-cover rounded'
                     />
