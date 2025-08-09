@@ -248,65 +248,65 @@ const AboutUs = () => {
       />
       {/* Gallery Section */}
 
-  <section className="py-12 bg-white p-5">
-      <div className="md:max-w-[90vw] max-w-6xl mx-auto px-4 text-center relative">
-        <div className="mb-6">
-          <div className="text-orange-600 font-bold">Gallery</div>
-          <h2 className="text-3xl font-bold capitalize">Few Photos of Our Workplace</h2>
-        </div>
+    <section className="py-12 bg-white p-5">
+        <div className="md:max-w-[90vw] max-w-6xl mx-auto px-4 text-center relative">
+          <div className="mb-6">
+            <div className="text-orange-600 font-bold">Gallery</div>
+            <h2 className="text-3xl font-bold capitalize">Few Photos of Our Workplace</h2>
+          </div>
 
-        {/* Navigation Buttons */}
-        <div className="absolute top-1/2 -left-5 z-10">
-          <button
-            ref={prevRef}
-            className="bg-white p-2 rounded-full shadow hover:bg-orange-500 transition"
+          {/* Navigation Buttons */}
+          <div className="absolute top-1/2 -left-5 z-10">
+            <button
+              ref={prevRef}
+              className="bg-white p-2 rounded-full shadow hover:bg-orange-500 transition"
+            >
+              <FaArrowLeft className="text-xl text-black" />
+            </button>
+          </div>
+          <div className="absolute top-1/2 -right-5 z-10">
+            <button
+              ref={nextRef}
+              className="bg-white p-2 text-xl rounded-full shadow hover:bg-orange-500 transition"
+            >
+              <FaArrowRight className="text-black" />
+            </button>
+          </div>
+
+          {/* Swiper */}
+          <Swiper
+            modules={[Autoplay, Navigation]}
+            ref={swiperRef}
+            slidesPerView={1}
+            spaceBetween={30}
+            grabCursor
+            autoplay
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
           >
-            <FaArrowRight className="rotate-180 text-black" />
-          </button>
-        </div>
-        <div className="absolute top-1/2 -right-5 z-10">
-          <button
-            ref={nextRef}
-            className="bg-white p-2 rounded-full shadow hover:bg-orange-500 transition"
-          >
-            <FaArrowRight className="text-black" />
-          </button>
-        </div>
+            {galleryImages.map((img, i) => (
+              <SwiperSlide key={i}>
+                <div className="bg-white rounded-md shadow-lg grid px-5 grid-cols-1 md:flex items-center justify-center w-full h-[300px] md:h-[250px] mx-auto">
+                  <img
+                    src={img}
+                    alt={`gallery-${i}`}
+                    className="object-cover rounded-xl"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-        {/* Swiper */}
-        <Swiper
-          modules={[Autoplay, Navigation]}
-          ref={swiperRef}
-          slidesPerView={1}
-          spaceBetween={30}
-          grabCursor
-          autoplay
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-        >
-          {galleryImages.map((img, i) => (
-            <SwiperSlide key={i}>
-              <div className="bg-white rounded-md shadow-lg grid grid-cols-1 md:flex items-center justify-center w-full h-[300px] md:h-[250px] mx-auto">
-                <img
-                  src={img}
-                  alt={`gallery-${i}`}
-                  className="object-cover rounded-xl"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
-        {/* Progress Indicator */}
-        <div className="mt-6 text-sm text-gray-500">
-          <span>
-            Slide {currentSlide} of {galleryImages.length}
-          </span>
+          {/* Progress Indicator */}
+          <div className="mt-6 text-sm text-gray-500">
+            <span>
+              Slide {currentSlide} of {galleryImages.length}
+            </span>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </div>
   );
 };
