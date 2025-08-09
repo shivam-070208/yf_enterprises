@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { logo, whiteLogo } from "../assets";
 
 const Secondarynav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const NavItems = [
     { Name: "Home", href: "/" },
-    { Name: "About", href: "/about" },
+    { Name: "About Us", href: "/about" },
     { Name: "Services", href: "/services" },
     { Name: "Products", href: "/products" },
     { Name: "Blog", href: "/blog" },
@@ -27,7 +28,7 @@ const Secondarynav = () => {
           ))}
 
           {/* Menu Button for small screens */}
-          <a href="/contact" className="sm:hidden p-3 bg-orange-500 hover:bg-orange-400 cursor-pointer text-gray-50 rounded-md ">Contact</a>
+          <Link to="/contact" className="sm:hidden p-3 bg-orange-500 hover:bg-orange-400 cursor-pointer text-gray-50 rounded-md ">Enquire Us</Link>
           <button
           name="menu"
 
@@ -46,7 +47,9 @@ const Secondarynav = () => {
         }`}
       >
         <div className="flex justify-between items-center p-4 border-b border-gray-700">
-          <h2 className="text-lg font-bold">Menu</h2>
+          <div className="h-[30%] ">
+                  <img src={whiteLogo} className="w-55 h-20" alt="logo" />
+                </div>
           <button onClick={() => setIsOpen(false)}>
             <FaTimes size={24} />
           </button>

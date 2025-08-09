@@ -6,7 +6,7 @@ const SmallTopNavbar = () => {
        <div className="bg-gray-900 text-white flex flex-col items-center gap-5 px-10 py-2 text-sm md:flex-row md:justify-between md:items-center md:gap-0">
       
       {/* Company Name - Hidden on mobile, visible from md (tablet) upwards */}
-      <div className="font-semibold tracking-wide">
+      <div className="font-semibold tracking-wide md:block hidden">
         YF Enterprises Pvt. Ltd.
       </div>
 

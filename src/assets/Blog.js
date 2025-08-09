@@ -4,7 +4,7 @@ import blog2 from './blog2.jpg';
 const Allblogs = [
   {
     title: "Key Challenges in EPC Project Execution and How to Overcome Them",
-    coverImage: blog1,
+    coverImage: blog2,
     category: "Engineering",
     date: "2024-01-15",
     content: `
@@ -70,7 +70,7 @@ const Allblogs = [
   },
   {
     title: "How Regular HCD Maintenance Can Prevent Industrial Accidents",
-    coverImage: blog2,
+    coverImage: blog1,
     category: "Safety",
     date: "2024-01-10",
     content: `
