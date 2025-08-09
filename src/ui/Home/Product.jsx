@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
-import { FaStar, FaArrowRight } from 'react-icons/fa';
+import { FaStar, FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import productImages from '../../assets/productImage';
 
@@ -193,7 +193,7 @@ const products = [
 
 const ProductCarousel = () => {
   return (
-    <section className="bg-[#efefef9f] py-16">
+    <section className="bg-[#efefef9f] py-16 px-8">
       <div className="text-center mb-12">
         <div className="text-orange-600 inline-block font-bold uppercase relative beforetext md:before:content-['Products'] mb-10">
           Popular Products
@@ -211,7 +211,10 @@ const ProductCarousel = () => {
           loop
           autoplay={{ delay: 4000 }}
           pagination={{ clickable: true }}
-          navigation
+          navigation={{
+            prevEl: '.swiper-button-prev-custom',
+            nextEl: '.swiper-button-next-custom',
+          }}
           breakpoints={{
             768: { slidesPerView: 3 },
             1024: { slidesPerView: 4 },
@@ -273,6 +276,12 @@ const ProductCarousel = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className="swiper-button-prev-custom absolute top-1/2 -left-4 -translate-y-1/2 z-10 bg-orange-500 hover:bg-orange-600 text-white rounded-full p-3 cursor-pointer transition-colors">
+          <FaArrowLeft />
+        </div>
+        <div className="swiper-button-next-custom absolute top-1/2 -right-4 -translate-y-1/2 z-10 bg-orange-500 hover:bg-orange-600 text-white rounded-full p-3 cursor-pointer transition-colors">
+          <FaArrowRight />
+        </div>
       </div>
     </section>
   );

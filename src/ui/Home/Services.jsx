@@ -74,7 +74,7 @@ const ServicesCarousel = () => {
   };
 
   return (
-    <section className="relative pt-20 pb-50 mb-10 px-4 md:px-16 mt-10 backdrop-blur-md">
+    <section className="relative pt-20 pb-15 mb-10 px-4 md:px-16 mt-10 backdrop-blur-md">
       {/* Background overlay */}
       <div
         className="absolute inset-0 bg-cover bg-left"
@@ -88,8 +88,8 @@ const ServicesCarousel = () => {
           <div className="text-orange-600 inline-block font-bold uppercase relative beforetext md:before:content-['Services']">
             Our Awesome Services
           </div>
-          <h2 className="text-5xl font-montserrat font-extrabold mt-5 text-gray-900">
-            Our Awesome Services
+          <h2 className="text-4xl font-montserrat font-bold mt-5 text-gray-900">
+           We provide various engineering <br /> service since 2013
           </h2>
         </div>
 

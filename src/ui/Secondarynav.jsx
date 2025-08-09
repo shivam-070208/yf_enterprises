@@ -20,7 +20,7 @@ const Secondarynav = () => {
     <>
       {/* Main Navbar for large screens */}
       <div className="w-screen absolute  z-50 ">
-        <div className="ml-auto text-xl bg-transparent gap-10 md:w-fit w-full md:text-left md:pr-53 flex sm:-translate-y-12 py-6 text-white font-semibold px-8 secondarynav relative sm:before:-skew-x-[24deg] sm:left-10">
+        <div className="ml-auto text-xl bg-transparent gap-10 md:w-fit w-full md:text-left md:pr-53 flex sm:-translate-y-12 py-3 md:py-6 text-white font-semibold px-8 secondarynav relative sm:before:-skew-x-[24deg] sm:left-10">
           {NavItems.map((item, index) => (
             <Link key={index} className="sm:inline-block hidden" to={item.href}>
               {item.Name}

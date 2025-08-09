@@ -22,7 +22,7 @@ export const ModernLogoCarousel = ({ title, subtitle, logos, bgColor = "bg-white
       if (isLargeScreen) {
         setCurrentIndex((prev) => (prev + 1) % totalSlides);
       } else {
-        scrollRef.current?.scrollBy({ left: 200, behavior: 'smooth' });
+        scrollRef.current?.scrollBy({ left: 400, behavior: 'smooth' });
       }
     }, 3000);
 
@@ -35,7 +35,7 @@ export const ModernLogoCarousel = ({ title, subtitle, logos, bgColor = "bg-white
       const totalSlides = logos.length - (itemsPerView - 1);
       setCurrentIndex((prev) => (prev + 1) % totalSlides);
     } else {
-      scrollRef.current?.scrollBy({ left: 200, behavior: 'smooth' });
+      scrollRef.current?.scrollBy({ left: 400, behavior: 'smooth' });
     }
   };
 
@@ -45,7 +45,7 @@ export const ModernLogoCarousel = ({ title, subtitle, logos, bgColor = "bg-white
       const totalSlides = logos.length - (itemsPerView - 1);
       setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
     } else {
-      scrollRef.current?.scrollBy({ left: -200, behavior: 'smooth' });
+      scrollRef.current?.scrollBy({ left: -400, behavior: 'smooth' });
     }
   };
 
@@ -69,7 +69,7 @@ export const ModernLogoCarousel = ({ title, subtitle, logos, bgColor = "bg-white
           <>
             <button
               onClick={prevSlide}
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-gray-50 border border-gray-200 rounded-full p-2 sm:p-3 shadow-md transition-all duration-200 hover:shadow-xl hover:scale-105"
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white md:block hidden hover:bg-gray-50 border border-gray-200 rounded-full p-2 sm:p-3 shadow-md transition-all duration-200 hover:shadow-xl hover:scale-105"
               aria-label="Previous"
             >
               <svg className="w-4 h-4 sm:w-6 sm:h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,7 +79,7 @@ export const ModernLogoCarousel = ({ title, subtitle, logos, bgColor = "bg-white
 
             <button
               onClick={nextSlide}
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-gray-50 border border-gray-200 rounded-full p-2 sm:p-3 shadow-md transition-all duration-200 hover:shadow-xl hover:scale-105"
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white md:block hidden hover:bg-gray-50 border border-gray-200 rounded-full p-2 sm:p-3 shadow-md transition-all duration-200 hover:shadow-xl hover:scale-105"
               aria-label="Next"
             >
               <svg className="w-4 h-4 sm:w-6 sm:h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
