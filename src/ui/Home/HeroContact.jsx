@@ -8,7 +8,7 @@ import {  Pipe, whiteLogo } from "../../assets";
 const HeroContactSection = () => {
   return (
     <section
-      className="relative bg-cover bg-center mb-20 text-white"
+      className="relative bg-cover bg-center mb-0 text-white"
       style={{
         backgroundImage: `url(${Pipe})`,
       }}

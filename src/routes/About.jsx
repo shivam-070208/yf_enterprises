@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FaIndustry, FaTools, FaGlobe, FaTrophy, FaStar, FaToolbox, FaBolt, FaRobot, FaArrowRight } from 'react-icons/fa';
+import { FaIndustry, FaTools, FaGlobe, FaTrophy, FaStar, FaToolbox, FaBolt, FaRobot, FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
@@ -181,59 +181,62 @@ const AboutUs = () => {
       </section>
 
       {/* Testimonials */}
-       <section className="py-20 bg-gray-100 text-center">
-        <div className="max-w-6xl mx-auto px-4">
-        <div className="mb-10">
-          <div className="text-orange-600 font-bold uppercase">Our Testimonial</div>
-          <h2 className="text-3xl font-bold text-gray-800">Happy Clients Say About Us</h2>
-        </div>
-
-        <Swiper
-          modules={[Navigation, Autoplay, Pagination]}
-          spaceBetween={30}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          className="testimonial-swiper"
-        >
-          {textTestimonial.map((item, index) => (
-            <SwiperSlide key={index}>
-              <div className="bg-white p-6 rounded-xl shadow-md text-left h-full flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center gap-4 mb-4">
-                    <img src={profile} alt="client" className="w-12 h-12 rounded-full" />
-                    <div>
-                      <h4 className="text-md font-semibold text-gray-700">{item.name}</h4>
-                      <p className="text-sm text-gray-500">Client</p>
+       <section className="py-10 px-10 bg-gray-100 text-center">
+        <div className="relative p-10">
+          <Swiper
+            modules={[Navigation, Autoplay, Pagination]}
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation={{
+              prevEl: '.testimonial-prev',
+              nextEl: '.testimonial-next',
+            }}
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            className="testimonial-swiper"
+          >
+            {textTestimonial.map((item, index) => (
+              <SwiperSlide key={index}>
+                <div className="bg-white p-6 rounded-xl shadow-md text-left h-full flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-4 mb-4">
+                      <img src={profile} alt="client" className="w-12 h-12 rounded-full" />
+                      <div>
+                        <h4 className="text-md font-semibold text-gray-700">{item.Name}</h4>
+                        <p className="text-sm text-gray-500">Client</p>
+                      </div>
                     </div>
+                    <p className="text-gray-600 text-sm mb-4">{item.text}</p>
                   </div>
-                  <p className="text-gray-600 text-sm mb-4">{item.text}</p>
+                  <div className="text-yellow-500 flex">
+                    {[...Array(5)].map((_, i) => (
+                      <FaStar key={i} />
+                    ))}
+                  </div>
                 </div>
-                <div className="text-yellow-500 flex">
-                  {[...Array(5)].map((_, i) => (
-                    <FaStar key={i} />
-                  ))}
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="testimonial-prev absolute top-1/2 -left-4 -translate-y-1/2 z-10 bg-orange-500 hover:bg-orange-600 text-white rounded-full p-3 cursor-pointer transition-colors">
+            <FaArrowLeft/>
+          </div>
+          <div className="testimonial-next absolute top-1/2 -right-4 -translate-y-1/2 z-10 bg-orange-500 hover:bg-orange-600 text-white rounded-full p-3 cursor-pointer transition-colors">
+            <FaArrowRight />
+          </div>
+        </div>
     </section>
 
       {/* Modern Logo Carousels */}
       <ModernLogoCarousel 
-        title="Our Trusted Clients" 
+      title="Our Trusted Clients" 
         subtitle="Clients" 
         logos={ClientsImage} 
-        bgColor="bg-gradient-to-br from-gray-50 to-white"
-      />
+        bgColor="bg-gradient-to-br from-gray-50 to-white"/>
       
       <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mx-auto max-w-4xl"></div>
       
@@ -285,11 +288,11 @@ const AboutUs = () => {
         >
           {galleryImages.map((img, i) => (
             <SwiperSlide key={i}>
-              <div className="bg-white rounded-sm shadow-lg grid grid-cols-1 md:flex items-center justify-center w-full object-fill h-[250px] md:h-[300px] mx-auto">
+              <div className="bg-white rounded-md shadow-lg grid grid-cols-1 md:flex items-center justify-center w-full h-[300px] md:h-[250px] mx-auto">
                 <img
                   src={img}
                   alt={`gallery-${i}`}
-                  className="object-cover rounded-xl w-full h-full"
+                  className="object-cover rounded-xl"
                 />
               </div>
             </SwiperSlide>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   flameproofProducts,
   productCategories,
@@ -9,11 +9,35 @@ import { FaStar, FaSearch, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Button } from '../ui';
 import './index.css';
+import { BiArrowToTop } from 'react-icons/bi';
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState('Lighting');
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredProducts, setFilteredProducts] = useState(flameproofProducts);
+    const [progress, setProgress] = useState(0);  
+  
+  useEffect(() => {
+    const root = document.querySelector('.root');
+          
+
+    const handleScroll = () => {
+     
+      const scrollTop = root.scrollTop;
+      const scrollHeight = root.scrollHeight - root.clientHeight;
+      const progress = scrollTop / scrollHeight;
+      setProgress(progress);
+    };
+
+    root.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
@@ -225,6 +249,23 @@ const Products = () => {
           </div>
         </div>
       </section>
+      <button
+      aria-label="Scroll to top"
+      className='fixed bottom-8 right-8 w-14 h-14 z-9999'
+      onClick={() => document.querySelector('.root').scrollTo({ top: 0, behavior: 'smooth' })}
+    >
+      <div className='relative w-14 h-14 p-1'>
+        <div
+          className='absolute top-0 left-0 w-14 h-14 rounded-full'
+          style={{
+            background: `conic-gradient(#f97316 ${progress * 360}deg, #fff ${progress * 360}deg)`,
+          }}
+        ></div>
+        <div className='w-full  hover:text-white hover:bg-orange-500 transition-all duration-300  h-full cursor-pointer rounded-full z-10 relative bg-white grid place-items-center text-orange-500'>
+          <BiArrowToTop size={28} />
+        </div>
+      </div>
+    </button> 
     </div>
   );
 };

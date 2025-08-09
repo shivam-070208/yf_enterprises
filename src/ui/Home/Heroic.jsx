@@ -115,7 +115,7 @@ const HeroSection = () => {
       </Swiper>
 
       {/* 🔘 Custom Arrows */}
-      <div className="absolute w-full z-30 flex justify-between items-center px-6 md:top-[40%] top-[20%] pointer-events-none md:pointer-events-auto">
+      <div className="absolute w-full z-30 flex justify-between items-center px-6 md:top-[40%] top-[25%] pointer-events-none md:pointer-events-auto">
         <button className="swiper-button-prev-custom bg-gray-900 w-10 h-10 text-white p-3 rounded-full grid content-center hover:bg-orange-600 transition pointer-events-auto">
           &#8592;
         </button>
