@@ -1,4 +1,4 @@
-import {  FaPhone } from "react-icons/fa";
+import {  FaPhone, FaPhoneAlt } from "react-icons/fa";
 import { FaEnvelopeOpenText } from "react-icons/fa6";
 import { logo } from "../assets";
 import { TiLocationOutline } from "react-icons/ti";
@@ -11,7 +11,7 @@ const Primarynav = () => {
     {
       tittle: "Call us for help",
       comment: "+91 9748413152",
-      Icon: <FaPhone size={30} className="text-orange-500" />,
+      Icon: <FaPhoneAlt size={30} className="text-orange-500 " />,
     },
     {
       tittle: "Address",

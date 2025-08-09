@@ -1,6 +1,4 @@
 import React from 'react'
-import blog1 from '../../assets/blog1.jpg';
-import blog2 from '../../assets/blog2.jpg';
 import parse from 'html-react-parser'
 import Button from '../Button'
 import { motion } from 'motion/react'

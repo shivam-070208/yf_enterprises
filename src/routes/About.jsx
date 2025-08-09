@@ -156,7 +156,7 @@ const AboutUs = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <div className="mb-12">
-            <div className="text-orange-600 font-bold font-montserrat">Our Approach</div>
+            <div className="text-orange-600 font-bold font-montserrat uppercase">Our Approach</div>
             <h2 className="text-3xl font-bold font-montserrat">Delivering Fast, Reliable Industrial Solutions</h2>
             <p className="text-gray-600 mt-2 font-poppins">We focus on rapid resolution of operational challenges through 24×7 support, proactive project management, and a customer-first approach.</p>
           </div>
@@ -249,7 +249,7 @@ const AboutUs = () => {
       <div className="md:max-w-[90vw] max-w-6xl mx-auto px-4 text-center relative">
         <div className="mb-6">
           <div className="text-orange-600 font-bold">Gallery</div>
-          <h2 className="text-3xl font-bold">Our Work Gallery</h2>
+          <h2 className="text-3xl font-bold capitalize">Few Photos of Our Workplace</h2>
         </div>
 
         {/* Navigation Buttons */}
@@ -285,7 +285,7 @@ const AboutUs = () => {
         >
           {galleryImages.map((img, i) => (
             <SwiperSlide key={i}>
-              <div className="bg-white rounded-sm shadow-lg grid grid-cols-1 md:flex items-center justify-center w-full h-[300px] md:h-[300px] mx-auto">
+              <div className="bg-white rounded-sm shadow-lg grid grid-cols-1 md:flex items-center justify-center w-full object-fill h-[250px] md:h-[300px] mx-auto">
                 <img
                   src={img}
                   alt={`gallery-${i}`}
