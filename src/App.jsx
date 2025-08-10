@@ -6,8 +6,9 @@ import { Route, Routes } from 'react-router-dom';
 import Loaderinitiater from './Components/Loaderinitiater';
 import Totop from './ui/Totop';
 import { HelmetProvider } from 'react-helmet-async';
-import { AccessibilityWrapper } from './components/SEO';
+
 import { PerformanceProvider } from './context/PerformanceContext';
+
 
 // Lazy load routes
 const Home = lazy(() => import('./routes/Home'));
@@ -32,7 +33,7 @@ function App() {
   return (
     <HelmetProvider>
       <PerformanceProvider imagesToPreload={criticalImages}>
-        <AccessibilityWrapper>
+      
           <div className='h-screen overflow-scroll root overflow-x-hidden'>
             <Suspense fallback={<Loaderinitiater />}>
               <Bglayer />
@@ -95,7 +96,7 @@ function App() {
               </Suspense>
             </Suspense>
           </div>
-        </AccessibilityWrapper>
+       
       </PerformanceProvider>
     </HelmetProvider>
   )
