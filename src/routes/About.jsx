@@ -9,8 +9,7 @@ import {ClientsImage,ChannelImage} from '../assets/logo';
 
 import { FaComputer } from 'react-icons/fa6';
 import {ModernLogoCarousel} from '../ui/Home/Clients';
-import { SEOHelmet } from '../components/SEO';
-import { organizationSchema, breadcrumbSchema } from '../components/SEO';
+import { SEOHelmet,organizationSchema, breadcrumbSchema  } from '../Components/SEO';
 
 const AboutUs = () => {
 
