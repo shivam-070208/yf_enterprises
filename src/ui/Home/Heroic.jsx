@@ -99,7 +99,9 @@ const HeroSection = () => {
           <SwiperSlide key={i}>
             <div
               className="relative w-full h-full bg-cover bg-center flex py-25 justify-start md:px-40 px-2"
-              style={{ backgroundImage: `url(${slide.image})` }}
+              style={{ backgroundImage: `url(${slide.image
+              })`
+               }}
             >
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent z-10"></div>

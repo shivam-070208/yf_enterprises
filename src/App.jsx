@@ -4,7 +4,6 @@ import Navbar from './Components/Navbar';
 import { Bglayer, Cursor } from './ui';
 import { Route, Routes } from 'react-router-dom';
 import Loaderinitiater from './Components/Loaderinitiater';
-import Totop from './ui/Totop';
 import { HelmetProvider } from 'react-helmet-async';
 import { AccessibilityWrapper } from './components/SEO';
 import { PerformanceProvider } from './context/PerformanceContext';

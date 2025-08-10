@@ -19,20 +19,28 @@ export const generateImageURL = (url, options = {}) => {
 export const imagePlaceholder = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3C/svg%3E';
 
 export const preloadImage = (src) => {
+  if (!src) return Promise.reject(new Error('No image source provided'));
+  
   return new Promise((resolve, reject) => {
     const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error(`Failed to load image: ${src}`));
     img.src = src;
-    img.onload = resolve;
-    img.onerror = reject;
   });
 };
 
 export const preloadImages = async (images) => {
+  if (!Array.isArray(images)) {
+    console.error('preloadImages expects an array of image sources');
+    return false;
+  }
+
   try {
-    await Promise.all(images.map(preloadImage));
+    const validImages = images.filter(img => img && typeof img === 'string');
+    await Promise.all(validImages.map(preloadImage));
     return true;
   } catch (error) {
-    console.error('Failed to preload images:', error);
+    console.error('Failed to preload images:', error.message);
     return false;
   }
 };
