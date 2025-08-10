@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom';
 import { profile } from '../assets';
 import serviceImages from '../assets/serviceImages';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import { SEOHelmet } from '../components/SEO';
-import { serviceSchema, breadcrumbSchema } from '../components/SEO';
+import { SEOHelmet,serviceSchema, breadcrumbSchema  } from '../Components/SEO';
+
 
 
 const ServicesPage = () => {

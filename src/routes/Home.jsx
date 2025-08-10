@@ -1,143 +1,162 @@
-import React from 'react';
-import { AboutSection, HeroContactSection, HeroSection, ProductCarousel, ServicesCarousel } from '../ui/Home';
-import { Bglayer } from '../ui';
-import PortfolioSection from '../ui/Home/Portfolio';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { profile } from '../assets';
-import { FaArrowLeft, FaArrowRight, FaStar } from 'react-icons/fa';
-import { ChannelImage, ClientsImage } from '../assets/logo';
+import React from "react";
+import {
+  AboutSection,
+  HeroContactSection,
+  HeroSection,
+  ProductCarousel,
+  ServicesCarousel,
+} from "../ui/Home";
+import { Bglayer } from "../ui";
+import PortfolioSection from "../ui/Home/Portfolio";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { profile } from "../assets";
+import { FaArrowLeft, FaArrowRight, FaStar } from "react-icons/fa";
+import { ChannelImage, ClientsImage } from "../assets/logo";
 // import Clients from '../ui/Home/Clients';
-import {ModernLogoCarousel} from '../ui/Home/Clients';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import { SEOHelmet,localBusinessSchema,organizationSchema } from '../Components/SEO/index.js';
-
-
+import { ModernLogoCarousel } from "../ui/Home/Clients";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import {
+  SEOHelmet,
+  localBusinessSchema,
+  organizationSchema,
+} from "../Components/SEO/index.js";
 
 const textTestimonial = [
   {
     Name: "Manish Tiwari",
     Location: "Kolkata",
-    text: "Y.F Enterprises resolved our UPS breakdown within hours. Their technician was skilled, fast, and professional. Best UPS repair and emergency service I’ve seen in Delhi."
+    text: "Y.F Enterprises resolved our UPS breakdown within hours. Their technician was skilled, fast, and professional. Best UPS repair and emergency service I’ve seen in Delhi.",
   },
   {
     Name: "Vikram Mehta",
     Location: "Kolkata",
-    text: "We bought a reconditioned UPS and it runs like new. Affordable pricing and excellent installation support. Highly recommended for UPS solutions in Pune."
+    text: "We bought a reconditioned UPS and it runs like new. Affordable pricing and excellent installation support. Highly recommended for UPS solutions in Pune.",
   },
   {
     Name: "Rahul Patel",
     Location: "Kolkata",
-    text: "Y.F Enterprises resolved our UPS breakdown within hours. Their technician was skilled, fast, and professional. Best UPS repair and emergency service I’ve seen in Delhi."
+    text: "Y.F Enterprises resolved our UPS breakdown within hours. Their technician was skilled, fast, and professional. Best UPS repair and emergency service I’ve seen in Delhi.",
   },
   {
     Name: "Imran Sheikh",
     Location: "Kolkata",
-    text: "Needed UPS battery rental for an event—flawless service! Timely delivery, proper setup, and smooth backup. Great experience with their team in Hyderabad."
+    text: "Needed UPS battery rental for an event—flawless service! Timely delivery, proper setup, and smooth backup. Great experience with their team in Hyderabad.",
   },
   {
     Name: "Naveen Raut",
     Location: "Kolkata",
-    text: "We use their AMC services across our offices. No power issues since they took over maintenance. Trusted UPS service partner in Nagpur."
-  }
+    text: "We use their AMC services across our offices. No power issues since they took over maintenance. Trusted UPS service partner in Nagpur.",
+  },
 ];
 
 function Home() {
   const homeJsonLd = {
     ...organizationSchema,
     ...localBusinessSchema,
-    "@type": ["Organization", "LocalBusiness"]
+    "@type": ["Organization", "LocalBusiness"],
   };
 
   return (
     <>
-      <SEOHelmet 
+      <SEOHelmet
         title="YF Enterprises - Leading Industrial Engineering Solutions in Kolkata"
         description="YF Enterprises provides comprehensive engineering services including Electrical, C&I, BMS, Firefighting, and Industrial Security Systems. Trusted by 20+ clients with 15+ years of experience in Kolkata."
         keywords="YF Enterprises, industrial engineering, electrical services, C&I contracting, BMS systems, firefighting systems, industrial security, Kolkata engineering services, automation systems, EPC projects"
         canonical="/"
         jsonLd={homeJsonLd}
       />
-      <div className='bg-transparent'>
-        
-      <HeroSection />
-      <AboutSection />
-       <ServicesCarousel />
-       {/* <PortfolioSection /> */}
-       <ProductCarousel />
-       <HeroContactSection />
+      <div className="bg-transparent">
+        <HeroSection />
+        <AboutSection />
+        <ServicesCarousel />
+        {/* <PortfolioSection /> */}
+        <ProductCarousel />
+        <HeroContactSection />
         <section className="py-20 bg-gray-100 text-center">
-        <div className="max-w-6xl mx-auto px-4">
-        <div className="mb-10">
-          <div className="text-orange-600 font-bold uppercase">Our Testimonial</div>
-          <h2 className="text-3xl font-bold text-gray-800">Happy Clients Say About Us</h2>
-        </div>
-        {/* Texttestimonials  */}
-        <div className="relative p-10">
-          <Swiper
-            modules={[Navigation, Autoplay, Pagination]}
-            spaceBetween={30}
-            slidesPerView={1}
-            navigation={{
-              prevEl: '.testimonial-prev',
-              nextEl: '.testimonial-next',
-            }}
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
-            breakpoints={{
-              640: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-            className="testimonial-swiper"
-          >
-            {textTestimonial.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className="bg-white p-6 rounded-xl shadow-md text-left h-full flex flex-col justify-between">
-                  <div>
-                    <div className="flex items-center gap-4 mb-4">
-                      <img src={profile} alt="client" className="w-12 h-12 rounded-full" />
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="mb-10">
+              <div className="text-orange-600 font-bold uppercase">
+                Our Testimonial
+              </div>
+              <h2 className="text-3xl font-bold text-gray-800">
+                Happy Clients Say About Us
+              </h2>
+            </div>
+            {/* Texttestimonials  */}
+            <div className="relative p-10">
+              <Swiper
+                modules={[Navigation, Autoplay, Pagination]}
+                spaceBetween={30}
+                slidesPerView={1}
+                navigation={{
+                  prevEl: ".testimonial-prev",
+                  nextEl: ".testimonial-next",
+                }}
+                pagination={{ clickable: true }}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                breakpoints={{
+                  640: { slidesPerView: 1 },
+                  768: { slidesPerView: 2 },
+                  1024: { slidesPerView: 3 },
+                }}
+                className="testimonial-swiper"
+              >
+                {textTestimonial.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="bg-white p-6 rounded-xl shadow-md text-left h-full flex flex-col justify-between">
                       <div>
-                        <h4 className="text-md font-semibold text-gray-700">{item.Name}</h4>
-                        <p className="text-sm text-gray-500">Client</p>
+                        <div className="flex items-center gap-4 mb-4">
+                          <img
+                            src={profile}
+                            alt="client"
+                            className="w-12 h-12 rounded-full"
+                          />
+                          <div>
+                            <h4 className="text-md font-semibold text-gray-700">
+                              {item.Name}
+                            </h4>
+                            <p className="text-sm text-gray-500">Client</p>
+                          </div>
+                        </div>
+                        <p className="text-gray-600 text-sm mb-4">
+                          {item.text}
+                        </p>
+                      </div>
+                      <div className="text-yellow-500 flex">
+                        {[...Array(5)].map((_, i) => (
+                          <FaStar key={i} />
+                        ))}
                       </div>
                     </div>
-                    <p className="text-gray-600 text-sm mb-4">{item.text}</p>
-                  </div>
-                  <div className="text-yellow-500 flex">
-                    {[...Array(5)].map((_, i) => (
-                      <FaStar key={i} />
-                    ))}
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className="testimonial-prev absolute top-1/2 -left-4 -translate-y-1/2 z-10 bg-orange-500 hover:bg-orange-600 text-white rounded-full p-3 cursor-pointer transition-colors">
-            <FaArrowLeft />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              <div className="testimonial-prev absolute top-1/2 -left-4 -translate-y-1/2 z-10 bg-orange-500 hover:bg-orange-600 text-white rounded-full p-3 cursor-pointer transition-colors">
+                <FaArrowLeft />
+              </div>
+              <div className="testimonial-next absolute top-1/2 -right-4 -translate-y-1/2 z-10 bg-orange-500 hover:bg-orange-600 text-white rounded-full p-3 cursor-pointer transition-colors">
+                <FaArrowRight />
+              </div>
+            </div>
           </div>
-          <div className="testimonial-next absolute top-1/2 -right-4 -translate-y-1/2 z-10 bg-orange-500 hover:bg-orange-600 text-white rounded-full p-3 cursor-pointer transition-colors">
-            <FaArrowRight />
-          </div>
-        </div>
-      </div>
         </section>
-               <ModernLogoCarousel 
-                 title="Our Trusted Clients" 
-                 subtitle="Clients" 
-                 logos={ClientsImage} 
-                 bgColor="bg-gradient-to-br from-gray-50 to-white"
-               />
-               
-               <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mx-auto max-w-4xl"></div>
-               <ModernLogoCarousel 
-                 title="Our Channel Partners" 
-                 subtitle="Channel Partners" 
-                 logos={ChannelImage} 
-                 bgColor="bg-gradient-to-br from-white to-gray-50"
-               />
+        <ModernLogoCarousel
+          title="Our Trusted Clients"
+          subtitle="Clients"
+          logos={ClientsImage}
+          bgColor="bg-gradient-to-br from-gray-50 to-white"
+        />
+
+        <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mx-auto max-w-4xl"></div>
+        <ModernLogoCarousel
+          title="Our Channel Partners"
+          subtitle="Channel Partners"
+          logos={ChannelImage}
+          bgColor="bg-gradient-to-br from-white to-gray-50"
+        />
       </div>
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;
