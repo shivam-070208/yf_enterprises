@@ -1,12 +1,16 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import { FaTools, FaBatteryFull } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+
+// Lazy load Swiper components
+const Swiper = lazy(() => import("swiper/react").then(module => ({ default: module.Swiper })));
+const SwiperSlide = lazy(() => import("swiper/react").then(module => ({ default: module.SwiperSlide })));
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import serviceImages from "../../assets/serviceImages";
 // import './Home.css';
 
