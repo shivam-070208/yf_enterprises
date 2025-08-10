@@ -16,13 +16,23 @@ export const ModernLogoCarousel = ({ title, subtitle, logos, bgColor = "bg-white
 
   useEffect(() => {
     const itemsPerView = 4;
-    const totalSlides = logos.length - (itemsPerView - 1);
+    const totalSlides = logos.length > itemsPerView ? logos.length - itemsPerView + 1 : 1;
 
     const interval = setInterval(() => {
       if (isLargeScreen) {
-        setCurrentIndex((prev) => (prev + 1) % totalSlides);
+        if (totalSlides > 1) {
+          setCurrentIndex((prev) => (prev + 1) % totalSlides);
+        }
       } else {
-        scrollRef.current?.scrollBy({ left: 400, behavior: 'smooth' });
+        if (scrollRef.current) {
+          const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+          // A small buffer is added to the comparison to account for sub-pixel rendering issues.
+          if (scrollLeft + clientWidth >= scrollWidth - 1) {
+            scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            scrollRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+          }
+        }
       }
     }, 3000);
 
@@ -30,24 +40,31 @@ export const ModernLogoCarousel = ({ title, subtitle, logos, bgColor = "bg-white
   }, [logos.length, isLargeScreen]);
 
   const nextSlide = () => {
+    const itemsPerView = 4;
+    const totalSlides = logos.length > itemsPerView ? logos.length - itemsPerView + 1 : 1;
     if (isLargeScreen) {
-      const itemsPerView = 4;
-      const totalSlides = logos.length - (itemsPerView - 1);
-      setCurrentIndex((prev) => (prev + 1) % totalSlides);
+      if (totalSlides > 1) {
+        setCurrentIndex((prev) => (prev + 1) % totalSlides);
+      }
     } else {
       scrollRef.current?.scrollBy({ left: 400, behavior: 'smooth' });
     }
   };
 
   const prevSlide = () => {
+    const itemsPerView = 4;
+    const totalSlides = logos.length > itemsPerView ? logos.length - itemsPerView + 1 : 1;
     if (isLargeScreen) {
-      const itemsPerView = 4;
-      const totalSlides = logos.length - (itemsPerView - 1);
-      setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
+      if (totalSlides > 1) {
+        setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
+      }
     } else {
       scrollRef.current?.scrollBy({ left: -400, behavior: 'smooth' });
     }
   };
+  
+  const itemsPerView = 4;
+  const totalSlidesForDots = logos.length > itemsPerView ? logos.length - itemsPerView + 1 : 1;
 
   return (
     <section className={`py-16 ${bgColor}`}>
@@ -104,7 +121,7 @@ export const ModernLogoCarousel = ({ title, subtitle, logos, bgColor = "bg-white
                       <img
                         src={logo}
                         alt={`Logo ${index + 1}`}
-                        className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                        className="max-w-full max-h-full object-contain filter"
                         onError={(e) => {
                           e.target.onerror = null;
                           e.target.src = "https://placehold.co/100x60/f3f4f6/9ca3af?text=Error";
@@ -119,9 +136,9 @@ export const ModernLogoCarousel = ({ title, subtitle, logos, bgColor = "bg-white
           </div>
 
           {/* Dots for large screens */}
-          {isLargeScreen && (
+          {isLargeScreen && totalSlidesForDots > 1 && (
             <div className="flex justify-center mt-8 space-x-2">
-              {Array.from({ length: logos.length - 3 }).map((_, index) => (
+              {Array.from({ length: totalSlidesForDots }).map((_, index) => (
                 <button
                   key={index}
                   className={`w-3 h-3 rounded-full transition-all duration-200 ${

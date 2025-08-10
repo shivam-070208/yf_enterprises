@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { FaStar } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight, FaStar } from 'react-icons/fa';
 import { Button } from '../ui';
 
 import { Link } from 'react-router-dom';
@@ -94,7 +94,7 @@ const servicesInfo = [
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-blue-600 text-sm uppercase font-semibold">The Best Industrial Services</p>
+            <p className="text-blue-600 text-sm uppercase font-semibold">The Best Engineering Services</p>
             <h2 className="text-3xl md:text-4xl font-bold">We Provide Services <br className="hidden md:block" /> for Your Business</h2>
           </div>
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
@@ -112,57 +112,68 @@ const servicesInfo = [
             })}
           </div>
           <div className="text-center mt-12">
-           <Button text={"Explore More"} href={'/services/details/1'} primarycolor={"bg-blue-600"} secondarycolor={"bg-green-600"} />
+           <Button text={"Download Our Service Brochure"} target={"_blank"} href={'/Y F ENTERPRISES SERVICES.pdf'} primarycolor={"bg-blue-600"} secondarycolor={"bg-green-600"} />
           </div>
         </div>
       </section>
 
       {/* Testimonial Section */}
      <section className="py-20 bg-gray-100 text-center">
-        <div className="max-w-6xl mx-auto px-4">
-        <div className="mb-10">
-          <div className="text-orange-600 font-bold uppercase">Our Testimonial</div>
-          <h2 className="text-3xl font-bold text-gray-800">Happy Clients Say About Us</h2>
-        </div>
-
-        <Swiper
-          modules={[Navigation, Autoplay, Pagination]}
-          spaceBetween={30}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          breakpoints={{
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          className="testimonial-swiper"
-        >
-          {textTestimonial.map((item, index) => (
-            <SwiperSlide key={index}>
-              <div className="bg-white p-6 rounded-xl shadow-md text-left h-full flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center gap-4 mb-4">
-                    <img src={profile} alt="client" className="w-12 h-12 rounded-full" />
-                    <div>
-                      <h4 className="text-md font-semibold text-gray-700">{item.name}</h4>
-                      <p className="text-sm text-gray-500">Client</p>
-                    </div>
-                  </div>
-                  <p className="text-gray-600 text-sm mb-4">{item.text}</p>
-                </div>
-                <div className="text-yellow-500 flex">
-                  {[...Array(5)].map((_, i) => (
-                    <FaStar key={i} />
-                  ))}
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </section>
+             <div className="max-w-6xl mx-auto px-4">
+             <div className="mb-10">
+               <div className="text-orange-600 font-bold uppercase">Our Testimonial</div>
+               <h2 className="text-3xl font-bold text-gray-800">Happy Clients Say About Us</h2>
+             </div>
+             {/* Texttestimonials  */}
+             <div className="relative p-10">
+               <Swiper
+                 modules={[Navigation, Autoplay, Pagination]}
+                 spaceBetween={30}
+                 slidesPerView={1}
+                 navigation={{
+                   prevEl: '.testimonial-prev',
+                   nextEl: '.testimonial-next',
+                 }}
+                 pagination={{ clickable: true }}
+                 autoplay={{ delay: 3000, disableOnInteraction: false }}
+                 breakpoints={{
+                   640: { slidesPerView: 1 },
+                   768: { slidesPerView: 2 },
+                   1024: { slidesPerView: 3 },
+                 }}
+                 className="testimonial-swiper"
+               >
+                 {textTestimonial.map((item, index) => (
+                   <SwiperSlide key={index}>
+                     <div className="bg-white p-6 rounded-xl shadow-md text-left h-full flex flex-col justify-between">
+                       <div>
+                         <div className="flex items-center gap-4 mb-4">
+                           <img src={profile} alt="client" className="w-12 h-12 rounded-full" />
+                           <div>
+                             <h4 className="text-md font-semibold text-gray-700">{item.Name}</h4>
+                             <p className="text-sm text-gray-500">Client</p>
+                           </div>
+                         </div>
+                         <p className="text-gray-600 text-sm mb-4">{item.text}</p>
+                       </div>
+                       <div className="text-yellow-500 flex">
+                         {[...Array(5)].map((_, i) => (
+                           <FaStar key={i} />
+                         ))}
+                       </div>
+                     </div>
+                   </SwiperSlide>
+                 ))}
+               </Swiper>
+               <div className="testimonial-prev absolute top-1/2 -left-4 -translate-y-1/2 z-10 bg-orange-500 hover:bg-orange-600 text-white rounded-full p-3 cursor-pointer transition-colors">
+                 <FaArrowLeft />
+               </div>
+               <div className="testimonial-next absolute top-1/2 -right-4 -translate-y-1/2 z-10 bg-orange-500 hover:bg-orange-600 text-white rounded-full p-3 cursor-pointer transition-colors">
+                 <FaArrowRight />
+               </div>
+             </div>
+           </div>
+             </section>
     </div>
   );
 };

@@ -1,13 +1,21 @@
-
-import { Link } from 'react-router-dom'
+import React, { Suspense, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { Allblogs } from '../assets'
+import blog1 from '../assets/blog1.jpg';
+import blog2 from '../assets/blog2.jpg';
+import { motion } from 'framer-motion'
+import { FaArrowDown } from 'react-icons/fa'
+const Blogs = React.lazy(()=>import('../Components/Blogs'))
 
 const Blog = () => {
-  const [search] = React.useState('');
-  const [selectedCategory] = React.useState('All');
+  const navigate = useNavigate();
+  const [search, setSearch] = React.useState('');
+  const [selectedCategory, setSelectedCategory] = React.useState('All');
   // Get unique categories
+  const categories = ['All', ...new Set(Allblogs.map(blog => blog.category))];
 
   // Get latest 3 blogs
+  const latestBlogs = Allblogs.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
 
   return (
     <div className='mb-10 mt-10 md:mt-0'>
@@ -37,9 +45,9 @@ const Blog = () => {
                 // Use blog1.jpg and blog2.jpg for index 0 and 1
                 return (
                   <div 
-                    key={originalIndex} 
-
+                    key={index} 
                     className='flex gap-3 p-3 border border-gray-200 rounded hover:bg-gray-50 hover:shadow-md transition-all cursor-pointer'
+                    onClick={() => navigate(`/blog/show?id=${originalIndex}`)}
                   >
                     <img 
                       src={blog.coverImage} 

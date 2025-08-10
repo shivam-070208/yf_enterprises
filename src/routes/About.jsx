@@ -86,7 +86,7 @@ const AboutUs = () => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="mb-8">
             <div className="text-orange-600 uppercase tracking-wide font-bold">Achievement</div>
-            <h2 className="text-3xl font-bold">Our Achievement</h2>
+            <h2 className="text-3xl font-bold">What We Have Accomplished</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-gray-50 p-6 rounded shadow">
@@ -180,8 +180,13 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-       <section className="py-10 px-10 bg-gray-100 text-center">
+        <section className="py-20 bg-gray-100 text-center">
+        <div className="max-w-6xl mx-auto px-4">
+        <div className="mb-10">
+          <div className="text-orange-600 font-bold uppercase">Our Testimonial</div>
+          <h2 className="text-3xl font-bold text-gray-800">Happy Clients Say About Us</h2>
+        </div>
+        {/* Texttestimonials  */}
         <div className="relative p-10">
           <Swiper
             modules={[Navigation, Autoplay, Pagination]}
@@ -223,13 +228,14 @@ const AboutUs = () => {
             ))}
           </Swiper>
           <div className="testimonial-prev absolute top-1/2 -left-4 -translate-y-1/2 z-10 bg-orange-500 hover:bg-orange-600 text-white rounded-full p-3 cursor-pointer transition-colors">
-            <FaArrowLeft/>
+            <FaArrowLeft />
           </div>
           <div className="testimonial-next absolute top-1/2 -right-4 -translate-y-1/2 z-10 bg-orange-500 hover:bg-orange-600 text-white rounded-full p-3 cursor-pointer transition-colors">
             <FaArrowRight />
           </div>
         </div>
-    </section>
+      </div>
+        </section>
 
       {/* Modern Logo Carousels */}
       <ModernLogoCarousel 

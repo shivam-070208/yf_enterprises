@@ -2,10 +2,11 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 
-const Button = ({ href, text, secondarycolor, primarycolor }) => {
+const Button = ({ href, text, secondarycolor, primarycolor,target }) => {
   return (
     <Link
       to={href}
+      target={target}
       className='inline-block animate-view origin-top'
     >
     <div  className={`py-3 rounded whitespace-nowrap text-white    group md:px-10 px-6 relative overflow-hidden ${primarycolor}`}>   
@@ -22,7 +23,7 @@ const Button = ({ href, text, secondarycolor, primarycolor }) => {
 
       </div> */}
       <div
-        className={`absolute  w-2 h-2 rounded-full ${secondarycolor} -translate-x-1/2 -translate-y-1/2  z-0  -top-4 transition-all duration-700 group-hover:scale-[60]`}
+        className={`absolute  w-2 h-2 rounded-full ${secondarycolor} -translate-x-1/2 -translate-y-1/2  z-0  -top-4 transition-all duration-700 group-hover:scale-[80]`}
       />
 </div>
       

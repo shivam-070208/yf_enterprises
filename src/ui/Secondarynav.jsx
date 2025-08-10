@@ -28,7 +28,7 @@ const Secondarynav = () => {
           ))}
 
           {/* Menu Button for small screens */}
-          <Link to="/contact" className="sm:hidden p-3 bg-orange-500 hover:bg-orange-400 cursor-pointer text-gray-50 rounded-md ">Enquire Us</Link>
+          <Link to="/contact" className="sm:hidden p-2  bg-orange-500 hover:bg-orange-400 cursor-pointer text-gray-50 rounded-md ">Enquire Us</Link>
           <button
           name="menu"
 
