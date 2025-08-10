@@ -9,8 +9,8 @@ import { ChannelImage, ClientsImage } from '../assets/logo';
 // import Clients from '../ui/Home/Clients';
 import {ModernLogoCarousel} from '../ui/Home/Clients';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import { SEOHelmet } from '../components/SEO';
-import { organizationSchema, localBusinessSchema } from '../components/SEO';
+import { SEOHelmet,localBusinessSchema,organizationSchema } from '../components/SEO';
+
 
 
 const textTestimonial = [
