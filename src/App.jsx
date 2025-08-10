@@ -5,8 +5,9 @@ import { Bglayer, Cursor } from './ui';
 import { Route, Routes } from 'react-router-dom';
 import Loaderinitiater from './Components/Loaderinitiater';
 import { HelmetProvider } from 'react-helmet-async';
-import { AccessibilityWrapper } from './components/SEO';
+
 import { PerformanceProvider } from './context/PerformanceContext';
+import { AccessibilityWrapper } from './Components/SEO';
 
 // Lazy load routes
 const Home = lazy(() => import('./routes/Home'));
