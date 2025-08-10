@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://yfenterprises.com/sitemap.xml
+
+# Crawl delay for polite crawling
+Crawl-delay: 1
+
+# Disallow specific paths if needed
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all important pages
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /services/details/
+Allow: /products
+Allow: /products/details
+Allow: /contact
+Allow: /career
+Allow: /blog
+Allow: /blog/show

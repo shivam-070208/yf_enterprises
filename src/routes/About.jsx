@@ -9,6 +9,8 @@ import {ClientsImage,ChannelImage} from '../assets/logo';
 
 import { FaComputer } from 'react-icons/fa6';
 import {ModernLogoCarousel} from '../ui/Home/Clients';
+import { SEOHelmet } from '../components/SEO';
+import { organizationSchema, breadcrumbSchema } from '../components/SEO';
 
 const AboutUs = () => {
 
@@ -68,8 +70,24 @@ const AboutUs = () => {
 
   // Modern Logo Carousel Component
 
+  const aboutBreadcrumbs = [
+    { name: "Home", url: "/" },
+    { name: "About Us", url: "/about" }
+  ];
+
   return (
-    <div className="bg-white text-gray-800 md:mt-0 mt-15 ">
+    <>
+      <SEOHelmet 
+        title="About YF Enterprises - 15+ Years of Engineering Excellence in Kolkata"
+        description="Learn about YF Enterprises' journey since 2013 as a trusted engineering service provider. Led by Omar Farooque, we specialize in Electrical, C&I, BMS, and Industrial Security Systems with 30+ successful projects."
+        keywords="about YF Enterprises, engineering company history, Omar Farooque, Kolkata engineering services, industrial automation company, electrical contractor Kolkata, C&I services"
+        canonical="/about"
+        jsonLd={{
+          ...organizationSchema,
+          ...breadcrumbSchema(aboutBreadcrumbs)
+        }}
+      />
+      <div className="bg-white text-gray-800 md:mt-0 mt-15 ">
       {/* Hero Section */}
       <section className="bg-cover bg-center py-15" style={{ backgroundImage: 'url(https://html.themexriver.com/industo/images/background/9.jpg)' }}>
         <div className="max-w-7xl mx-auto px-4">
@@ -314,6 +332,7 @@ const AboutUs = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

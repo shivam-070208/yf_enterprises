@@ -9,6 +9,8 @@ import { ChannelImage, ClientsImage } from '../assets/logo';
 // import Clients from '../ui/Home/Clients';
 import {ModernLogoCarousel} from '../ui/Home/Clients';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { SEOHelmet } from '../components/SEO';
+import { organizationSchema, localBusinessSchema } from '../components/SEO';
 
 
 const textTestimonial = [
@@ -40,8 +42,22 @@ const textTestimonial = [
 ];
 
 function Home() {
+  const homeJsonLd = {
+    ...organizationSchema,
+    ...localBusinessSchema,
+    "@type": ["Organization", "LocalBusiness"]
+  };
+
   return (
-    <div className='bg-transparent'>
+    <>
+      <SEOHelmet 
+        title="YF Enterprises - Leading Industrial Engineering Solutions in Kolkata"
+        description="YF Enterprises provides comprehensive engineering services including Electrical, C&I, BMS, Firefighting, and Industrial Security Systems. Trusted by 20+ clients with 15+ years of experience in Kolkata."
+        keywords="YF Enterprises, industrial engineering, electrical services, C&I contracting, BMS systems, firefighting systems, industrial security, Kolkata engineering services, automation systems, EPC projects"
+        canonical="/"
+        jsonLd={homeJsonLd}
+      />
+      <div className='bg-transparent'>
         
       <HeroSection />
       <AboutSection />
@@ -119,7 +135,8 @@ function Home() {
                  logos={ChannelImage} 
                  bgColor="bg-gradient-to-br from-white to-gray-50"
                />
-    </div>
+      </div>
+    </>
   )
 }
 

@@ -4,6 +4,8 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { SEOHelmet } from '../components/SEO';
+import { contactPageSchema, breadcrumbSchema } from '../components/SEO';
 
 
 const concactInfo = [
@@ -63,8 +65,24 @@ const Contact = () => {
     });
   };
 
+  const contactBreadcrumbs = [
+    { name: "Home", url: "/" },
+    { name: "Contact", url: "/contact" }
+  ];
+
   return (
-    <div className="w-full md:mt-0 mt-10">
+    <>
+      <SEOHelmet 
+        title="Contact YF Enterprises - Get Industrial Engineering Solutions"
+        description="Contact YF Enterprises for your industrial engineering needs. Call +91 9748413152 or email tenders@yfenterprises.com. Located at 62, Bentick Street, Kolkata. Branches in Saudi Arabia, Nigeria, Oman & Bangladesh."
+        keywords="contact YF Enterprises, engineering services contact, Kolkata engineering company contact, industrial automation contact, electrical services inquiry"
+        canonical="/contact"
+        jsonLd={[
+          contactPageSchema,
+          breadcrumbSchema(contactBreadcrumbs)
+        ]}
+      />
+      <div className="w-full md:mt-0 mt-10">
       <div ref={toastref} >
         <ToastContainer position="bottom" className="z-[999]" autoClose={2000} closeOnClick />
       </div>
@@ -199,6 +217,7 @@ const Contact = () => {
       </div>
       </div>
     </div>
+    </>
   );
 };
 

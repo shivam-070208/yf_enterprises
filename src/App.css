@@ -11,7 +11,7 @@
     font-family: 'Poppins', sans-serif;
   }
 }
-/* ... rest of your code ... */
+
 @layer utilities{
   .cursorspan{
     @apply w-4 h-4 -translate-x-1/2 -translate-y-1/2 z-[999] pointer-events-none fixed   bg-orange-500 rounded-full;
@@ -266,4 +266,37 @@ background-color: var(--color-orange-600);
 .slider-caption p {
   font-weight: 500;
   font-size: 18px;
+}
+
+/* Accessibility - Skip Links */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.sr-only:focus,
+.focus\:not-sr-only:focus {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 12px 16px !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+  z-index: 9999 !important;
+  background-color: #ea580c !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 0 0 4px 0 !important;
+  font-weight: 600 !important;
 }

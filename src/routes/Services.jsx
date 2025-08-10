@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 import { profile } from '../assets';
 import serviceImages from '../assets/serviceImages';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { SEOHelmet } from '../components/SEO';
+import { serviceSchema, breadcrumbSchema } from '../components/SEO';
 
 
 const ServicesPage = () => {
@@ -77,8 +79,28 @@ const servicesInfo = [
 ];
 
 
+  const servicesBreadcrumbs = [
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services" }
+  ];
+
+  const servicesJsonLd = [
+    ...servicesInfo.map(service => 
+      serviceSchema(service.service, service.textExplanation)
+    ),
+    breadcrumbSchema(servicesBreadcrumbs)
+  ];
+
   return (
-    <div className="page-wrapper">
+    <>
+      <SEOHelmet 
+        title="Engineering Services - Instrumentation, EPC Projects & Industrial Solutions"
+        description="Comprehensive engineering services including Instrumentation Solutions, C&I Contracting, EPC Projects, Testing & Commissioning, CCTV Systems, and Manpower Deployment across India."
+        keywords="engineering services, instrumentation solutions, C&I contracting, EPC projects, testing commissioning, CCTV systems, manpower deployment, industrial services, electrical contracting"
+        canonical="/services"
+        jsonLd={servicesJsonLd}
+      />
+      <div className="page-wrapper">
       {/* Page Title */}
       <section className="bg-cover bg-center mt-5 py-30" style={{ backgroundImage: "url('https://html.themexriver.com/industo/images/background/9.jpg')" }}>
         <div className="container mx-auto px-4">
@@ -175,6 +197,7 @@ const servicesInfo = [
            </div>
              </section>
     </div>
+    </>
   );
 };
 

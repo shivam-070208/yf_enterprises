@@ -10,15 +10,19 @@ import Loaderinitiater from './Components/Loaderinitiater'
 import Totop from './ui/Totop'
 import ProductDetails from './routes/ProductDetails'
 import Career from './routes/Career'
+import { HelmetProvider } from 'react-helmet-async'
+import { AccessibilityWrapper } from './components/SEO'
 
 function App() {
   return (
-    <div className='h-screen overflow-scroll root overflow-x-hidden'>
-    
-      <Bglayer />
-      <Cursor />
-      <Navbar />
-      <Routes>
+    <HelmetProvider>
+      <AccessibilityWrapper>
+        <div className='h-screen overflow-scroll root overflow-x-hidden'>
+        
+          <Bglayer />
+          <Cursor />
+          <Navbar />
+          <Routes>
         <Route path='/' element={
           <Loaderinitiater>
             <Home />
@@ -67,9 +71,11 @@ function App() {
             <Detailblog />
             </Loaderinitiater>
             } />
-      </Routes>
-      <Footer />
-    </div>
+          </Routes>
+          <Footer />
+        </div>
+      </AccessibilityWrapper>
+    </HelmetProvider>
   )
 }
 
