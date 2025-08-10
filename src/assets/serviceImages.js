@@ -21,17 +21,18 @@ const serviceImages = {
   service5,
   service6,
   service7,
-  heroic1,
-  heroic2,
-  heroic3,
+
 };
 export default {
   ...serviceImages,
   values,
   vision,
   mission,
+ 
+};
+
+export {
   heroic1,
   heroic2,
   heroic3
-};
-
+}

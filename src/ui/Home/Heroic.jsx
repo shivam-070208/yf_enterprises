@@ -11,23 +11,24 @@ const SwiperSlide = lazy(() => import("swiper/react").then(module => ({ default:
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import serviceImages from "../../assets/serviceImages";
+
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { heroic1, heroic2, heroic3 } from "../../assets/serviceImages";
 // import './Home.css';
 
 const slides = [
   {
-    image: serviceImages.heroic1,
+    image: heroic1,
     heading: "Your Trusted Partner in EPC Projects & Industrial Safety",
     subheading: "We handle complete Erection, Procurement, and Commissioning projects, while delivering intelligent HCD solutions to secure your operations.",
   },
   {
-    image: serviceImages.heroic2,
+    image: heroic2,
     heading: "Never Lose Power Again with Our End-to-End UPS AMC Services",
     subheading: "Y.F Enterprises offers expert annual maintenance, UPS rentals, battery replacement, and 24/7 service support across India.",
   },
   {
-    image: serviceImages.heroic3,
+    image: heroic3,
     heading: "India’s Reliable Partner for Industrial Engineering & Technical Services",
     subheading: "From skilled manpower deployment to electrical maintenance, HCD servicing, and UPS support — Y.F Enterprises delivers responsive, professional service solutions across industries.",
   },
