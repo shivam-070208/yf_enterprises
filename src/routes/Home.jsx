@@ -9,7 +9,7 @@ import { ChannelImage, ClientsImage } from '../assets/logo';
 // import Clients from '../ui/Home/Clients';
 import {ModernLogoCarousel} from '../ui/Home/Clients';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import { SEOHelmet,localBusinessSchema,organizationSchema } from '../components/SEO';
+import { SEOHelmet,localBusinessSchema,organizationSchema } from '../Components/SEO/index.js';
 
 
 
