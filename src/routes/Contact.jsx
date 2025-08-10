@@ -4,8 +4,6 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { SEOHelmet } from '../components/SEO';
-import { contactPageSchema, breadcrumbSchema } from '../components/SEO';
 
 
 const concactInfo = [
@@ -65,23 +63,7 @@ const Contact = () => {
     });
   };
 
-  const contactBreadcrumbs = [
-    { name: "Home", url: "/" },
-    { name: "Contact", url: "/contact" }
-  ];
-
   return (
-    <>
-      <SEOHelmet 
-        title="Contact YF Enterprises - Get Industrial Engineering Solutions"
-        description="Contact YF Enterprises for your industrial engineering needs. Call +91 9748413152 or email tenders@yfenterprises.com. Located at 62, Bentick Street, Kolkata. Branches in Saudi Arabia, Nigeria, Oman & Bangladesh."
-        keywords="contact YF Enterprises, engineering services contact, Kolkata engineering company contact, industrial automation contact, electrical services inquiry"
-        canonical="/contact"
-        jsonLd={[
-          contactPageSchema,
-          breadcrumbSchema(contactBreadcrumbs)
-        ]}
-      />
       <div className="w-full md:mt-0 mt-10">
       <div ref={toastref} >
         <ToastContainer position="bottom" className="z-[999]" autoClose={2000} closeOnClick />
@@ -120,7 +102,7 @@ const Contact = () => {
 
                 )}
                 {item.icon === "FaEnvelopeOpenText" && (
-                  <a href="mailto:tenders@yfenterprises.com"><svg width="2em" height="2em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-orange-500 group-hover:text-white transition"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg></a>
+                  <svg width="2em" height="2em" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-orange-500 group-hover:text-white transition"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
                 )}
               </span>
               <div>
@@ -217,7 +199,6 @@ const Contact = () => {
       </div>
       </div>
     </div>
-    </>
   );
 };
 

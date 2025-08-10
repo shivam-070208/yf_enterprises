@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, useState } from "react";
 import { FaTools, FaBatteryFull } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
@@ -12,6 +12,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import serviceImages from "../../assets/serviceImages";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 // import './Home.css';
 
 const slides = [
