@@ -8,7 +8,6 @@ import { HelmetProvider } from 'react-helmet-async';
 
 import { PerformanceProvider } from './context/PerformanceContext';
 import { AccessibilityWrapper } from './Components/SEO';
-import Footer from './ui/Footer';
 
 // Lazy load routes
 const Home = lazy(() => import('./routes/Home'));
@@ -21,6 +20,7 @@ const Products = lazy(() => import('./routes/Products'));
 const ServiceDetails = lazy(() => import('./routes/ServiceDetails'));
 const ProductDetails = lazy(() => import('./routes/ProductDetails'));
 const Career = lazy(() => import('./routes/Career'));
+const Footer = lazy(() => import('./ui/Footer'));
 
 function App() {
   const criticalImages = [
@@ -90,10 +90,10 @@ function App() {
                   </Suspense>
                 }/>
               </Routes>
-            
-             
-            </Suspense>
+              <Suspense fallback={<div>Loading footer...</div>}>
                 <Footer />
+              </Suspense>
+            </Suspense>
           </div>
         </AccessibilityWrapper>
       </PerformanceProvider>
