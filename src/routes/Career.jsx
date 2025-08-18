@@ -210,10 +210,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import SeoHead from '../Seo/SeoHead';
+import { getSeoData } from '../Seo/seoConfig';
 
 const Career = () => {
   const [showForm, setShowForm] = useState(false);
   const [fileURL, setFileURL] = useState("");
+  const seoData = getSeoData('career');
 
   const handleResumePreview = (e) => {
     const file = e.target.files[0];
@@ -262,6 +265,16 @@ const Career = () => {
 
   return (
     <div className="w-full h-full mt-20 md:mt-0">
+      <SeoHead
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        canonicalUrl={seoData.canonicalUrl}
+        structuredData={seoData.structuredData}
+        url={seoData.canonicalUrl}
+        image={seoData.image}
+        type="website"
+      />
       {/* Banner */}
       <section
         className="bg-cover bg-center py-20"

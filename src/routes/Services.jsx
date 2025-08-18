@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 import { profile } from '../assets';
 import serviceImages from '../assets/serviceImages';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import SeoHead from '../Seo/SeoHead';
+import { getSeoData } from '../Seo/seoConfig';
 
 
 const ServicesPage = () => {
@@ -77,8 +79,20 @@ const servicesInfo = [
 ];
 
 
+  const seoData = getSeoData('services');
+  
   return (
     <div className="page-wrapper">
+      <SeoHead
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        canonicalUrl={seoData.canonicalUrl}
+        structuredData={seoData.structuredData}
+        url={seoData.canonicalUrl}
+        image={seoData.image}
+        type="website"
+      />
       {/* Page Title */}
       <section className="bg-cover bg-center mt-5 py-30" style={{ backgroundImage: "url('https://html.themexriver.com/industo/images/background/9.jpg')" }}>
         <div className="container mx-auto px-4">

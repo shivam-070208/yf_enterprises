@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Button } from '../ui';
 import serviceImages from '../assets/serviceImages';
+import SeoHead from '../Seo/SeoHead';
+import { getSeoData } from '../Seo/seoConfig';
 
 // Centralized service details data
 const serviceDetailsData = [
@@ -220,12 +222,23 @@ const ServiceDetails = () => {
   const { id } = useParams();
   const serviceIndex = Math.max(0, Math.min(serviceDetailsData.length - 1, parseInt(id, 10) - 1));
   const service = serviceDetailsData[serviceIndex];
+  const seoData = getSeoData('serviceDetails', { id });
 
   // Helper function to handle text replacements, for readability
   const correctedPointText = (text) => text.replace('shut down', 'shutdown');
 
   return (
     <div className="page-wrapper md:mt-0 mt-25 bg-gray-50 min-h-screen">
+      <SeoHead
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        canonicalUrl={seoData.canonicalUrl}
+        structuredData={seoData.structuredData}
+        url={seoData.canonicalUrl}
+        image={seoData.image}
+        type="service"
+      />
       {/* Header */}
       <section
         style={{ backgroundImage: `url(${'https://html.themexriver.com/industo/images/background/9.jpg'})` }}

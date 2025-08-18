@@ -9,6 +9,8 @@ import { ChannelImage, ClientsImage } from '../assets/logo';
 // import Clients from '../ui/Home/Clients';
 import {ModernLogoCarousel} from '../ui/Home/Clients';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import SeoHead from '../Seo/SeoHead';
+import { getSeoData } from '../Seo/seoConfig';
 
 
 const textTestimonial = [
@@ -40,9 +42,21 @@ const textTestimonial = [
 ];
 
 function Home() {
+  const seoData = getSeoData('home');
+  
   return (
+    <>
+      <SeoHead
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        canonicalUrl={seoData.canonicalUrl}
+        structuredData={seoData.structuredData}
+        url={seoData.canonicalUrl}
+        image={seoData.image}
+        type="website"
+      />
     <div className='bg-transparent'>
-        
       <HeroSection />
       <AboutSection />
        <ServicesCarousel />
@@ -111,6 +125,7 @@ function Home() {
                />
          
     </div>
+    </>
   )
 }
 

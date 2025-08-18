@@ -9,6 +9,8 @@ import {ClientsImage,ChannelImage} from '../assets/logo';
 
 import { FaComputer } from 'react-icons/fa6';
 import {ModernLogoCarousel} from '../ui/Home/Clients';
+import SeoHead from '../Seo/SeoHead';
+import { getSeoData } from '../Seo/seoConfig';
 
 const AboutUs = () => {
 
@@ -68,8 +70,20 @@ const AboutUs = () => {
 
   // Modern Logo Carousel Component
 
+  const seoData = getSeoData('about');
+  
   return (
     <div className="bg-white text-gray-800 md:mt-0 mt-15 ">
+      <SeoHead
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        canonicalUrl={seoData.canonicalUrl}
+        structuredData={seoData.structuredData}
+        url={seoData.canonicalUrl}
+        image={seoData.image}
+        type="website"
+      />
       {/* Hero Section */}
       <section className="bg-cover bg-center py-15" style={{ backgroundImage: 'url(https://html.themexriver.com/industo/images/background/9.jpg)' }}>
         <div className="max-w-7xl mx-auto px-4">

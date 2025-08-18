@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import { FaStar, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { flameproofProducts } from '../assets/products';
@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import SeoHead from '../Seo/SeoHead';
+import { getSeoData } from '../Seo/seoConfig';
 
 const ProductDetails = () => {
   const location = useLocation();
@@ -25,9 +27,51 @@ const ProductDetails = () => {
   const similarProducts = flameproofProducts
     .filter((p) => p.category === product.category && p.id !== product.id)
     .slice(0, 4);
+  
+  const seoData = getSeoData('productDetails');
+  // Create dynamic SEO title and description based on product
+  const dynamicTitle = `${product.name} - ${product.category} | Flameproof Equipment | YF Enterprises Kolkata`;
+  const dynamicDescription = `${product.name}: High-quality ${product.category.toLowerCase()} equipment. ${product.description} Certified flameproof product for hazardous areas. Material: ${product.specifications.material}. Get quote from YF Enterprises Kolkata.`;
+  const dynamicKeywords = `${product.name}, ${product.category} equipment, flameproof ${product.category.toLowerCase()}, hazardous area equipment, ${product.specifications.material} products, industrial safety equipment, explosion proof equipment, YF Enterprises products, Kolkata industrial equipment, certified safety products, ${product.category} specifications, industrial ${product.category.toLowerCase()} solutions`;
 
   return (
     <div className="min-h-screen bg-gray-50 md:mt-0 mt-10">
+      <SeoHead
+        title={dynamicTitle}
+        description={dynamicDescription}
+        keywords={dynamicKeywords}
+        canonicalUrl={`https://yfenterprises.com/products/details?id=${product.id}`}
+        url={`https://yfenterprises.com/products/details?id=${product.id}`}
+        image={product.image}
+        type="product"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": product.name,
+          "description": product.description,
+          "category": product.category,
+          "brand": {
+            "@type": "Brand",
+            "name": "YF Enterprises"
+          },
+          "manufacturer": {
+            "@type": "Organization",
+            "name": "YF Enterprises"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": product.price,
+            "priceCurrency": "INR",
+            "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": product.rating,
+            "bestRating": "5"
+          },
+          "image": product.image
+        }}
+      />
       {/* Header Section with Background */}
       <section 
         className="bg-cover bg-center py-25 relative"

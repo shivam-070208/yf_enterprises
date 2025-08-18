@@ -5,6 +5,8 @@ import blog1 from '../assets/blog1.jpg';
 import blog2 from '../assets/blog2.jpg';
 import { motion } from 'framer-motion'
 import { FaArrowDown } from 'react-icons/fa'
+import SeoHead from '../Seo/SeoHead';
+import { getSeoData } from '../Seo/seoConfig';
 const Blogs = React.lazy(()=>import('../Components/Blogs'))
 
 const Blog = () => {
@@ -16,9 +18,20 @@ const Blog = () => {
 
   // Get latest 3 blogs
   const latestBlogs = Allblogs.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
+  const seoData = getSeoData('blog');
 
   return (
     <div className='mb-10 mt-10 md:mt-0'>
+      <SeoHead
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        canonicalUrl={seoData.canonicalUrl}
+        structuredData={seoData.structuredData}
+        url={seoData.canonicalUrl}
+        image={seoData.image}
+        type="website"
+      />
       <section className="bg-cover bg-center py-20 " style={{ backgroundImage: "url('https://html.themexriver.com/industo/images/background/9.jpg')" }}>
         <div className="container mx-auto px-4">
           <ul className="flex gap-2 text-white text-sm">

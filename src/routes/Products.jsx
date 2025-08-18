@@ -9,6 +9,8 @@ import { FaStar, FaSearch, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Button } from '../ui';
 import './index.css';
+import SeoHead from '../Seo/SeoHead';
+import { getSeoData } from '../Seo/seoConfig';
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState('Lighting');
@@ -32,8 +34,20 @@ const Products = () => {
     }
   };
 
+  const seoData = getSeoData('products');
+  
   return (
     <div className="page-wrapper">
+      <SeoHead
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        canonicalUrl={seoData.canonicalUrl}
+        structuredData={seoData.structuredData}
+        url={seoData.canonicalUrl}
+        image={seoData.image}
+        type="product"
+      />
       {/* Page Title */}
       <section
         className="bg-cover bg-center py-30"

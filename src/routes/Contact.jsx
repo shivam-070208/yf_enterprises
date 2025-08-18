@@ -4,6 +4,8 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SeoHead from '../Seo/SeoHead';
+import { getSeoData } from '../Seo/seoConfig';
 
 
 const concactInfo = [
@@ -27,6 +29,7 @@ const branches = [ "India","Dubai","Saudi Arabia","Tanzania","Mozambique","Bangl
 
 const Contact = () => {
   const toastref = useRef(null);
+  const seoData = getSeoData('contact');
   const handleContact = async (e) => {
     e.preventDefault();
 
@@ -65,6 +68,16 @@ const Contact = () => {
 
   return (
     <div className="w-full md:mt-0 mt-10">
+      <SeoHead
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        canonicalUrl={seoData.canonicalUrl}
+        structuredData={seoData.structuredData}
+        url={seoData.canonicalUrl}
+        image={seoData.image}
+        type="website"
+      />
       <div ref={toastref} >
         <ToastContainer position="bottom" className="z-[999]" autoClose={2000} closeOnClick />
       </div>
