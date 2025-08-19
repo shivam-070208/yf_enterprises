@@ -101,7 +101,9 @@ background-color: var(--color-orange-600);
     }
 }
 
-
+::-webkit-scrollbar {
+  display: none;
+}
 
 
 

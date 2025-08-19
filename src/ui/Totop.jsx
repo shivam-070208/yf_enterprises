@@ -48,17 +48,7 @@ const Totop = () => {
       className='fixed bottom-30 right-8 w-14 h-14 z-9999'
       onClick={() => document.querySelector('.root').scrollTo({ top: 0, behavior: 'smooth' })}
     >
-      {/* <div className='relative w-14 h-14 p-1'>
-        <div
-          className='absolute top-0 left-0 w-14 h-14 rounded-full'
-          style={{
-            background: `conic-gradient(#f97316 ${progress * 360}deg, #fff ${progress * 360}deg)`,
-          }}
-        ></div>
-        <div className='w-full h-full cursor-pointer rounded-full z-10 relative bg-white grid place-items-center text-orange-500'>
-          <BiArrowToTop size={28} />
-        </div>
-      </div> */}
+      
       <a href="https://wa.me/9748413152" className='w-full h-full cursor-pointer rounded-full hover:text-white hover:bg-orange-500 transition-all duration-300 z-10 relative bg-white grid place-items-center text-orange-500'>
       <FaWhatsapp className='w-10 h-10 '/>
       </a>

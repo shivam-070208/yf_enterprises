@@ -11,6 +11,7 @@ const LoaderInitiater = ({ children }) => {
   useEffect(() => {
     setLoading(true);
 
+    window.scrollTo({top:0})
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1500); // simulate loading time
