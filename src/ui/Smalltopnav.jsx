@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const SmallTopNavbar = () => {
   return (
@@ -16,7 +17,7 @@ const SmallTopNavbar = () => {
           <FaFacebookF />
         </a>
         <a href="#" className="transition-all ease-in bg-orange-700 p-2 rounded-full hover:bg-orange-600">
-          <FaTwitter />
+          <FaXTwitter />
         </a>
         <a href="#" className="transition-all ease-in bg-orange-700 p-2 rounded-full hover:bg-orange-600">
           <FaLinkedin />
