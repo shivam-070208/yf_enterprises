@@ -1,0 +1,18 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Ensure the base URL is correct (uncomment and adjust if needed)
+# RewriteBase /
+
+# Redirect all requests to index.html (for SPA routing)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [QSA,L]
+
+# Enable caching for static assets (optional but recommended for performance)
+<FilesMatch "\.(ico|jpe?g|png|gif|webp|svg|woff2?|ttf|otf|eot|js|css)$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# Handle 404 errors
+ErrorDocument 404 /index.html
