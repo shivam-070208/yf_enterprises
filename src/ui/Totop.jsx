@@ -60,7 +60,7 @@ const Totop = () => {
     >
 
       <a href="tel:+919748413152" className='w-full h-full cursor-pointer rounded-full text-white bg-orange-500 transition-all duration-300 z-10 relative hover:bg-white grid place-items-center hover:text-orange-500'>
-      <FaPhone className='w-5 h-5 '/>
+      <FaPhone className='w-5 h-5 rotate-90 '/>
       </a>
     </button>
     </>
